@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0E2A47" />
+  <title>Tori &amp; Max · Concierge Pet Care &amp; House Sitting | PinkPawPets</title>
+  <meta name="description" content="Concierge pet care, overnight boarding, and house sitting by Tori & Max. 5+ years, 100s of pets and homes cared for. Yacht-crew precision, pet-loving heart. Service from Central Pennsylvania to Cocoa Beach, Florida." />
+  <meta property="og:title" content="Tori & Max · Concierge Pet Care & House Sitting" />
+  <meta property="og:description" content="Concierge pet care for pets and homes — by land or by sea. Trusted by hundreds across two coasts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pinkpawpets.com/tori-and-max/" />
+  <link rel="canonical" href="https://pinkpawpets.com/tori-and-max/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230E2A47'%3E%3Ccircle cx='6' cy='9' r='2'/%3E%3Ccircle cx='18' cy='9' r='2'/%3E%3Ccircle cx='9' cy='5' r='2'/%3E%3Ccircle cx='15' cy='5' r='2'/%3E%3Cellipse cx='12' cy='16' rx='5' ry='4'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --hull: #0E2A47;
+      --deep: #1B4965;
+      --steel: #2C7DA0;
+      --foam: #A9D6E5;
+      --mist: #E8F4F8;
+      --sand: #F5E8D3;
+      --sand-light: #FBF4E6;
+      --gold: #C8932B;
+      --gold-light: #E5C16C;
+      --pink: #D4537E;
+      --ink: #14213D;
+      --slate: #475569;
+      --cream: #FFFCF7;
+      --line: #E5E7EB;
+      --font-display: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --shadow-sm: 0 1px 2px rgba(14,42,71,0.06);
+      --shadow-md: 0 8px 24px -8px rgba(14,42,71,0.18);
+      --shadow-lg: 0 22px 48px -16px rgba(14,42,71,0.30);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.55;
+    }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+    a { color: inherit; }
+
+    /* === Top nav === */
+    .topnav {
+      position: sticky; top: 0; z-index: 40;
+      background: rgba(255,252,247,0.85);
+      backdrop-filter: saturate(140%) blur(10px);
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid rgba(14,42,71,0.08);
+    }
+    .topnav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .topnav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .topnav-mark {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--hull), var(--deep));
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .topnav-mark svg { width: 18px; height: 18px; fill: var(--gold-light); }
+    .topnav-name { font-family: var(--font-display); font-weight: 600; color: var(--hull); letter-spacing: 0.2px; font-size: 16px; }
+    .topnav-name .thin { color: var(--slate); font-weight: 400; }
+    .topnav-back { font-size: 13px; color: var(--slate); text-decoration: none; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); transition: all 0.15s; }
+    .topnav-back:hover { background: var(--mist); border-color: var(--foam); color: var(--hull); }
+
+    /* === Hero === */
+    .hero { position: relative; overflow: hidden; padding: 5.5rem 0 0; background: linear-gradient(180deg, #F1F8FB 0%, var(--cream) 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 3rem; align-items: center; padding-bottom: 3.5rem; position: relative; z-index: 2; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11.5px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--steel);
+      margin-bottom: 1.25rem;
+    }
+    .eyebrow .pp-thread { color: var(--pink); font-weight: 700; }
+    .eyebrow .divider { width: 24px; height: 1px; background: currentColor; opacity: 0.4; }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(36px, 5.4vw, 60px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--hull);
+      margin: 0 0 1.25rem;
+      font-variation-settings: "opsz" 96;
+    }
+    .hero h1 em { font-style: italic; color: var(--deep); font-weight: 400; }
+    .hero-tag {
+      font-size: 18px; color: var(--slate); max-width: 540px;
+      margin: 0 0 1.75rem; line-height: 1.6;
+    }
+    .hero-tag strong { color: var(--ink); font-weight: 600; }
+
+    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      background: var(--hull); color: var(--cream);
+      border: 1px solid var(--hull);
+      padding: 14px 28px; border-radius: 999px;
+      font-family: var(--font-body); font-size: 14.5px; font-weight: 600;
+      cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+      transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
+      box-shadow: var(--shadow-md);
+      letter-spacing: 0.2px;
+    }
+    .btn-primary:hover { background: var(--deep); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+    .btn-primary .arrow { transition: transform 0.2s; }
+    .btn-primary:hover .arrow { transform: translateX(3px); }
+    .btn-ghost {
+      background: transparent; color: var(--hull);
+      border: 1px solid rgba(14,42,71,0.18);
+      padding: 13px 24px; border-radius: 999px;
+      font-family: var(--font-body); font-size: 14.5px; font-weight: 600;
+      cursor: pointer; text-decoration: none;
+      transition: all 0.15s;
+    }
+    .btn-ghost:hover { background: var(--mist); border-color: var(--steel); }
+
+    /* "Currently in" live badge */
+    .where-now {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: white; border: 1px solid var(--line);
+      padding: 8px 14px 8px 12px; border-radius: 999px;
+      font-size: 12.5px; font-weight: 500; color: var(--slate);
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .where-now .pulse {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--gold);
+      box-shadow: 0 0 0 0 rgba(200,147,43,0.55);
+      animation: where-pulse 2s infinite;
+    }
+    .where-now strong { color: var(--hull); font-weight: 700; }
+    @keyframes where-pulse { 0% { box-shadow: 0 0 0 0 rgba(200,147,43,0.55); } 70% { box-shadow: 0 0 0 8px rgba(200,147,43,0); } 100% { box-shadow: 0 0 0 0 rgba(200,147,43,0); } }
+
+    /* Hero visual: layered SVG composition */
+    .hero-visual {
+      position: relative; aspect-ratio: 1/1;
+      max-width: 460px; justify-self: end;
+      width: 100%;
+    }
+    .hero-circle {
+      position: absolute; inset: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, var(--mist), var(--foam) 55%, var(--steel) 100%);
+      box-shadow: 0 30px 60px -20px rgba(27,73,101,0.45), inset 0 -24px 60px rgba(14,42,71,0.18);
+      overflow: hidden;
+    }
+    .hero-sun {
+      position: absolute; top: 14%; right: 18%;
+      width: 80px; height: 80px; border-radius: 50%;
+      background: radial-gradient(circle, var(--gold-light) 0%, rgba(229,193,108,0) 70%);
+      animation: sun-glow 5s ease-in-out infinite;
+    }
+    @keyframes sun-glow { 0%,100% { transform: scale(1); opacity: 0.95; } 50% { transform: scale(1.08); opacity: 1; } }
+    .hero-yacht-wrap {
+      position: absolute; bottom: 32%; left: 0; right: 0;
+      animation: yacht-glide 9s ease-in-out infinite;
+    }
+    @keyframes yacht-glide { 0%,100% { transform: translateX(-8%); } 50% { transform: translateX(8%); } }
+    .hero-yacht {
+      display: block; margin: 0 auto;
+      width: 50%;
+      animation: yacht-bob 4s ease-in-out infinite;
+      filter: drop-shadow(0 4px 8px rgba(14,42,71,0.35));
+    }
+    @keyframes yacht-bob { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-4px) rotate(1deg); } }
+    .hero-waves { position: absolute; left: 0; right: 0; bottom: 0; height: 35%; overflow: hidden; }
+    .hero-paw {
+      position: absolute;
+      font-size: 22px;
+      animation: paw-float 6s ease-in-out infinite;
+      filter: drop-shadow(0 2px 4px rgba(14,42,71,0.18));
+    }
+    .hero-paw.p1 { top: 8%;  left: -4%;  animation-delay: 0s; }
+    .hero-paw.p2 { top: 30%; right: -2%; animation-delay: 1.5s; }
+    .hero-paw.p3 { bottom: 6%; left: -2%; animation-delay: 3s; }
+    @keyframes paw-float { 0%,100% { transform: translateY(0) rotate(-8deg); opacity: 0.85; } 50% { transform: translateY(-12px) rotate(8deg); opacity: 1; } }
+
+    /* Bottom hero waves */
+    .ocean-divider { position: relative; height: 90px; overflow: hidden; line-height: 0; margin-top: -1px; }
+    .ocean-divider svg { display: block; width: 100%; height: 100%; }
+
+    /* === Trust strip === */
+    .trust {
+      background: linear-gradient(180deg, var(--cream) 0%, #F8F1E1 100%);
+      padding: 2.5rem 0;
+      border-top: 1px solid rgba(200,147,43,0.18);
+      border-bottom: 1px solid rgba(200,147,43,0.18);
+    }
+    .trust-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+    }
+    .trust-stat { text-align: center; }
+    .trust-num { font-family: var(--font-display); font-size: 38px; font-weight: 600; color: var(--hull); line-height: 1; letter-spacing: -0.02em; font-variation-settings: "opsz" 96; }
+    .trust-num .plus { color: var(--gold); }
+    .trust-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--slate); margin-top: 8px; font-weight: 500; }
+
+    /* === Section base === */
+    section { padding: 5rem 0; }
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 11.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.6vw, 40px);
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      color: var(--hull);
+      margin: 0 0 0.75rem;
+      line-height: 1.15;
+      font-variation-settings: "opsz" 96;
+    }
+    .section-title em { font-style: italic; color: var(--deep); font-weight: 400; }
+    .section-lede { font-size: 17px; color: var(--slate); max-width: 640px; margin: 0 0 2.5rem; line-height: 1.6; }
+
+    /* === About === */
+    .about { background: var(--cream); }
+    .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: center; }
+    .about-pals { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .pal {
+      background: white; border: 1px solid var(--line);
+      border-radius: 18px; padding: 1.5rem 1.25rem;
+      text-align: center; transition: transform 0.25s, box-shadow 0.25s;
+      box-shadow: var(--shadow-sm);
+    }
+    .pal:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .pal-avatar {
+      width: 86px; height: 86px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--hull), var(--steel));
+      color: var(--gold-light);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 36px; font-weight: 600;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 8px 20px -8px rgba(14,42,71,0.45);
+      position: relative;
+    }
+    .pal:nth-child(2) .pal-avatar { background: linear-gradient(135deg, var(--deep), var(--gold)); }
+    .pal-avatar::after {
+      content: ''; position: absolute; inset: -3px; border-radius: 50%;
+      border: 1px solid var(--gold-light); opacity: 0.4;
+    }
+    .pal-name { font-family: var(--font-display); font-size: 19px; font-weight: 600; color: var(--hull); margin: 0 0 4px; }
+    .pal-role { font-size: 12px; color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; margin: 0 0 12px; }
+    .pal-bio { font-size: 14px; color: var(--slate); margin: 0; line-height: 1.6; }
+
+    .about-copy h2 { margin-top: 0; }
+    .about-copy p { font-size: 16px; color: var(--slate); line-height: 1.7; margin: 0 0 1rem; }
+    .about-copy p strong { color: var(--ink); font-weight: 600; }
+    .about-quote {
+      border-left: 3px solid var(--gold);
+      padding-left: 1.25rem;
+      margin: 1.5rem 0 0;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 18px;
+      color: var(--hull);
+      line-height: 1.5;
+    }
+
+    /* === Services === */
+    .services { background: linear-gradient(180deg, var(--cream) 0%, #F4F8FA 100%); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .svc-card {
+      background: white; border: 1px solid var(--line);
+      border-radius: 20px; padding: 1.75rem 1.5rem;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+      position: relative; overflow: hidden;
+    }
+    .svc-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--steel), var(--gold));
+      transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
+    }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--foam); }
+    .svc-card:hover::before { transform: scaleX(1); }
+    .svc-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--mist), var(--foam));
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--hull);
+    }
+    .svc-icon svg { width: 26px; height: 26px; }
+    .svc-name { font-family: var(--font-display); font-size: 21px; font-weight: 600; color: var(--hull); margin: 0 0 0.5rem; }
+    .svc-desc { font-size: 14.5px; color: var(--slate); margin: 0 0 1rem; line-height: 1.6; }
+    .svc-meta { font-size: 12.5px; color: var(--gold); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600; }
+
+    /* === Coast-to-coast journey === */
+    .journey { background: var(--cream); }
+    .journey-card {
+      background: white; border: 1px solid var(--line);
+      border-radius: 24px; padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .journey-graphic {
+      position: relative;
+      max-width: 880px; margin: 1.5rem auto 0;
+    }
+    .journey-graphic svg { display: block; width: 100%; height: auto; }
+    .journey-legend {
+      display: flex; justify-content: space-between; gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .leg-card {
+      flex: 1; min-width: 240px;
+      padding: 1rem 1.25rem;
+      background: var(--sand-light);
+      border: 1px solid rgba(200,147,43,0.25);
+      border-radius: 14px;
+    }
+    .leg-card .lc-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+    .leg-card .lc-place { font-family: var(--font-display); font-size: 19px; font-weight: 600; color: var(--hull); margin: 4px 0 4px; }
+    .leg-card .lc-when { font-size: 13px; color: var(--slate); }
+    .journey-note {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 13.5px; color: var(--slate);
+      font-style: italic;
+    }
+
+    /* === How it works === */
+    .how { background: linear-gradient(180deg, #F4F8FA 0%, var(--cream) 100%); }
+    .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+    .step {
+      background: white; border: 1px solid var(--line);
+      border-radius: 18px; padding: 1.5rem 1.25rem;
+      position: relative;
+      transition: transform 0.2s;
+    }
+    .step:hover { transform: translateY(-3px); border-color: var(--foam); }
+    .step-num {
+      font-family: var(--font-display);
+      font-size: 32px; font-weight: 600;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .step-name { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--hull); margin: 0 0 6px; }
+    .step-desc { font-size: 13.5px; color: var(--slate); margin: 0; line-height: 1.55; }
+
+    /* === What we promise === */
+    .promise { background: var(--cream); }
+    .promise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .promise-item {
+      background: white; border: 1px solid var(--line);
+      border-radius: 16px; padding: 1.25rem 1.25rem;
+      display: flex; gap: 12px; align-items: flex-start;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .promise-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .promise-check {
+      flex: 0 0 28px; width: 28px; height: 28px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: white;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700;
+      margin-top: 2px;
+      box-shadow: 0 4px 10px -4px rgba(200,147,43,0.5);
+    }
+    .promise-text { font-size: 14px; color: var(--ink); line-height: 1.55; font-weight: 500; }
+    .promise-text small { display: block; color: var(--slate); font-weight: 400; margin-top: 2px; }
+
+    /* === Booking form === */
+    .booking { background: linear-gradient(180deg, var(--cream) 0%, #F0F5F8 100%); }
+    .booking-card {
+      background: white; border: 1px solid var(--line);
+      border-radius: 24px; padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-md);
+      max-width: 760px; margin: 0 auto;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .form-row.single { grid-template-columns: 1fr; }
+    .form-label { display: block; font-size: 12.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; letter-spacing: 0.3px; }
+    .form-label .req { color: var(--gold); margin-left: 2px; }
+    .form-row input, .form-row select, .form-row textarea {
+      width: 100%; padding: 12px 14px;
+      border: 1px solid var(--line); border-radius: 10px;
+      font-size: 14px; font-family: var(--font-body); color: var(--ink);
+      background: var(--cream);
+      transition: border-color 0.15s, box-shadow 0.15s;
+      box-sizing: border-box;
+    }
+    .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+      outline: none; border-color: var(--steel);
+      box-shadow: 0 0 0 3px rgba(44,125,160,0.15);
+      background: white;
+    }
+    .form-row textarea { resize: vertical; min-height: 90px; }
+
+    .svc-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 4px; }
+    .svc-pill {
+      cursor: pointer;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 13px; font-weight: 500; color: var(--ink);
+      background: var(--cream);
+      transition: all 0.15s;
+      user-select: none;
+    }
+    .svc-pill:hover { border-color: var(--steel); }
+    .svc-pill.active { background: var(--hull); color: white; border-color: var(--hull); }
+
+    .booking-summary {
+      background: var(--mist); border: 1px solid var(--foam);
+      border-radius: 12px; padding: 0.85rem 1.1rem;
+      margin: 14px 0;
+      font-size: 13.5px; color: var(--hull);
+    }
+    .booking-summary.empty { color: var(--slate); font-style: italic; }
+    .booking-success {
+      background: linear-gradient(135deg, var(--mist), white);
+      border: 1px solid var(--foam);
+      border-radius: 16px; padding: 1.5rem;
+      margin-top: 1rem;
+      text-align: center;
+      animation: rise 0.4s ease-out;
+    }
+    .booking-success h3 { font-family: var(--font-display); font-size: 22px; color: var(--hull); margin: 0 0 6px; font-weight: 600; }
+    .booking-success p { font-size: 14px; color: var(--slate); margin: 0; }
+    .booking-success .check { font-size: 32px; color: var(--gold); margin-bottom: 6px; }
+
+    /* === Footer === */
+    footer {
+      background: var(--hull); color: var(--cream);
+      padding: 3rem 0 2rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2rem; }
+    .footer-brand { font-family: var(--font-display); font-size: 22px; font-weight: 600; margin-bottom: 0.5rem; }
+    .footer-tag { font-size: 13.5px; color: rgba(255,252,247,0.7); max-width: 320px; line-height: 1.6; }
+    .footer-h { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-light); margin: 0 0 12px; font-weight: 700; }
+    .footer-link { display: block; font-size: 14px; color: rgba(255,252,247,0.85); text-decoration: none; padding: 4px 0; transition: color 0.15s; }
+    .footer-link:hover { color: var(--gold-light); }
+    .footer-bottom { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,252,247,0.12); font-size: 12.5px; color: rgba(255,252,247,0.55); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom a { color: rgba(255,252,247,0.7); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--gold-light); }
+
+    /* === Animations & utility === */
+    @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    /* Wave animations */
+    .wave-path { animation: wave-shift 12s linear infinite; }
+    .wave-path.slow { animation-duration: 18s; opacity: 0.5; }
+    @keyframes wave-shift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* Journey route dash animation */
+    .route-dash {
+      stroke-dasharray: 6 8;
+      animation: dash-march 2s linear infinite;
+    }
+    @keyframes dash-march { to { stroke-dashoffset: -28; } }
+
+    /* Yacht moving along the route */
+    .route-yacht {
+      animation: route-travel 14s ease-in-out infinite;
+    }
+    @keyframes route-travel {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(280px); }
+    }
+
+    /* Subtle gold particles for premium feel */
+    .gold-particle {
+      position: fixed; pointer-events: none;
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--gold-light);
+      opacity: 0;
+      z-index: 5;
+    }
+
+    /* Loading dots */
+    .loading { display: inline-flex; gap: 4px; }
+    .loading span { width: 6px; height: 6px; border-radius: 50%; background: currentColor; animation: load-bounce 0.9s ease-in-out infinite; }
+    .loading span:nth-child(2) { animation-delay: 0.15s; }
+    .loading span:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes load-bounce { 0%, 100% { transform: translateY(0); opacity: 0.4; } 50% { transform: translateY(-4px); opacity: 1; } }
+
+    @media (max-width: 880px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-visual { max-width: 360px; margin: 0 auto; }
+      .about-grid { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem 1rem; }
+      .how-steps { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      section { padding: 3.5rem 0; }
+      .hero { padding-top: 3.5rem; }
+      .booking-card, .journey-card { padding: 1.75rem 1.25rem; }
+    }
+    @media (max-width: 520px) {
+      .form-row { grid-template-columns: 1fr; }
+      .how-steps { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001s !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="container topnav-inner">
+      <a class="topnav-brand" href="/">
+        <span class="topnav-mark">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="9" r="2"/><circle cx="18" cy="9" r="2"/><circle cx="9" cy="5" r="2"/><circle cx="15" cy="5" r="2"/><ellipse cx="12" cy="16" rx="5" ry="4"/></svg>
+        </span>
+        <span class="topnav-name">PinkPawPets <span class="thin">· Pro Crew</span></span>
+      </a>
+      <a class="topnav-back" href="/">← Charlie &amp; Katie</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="where-now" id="where-now" aria-live="polite">
+          <span class="pulse"></span>
+          Currently based in <strong id="where-place">Cocoa Beach, FL</strong>
+        </span>
+        <div class="eyebrow">
+          <span class="pp-thread">PinkPawPets</span>
+          <span class="divider"></span>
+          Pro Crew
+        </div>
+        <h1>Concierge care for your pets <em>and</em> home — by land or by sea.</h1>
+        <p class="hero-tag">
+          <strong>Tori &amp; Max</strong> have spent 5+ years caring for pets and homes across two coasts —
+          and the rest of the year working as crew leads aboard private yachts. The same standards your
+          home would meet in the Mediterranean apply on your kitchen counter.
+        </p>
+        <div class="hero-cta-row">
+          <a class="btn-primary" href="#booking">Request a quote <span class="arrow">→</span></a>
+          <a class="btn-ghost" href="#services">Our services</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-circle">
+          <div class="hero-sun"></div>
+          <div class="hero-yacht-wrap">
+            <svg class="hero-yacht" viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <!-- Yacht hull -->
+              <path d="M20 60 L180 60 L160 78 L40 78 Z" fill="#0E2A47"/>
+              <!-- Lower deck -->
+              <rect x="40" y="46" width="120" height="16" rx="2" fill="#FFFCF7"/>
+              <rect x="50" y="50" width="8" height="6" fill="#A9D6E5"/>
+              <rect x="65" y="50" width="8" height="6" fill="#A9D6E5"/>
+              <rect x="80" y="50" width="8" height="6" fill="#A9D6E5"/>
+              <rect x="95" y="50" width="8" height="6" fill="#A9D6E5"/>
+              <rect x="110" y="50" width="8" height="6" fill="#A9D6E5"/>
+              <rect x="125" y="50" width="8" height="6" fill="#A9D6E5"/>
+              <rect x="140" y="50" width="8" height="6" fill="#A9D6E5"/>
+              <!-- Upper deck -->
+              <rect x="60" y="32" width="80" height="14" rx="2" fill="#FFFCF7"/>
+              <rect x="70" y="36" width="6" height="6" fill="#A9D6E5"/>
+              <rect x="82" y="36" width="6" height="6" fill="#A9D6E5"/>
+              <rect x="94" y="36" width="6" height="6" fill="#A9D6E5"/>
+              <rect x="106" y="36" width="6" height="6" fill="#A9D6E5"/>
+              <rect x="118" y="36" width="6" height="6" fill="#A9D6E5"/>
+              <!-- Bridge -->
+              <rect x="86" y="20" width="28" height="12" rx="2" fill="#FFFCF7"/>
+              <rect x="92" y="23" width="16" height="6" fill="#1B4965"/>
+              <!-- Antenna -->
+              <line x1="100" y1="20" x2="100" y2="8" stroke="#0E2A47" stroke-width="1.5"/>
+              <circle cx="100" cy="8" r="2" fill="#C8932B"/>
+              <!-- Flag -->
+              <line x1="180" y1="60" x2="180" y2="32" stroke="#0E2A47" stroke-width="1.5"/>
+              <path d="M180 32 L196 36 L180 40 Z" fill="#D4537E"/>
+            </svg>
+          </div>
+          <div class="hero-waves">
+            <svg viewBox="0 0 1200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <g class="wave-path slow">
+                <path d="M0 110 Q 150 90 300 110 T 600 110 T 900 110 T 1200 110 V200 H0 Z" fill="#2C7DA0" opacity="0.55"/>
+                <path d="M1200 110 Q 1350 90 1500 110 T 1800 110 T 2100 110 T 2400 110 V200 H1200 Z" fill="#2C7DA0" opacity="0.55"/>
+              </g>
+              <g class="wave-path">
+                <path d="M0 140 Q 150 120 300 140 T 600 140 T 900 140 T 1200 140 V200 H0 Z" fill="#1B4965"/>
+                <path d="M1200 140 Q 1350 120 1500 140 T 1800 140 T 2100 140 T 2400 140 V200 H1200 Z" fill="#1B4965"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <span class="hero-paw p1">🐾</span>
+        <span class="hero-paw p2">🐾</span>
+        <span class="hero-paw p3">🐾</span>
+      </div>
+    </div>
+
+    <div class="ocean-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 20 Q 300 80 600 30 T 1200 40 V90 H0 Z" fill="#FFFCF7"/>
+      </svg>
+    </div>
+  </header>
+
+  <section class="trust">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-stat">
+          <div class="trust-num"><span data-count="5">0</span><span class="plus">+</span></div>
+          <div class="trust-label">Years caring</div>
+        </div>
+        <div class="trust-stat">
+          <div class="trust-num"><span data-count="100">0</span><span class="plus">+</span></div>
+          <div class="trust-label">Pets cared for</div>
+        </div>
+        <div class="trust-stat">
+          <div class="trust-num"><span data-count="100">0</span><span class="plus">+</span></div>
+          <div class="trust-label">Homes watched</div>
+        </div>
+        <div class="trust-stat">
+          <div class="trust-num"><span data-count="2">0</span></div>
+          <div class="trust-label">Coasts served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about reveal">
+    <div class="container about-grid">
+      <div class="about-pals">
+        <div class="pal">
+          <div class="pal-avatar">T</div>
+          <p class="pal-name">Tori</p>
+          <p class="pal-role">Crew Lead · Pet Care</p>
+          <p class="pal-bio">Calm under any condition. The kind of person you trust with your house keys and a senior pet's medication schedule on the same day.</p>
+        </div>
+        <div class="pal">
+          <div class="pal-avatar">M</div>
+          <p class="pal-name">Max</p>
+          <p class="pal-role">Crew Lead · Home Care</p>
+          <p class="pal-bio">Detail-obsessed and dependable. Will text you a photo of your dog mid-walk and confirm the alarm is set before locking up.</p>
+        </div>
+      </div>
+      <div class="about-copy">
+        <span class="section-eyebrow">About Tori &amp; Max</span>
+        <h2 class="section-title">The standards of a private yacht <em>brought home</em>.</h2>
+        <p>
+          For half the year, Tori &amp; Max work as <strong>crew leads aboard private yachts</strong> — the
+          ones you see anchored off St. Barts and the Amalfi Coast. The expectations there are
+          uncompromising. Schedules are kept. Spaces are pristine. Guests are at ease.
+        </p>
+        <p>
+          When they're stateside, they bring the same discipline to your driveway. Whether it's a
+          three-night sit with a senior dog or a two-week house watch with mail, plants, and a finicky
+          cat, every visit is logged, photographed, and delivered with the kind of quiet professionalism
+          you usually have to charter a 140-foot yacht to get.
+        </p>
+        <p class="about-quote">
+          &ldquo;Your pet doesn't know you're 4,000 miles away. We make sure your home doesn't either.&rdquo;
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services reveal" id="services">
+    <div class="container">
+      <span class="section-eyebrow">Services</span>
+      <h2 class="section-title">Premium care, <em>tailored</em> to your trip.</h2>
+      <p class="section-lede">
+        Most clients combine two or three of these. Pricing is custom and quoted after a free
+        meet-and-greet — never a surprise.
+      </p>
+
+      <div class="services-grid">
+        <div class="svc-card">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 4 21 12"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+          </div>
+          <h3 class="svc-name">Overnight Boarding</h3>
+          <p class="svc-desc">Your pet stays with us in a quiet, fully pet-proofed home. Crate-trained or free-roam. One booking per family at a time — never a kennel.</p>
+          <p class="svc-meta">From dusk to dawn · 24/7 attention</p>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          </div>
+          <h3 class="svc-name">In-Home Pet Sitting</h3>
+          <p class="svc-desc">We stay overnight at your place. Your pet's routine, bed, food, and view all stay the same. We handle feedings, meds, walks, and playtime.</p>
+          <p class="svc-meta">Per night · Multi-pet welcome</p>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><circle cx="7" cy="6" r="0.6" fill="currentColor"/><circle cx="9.5" cy="6" r="0.6" fill="currentColor"/></svg>
+          </div>
+          <h3 class="svc-name">House Sitting</h3>
+          <p class="svc-desc">For homes without pets. Mail, packages, plants, lights, alarm checks, trash pickup — and a real human inside the house each day. Insurance-friendly.</p>
+          <p class="svc-meta">Daily checks · Custom routine</p>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3 class="svc-name">Daily Care Visits</h3>
+          <p class="svc-desc">Drop-in visits — feeding, fresh water, litter, a real walk (not just a yard break), and yes, photos every time. 30 or 60-minute options.</p>
+          <p class="svc-meta">1–4 visits per day</p>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 class="svc-name">Senior &amp; Special Needs</h3>
+          <p class="svc-desc">Med schedules, mobility help, sub-Q fluids, anxious pets, post-surgery recovery. We've done it all and we'll show you our notes from past clients.</p>
+          <p class="svc-meta">Vet-coordinated · Detailed logs</p>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="svc-name">Travel-Day Concierge</h3>
+          <p class="svc-desc">Airport-day handoffs, last-minute starts, late-night arrivals. We've done crew turnaround in 90 minutes — your trip can be that smooth too.</p>
+          <p class="svc-meta">Flexible windows · Same-week starts</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="journey reveal">
+    <div class="container">
+      <span class="section-eyebrow">Service Area</span>
+      <h2 class="section-title">Two coasts. <em>One standard.</em></h2>
+      <p class="section-lede">
+        Tori &amp; Max follow the season — Central Pennsylvania in summer, Cocoa Beach, Florida in winter.
+        If you're somewhere along that line, there's a good chance we're close.
+      </p>
+
+      <div class="journey-card">
+        <div class="journey-graphic" aria-label="Travel route from Central Pennsylvania to Cocoa Beach, Florida">
+          <svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background sky band -->
+            <rect x="0" y="0" width="800" height="280" fill="#F4F8FA"/>
+            <!-- Soft cloud trail behind route -->
+            <path d="M50 100 Q 200 60 400 110 T 750 130" stroke="#E8F4F8" stroke-width="40" fill="none" stroke-linecap="round" opacity="0.8"/>
+
+            <!-- Pennsylvania marker -->
+            <g transform="translate(80, 80)">
+              <circle r="36" fill="#1B4965" opacity="0.08"/>
+              <circle r="22" fill="white" stroke="#1B4965" stroke-width="2"/>
+              <!-- pine tree -->
+              <path d="M 0 -10 L -7 0 L -4 0 L -8 6 L -3 6 L -7 12 L 7 12 L 3 6 L 8 6 L 4 0 L 7 0 Z" fill="#1B4965"/>
+              <rect x="-1.5" y="12" width="3" height="3" fill="#5C3A1E"/>
+            </g>
+            <text x="80" y="140" text-anchor="middle" font-family="Fraunces, serif" font-size="18" font-weight="600" fill="#0E2A47">Central PA</text>
+            <text x="80" y="158" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#475569" letter-spacing="1">MAY — SEPT</text>
+
+            <!-- Florida marker -->
+            <g transform="translate(720, 200)">
+              <circle r="36" fill="#C8932B" opacity="0.12"/>
+              <circle r="22" fill="white" stroke="#C8932B" stroke-width="2"/>
+              <!-- palm tree -->
+              <path d="M -6 12 Q -2 0 0 -10" stroke="#5C3A1E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M 0 -10 Q -10 -14 -14 -10" stroke="#1B7A4D" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M 0 -10 Q 10 -14 14 -10" stroke="#1B7A4D" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M 0 -10 Q -8 -18 -2 -20" stroke="#1B7A4D" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M 0 -10 Q 8 -18 2 -20" stroke="#1B7A4D" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </g>
+            <text x="720" y="258" text-anchor="middle" font-family="Fraunces, serif" font-size="18" font-weight="600" fill="#0E2A47">Cocoa Beach, FL</text>
+            <text x="720" y="276" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#475569" letter-spacing="1">OCT — APR</text>
+
+            <!-- Animated dashed route -->
+            <path d="M 110 90 Q 280 30 460 130 T 690 200" stroke="#C8932B" stroke-width="2.5" fill="none" stroke-linecap="round" class="route-dash"/>
+
+            <!-- Yacht traveling along route -->
+            <g class="route-yacht" transform="translate(180, 60)">
+              <g transform="translate(0, 0) scale(0.55)">
+                <path d="M 0 14 L 50 14 L 44 22 L 6 22 Z" fill="#0E2A47"/>
+                <rect x="6" y="6" width="38" height="9" rx="1" fill="#FFFCF7"/>
+                <rect x="22" y="-2" width="16" height="8" rx="1" fill="#FFFCF7"/>
+                <line x1="30" y1="-2" x2="30" y2="-12" stroke="#0E2A47" stroke-width="1"/>
+                <path d="M30 -12 L42 -8 L30 -4 Z" fill="#D4537E"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <div class="journey-legend">
+          <div class="leg-card">
+            <div class="lc-eyebrow">Summer Base</div>
+            <div class="lc-place">🌲 Central Pennsylvania</div>
+            <div class="lc-when">May through September</div>
+          </div>
+          <div class="leg-card">
+            <div class="lc-eyebrow">Winter Base</div>
+            <div class="lc-place">🌴 Cocoa Beach, Florida</div>
+            <div class="lc-when">October through April</div>
+          </div>
+        </div>
+        <p class="journey-note">Charter season can pull us to sea — book early for peak weeks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how reveal">
+    <div class="container">
+      <span class="section-eyebrow">How it works</span>
+      <h2 class="section-title">Four steps. <em>Zero stress.</em></h2>
+      <p class="section-lede">A quote-first process. We get to know your pet and home before you commit to anything.</p>
+      <div class="how-steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3 class="step-name">Request a quote</h3>
+          <p class="step-desc">Fill out the form below — dates, pets, and what you need. We respond within 24 hours.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3 class="step-name">Free meet &amp; greet</h3>
+          <p class="step-desc">15-minute walkthrough at your home. We meet your pet, you meet us, and we lock in routines.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3 class="step-name">Daily updates</h3>
+          <p class="step-desc">Photos, walk maps, feeding logs — sent every day. You'll know your dog ate breakfast.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h3 class="step-name">Welcome home</h3>
+          <p class="step-desc">Pet content, mail stacked, plants alive, alarm set. Trip recap waiting for you on the counter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="promise reveal">
+    <div class="container">
+      <span class="section-eyebrow">What you can count on</span>
+      <h2 class="section-title">Promises we <em>actually keep</em>.</h2>
+      <div class="promise-grid">
+        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Daily photo &amp; text updates<small>Never wonder how your pet's day went.</small></span></div>
+        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Mail, packages &amp; trash pickup<small>Your home looks lived-in the whole time.</small></span></div>
+        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Plant &amp; garden watering<small>Indoor and outdoor — we'll log what you tell us.</small></span></div>
+        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Discreet key &amp; alarm handling<small>Yacht-crew protocols. Codes never written down.</small></span></div>
+        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Vet-coordinated medication<small>Pre-trip schedule confirmed in writing.</small></span></div>
+        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Emergency vet plan on file<small>We know where to go and what you'd want done.</small></span></div>
+        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Two-person backup<small>If one of us can't make it, the other can.</small></span></div>
+        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Post-trip home report<small>Photos, notes, anything that came up — written up for you.</small></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking reveal" id="booking">
+    <div class="container">
+      <span class="section-eyebrow">Book a quote</span>
+      <h2 class="section-title">Tell us about your trip.</h2>
+      <p class="section-lede">No commitment. We'll respond within 24 hours with a meet-and-greet time and a clear quote.</p>
+
+      <div class="booking-card">
+        <div class="form-row">
+          <div>
+            <label class="form-label">Your name <span class="req">*</span></label>
+            <input type="text" id="f-name" placeholder="Full name" autocomplete="name" />
+          </div>
+          <div>
+            <label class="form-label">Phone <span class="req">*</span></label>
+            <input type="tel" id="f-phone" placeholder="(555) 123-4567" autocomplete="tel" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label class="form-label">Pet's name</label>
+            <input type="text" id="f-pet" placeholder="Buddy, Luna…" />
+          </div>
+          <div>
+            <label class="form-label">Pet type</label>
+            <select id="f-type">
+              <option value="Dog">Dog</option>
+              <option value="Cat">Cat</option>
+              <option value="Multiple">Multiple pets</option>
+              <option value="Small pet">Small pet</option>
+              <option value="No pet (house sitting only)">No pet — house sitting only</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label class="form-label">Trip start</label>
+            <input type="date" id="f-start" />
+          </div>
+          <div>
+            <label class="form-label">Trip end</label>
+            <input type="date" id="f-end" />
+          </div>
+        </div>
+
+        <div class="form-row single">
+          <div>
+            <label class="form-label">Services interested in <span class="req">*</span></label>
+            <div class="svc-pills" id="svc-pills"></div>
+          </div>
+        </div>
+
+        <div class="form-row single">
+          <div>
+            <label class="form-label">Tell us about your pet, home, and trip</label>
+            <textarea id="f-notes" rows="4" placeholder="Routines, medications, alarm code reminders, key handoff plan, special requests…"></textarea>
+          </div>
+        </div>
+
+        <div class="booking-summary empty" id="summary">Pick at least one service to see your selection here.</div>
+
+        <button class="btn-primary" id="submit-btn" onclick="submitBooking()" style="width: 100%; justify-content: center;">
+          Send quote request <span class="arrow">→</span>
+        </button>
+
+        <div id="success" style="display: none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">PinkPawPets · <span style="color: var(--gold-light)">Pro Crew</span></div>
+          <p class="footer-tag">Concierge pet care, overnight boarding, and house sitting from Tori &amp; Max — across two coasts and aboard a few yachts in between.</p>
+        </div>
+        <div>
+          <h4 class="footer-h">Services</h4>
+          <a class="footer-link" href="#services">Overnight boarding</a>
+          <a class="footer-link" href="#services">In-home pet sitting</a>
+          <a class="footer-link" href="#services">House sitting</a>
+          <a class="footer-link" href="#services">Daily visits</a>
+        </div>
+        <div>
+          <h4 class="footer-h">PinkPawPets</h4>
+          <a class="footer-link" href="/">Charlie &amp; Katie (kids' team)</a>
+          <a class="footer-link" href="#booking">Request a quote</a>
+          <a class="footer-link" href="/">Back to main site</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="yr"></span> PinkPawPets · Tori &amp; Max</span>
+        <span>Central PA · Cocoa Beach, FL</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ========= Same booking endpoint, auto-tagged ========= */
+    const BOOKING_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxw2a6-Kdjl0ukocVZ1XAlUqpeiqGAcCwa1F4ofZK0uW8_YNkhK6yrtRcWsZMaTxGAEyQ/exec';
+    const TEAM_TAG = 'Tori & Max';
+
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* ========= "Currently in" badge ========= */
+    (function whereNow() {
+      const month = new Date().getMonth(); // 0=Jan
+      // May–Sept (4–8) = PA, otherwise FL
+      const isPA = month >= 4 && month <= 8;
+      const place = isPA ? 'Central Pennsylvania' : 'Cocoa Beach, FL';
+      document.getElementById('where-place').textContent = place;
+    })();
+
+    /* ========= Animated stat counters ========= */
+    (function counters() {
+      const els = document.querySelectorAll('[data-count]');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(el => el.textContent = el.dataset.count);
+        return;
+      }
+      const animate = (el) => {
+        const target = parseInt(el.dataset.count, 10) || 0;
+        const start = performance.now();
+        const dur = 1400;
+        const tick = (t) => {
+          const p = Math.min((t - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased);
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); } });
+      }, { threshold: 0.4 });
+      els.forEach(el => io.observe(el));
+    })();
+
+    /* ========= Reveal on scroll ========= */
+    (function reveal() {
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    })();
+
+    /* ========= Subtle gold particle drift on scroll ========= */
+    (function goldDust() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (!window.matchMedia('(hover: hover)').matches) return;
+      let last = 0;
+      window.addEventListener('scroll', () => {
+        const now = performance.now();
+        if (now - last < 220) return;
+        last = now;
+        if (Math.random() > 0.45) return;
+        const p = document.createElement('span');
+        p.className = 'gold-particle';
+        const x = Math.random() * window.innerWidth;
+        const y = window.innerHeight - 40 + (Math.random() * 20);
+        p.style.left = x + 'px';
+        p.style.top  = y + 'px';
+        const drift = (Math.random() * 60 - 30).toFixed(0);
+        const rise  = (60 + Math.random() * 60).toFixed(0);
+        const dur   = (1.6 + Math.random() * 1.6).toFixed(2);
+        p.style.transition = `transform ${dur}s ease-out, opacity ${dur}s ease-out`;
+        document.body.appendChild(p);
+        requestAnimationFrame(() => {
+          p.style.opacity = '0.8';
+          p.style.transform = `translate(${drift}px, -${rise}px)`;
+        });
+        setTimeout(() => {
+          p.style.opacity = '0';
+        }, parseFloat(dur) * 800);
+        setTimeout(() => p.remove(), parseFloat(dur) * 1200);
+      }, { passive: true });
+    })();
+
+    /* ========= Service pill chooser ========= */
+    const services = [
+      { id: 'boarding',   name: 'Overnight boarding' },
+      { id: 'in-home',    name: 'In-home pet sitting' },
+      { id: 'house-sit',  name: 'House sitting' },
+      { id: 'visits',     name: 'Daily visits' },
+      { id: 'special',    name: 'Senior / special needs' },
+      { id: 'concierge',  name: 'Travel-day concierge' },
+    ];
+    const selected = new Set();
+
+    function renderPills() {
+      const wrap = document.getElementById('svc-pills');
+      wrap.innerHTML = services.map(s => `
+        <span class="svc-pill ${selected.has(s.id) ? 'active' : ''}" data-id="${s.id}">${s.name}</span>
+      `).join('');
+      wrap.querySelectorAll('.svc-pill').forEach(p => {
+        p.addEventListener('click', () => {
+          const id = p.dataset.id;
+          if (selected.has(id)) selected.delete(id);
+          else selected.add(id);
+          renderPills();
+          updateSummary();
+        });
+      });
+    }
+
+    function updateSummary() {
+      const box = document.getElementById('summary');
+      if (selected.size === 0) {
+        box.className = 'booking-summary empty';
+        box.textContent = 'Pick at least one service to see your selection here.';
+        return;
+      }
+      const picked = services.filter(s => selected.has(s.id)).map(s => s.name);
+      box.className = 'booking-summary';
+      box.innerHTML = '<strong>Requested:</strong> ' + picked.join(' · ');
+    }
+
+    renderPills();
+
+    /* ========= Booking submit (Apps Script same endpoint, tagged) ========= */
+    async function submitBooking() {
+      const name      = document.getElementById('f-name').value.trim();
+      const phone     = document.getElementById('f-phone').value.trim();
+      const petName   = document.getElementById('f-pet').value.trim();
+      const petType   = document.getElementById('f-type').value;
+      const startDate = document.getElementById('f-start').value;
+      const endDate   = document.getElementById('f-end').value;
+      const notesIn   = document.getElementById('f-notes').value.trim();
+
+      if (!name || !phone) {
+        alert('Please add your name and phone so Tori & Max can reach you.');
+        return;
+      }
+      if (selected.size === 0) {
+        alert('Please pick at least one service so we know what to quote.');
+        return;
+      }
+
+      const pickedServices = services.filter(s => selected.has(s.id)).map(s => s.name);
+
+      // Auto-tag the notes so the bookings sheet/email clearly shows this is a Tori & Max request
+      const taggedNotes = `[TEAM: ${TEAM_TAG}]\n${notesIn || '(no additional notes)'}`;
+
+      const btn = document.getElementById('submit-btn');
+      const originalLabel = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = 'Sending <span class="loading"><span></span><span></span><span></span></span>';
+
+      const payload = {
+        name, phone, petName, petType, startDate, endDate,
+        notes: taggedNotes,
+        services: pickedServices,
+        team: TEAM_TAG,
+        userAgent: navigator.userAgent
+      };
+
+      try {
+        await fetch(BOOKING_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+
+        const success = document.getElementById('success');
+        success.style.display = 'block';
+        success.className = 'booking-success';
+        success.innerHTML = `
+          <div class="check">✓</div>
+          <h3>Request received.</h3>
+          <p>Thanks ${name.split(' ')[0]}. Tori &amp; Max will text you at ${phone} within 24 hours with meet-and-greet times and a clear quote.</p>
+        `;
+        success.scrollIntoView({behavior:'smooth', block:'center'});
+        btn.innerHTML = 'Sent ✓';
+      } catch (err) {
+        console.error(err);
+        alert("We couldn't send that request just now. Please try again, or reach out directly.");
+        btn.disabled = false;
+        btn.innerHTML = originalLabel;
+      }
+    }
+  </script>
+</body>
+</html>
