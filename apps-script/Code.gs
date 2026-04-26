@@ -10,6 +10,7 @@
  */
 
 const NOTIFY_EMAIL = 'ctriordan1@gmail.com';
+const SHEET_ID = '1yY-7KpC16pEX0WIUeI3bll9OUDhe6mjr86gV9tYDXno';
 const SHEET_NAME = 'Bookings';
 
 const HEADERS = [
@@ -61,7 +62,12 @@ function doGet() {
 }
 
 function getOrCreateSheet() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = SHEET_ID
+    ? SpreadsheetApp.openById(SHEET_ID)
+    : SpreadsheetApp.getActiveSpreadsheet();
+  if (!ss) {
+    throw new Error('Spreadsheet not found. Set SHEET_ID at the top of Code.gs.');
+  }
   let sheet = ss.getSheetByName(SHEET_NAME);
   if (!sheet) {
     sheet = ss.insertSheet(SHEET_NAME);

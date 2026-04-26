@@ -17,6 +17,7 @@ Google Sheet and emails you when a new request arrives.
    - Delete the default `function myFunction() { ... }` content
    - Copy/paste the entire contents of `Code.gs` from this folder
    - Update `NOTIFY_EMAIL` at the top if you want a different inbox
+   - `SHEET_ID` is already set to the live Bookings sheet — only change if you point at a different sheet (the long string between `/d/` and `/edit` in the sheet's URL)
    - Click the floppy/save icon
 
 4. **Deploy as Web App**
