@@ -232,6 +232,10 @@
   </main>
 
   <script>
+    // Paste your Google Apps Script Web App /exec URL here after deploying.
+    // See apps-script/README.md for setup instructions.
+    const BOOKING_ENDPOINT = '';
+
     document.getElementById('yr').textContent = new Date().getFullYear();
 
     const services = [
@@ -275,9 +279,15 @@
       box.innerHTML = `<strong>♥ Your selection:</strong><br>${list}`;
     }
 
-    function submitBooking() {
-      const name  = document.getElementById('f-name').value.trim();
-      const phone = document.getElementById('f-phone').value.trim();
+    async function submitBooking() {
+      const name      = document.getElementById('f-name').value.trim();
+      const phone     = document.getElementById('f-phone').value.trim();
+      const petName   = document.getElementById('f-pet').value.trim();
+      const petType   = document.getElementById('f-type').value;
+      const startDate = document.getElementById('f-start').value;
+      const endDate   = document.getElementById('f-end').value;
+      const notes     = document.getElementById('f-notes').value.trim();
+
       if (!name || !phone) {
         alert('Please add your name and phone so Charlie & Katie can reach you! ♥');
         return;
@@ -286,15 +296,45 @@
         alert('Please pick at least one service! 🐾');
         return;
       }
-      const success = document.getElementById('ppp-success');
-      success.style.display = 'block';
-      success.className = 'ppp-success';
-      success.innerHTML = `
-        <span class="ppp-success-emoji">🐾</span>
-        <p class="ppp-success-title">Yay! Your request is on its way!</p>
-        <p class="ppp-success-msg">Thanks ${name.split(' ')[0]}! Charlie &amp; Katie will text you at ${phone} within 24 hours. ♥</p>
-      `;
-      success.scrollIntoView({behavior:'smooth', block:'center'});
+
+      const pickedServices = services.filter(s => selected.has(s.id)).map(s => `${s.name} (${s.price})`);
+
+      const button = document.querySelector('#ppp-form .ppp-btn-primary');
+      const originalLabel = button ? button.textContent : '';
+      if (button) { button.disabled = true; button.textContent = 'Sending… 🐾'; }
+
+      const payload = {
+        name, phone, petName, petType, startDate, endDate, notes,
+        services: pickedServices,
+        userAgent: navigator.userAgent
+      };
+
+      try {
+        if (!BOOKING_ENDPOINT) {
+          throw new Error('Booking endpoint not configured yet.');
+        }
+        // Apps Script accepts text/plain bodies without triggering a CORS preflight.
+        await fetch(BOOKING_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+
+        const success = document.getElementById('ppp-success');
+        success.style.display = 'block';
+        success.className = 'ppp-success';
+        success.innerHTML = `
+          <span class="ppp-success-emoji">🐾</span>
+          <p class="ppp-success-title">Yay! Your request is on its way!</p>
+          <p class="ppp-success-msg">Thanks ${name.split(' ')[0]}! Charlie &amp; Katie will text you at ${phone} within 24 hours. ♥</p>
+        `;
+        success.scrollIntoView({behavior:'smooth', block:'center'});
+      } catch (err) {
+        console.error(err);
+        alert("Sorry — we couldn't send your request just now. Please try again, or text Charlie & Katie directly. ♥");
+        if (button) { button.disabled = false; button.textContent = originalLabel; }
+      }
     }
 
     renderServices();
