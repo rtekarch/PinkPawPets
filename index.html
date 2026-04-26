@@ -14,161 +14,466 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D4537E'%3E%3Ccircle cx='6' cy='9' r='2'/%3E%3Ccircle cx='18' cy='9' r='2'/%3E%3Ccircle cx='9' cy='5' r='2'/%3E%3Ccircle cx='15' cy='5' r='2'/%3E%3Cellipse cx='12' cy='16' rx='5' ry='4'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root { --font-sans: 'Quicksand', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+    :root {
+      --font-sans: 'Quicksand', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      --font-display: 'Fredoka', 'Quicksand', system-ui, sans-serif;
+      --pink-50: #FFF6F9;
+      --pink-100: #FBEAF0;
+      --pink-200: #F4C0D1;
+      --pink-300: #ED93B1;
+      --pink-500: #D4537E;
+      --pink-700: #993556;
+      --pink-900: #4B1528;
+      --hot: #FF4F8A;
+      --lavender: #C8A8E9;
+      --mint: #A8E6CF;
+      --sun: #FFE066;
+      --ink: #2C2C2A;
+    }
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: var(--font-sans);
       background: linear-gradient(180deg, #FFF6F9 0%, #FBEAF0 100%);
       min-height: 100vh;
-      color: #2C2C2A;
+      color: var(--ink);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
     }
-    .page { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+    .page { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem 6rem; position: relative; z-index: 1; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-    .footer { text-align: center; font-size: 12px; color: #993556; margin-top: 2rem; opacity: 0.75; }
-    .footer a { color: #D4537E; text-decoration: none; }
+    .footer { text-align: center; font-size: 12px; color: var(--pink-700); margin-top: 2rem; opacity: 0.75; }
+    .footer a { color: var(--pink-500); text-decoration: none; }
 
-@keyframes ppp-wiggle { 0%,100% { transform: rotate(0deg); } 25% { transform: rotate(-6deg); } 75% { transform: rotate(6deg); } }
-@keyframes ppp-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-@keyframes ppp-pop { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
-@keyframes ppp-heart { 0%,100% { transform: scale(1); } 50% { transform: scale(1.15); } }
-@keyframes ppp-trot { 0% { transform: translateX(-30px) rotate(0deg); } 100% { transform: translateX(0) rotate(0deg); } }
+    /* === Animated background blobs === */
+    .bg-blobs { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+    .blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.55; animation: blob-drift 18s ease-in-out infinite; }
+    .blob.b1 { width: 420px; height: 420px; background: var(--pink-200); top: -120px; left: -100px; }
+    .blob.b2 { width: 360px; height: 360px; background: var(--lavender); top: 30%; right: -120px; animation-delay: -6s; }
+    .blob.b3 { width: 320px; height: 320px; background: var(--mint); bottom: -100px; left: 20%; animation-delay: -12s; opacity: 0.4; }
+    @keyframes blob-drift {
+      0%, 100% { transform: translate(0,0) scale(1); }
+      33%      { transform: translate(40px, -30px) scale(1.08); }
+      66%      { transform: translate(-30px, 40px) scale(0.95); }
+    }
 
-.ppp-wrap { font-family: var(--font-sans); color: #2C2C2A; padding: 0; position: relative; }
+    /* === Animations === */
+    @keyframes ppp-wiggle { 0%,100% { transform: rotate(0deg); } 25% { transform: rotate(-8deg); } 75% { transform: rotate(8deg); } }
+    @keyframes ppp-float  { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-10px) rotate(4deg); } }
+    @keyframes ppp-pop    { 0% { transform: scale(0.6); opacity: 0; } 70% { transform: scale(1.08); } 100% { transform: scale(1); opacity: 1; } }
+    @keyframes ppp-heart  { 0%,100% { transform: scale(1); } 50% { transform: scale(1.18); } }
+    @keyframes ppp-pulse  { 0%,100% { box-shadow: 0 4px 0 var(--pink-700), 0 0 0 0 rgba(212,83,126,0.55); } 50% { box-shadow: 0 4px 0 var(--pink-700), 0 0 0 14px rgba(212,83,126,0); } }
+    @keyframes ppp-shimmer{ 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+    @keyframes ppp-bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @keyframes ppp-sparkle{ 0%,100% { opacity: 0.4; transform: scale(0.8) rotate(0deg);} 50% { opacity: 1; transform: scale(1.2) rotate(180deg);} }
+    @keyframes ppp-marquee{ from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes ppp-rise   { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes paw-fade   { 0% { opacity: 0.9; transform: scale(0.4) rotate(var(--r,0deg)); } 60% { opacity: 0.7; transform: scale(1) rotate(var(--r,0deg)); } 100% { opacity: 0; transform: scale(1.1) rotate(var(--r,0deg)); } }
+    @keyframes heart-burst{ 0% { transform: translate(0,0) scale(0.6); opacity: 1; } 100% { transform: translate(var(--tx,0), var(--ty,-80px)) scale(1.1); opacity: 0; } }
+    @keyframes confetti-fall { 0% { transform: translateY(-20px) rotate(0); opacity: 1; } 100% { transform: translateY(110vh) rotate(720deg); opacity: 0; } }
 
-/* Floating paw decorations */
-.ppp-deco { position: absolute; opacity: 0.35; pointer-events: none; }
-.ppp-deco.d1 { top: 20px; left: 20px; animation: ppp-float 4s ease-in-out infinite; }
-.ppp-deco.d2 { top: 80px; right: 30px; animation: ppp-float 5s ease-in-out infinite 0.5s; }
-.ppp-deco.d3 { top: 200px; left: 40px; animation: ppp-float 4.5s ease-in-out infinite 1s; }
+    .ppp-wrap { font-family: var(--font-sans); color: var(--ink); padding: 0; position: relative; }
 
-/* Hero */
-.ppp-hero { background: linear-gradient(135deg, #FBEAF0 0%, #F4C0D1 100%); border-radius: 24px; padding: 2.5rem 2rem; text-align: center; margin-bottom: 1.5rem; position: relative; overflow: hidden; border: 3px dashed #ED93B1; }
-.ppp-logo-circle { width: 88px; height: 88px; border-radius: 50%; background: white; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem; box-shadow: 0 4px 0 #ED93B1; animation: ppp-heart 2s ease-in-out infinite; }
-.ppp-logo-circle svg { width: 50px; height: 50px; }
-.ppp-title { font-size: 42px; font-weight: 500; margin: 0 0 0.5rem; color: #4B1528; letter-spacing: -0.5px; }
-.ppp-title .sparkle { display: inline-block; animation: ppp-wiggle 1.5s ease-in-out infinite; }
-.ppp-tag { font-size: 17px; color: #993556; margin: 0 0 1.5rem; font-style: italic; font-weight: 500; }
-.ppp-tag-emoji { display: inline-block; animation: ppp-heart 1.5s ease-in-out infinite; }
+    /* === Sticker decorations scattered === */
+    .sticker { position: absolute; pointer-events: none; user-select: none; opacity: 0.85; filter: drop-shadow(0 2px 0 rgba(153,53,86,0.18)); }
 
-.ppp-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.ppp-btn-primary { background: #D4537E; color: white; border: none; padding: 14px 28px; border-radius: 999px; font-size: 15px; font-weight: 500; cursor: pointer; font-family: var(--font-sans); transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 0 #993556; }
-.ppp-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 0 #993556; }
-.ppp-btn-primary:active { transform: translateY(2px); box-shadow: 0 2px 0 #993556; }
-.ppp-btn-secondary { background: white; color: #993556; border: 2px solid #ED93B1; padding: 12px 26px; border-radius: 999px; font-size: 15px; font-weight: 500; cursor: pointer; font-family: var(--font-sans); transition: all 0.15s; }
-.ppp-btn-secondary:hover { background: #FBEAF0; transform: translateY(-2px); }
+    /* === Hero === */
+    .ppp-hero {
+      position: relative;
+      background: linear-gradient(135deg, #FFE9F1 0%, #F4C0D1 55%, #FFD8E8 100%);
+      border-radius: 28px;
+      padding: 3rem 1.75rem 2.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      border: 3px dashed var(--pink-300);
+      box-shadow: 0 12px 0 rgba(212,83,126,0.12);
+    }
+    .ppp-hero .h-deco { position: absolute; font-size: 26px; opacity: 0.85; }
+    .ppp-hero .h-deco.s1 { top: 18px; left: 22px;  animation: ppp-float 4.0s ease-in-out infinite; }
+    .ppp-hero .h-deco.s2 { top: 30px; right: 28px; animation: ppp-float 4.6s ease-in-out infinite 0.3s; }
+    .ppp-hero .h-deco.s3 { bottom: 26px; left: 38px;animation: ppp-float 5.2s ease-in-out infinite 0.8s; }
+    .ppp-hero .h-deco.s4 { bottom: 36px; right: 40px;animation: ppp-float 4.4s ease-in-out infinite 1.2s; }
+    .ppp-hero .h-deco.s5 { top: 50%; left: 8px;     animation: ppp-sparkle 3s ease-in-out infinite; font-size: 18px; }
+    .ppp-hero .h-deco.s6 { top: 40%; right: 10px;   animation: ppp-sparkle 2.4s ease-in-out infinite 0.5s; font-size: 18px; }
 
-.ppp-section { margin-bottom: 2rem; }
-.ppp-section-title { font-size: 24px; font-weight: 500; margin: 0 0 0.25rem; color: #4B1528; display: flex; align-items: center; gap: 8px; }
-.ppp-section-emoji { display: inline-block; animation: ppp-wiggle 2s ease-in-out infinite; }
-.ppp-section-sub { font-size: 14px; color: #993556; margin: 0 0 1.25rem; font-style: italic; }
+    .vibe-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: white; color: var(--pink-700);
+      border: 2px solid var(--pink-300);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      box-shadow: 0 3px 0 var(--pink-300);
+    }
+    .vibe-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 0 rgba(168,230,207,0.7); animation: ppp-pulse 1.6s infinite; }
 
-/* Service cards */
-.ppp-services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
-.ppp-service-card { background: white; border: 2px solid #FBEAF0; border-radius: 20px; padding: 1.25rem; cursor: pointer; transition: all 0.2s; position: relative; }
-.ppp-service-card:hover { border-color: #ED93B1; transform: translateY(-3px) rotate(-1deg); box-shadow: 0 6px 0 #FBEAF0; }
-.ppp-service-card.selected { border-color: #D4537E; background: #FBEAF0; box-shadow: 0 4px 0 #ED93B1; }
-.ppp-service-card.selected::after { content: '♥'; position: absolute; top: -8px; right: -8px; width: 28px; height: 28px; background: #D4537E; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; animation: ppp-pop 0.3s ease-out; box-shadow: 0 2px 0 #993556; }
-.ppp-service-icon { width: 52px; height: 52px; border-radius: 50%; background: #FBEAF0; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; font-size: 28px; transition: transform 0.2s; }
-.ppp-service-card:hover .ppp-service-icon { animation: ppp-wiggle 0.6s ease-in-out; }
-.ppp-service-name { font-size: 16px; font-weight: 500; margin: 0 0 4px; color: #4B1528; }
-.ppp-service-price { font-size: 13px; color: #D4537E; font-weight: 500; margin: 0 0 8px; background: #FBEAF0; display: inline-block; padding: 2px 10px; border-radius: 999px; }
-.ppp-service-card.selected .ppp-service-price { background: white; }
-.ppp-service-desc { font-size: 13px; color: #5F5E5A; margin: 0; line-height: 1.5; }
+    .ppp-logo-circle {
+      width: 96px; height: 96px; border-radius: 50%;
+      background: white; display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 6px 0 var(--pink-300), 0 0 0 4px rgba(255,255,255,0.6);
+      animation: ppp-heart 2s ease-in-out infinite;
+    }
+    .ppp-logo-circle svg { width: 56px; height: 56px; }
 
-/* About */
-.ppp-about { background: linear-gradient(135deg, #FBEAF0 0%, white 100%); border-radius: 20px; padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border: 2px dashed #F4C0D1; }
-.ppp-pal { text-align: center; padding: 1rem; background: white; border-radius: 16px; transition: transform 0.2s; }
-.ppp-pal:hover { transform: translateY(-3px); }
-.ppp-pal-avatar { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, #ED93B1 0%, #D4537E 100%); color: white; display: inline-flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 500; margin-bottom: 8px; box-shadow: 0 4px 0 #993556; }
-.ppp-pal-name { font-size: 16px; font-weight: 500; margin: 0 0 4px; color: #4B1528; }
-.ppp-pal-emoji { font-size: 14px; }
-.ppp-pal-bio { font-size: 13px; color: #5F5E5A; margin: 4px 0 0; line-height: 1.5; }
+    .ppp-title {
+      font-family: var(--font-display);
+      font-size: clamp(38px, 8vw, 56px);
+      font-weight: 700;
+      margin: 0 0 0.4rem;
+      letter-spacing: -1px;
+      line-height: 1.05;
+      background: linear-gradient(90deg, var(--pink-700), var(--hot), var(--lavender), var(--pink-500), var(--pink-700));
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: ppp-shimmer 6s linear infinite;
+    }
+    .ppp-title .sparkle { display: inline-block; -webkit-text-fill-color: initial; color: var(--sun); animation: ppp-wiggle 1.5s ease-in-out infinite; filter: drop-shadow(0 2px 0 rgba(212,83,126,0.3)); }
 
-/* Stats */
-.ppp-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 1rem; }
-.ppp-stat { background: white; border: 2px solid #FBEAF0; border-radius: 16px; padding: 1rem; text-align: center; transition: transform 0.2s; }
-.ppp-stat:hover { transform: translateY(-2px); border-color: #ED93B1; }
-.ppp-stat-num { font-size: 28px; font-weight: 500; color: #D4537E; margin: 0; }
-.ppp-stat-label { font-size: 12px; color: #993556; margin: 4px 0 0; font-weight: 500; }
+    .ppp-tag {
+      font-size: 17px; color: var(--pink-700); margin: 0 0 0.5rem;
+      font-style: italic; font-weight: 600;
+      min-height: 1.6em;
+    }
+    .ppp-tag .ppp-tag-emoji { display: inline-block; animation: ppp-heart 1.5s ease-in-out infinite; }
+    .ppp-tag-cycle { display: inline-block; animation: ppp-rise 0.5s ease-out; }
 
-/* Form */
-.ppp-form { background: white; border: 2px solid #FBEAF0; border-radius: 20px; padding: 1.5rem; position: relative; }
-.ppp-form::before { content: '♥ ♥ ♥'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: white; padding: 0 12px; color: #ED93B1; font-size: 14px; letter-spacing: 4px; }
-.ppp-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
-.ppp-form-row.single { grid-template-columns: 1fr; }
-.ppp-label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; color: #4B1528; }
-.ppp-required { color: #D4537E; }
-.ppp-form input, .ppp-form select, .ppp-form textarea { width: 100%; padding: 10px 14px; border: 2px solid #FBEAF0; border-radius: 12px; font-size: 14px; font-family: var(--font-sans); transition: border-color 0.15s; box-sizing: border-box; background: white; color: #2C2C2A; }
-.ppp-form input:focus, .ppp-form select:focus, .ppp-form textarea:focus { outline: none; border-color: #D4537E; }
-.ppp-form input::placeholder, .ppp-form textarea::placeholder { color: #B4B2A9; }
+    .ppp-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 1.25rem; }
+    .ppp-btn-primary {
+      background: linear-gradient(135deg, var(--hot), var(--pink-500));
+      color: white; border: none; padding: 14px 28px;
+      border-radius: 999px; font-size: 15px; font-weight: 700;
+      cursor: pointer; font-family: var(--font-sans);
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 0 var(--pink-700);
+      letter-spacing: 0.3px;
+    }
+    .ppp-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--pink-700); }
+    .ppp-btn-primary:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--pink-700); }
+    .ppp-btn-primary.pulse { animation: ppp-pulse 2s infinite; }
+    .ppp-btn-secondary {
+      background: white; color: var(--pink-700);
+      border: 2px solid var(--pink-300);
+      padding: 12px 26px; border-radius: 999px;
+      font-size: 15px; font-weight: 700; cursor: pointer;
+      font-family: var(--font-sans);
+      transition: all 0.15s;
+      box-shadow: 0 3px 0 var(--pink-200);
+    }
+    .ppp-btn-secondary:hover { background: var(--pink-100); transform: translateY(-2px); box-shadow: 0 5px 0 var(--pink-200); }
 
-.ppp-summary { background: #FBEAF0; border-radius: 16px; padding: 1rem 1.25rem; margin-top: 1rem; font-size: 14px; color: #4B1528; border: 2px dashed #ED93B1; }
-.ppp-summary-empty { color: #993556; font-style: italic; }
-.ppp-summary strong { color: #4B1528; }
+    /* === Vibe marquee === */
+    .vibe-strip {
+      margin: 0 0 1.5rem;
+      background: linear-gradient(90deg, var(--lavender), var(--pink-300), var(--mint), var(--sun), var(--lavender));
+      background-size: 300% 100%;
+      animation: ppp-shimmer 12s linear infinite;
+      border-radius: 999px;
+      padding: 10px 0;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 0 rgba(212,83,126,0.15);
+    }
+    .vibe-track { display: flex; gap: 28px; white-space: nowrap; animation: ppp-marquee 22s linear infinite; width: max-content; }
+    .vibe-track span { color: white; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; text-shadow: 0 2px 0 rgba(153,53,86,0.35); }
+    .vibe-strip:hover .vibe-track { animation-play-state: paused; }
 
-.ppp-success { background: linear-gradient(135deg, #FBEAF0 0%, #F4C0D1 100%); border-radius: 16px; padding: 1.5rem; margin-top: 1rem; text-align: center; border: 3px dashed #D4537E; animation: ppp-pop 0.4s ease-out; }
-.ppp-success-emoji { font-size: 36px; display: block; margin-bottom: 8px; animation: ppp-heart 1s ease-in-out infinite; }
-.ppp-success-title { font-size: 18px; font-weight: 500; color: #4B1528; margin: 0 0 4px; }
-.ppp-success-msg { font-size: 14px; color: #993556; margin: 0; }
+    /* === Sections === */
+    .ppp-section { margin-bottom: 2rem; position: relative; }
+    .ppp-section-title { font-family: var(--font-display); font-size: 26px; font-weight: 700; margin: 0 0 0.25rem; color: var(--pink-900); display: flex; align-items: center; gap: 10px; }
+    .ppp-section-emoji { display: inline-block; animation: ppp-wiggle 2s ease-in-out infinite; }
+    .ppp-section-sub { font-size: 14px; color: var(--pink-700); margin: 0 0 1.25rem; font-weight: 500; }
 
-@media (max-width: 480px) { .ppp-form-row, .ppp-about { grid-template-columns: 1fr; } }
+    /* === Service cards === */
+    .ppp-services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; perspective: 800px; }
+    .ppp-service-card {
+      background: white; border: 2px solid var(--pink-100);
+      border-radius: 22px; padding: 1.25rem; cursor: pointer;
+      transition: transform 0.25s ease, border-color 0.2s, box-shadow 0.2s;
+      position: relative;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+    .ppp-service-card::before {
+      content: ''; position: absolute; inset: 0; border-radius: 22px;
+      background: linear-gradient(135deg, transparent, rgba(255,255,255,0.6), transparent);
+      opacity: 0; transition: opacity 0.2s; pointer-events: none;
+    }
+    .ppp-service-card:hover { border-color: var(--pink-300); box-shadow: 0 10px 24px -8px rgba(212,83,126,0.35); }
+    .ppp-service-card:hover::before { opacity: 1; }
+    .ppp-service-card.selected { border-color: var(--pink-500); background: linear-gradient(135deg, #FFF1F6, #FBEAF0); box-shadow: 0 6px 0 var(--pink-300); }
+    .ppp-service-card.selected::after {
+      content: '♥'; position: absolute; top: -10px; right: -10px;
+      width: 32px; height: 32px;
+      background: linear-gradient(135deg, var(--hot), var(--pink-500));
+      color: white; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; animation: ppp-pop 0.3s ease-out;
+      box-shadow: 0 3px 0 var(--pink-700);
+    }
+    .ppp-service-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--pink-100), white);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 12px; font-size: 30px;
+      transition: transform 0.2s;
+      box-shadow: inset 0 -3px 0 var(--pink-200);
+    }
+    .ppp-service-card:hover .ppp-service-icon { animation: ppp-bounce 0.6s ease-in-out; }
+    .ppp-service-name { font-family: var(--font-display); font-size: 17px; font-weight: 600; margin: 0 0 4px; color: var(--pink-900); }
+    .ppp-service-price { font-size: 13px; color: var(--pink-700); font-weight: 700; margin: 0 0 8px; background: var(--pink-100); display: inline-block; padding: 3px 12px; border-radius: 999px; }
+    .ppp-service-card.selected .ppp-service-price { background: white; color: var(--hot); }
+    .ppp-service-desc { font-size: 13px; color: #5F5E5A; margin: 0; line-height: 1.5; }
+
+    /* === About === */
+    .ppp-about { background: linear-gradient(135deg, #FFF1F6 0%, white 100%); border-radius: 24px; padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border: 2px dashed var(--pink-200); }
+    .ppp-pal { text-align: center; padding: 1rem; background: white; border-radius: 18px; transition: transform 0.2s; position: relative; box-shadow: 0 4px 0 var(--pink-100); }
+    .ppp-pal:hover { transform: translateY(-4px) rotate(-1deg); }
+    .ppp-pal:nth-child(2):hover { transform: translateY(-4px) rotate(1deg); }
+    .ppp-pal-avatar {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--pink-300) 0%, var(--hot) 100%);
+      color: white; display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 30px; font-weight: 700;
+      margin-bottom: 8px;
+      box-shadow: 0 5px 0 var(--pink-700);
+      animation: ppp-bounce 3s ease-in-out infinite;
+    }
+    .ppp-pal:nth-child(2) .ppp-pal-avatar { animation-delay: -1.5s; background: linear-gradient(135deg, var(--lavender) 0%, var(--pink-500) 100%); }
+    .ppp-pal-name { font-family: var(--font-display); font-size: 17px; font-weight: 600; margin: 0 0 4px; color: var(--pink-900); }
+    .ppp-pal-emoji { font-size: 14px; }
+    .ppp-pal-bio { font-size: 13px; color: #5F5E5A; margin: 4px 0 8px; line-height: 1.5; }
+    .ppp-bubble {
+      display: inline-block; background: var(--pink-100); color: var(--pink-900);
+      padding: 6px 12px; border-radius: 14px;
+      font-size: 12px; font-weight: 600;
+      position: relative; min-height: 1.4em;
+      max-width: 100%;
+    }
+    .ppp-bubble::before {
+      content: ''; position: absolute; top: -6px; left: 16px;
+      width: 12px; height: 12px; background: var(--pink-100);
+      transform: rotate(45deg);
+    }
+    .ppp-bubble-text { display: inline-block; animation: ppp-rise 0.4s ease-out; }
+
+    /* === Energy meter === */
+    .energy-meter { margin-top: 1rem; background: white; border-radius: 16px; padding: 0.85rem 1rem; border: 2px solid var(--pink-100); display: flex; align-items: center; gap: 12px; }
+    .energy-label { font-size: 13px; font-weight: 700; color: var(--pink-900); white-space: nowrap; }
+    .energy-bar { flex: 1; height: 12px; background: var(--pink-100); border-radius: 999px; overflow: hidden; position: relative; }
+    .energy-fill {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, var(--mint), var(--sun), var(--hot), var(--pink-500));
+      background-size: 250% 100%;
+      animation: ppp-shimmer 4s linear infinite;
+      border-radius: 999px;
+    }
+    .energy-pct { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--hot); }
+
+    /* === Stats === */
+    .ppp-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 1rem; }
+    .ppp-stat { background: white; border: 2px solid var(--pink-100); border-radius: 18px; padding: 1rem; text-align: center; transition: transform 0.2s, border-color 0.2s; }
+    .ppp-stat:hover { transform: translateY(-3px) rotate(-1deg); border-color: var(--pink-300); }
+    .ppp-stat:nth-child(2):hover { transform: translateY(-3px) rotate(1deg); }
+    .ppp-stat-num { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--hot); margin: 0; line-height: 1; }
+    .ppp-stat-label { font-size: 12px; color: var(--pink-700); margin: 6px 0 0; font-weight: 600; }
+
+    /* === Form === */
+    .ppp-form { background: white; border: 2px solid var(--pink-100); border-radius: 22px; padding: 1.5rem; position: relative; box-shadow: 0 6px 0 var(--pink-100); }
+    .ppp-form::before { content: '♥ ✦ ♥ ✦ ♥'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: white; padding: 0 12px; color: var(--pink-300); font-size: 14px; letter-spacing: 4px; }
+    .ppp-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .ppp-form-row.single { grid-template-columns: 1fr; }
+    .ppp-label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--pink-900); }
+    .ppp-required { color: var(--hot); }
+    .ppp-form input, .ppp-form select, .ppp-form textarea {
+      width: 100%; padding: 11px 14px;
+      border: 2px solid var(--pink-100); border-radius: 14px;
+      font-size: 14px; font-family: var(--font-sans);
+      transition: border-color 0.15s, box-shadow 0.15s;
+      box-sizing: border-box; background: white; color: var(--ink);
+    }
+    .ppp-form input:focus, .ppp-form select:focus, .ppp-form textarea:focus {
+      outline: none; border-color: var(--pink-500);
+      box-shadow: 0 0 0 4px rgba(212,83,126,0.12);
+    }
+    .ppp-form input::placeholder, .ppp-form textarea::placeholder { color: #B4B2A9; }
+
+    .ppp-summary { background: var(--pink-100); border-radius: 18px; padding: 1rem 1.25rem; margin-top: 1rem; font-size: 14px; color: var(--pink-900); border: 2px dashed var(--pink-300); }
+    .ppp-summary-empty { color: var(--pink-700); font-style: italic; }
+    .ppp-summary strong { color: var(--pink-900); }
+
+    .ppp-success { background: linear-gradient(135deg, #FFF1F6 0%, var(--pink-200) 100%); border-radius: 20px; padding: 1.5rem; margin-top: 1rem; text-align: center; border: 3px dashed var(--pink-500); animation: ppp-pop 0.4s ease-out; }
+    .ppp-success-emoji { font-size: 40px; display: block; margin-bottom: 8px; animation: ppp-heart 1s ease-in-out infinite; }
+    .ppp-success-title { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--pink-900); margin: 0 0 4px; }
+    .ppp-success-msg { font-size: 14px; color: var(--pink-700); margin: 0; }
+
+    /* === Floating book button === */
+    .float-book {
+      position: fixed; right: 18px; bottom: 18px;
+      z-index: 50;
+      background: linear-gradient(135deg, var(--hot), var(--pink-500));
+      color: white; border: none;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-family: var(--font-sans); font-size: 14px; font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 18px -4px rgba(212,83,126,0.55), 0 4px 0 var(--pink-700);
+      opacity: 0; transform: translateY(20px) scale(0.9);
+      transition: opacity 0.3s, transform 0.3s;
+      pointer-events: none;
+    }
+    .float-book.show { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+    .float-book:hover { transform: translateY(-3px) scale(1.03); }
+    .float-book .fb-emoji { display: inline-block; animation: ppp-wiggle 2s ease-in-out infinite; }
+
+    /* === Reveal on scroll === */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    /* === Cursor paw trail === */
+    .paw-trail {
+      position: fixed; pointer-events: none; z-index: 9999;
+      font-size: 18px; color: var(--pink-500);
+      animation: paw-fade 1.2s ease-out forwards;
+      will-change: transform, opacity;
+      filter: drop-shadow(0 1px 0 rgba(153,53,86,0.4));
+    }
+
+    /* === Click heart particles === */
+    .heart-particle {
+      position: fixed; pointer-events: none; z-index: 9998;
+      font-size: 20px;
+      animation: heart-burst 0.9s ease-out forwards;
+      will-change: transform, opacity;
+    }
+
+    /* === Confetti === */
+    .confetti-piece {
+      position: fixed; top: -20px; pointer-events: none; z-index: 9997;
+      font-size: 18px;
+      animation: confetti-fall linear forwards;
+      will-change: transform, opacity;
+    }
+
+    /* === Loading paws === */
+    .loading-paws { display: inline-flex; gap: 4px; }
+    .loading-paws span {
+      display: inline-block;
+      animation: ppp-bounce 0.8s ease-in-out infinite;
+    }
+    .loading-paws span:nth-child(2) { animation-delay: 0.15s; }
+    .loading-paws span:nth-child(3) { animation-delay: 0.3s; }
+
+    @media (max-width: 480px) {
+      .ppp-form-row, .ppp-about { grid-template-columns: 1fr; }
+      .ppp-hero { padding: 2.25rem 1.25rem 2rem; }
+      .float-book { right: 12px; bottom: 12px; padding: 12px 18px; font-size: 13px; }
+    }
+
+    /* Disable heavy animations for users who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001s !important;
+      }
+      .vibe-track { animation: none !important; }
+      .blob { animation: none !important; }
+    }
+
+    /* No tilt on touch */
+    @media (hover: none) {
+      .ppp-service-card { transform: none !important; }
+    }
   </style>
 </head>
 <body>
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
   <main class="page">
     <h2 class="sr-only">PinkPawPets cute and playful website with services, about section, and booking form for Charlie and Katie's pet care business.</h2>
 
     <div class="ppp-wrap">
 
       <div class="ppp-hero">
-        <span class="ppp-deco d1" style="font-size: 24px;">🐾</span>
-        <span class="ppp-deco d2" style="font-size: 20px;">♥</span>
-        <span class="ppp-deco d3" style="font-size: 22px;">🐾</span>
+        <span class="h-deco s1">🐾</span>
+        <span class="h-deco s2">♥</span>
+        <span class="h-deco s3">🦴</span>
+        <span class="h-deco s4">🐾</span>
+        <span class="h-deco s5">✨</span>
+        <span class="h-deco s6">✨</span>
+
+        <span class="vibe-badge"><span class="dot"></span> Booking now · Energy: max</span>
+
         <div class="ppp-logo-circle">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#D4537E"><circle cx="6" cy="9" r="2"/><circle cx="18" cy="9" r="2"/><circle cx="9" cy="5" r="2"/><circle cx="15" cy="5" r="2"/><ellipse cx="12" cy="16" rx="5" ry="4"/></svg>
         </div>
         <h1 class="ppp-title"><span class="sparkle">✨</span> PinkPawPets <span class="sparkle">✨</span></h1>
-        <p class="ppp-tag">Loving care for the pets you love <span class="ppp-tag-emoji">♥</span></p>
+        <p class="ppp-tag" id="ppp-tag-cycle">
+          <span class="ppp-tag-cycle">Loving care for the pets you love <span class="ppp-tag-emoji">♥</span></span>
+        </p>
         <div class="ppp-cta-row">
-          <button class="ppp-btn-primary" onclick="document.getElementById('ppp-services').scrollIntoView({behavior:'smooth'})">See our services 🐾</button>
+          <button class="ppp-btn-primary pulse" onclick="document.getElementById('ppp-services').scrollIntoView({behavior:'smooth'})">See our services 🐾</button>
           <button class="ppp-btn-secondary" onclick="document.getElementById('ppp-form').scrollIntoView({behavior:'smooth'})">Book us now</button>
         </div>
       </div>
 
-      <div class="ppp-section">
+      <div class="vibe-strip" aria-hidden="true">
+        <div class="vibe-track" id="vibe-track"></div>
+      </div>
+
+      <div class="ppp-section reveal">
         <h2 class="ppp-section-title"><span class="ppp-section-emoji">👋</span> Meet your pet pals</h2>
-        <p class="ppp-section-sub">Two trusted neighbors. Two years of happy tails.</p>
+        <p class="ppp-section-sub">Two best-friend neighbors. Two years of happy tails. Zero chill (in the best way).</p>
         <div class="ppp-about">
           <div class="ppp-pal">
             <div class="ppp-pal-avatar">C</div>
             <p class="ppp-pal-name">Charlie, 12 <span class="ppp-pal-emoji">🐕</span></p>
-            <p class="ppp-pal-bio">Loves big dogs, long walks, and meeting every cat in the neighborhood.</p>
+            <p class="ppp-pal-bio">Big-dog energy. Always down for the long walk, the extra fetch, and a new pup to meet.</p>
+            <span class="ppp-bubble" data-bubble="charlie"><span class="ppp-bubble-text">"Let's gooo on a walk!"</span></span>
           </div>
           <div class="ppp-pal">
             <div class="ppp-pal-avatar">K</div>
             <p class="ppp-pal-name">Katie, 12 <span class="ppp-pal-emoji">🐱</span></p>
-            <p class="ppp-pal-bio">Patient with shy pets, great at feeding routines, and never forgets a scheduled walk.</p>
+            <p class="ppp-pal-bio">Pet whisperer mode. Patient with shy ones, never misses a feeding, total cat-magnet.</p>
+            <span class="ppp-bubble" data-bubble="katie"><span class="ppp-bubble-text">"I'll snuggle the shy ones 💕"</span></span>
           </div>
         </div>
+
+        <div class="energy-meter" aria-label="Today's energy level: 100%">
+          <span class="energy-label">⚡ Today's energy</span>
+          <div class="energy-bar"><div class="energy-fill"></div></div>
+          <span class="energy-pct">100%</span>
+        </div>
+
         <div class="ppp-stats">
-          <div class="ppp-stat"><p class="ppp-stat-num">40+</p><p class="ppp-stat-label">🐾 Pets cared for</p></div>
-          <div class="ppp-stat"><p class="ppp-stat-num">2</p><p class="ppp-stat-label">📅 Years running</p></div>
-          <div class="ppp-stat"><p class="ppp-stat-num">100%</p><p class="ppp-stat-label">♥ Tail wags</p></div>
+          <div class="ppp-stat"><p class="ppp-stat-num" data-count="25" data-suffix="">0</p><p class="ppp-stat-label">🐾 Pets cared for</p></div>
+          <div class="ppp-stat"><p class="ppp-stat-num" data-count="2" data-suffix="">0</p><p class="ppp-stat-label">📅 Years running</p></div>
+          <div class="ppp-stat"><p class="ppp-stat-num" data-count="100" data-suffix="%">0</p><p class="ppp-stat-label">♥ Tail wags</p></div>
         </div>
       </div>
 
-      <div class="ppp-section" id="ppp-services">
+      <div class="ppp-section reveal" id="ppp-services">
         <h2 class="ppp-section-title"><span class="ppp-section-emoji">🐾</span> Our services</h2>
         <p class="ppp-section-sub">Tap any service to add it to your booking ♥</p>
         <div class="ppp-services-grid" id="ppp-grid"></div>
       </div>
 
-      <div class="ppp-section" id="ppp-form">
+      <div class="ppp-section reveal" id="ppp-form">
         <h2 class="ppp-section-title"><span class="ppp-section-emoji">💌</span> Request a booking</h2>
         <p class="ppp-section-sub">Tell us about your pet. We'll text you back within 24 hours!</p>
         <div class="ppp-form">
@@ -219,7 +524,7 @@
           </div>
 
           <div style="margin-top: 1rem;">
-            <button class="ppp-btn-primary" onclick="submitBooking()" style="width: 100%;">Send booking request ♥</button>
+            <button class="ppp-btn-primary" id="ppp-submit" onclick="submitBooking()" style="width: 100%;">Send booking request ♥</button>
           </div>
 
           <div id="ppp-success" style="display: none;"></div>
@@ -231,12 +536,219 @@
     <p class="footer">© <span id="yr"></span> PinkPawPets · Charlie &amp; Katie ♥</p>
   </main>
 
+  <button class="float-book" id="float-book" onclick="document.getElementById('ppp-form').scrollIntoView({behavior:'smooth'})">
+    <span class="fb-emoji">🐾</span> Book us
+  </button>
+
   <script>
-    // Google Apps Script Web App /exec URL. See apps-script/README.md.
+    /* ========= Booking endpoint (Apps Script Web App /exec URL) ========= */
     const BOOKING_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxw2a6-Kdjl0ukocVZ1XAlUqpeiqGAcCwa1F4ofZK0uW8_YNkhK6yrtRcWsZMaTxGAEyQ/exec';
 
     document.getElementById('yr').textContent = new Date().getFullYear();
 
+    /* ========= Vibe marquee content ========= */
+    (function buildVibeTrack() {
+      const vibes = ['🐾 zoomies', '♥ tail wags', '🎾 fetch', '🦴 treats', '✨ snuggles', '🐕 walks', '🐱 cat naps', '🌟 happy pets', '💖 trusted', '🐹 small pets too'];
+      const track = document.getElementById('vibe-track');
+      const html = vibes.map(v => `<span>${v}</span>`).join('');
+      track.innerHTML = html + html; // duplicate for seamless loop
+    })();
+
+    /* ========= Rotating tagline ========= */
+    (function rotateTag() {
+      const taglines = [
+        'Loving care for the pets you love <span class="ppp-tag-emoji">♥</span>',
+        'Walks, snuggles, zoomies — all included <span class="ppp-tag-emoji">🐾</span>',
+        'Your neighbors. Your pet\'s new besties <span class="ppp-tag-emoji">✨</span>',
+        'Trusted by 25+ very good boys & girls <span class="ppp-tag-emoji">💖</span>',
+        'We treat your pet like family <span class="ppp-tag-emoji">🦴</span>'
+      ];
+      let i = 0;
+      const el = document.getElementById('ppp-tag-cycle');
+      setInterval(() => {
+        i = (i + 1) % taglines.length;
+        el.innerHTML = `<span class="ppp-tag-cycle">${taglines[i]}</span>`;
+      }, 4200);
+    })();
+
+    /* ========= Speech bubbles for Charlie & Katie ========= */
+    (function rotateBubbles() {
+      const charlieLines = [
+        '"Let\'s gooo on a walk!"',
+        '"That dog has BIG zoomies"',
+        '"I memorized every dog on the block"',
+        '"Your pup will be obsessed w/ me 😎"'
+      ];
+      const katieLines = [
+        '"I\'ll snuggle the shy ones 💕"',
+        '"Cats love me. It\'s a known fact."',
+        '"Feeding routine? Locked in."',
+        '"Bunnies + me = best friends"'
+      ];
+      let ci = 0, ki = 0;
+      const cEl = document.querySelector('[data-bubble="charlie"]');
+      const kEl = document.querySelector('[data-bubble="katie"]');
+      setInterval(() => {
+        ci = (ci + 1) % charlieLines.length;
+        cEl.innerHTML = `<span class="ppp-bubble-text">${charlieLines[ci]}</span>`;
+      }, 5000);
+      setInterval(() => {
+        ki = (ki + 1) % katieLines.length;
+        kEl.innerHTML = `<span class="ppp-bubble-text">${katieLines[ki]}</span>`;
+      }, 5600);
+    })();
+
+    /* ========= Reveal on scroll ========= */
+    (function revealOnScroll() {
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    })();
+
+    /* ========= Animated stat counters ========= */
+    (function statCounters() {
+      const els = document.querySelectorAll('.ppp-stat-num');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(el => { el.textContent = el.dataset.count + (el.dataset.suffix || ''); });
+        return;
+      }
+      const animate = (el) => {
+        const target = parseInt(el.dataset.count, 10) || 0;
+        const suffix = el.dataset.suffix || '';
+        const duration = 1200;
+        const start = performance.now();
+        function tick(t) {
+          const p = Math.min((t - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+          else el.textContent = target + suffix;
+        }
+        requestAnimationFrame(tick);
+      };
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); } });
+      }, { threshold: 0.4 });
+      els.forEach(el => io.observe(el));
+    })();
+
+    /* ========= Floating Book button visibility ========= */
+    (function floatingBook() {
+      const btn = document.getElementById('float-book');
+      const hero = document.querySelector('.ppp-hero');
+      const form = document.getElementById('ppp-form');
+      if (!btn || !hero || !form) return;
+
+      function update() {
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        const formTop = form.getBoundingClientRect().top;
+        const formBottom = form.getBoundingClientRect().bottom;
+        const inFormView = formTop < window.innerHeight * 0.6 && formBottom > 0;
+        const passedHero = heroBottom < 80;
+        if (passedHero && !inFormView) btn.classList.add('show');
+        else btn.classList.remove('show');
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+
+    /* ========= Cursor paw trail ========= */
+    (function pawTrail() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (!window.matchMedia('(hover: hover)').matches) return;
+      let last = 0;
+      const minDist = 60;
+      let lastX = 0, lastY = 0;
+      window.addEventListener('mousemove', (e) => {
+        const now = performance.now();
+        if (now - last < 80) return;
+        const dx = e.clientX - lastX, dy = e.clientY - lastY;
+        if (Math.sqrt(dx*dx + dy*dy) < minDist) return;
+        last = now; lastX = e.clientX; lastY = e.clientY;
+        const paw = document.createElement('span');
+        paw.className = 'paw-trail';
+        paw.textContent = '🐾';
+        const r = (Math.random() * 60 - 30).toFixed(0);
+        paw.style.setProperty('--r', r + 'deg');
+        paw.style.left = (e.clientX - 9) + 'px';
+        paw.style.top  = (e.clientY - 9) + 'px';
+        document.body.appendChild(paw);
+        setTimeout(() => paw.remove(), 1200);
+      }, { passive: true });
+    })();
+
+    /* ========= Click heart burst ========= */
+    (function heartClicks() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const symbols = ['♥','💖','✨','🐾'];
+      function isInteractive(el) {
+        return el.closest('button, a, input, select, textarea, label, .ppp-service-card');
+      }
+      window.addEventListener('click', (e) => {
+        if (isInteractive(e.target)) return;
+        const count = 5;
+        for (let i = 0; i < count; i++) {
+          const h = document.createElement('span');
+          h.className = 'heart-particle';
+          h.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+          h.style.left = (e.clientX - 10) + 'px';
+          h.style.top  = (e.clientY - 10) + 'px';
+          h.style.color = ['#FF4F8A','#D4537E','#C8A8E9','#FFE066'][i % 4];
+          const angle = (Math.PI / count) * i + (Math.random() * 0.4 - 0.2) - Math.PI/2;
+          const dist = 50 + Math.random() * 40;
+          h.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
+          h.style.setProperty('--ty', Math.sin(angle) * dist + 'px');
+          document.body.appendChild(h);
+          setTimeout(() => h.remove(), 1000);
+        }
+      });
+    })();
+
+    /* ========= Service card mouse-tilt ========= */
+    function attachTilt() {
+      if (!window.matchMedia('(hover: hover)').matches) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      document.querySelectorAll('.ppp-service-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const r = card.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width - 0.5;
+          const py = (e.clientY - r.top)  / r.height - 0.5;
+          const rx = (-py * 8).toFixed(2);
+          const ry = (px * 10).toFixed(2);
+          card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-3px)`;
+        });
+        card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+      });
+    }
+
+    /* ========= Confetti burst ========= */
+    function fireConfetti(durationMs = 2200, count = 80) {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const symbols = ['🐾','♥','✨','💖','🦴','🌸'];
+      for (let i = 0; i < count; i++) {
+        const c = document.createElement('span');
+        c.className = 'confetti-piece';
+        c.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        c.style.left = (Math.random() * 100) + 'vw';
+        const dur = (1.6 + Math.random() * 1.4).toFixed(2);
+        const delay = (Math.random() * 0.6).toFixed(2);
+        c.style.animationDuration = dur + 's';
+        c.style.animationDelay = delay + 's';
+        c.style.fontSize = (14 + Math.random() * 16) + 'px';
+        document.body.appendChild(c);
+        setTimeout(() => c.remove(), (parseFloat(dur) + parseFloat(delay)) * 1000 + 200);
+      }
+    }
+
+    /* ========= Services rendering & booking ========= */
     const services = [
       { id: 'walk',   name: 'Dog walking',         price: '$10 / 30 min',  desc: 'Leash time, sniff stops, and a happy return.',          emoji: '🐕' },
       { id: 'dropin', name: 'Drop-in & feeding',   price: '$8 / visit',    desc: 'Food, fresh water, litter check, and cuddles.',         emoji: '🥣' },
@@ -258,6 +770,7 @@
           <p class="ppp-service-desc">${s.desc}</p>
         </div>
       `).join('');
+      attachTilt();
     }
 
     function toggleService(id) {
@@ -298,9 +811,12 @@
 
       const pickedServices = services.filter(s => selected.has(s.id)).map(s => `${s.name} (${s.price})`);
 
-      const button = document.querySelector('#ppp-form .ppp-btn-primary');
-      const originalLabel = button ? button.textContent : '';
-      if (button) { button.disabled = true; button.textContent = 'Sending… 🐾'; }
+      const button = document.getElementById('ppp-submit');
+      const originalLabel = button ? button.innerHTML : '';
+      if (button) {
+        button.disabled = true;
+        button.innerHTML = 'Sending <span class="loading-paws"><span>🐾</span><span>🐾</span><span>🐾</span></span>';
+      }
 
       const payload = {
         name, phone, petName, petType, startDate, endDate, notes,
@@ -329,10 +845,12 @@
           <p class="ppp-success-msg">Thanks ${name.split(' ')[0]}! Charlie &amp; Katie will text you at ${phone} within 24 hours. ♥</p>
         `;
         success.scrollIntoView({behavior:'smooth', block:'center'});
+        fireConfetti();
+        if (button) { button.innerHTML = 'Sent ♥'; }
       } catch (err) {
         console.error(err);
         alert("Sorry — we couldn't send your request just now. Please try again, or text Charlie & Katie directly. ♥");
-        if (button) { button.disabled = false; button.textContent = originalLabel; }
+        if (button) { button.disabled = false; button.innerHTML = originalLabel; }
       }
     }
 
