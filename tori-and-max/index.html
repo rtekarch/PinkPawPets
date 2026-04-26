@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#FF4F2C" />
+  <meta name="theme-color" content="#06B6D4" />
   <title>Tori &amp; Max · Concierge Pet Care &amp; House Sitting | PinkPawPets</title>
   <meta name="description" content="Pet care from two free-spirited humans who happen to also work yachts. Overnight boarding, pet sitting, house sitting from Central PA to Cocoa Beach. 5+ years, 100s of pets and homes." />
   <meta property="og:title" content="Tori & Max · The Pro Crew at PinkPawPets" />
@@ -17,65 +17,68 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      /* Clean white base — no yellow undertone */
-      --cream: #FCFCFF;        /* near-white, subtle cool tint */
-      --cream-2: #F4F1FB;      /* soft lavender-white */
+      /* Clean cool white base — no warm undertone */
+      --cream: #FAFCFF;        /* near-white, cool blue tint */
+      --cream-2: #EAF6F8;      /* pale aqua */
       --cream-soft: #FFFFFF;   /* pure white for cards */
-      --paper: #F8F5FC;        /* paper-white with lavender hint */
-      --peach: #FFCBA8;
-      --peach-soft: #FFE8DA;
+      --paper: #F0F8FB;        /* paper-white with aqua hint */
+      --peach: #B8ECEC;        /* repurposed: light aqua (was peach) */
+      --peach-soft: #DEF6F4;   /* repurposed: very pale aqua */
 
-      /* Pastel rainbow mesh */
-      --mesh-pink:     rgba(255, 175, 210, 0.55);
-      --mesh-peach:    rgba(255, 200, 165, 0.45);
-      --mesh-yellow:   rgba(255, 235, 180, 0.32);
-      --mesh-mint:     rgba(180, 240, 210, 0.50);
-      --mesh-sky:      rgba(170, 220, 240, 0.55);
-      --mesh-lavender: rgba(220, 195, 245, 0.55);
+      /* Pastel ocean/garden mesh — blue-green dominant, tiny warm note */
+      --mesh-aqua:     rgba(165, 230, 240, 0.55);
+      --mesh-mint:     rgba(180, 240, 210, 0.55);
+      --mesh-sky:      rgba(170, 220, 245, 0.55);
+      --mesh-teal:     rgba(150, 220, 230, 0.45);
+      --mesh-lavender: rgba(220, 200, 240, 0.50);
+      --mesh-blush:    rgba(255, 200, 220, 0.28);
 
-      --coral: #FF4F2C;        /* electric coral */
-      --coral-deep: #E63A1C;
-      --terra: #C82F18;
+      /* Coral and terra repurposed -> teal/ocean (primary brand) */
+      --coral: #06B6D4;        /* vibrant teal — primary */
+      --coral-deep: #0E7490;   /* deep teal */
+      --terra: #155E75;        /* deep ocean */
 
-      --rose: #FF3D8B;         /* electric magenta */
-      --rose-deep: #E61A6E;
+      /* Rose softened to coral-pink — small accent only */
+      --rose: #FB7185;         /* soft coral-pink */
+      --rose-deep: #E11D48;    /* deep rose */
 
-      --sage: #7FD0A8;         /* vibrant mint */
-      --sage-deep: #3FA877;
+      /* Sage upgraded to vibrant emerald */
+      --sage: #34D399;         /* fresh mint green */
+      --sage-deep: #059669;    /* deep emerald */
 
-      --lime: #B5EE3A;         /* electric lime */
-      --lime-deep: #88C61A;
+      --lime: #84CC16;         /* electric lime */
+      --lime-deep: #65A30D;
 
-      --sky: #6BE0E6;          /* vibrant cyan */
-      --sky-deep: #0DB5C4;
+      --sky: #38BDF8;          /* sky blue */
+      --sky-deep: #0284C7;     /* ocean blue */
 
-      --sun: #FFD60A;          /* punchy yellow */
-      --sun-deep: #E6BE00;
+      --sun: #FCD34D;          /* softer yellow — TINY accent only */
+      --sun-deep: #EAB308;
 
-      --plum: #5C2A6A;
-      --brown: #5C3D22;
-      --brown-soft: #8B6940;
-      --charcoal: #1A1A2E;     /* cool dark, pops with brights */
-      --slate: #4D4759;
-      --line: #EFE0C5;
+      --plum: #1E3A8A;         /* navy plum (was purple) */
+      --brown: #475569;        /* slate (was brown) */
+      --brown-soft: #64748B;
+      --charcoal: #0F172A;     /* deep blue-charcoal */
+      --slate: #475569;
+      --line: #DBEAEC;
 
       /* Brand thread back to PinkPawPets */
       --brand-pink: #ED93B1;
       --brand-pink-deep: #D4537E;
 
-      /* Translucent tape colors */
-      --tape-1: rgba(107, 224, 230, 0.55);
-      --tape-2: rgba(255, 214, 10, 0.55);
-      --tape-3: rgba(255, 61, 139, 0.40);
-      --tape-4: rgba(181, 238, 58, 0.55);
+      /* Translucent tape colors — cool palette */
+      --tape-1: rgba(56, 189, 248, 0.55);    /* sky blue */
+      --tape-2: rgba(52, 211, 153, 0.55);    /* mint */
+      --tape-3: rgba(132, 204, 22, 0.45);    /* lime */
+      --tape-4: rgba(251, 113, 133, 0.40);   /* small pink pop */
 
       --font-display: 'Fredoka', 'Inter', system-ui, sans-serif;
       --font-hand: 'Caveat', 'Comic Sans MS', cursive;
       --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
-      --shadow-sm: 0 2px 4px rgba(230,58,28,0.10);
-      --shadow-md: 0 12px 32px -8px rgba(230,58,28,0.22);
-      --shadow-lg: 0 28px 56px -16px rgba(230,58,28,0.32);
+      --shadow-sm: 0 2px 4px rgba(14, 116, 144, 0.10);
+      --shadow-md: 0 12px 32px -8px rgba(14, 116, 144, 0.22);
+      --shadow-lg: 0 28px 56px -16px rgba(14, 116, 144, 0.32);
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
@@ -91,18 +94,19 @@
       cursor: none;
       position: relative;
     }
-    /* Pastel rainbow mesh — fixed so it stays as you scroll */
+    /* Ocean/garden mesh — blue-green dominant, tiny pink pop */
     body::before {
       content: ''; position: fixed; inset: 0; z-index: -2; pointer-events: none;
       background-color: var(--cream);
       background-image:
-        radial-gradient(60% 50% at 8% 4%,    var(--mesh-pink),     transparent 65%),
-        radial-gradient(55% 45% at 95% 6%,   var(--mesh-peach),    transparent 65%),
-        radial-gradient(45% 35% at 50% 28%,  var(--mesh-yellow),   transparent 70%),
-        radial-gradient(55% 45% at 4% 52%,   var(--mesh-mint),     transparent 65%),
+        radial-gradient(60% 50% at 6% 4%,    var(--mesh-sky),      transparent 65%),
+        radial-gradient(55% 45% at 95% 6%,   var(--mesh-mint),     transparent 65%),
+        radial-gradient(45% 35% at 50% 26%,  var(--mesh-aqua),     transparent 70%),
+        radial-gradient(55% 45% at 4% 52%,   var(--mesh-teal),     transparent 65%),
         radial-gradient(60% 50% at 96% 58%,  var(--mesh-sky),      transparent 65%),
-        radial-gradient(55% 45% at 30% 92%,  var(--mesh-lavender), transparent 70%),
-        radial-gradient(50% 40% at 80% 95%,  var(--mesh-pink),     transparent 70%);
+        radial-gradient(50% 40% at 30% 92%,  var(--mesh-lavender), transparent 70%),
+        radial-gradient(40% 32% at 78% 94%,  var(--mesh-blush),    transparent 70%),
+        radial-gradient(45% 35% at 60% 78%,  var(--mesh-mint),     transparent 70%);
     }
     /* Subtle dot grid — barely there, cool gray */
     body::after {
@@ -162,7 +166,7 @@
     @keyframes wag { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
     @keyframes wag-fast { 0%,100% { transform: rotate(-12deg); } 50% { transform: rotate(12deg); } }
     @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
-    @keyframes pulse-warm { 0%,100% { box-shadow: 0 0 0 0 rgba(255,107,74,0.55); } 50% { box-shadow: 0 0 0 14px rgba(255,107,74,0); } }
+    @keyframes pulse-warm { 0%,100% { box-shadow: 0 0 0 0 rgba(6,182,212,0.55); } 50% { box-shadow: 0 0 0 14px rgba(6,182,212,0); } }
     @keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
     @keyframes wave-shift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     @keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
@@ -250,7 +254,7 @@
       font-size: 11px; font-weight: 800;
       letter-spacing: 2.5px; text-transform: uppercase;
       transform: rotate(-3deg);
-      background: rgba(255,107,74,0.06);
+      background: rgba(6,182,212,0.08);
       border-radius: 4px;
       position: relative;
     }
@@ -268,7 +272,7 @@
       background: rgba(255,246,230,0.92);
       backdrop-filter: saturate(160%) blur(12px);
       -webkit-backdrop-filter: saturate(160%) blur(12px);
-      border-bottom: 2px dashed rgba(255,107,74,0.30);
+      border-bottom: 2px dashed rgba(6,182,212,0.30);
     }
     .topnav-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; gap: 1rem; }
     .topnav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
@@ -457,17 +461,17 @@
       position: absolute; inset: 0;
       border-radius: 50%;
       background:
-        radial-gradient(circle at 30% 22%, rgba(255,255,255,0.85), transparent 55%),
-        radial-gradient(circle at 78% 28%, rgba(255,214,10,0.45) 0%, transparent 40%),
-        conic-gradient(from 215deg at 50% 50%,
-          #FFD0E2 0deg,
-          #FFE0CC 60deg,
-          #FFF4C6 120deg,
-          #D4F5E0 180deg,
-          #CFEAF7 240deg,
-          #E6D9F5 300deg,
-          #FFD0E2 360deg);
-      box-shadow: inset 0 -20px 50px rgba(60,55,90,0.08), 0 24px 50px -15px rgba(60,55,90,0.25);
+        radial-gradient(circle at 30% 22%, rgba(255,255,255,0.88), transparent 55%),
+        radial-gradient(circle at 78% 28%, rgba(56,189,248,0.45) 0%, transparent 42%),
+        conic-gradient(from 200deg at 50% 50%,
+          #C5F5E0 0deg,
+          #B8EDF0 80deg,
+          #BAE1FB 160deg,
+          #C8E2F8 220deg,
+          #DCD4F5 280deg,
+          #FFD8E5 320deg,
+          #C5F5E0 360deg);
+      box-shadow: inset 0 -20px 50px rgba(14,116,144,0.10), 0 24px 50px -15px rgba(14,116,144,0.25);
       overflow: hidden;
       cursor: none;
     }
@@ -591,7 +595,7 @@
       bottom: 10%; right: 8%;
       width: 36px; height: 36px;
       border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #F0D26A, var(--sun));
+      background: radial-gradient(circle at 30% 30%, #BEF264, var(--lime));
       box-shadow: inset 0 -4px 0 rgba(0,0,0,0.18), 0 6px 10px rgba(60,55,90,0.20);
       animation: bob 1.8s ease-in-out infinite;
       position: absolute;
@@ -634,7 +638,7 @@
     /* Sticker labels in hero */
     .hero-sticker {
       position: absolute;
-      background: var(--sun);
+      background: var(--sage);
       color: var(--charcoal);
       padding: 10px 16px;
       border-radius: 50%;
@@ -774,7 +778,7 @@
 
     /* === About === */
     .about {
-      background: linear-gradient(180deg, transparent 0%, rgba(255, 175, 210, 0.18) 50%, transparent 100%);
+      background: linear-gradient(180deg, transparent 0%, rgba(165, 230, 240, 0.30) 50%, transparent 100%);
     }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
 
@@ -896,7 +900,7 @@
     .about-copy p { font-size: 16.5px; color: var(--slate); line-height: 1.75; margin: 0 0 1rem; }
     .about-copy p strong { color: var(--charcoal); font-weight: 600; }
     .about-quote {
-      background: var(--sun);
+      background: var(--sage);
       border: 3px solid var(--charcoal);
       border-radius: 18px;
       padding: 1.5rem 1.75rem;
@@ -929,7 +933,7 @@
     .signature::before { content: '— '; }
 
     /* === Services === */
-    .services { background: linear-gradient(180deg, transparent 0%, rgba(220, 195, 245, 0.22) 50%, transparent 100%); }
+    .services { background: linear-gradient(180deg, transparent 0%, rgba(180, 240, 210, 0.28) 50%, transparent 100%); }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem; perspective: 1000px; }
     .svc-card {
       background: white;
@@ -962,7 +966,7 @@
     }
     .svc-card:nth-child(2n) .stamp { color: var(--sage-deep); border-color: var(--sage-deep); background: rgba(146,189,142,0.10); }
     .svc-card:nth-child(2n) .stamp::before { border-color: var(--sage-deep); }
-    .svc-card:nth-child(3n) .stamp { color: var(--rose-deep); border-color: var(--rose-deep); background: rgba(232,71,119,0.06); }
+    .svc-card:nth-child(3n) .stamp { color: var(--rose-deep); border-color: var(--rose-deep); background: rgba(225,29,72,0.06); }
     .svc-card:nth-child(3n) .stamp::before { border-color: var(--rose-deep); }
     .svc-icon {
       width: 76px; height: 76px;
@@ -1047,7 +1051,7 @@
       border-radius: 18px;
       display: flex; align-items: center; gap: 1rem;
       position: relative;
-      box-shadow: 4px 4px 0 rgba(255,107,74,0.25);
+      box-shadow: 4px 4px 0 rgba(6,182,212,0.30);
     }
     .leg-card:nth-child(1) { transform: rotate(-1deg); }
     .leg-card:nth-child(2) { transform: rotate(1deg); }
@@ -1117,7 +1121,7 @@
     }
     .step:nth-child(2) .step-num { background: var(--rose); }
     .step:nth-child(3) .step-num { background: var(--sky); color: var(--charcoal); }
-    .step:nth-child(4) .step-num { background: var(--sun); color: var(--charcoal); }
+    .step:nth-child(4) .step-num { background: var(--lime); color: var(--charcoal); }
     .step-icon {
       font-size: 36px;
       margin-bottom: 8px;
@@ -1188,7 +1192,7 @@
       animation: bob 3s ease-in-out infinite;
     }
     .promise-item:nth-child(2n) .promise-paw { background: var(--rose); animation-delay: 0.4s; }
-    .promise-item:nth-child(3n) .promise-paw { background: var(--sun); color: var(--charcoal); animation-delay: 0.8s; }
+    .promise-item:nth-child(3n) .promise-paw { background: var(--sky); color: white; animation-delay: 0.8s; }
     .promise-item:nth-child(5n) .promise-paw { background: var(--sage); animation-delay: 1.2s; }
     .promise-text { font-size: 14.5px; color: var(--charcoal); line-height: 1.5; font-weight: 700; }
     .promise-text small {
@@ -1295,7 +1299,7 @@
     .booking-summary strong { color: var(--coral); font-weight: 700; }
 
     .booking-success {
-      background: var(--sun);
+      background: var(--sage);
       border: 3px solid var(--charcoal);
       border-radius: 22px;
       padding: 1.75rem;
@@ -1340,13 +1344,14 @@
       animation: gradient-shift 3s linear infinite;
       background-size: 400% 400%;
       background-image: linear-gradient(90deg,
-        rgba(255, 79, 44, 0.28),
-        rgba(255, 215, 10, 0.28),
-        rgba(127, 208, 168, 0.28),
-        rgba(13, 181, 196, 0.28),
-        rgba(124, 58, 237, 0.28),
-        rgba(255, 61, 139, 0.28),
-        rgba(255, 79, 44, 0.28)
+        rgba(6, 182, 212, 0.32),
+        rgba(56, 189, 248, 0.32),
+        rgba(2, 132, 199, 0.32),
+        rgba(52, 211, 153, 0.32),
+        rgba(132, 204, 22, 0.32),
+        rgba(30, 58, 138, 0.32),
+        rgba(251, 113, 133, 0.32),
+        rgba(6, 182, 212, 0.32)
       );
     }
 
@@ -1374,7 +1379,7 @@
       animation: wave-shift 32s linear infinite;
     }
     .footer-marquee-word {
-      color: var(--sun);
+      color: var(--sage);
       font-family: var(--font-hand);
       font-size: 26px; font-weight: 700;
       padding: 0 24px;
@@ -1388,7 +1393,7 @@
       font-size: 28px; font-weight: 600; margin-bottom: 0.5rem;
       letter-spacing: -0.3px;
     }
-    .footer-brand .pp { color: var(--sun); }
+    .footer-brand .pp { color: var(--sage); }
     .footer-brand .crew { font-family: var(--font-hand); font-weight: 700; font-size: 30px; }
     .footer-tag {
       font-size: 14px; color: rgba(255,252,246,0.88);
@@ -1397,7 +1402,7 @@
     .footer-h {
       font-family: var(--font-body);
       font-size: 12px;
-      color: var(--sun); margin: 0 0 12px; font-weight: 800;
+      color: var(--sage); margin: 0 0 12px; font-weight: 800;
       letter-spacing: 2px; text-transform: uppercase;
     }
     .footer-link {
@@ -1406,7 +1411,7 @@
       text-decoration: none; padding: 5px 0;
       transition: color 0.15s, transform 0.15s;
     }
-    .footer-link:hover { color: var(--sun); transform: translateX(4px); }
+    .footer-link:hover { color: var(--sage); transform: translateX(4px); }
     .footer-bottom {
       margin-top: 2rem; padding-top: 1.5rem;
       border-top: 1px dashed rgba(255,252,246,0.30);
@@ -1417,7 +1422,7 @@
     .footer-bottom .easter-hint {
       font-family: var(--font-body);
       font-size: 12px;
-      color: var(--sun);
+      color: var(--sage);
       opacity: 0.85;
       font-style: italic;
     }
@@ -1577,9 +1582,9 @@
             <path d="M 110 137 Q 100 152 88 144" stroke="#2A2A2A" stroke-width="2.8" fill="none" stroke-linecap="round"/>
             <path d="M 110 137 Q 120 152 132 144" stroke="#2A2A2A" stroke-width="2.8" fill="none" stroke-linecap="round"/>
             <path d="M 102 146 Q 110 158 118 146 Q 113 154 110 154 Q 107 154 102 146 Z" fill="#FF7878"/>
-            <path d="M 60 168 Q 110 178 160 168" stroke="#FF4F2C" stroke-width="6" fill="none" stroke-linecap="round"/>
-            <circle cx="110" cy="174" r="6" fill="#FFD60A"/>
-            <circle cx="110" cy="174" r="2.5" fill="#C82F18"/>
+            <path d="M 60 168 Q 110 178 160 168" stroke="#06B6D4" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <circle cx="110" cy="174" r="6" fill="#FCD34D"/>
+            <circle cx="110" cy="174" r="2.5" fill="#155E75"/>
           </svg>
 
           <!-- Custom cat SVG -->
@@ -1614,8 +1619,8 @@
             <line x1="56" y1="129" x2="36" y2="129" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
             <line x1="130" y1="124" x2="148" y2="119" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
             <line x1="130" y1="129" x2="150" y2="129" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
-            <path d="M 58 152 Q 93 162 128 152" stroke="#7FD0A8" stroke-width="5" fill="none" stroke-linecap="round"/>
-            <circle cx="93" cy="158" r="4" fill="#FFD60A"/>
+            <path d="M 58 152 Q 93 162 128 152" stroke="#34D399" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <circle cx="93" cy="158" r="4" fill="#FCD34D"/>
           </svg>
         </div>
 
@@ -1723,15 +1728,15 @@
           <div class="stamp">premium</div>
           <div class="svc-icon" aria-hidden="true">
             <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="30" cy="46" rx="24" ry="6" fill="#FFC9A2"/>
-              <path d="M 8 46 Q 8 34 16 32 L 44 32 Q 52 34 52 46" stroke="#C82F18" stroke-width="2.5" fill="#FFE0C8" stroke-linejoin="round"/>
+              <ellipse cx="30" cy="46" rx="24" ry="6" fill="#A7F3D0"/>
+              <path d="M 8 46 Q 8 34 16 32 L 44 32 Q 52 34 52 46" stroke="#155E75" stroke-width="2.5" fill="#FFE0C8" stroke-linejoin="round"/>
               <ellipse cx="30" cy="40" rx="14" ry="6" fill="#A5754B"/>
               <circle cx="22" cy="38" r="4" fill="#A5754B"/>
               <path d="M 19 37 Q 21 36 23 37" stroke="#2A2A2A" stroke-width="0.8" fill="none" stroke-linecap="round"/>
               <ellipse cx="20" cy="36" rx="0.8" ry="0.6" fill="#2A2A2A"/>
               <path d="M 14 28 Q 14 24 16 24 Q 18 26 20 30" fill="#A5754B"/>
-              <text x="42" y="28" font-family="Inter" font-size="6" fill="#7FD0A8" font-weight="700">Z</text>
-              <text x="46" y="22" font-family="Inter" font-size="8" fill="#7FD0A8" font-weight="700">Z</text>
+              <text x="42" y="28" font-family="Inter" font-size="6" fill="#34D399" font-weight="700">Z</text>
+              <text x="46" y="22" font-family="Inter" font-size="8" fill="#34D399" font-weight="700">Z</text>
             </svg>
           </div>
           <h3 class="svc-name">Overnight Boarding</h3>
@@ -1744,15 +1749,15 @@
           <div class="stamp">cozy</div>
           <div class="svc-icon" aria-hidden="true">
             <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 12 28 L 30 14 L 48 28 L 48 48 L 12 48 Z" fill="#FFE0C8" stroke="#C82F18" stroke-width="2" stroke-linejoin="round"/>
-              <path d="M 8 30 L 30 12 L 52 30" stroke="#C82F18" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="26" y="36" width="8" height="12" fill="#C82F18"/>
-              <circle cx="32" cy="42" r="0.8" fill="#FFD60A"/>
-              <ellipse cx="20" cy="38" rx="2.5" ry="1.8" fill="#FF4F2C"/>
-              <circle cx="17" cy="34" r="1.2" fill="#FF4F2C"/>
-              <circle cx="20" cy="33" r="1.2" fill="#FF4F2C"/>
-              <circle cx="23" cy="34" r="1.2" fill="#FF4F2C"/>
-              <circle cx="26" cy="35.5" r="1" fill="#FF4F2C"/>
+              <path d="M 12 28 L 30 14 L 48 28 L 48 48 L 12 48 Z" fill="#FFE0C8" stroke="#155E75" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M 8 30 L 30 12 L 52 30" stroke="#155E75" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="26" y="36" width="8" height="12" fill="#155E75"/>
+              <circle cx="32" cy="42" r="0.8" fill="#FCD34D"/>
+              <ellipse cx="20" cy="38" rx="2.5" ry="1.8" fill="#06B6D4"/>
+              <circle cx="17" cy="34" r="1.2" fill="#06B6D4"/>
+              <circle cx="20" cy="33" r="1.2" fill="#06B6D4"/>
+              <circle cx="23" cy="34" r="1.2" fill="#06B6D4"/>
+              <circle cx="26" cy="35.5" r="1" fill="#06B6D4"/>
             </svg>
           </div>
           <h3 class="svc-name">In-Home Pet Sitting</h3>
@@ -1765,16 +1770,16 @@
           <div class="stamp">trusted</div>
           <div class="svc-icon" aria-hidden="true">
             <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="14" y="22" width="28" height="22" rx="3" fill="#7FD0A8" stroke="#3FA877" stroke-width="2"/>
-              <rect x="14" y="22" width="28" height="6" fill="#3FA877"/>
-              <rect x="42" y="28" width="3" height="10" fill="#FFD60A"/>
+              <rect x="14" y="22" width="28" height="22" rx="3" fill="#34D399" stroke="#059669" stroke-width="2"/>
+              <rect x="14" y="22" width="28" height="6" fill="#059669"/>
+              <rect x="42" y="28" width="3" height="10" fill="#FCD34D"/>
               <rect x="26" y="44" width="4" height="10" fill="#5C3D22"/>
-              <rect x="20" y="14" width="18" height="12" rx="1" fill="white" stroke="#C82F18" stroke-width="1.6"/>
-              <path d="M 20 14 L 29 22 L 38 14" stroke="#C82F18" stroke-width="1.4" fill="none"/>
-              <path d="M 8 38 L 14 38 L 13 50 L 9 50 Z" fill="#C82F18"/>
-              <path d="M 11 38 Q 8 30 6 28" stroke="#7FD0A8" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <path d="M 11 38 Q 14 30 16 28" stroke="#7FD0A8" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <path d="M 11 38 Q 11 30 11 26" stroke="#7FD0A8" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <rect x="20" y="14" width="18" height="12" rx="1" fill="white" stroke="#155E75" stroke-width="1.6"/>
+              <path d="M 20 14 L 29 22 L 38 14" stroke="#155E75" stroke-width="1.4" fill="none"/>
+              <path d="M 8 38 L 14 38 L 13 50 L 9 50 Z" fill="#155E75"/>
+              <path d="M 11 38 Q 8 30 6 28" stroke="#34D399" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M 11 38 Q 14 30 16 28" stroke="#34D399" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M 11 38 Q 11 30 11 26" stroke="#34D399" stroke-width="2" fill="none" stroke-linecap="round"/>
               <circle cx="6" cy="28" r="1.5" fill="#7AA86A"/>
               <circle cx="16" cy="28" r="1.5" fill="#7AA86A"/>
               <circle cx="11" cy="26" r="1.5" fill="#7AA86A"/>
@@ -1799,9 +1804,9 @@
               <rect x="24" y="44" width="2.5" height="8" fill="#A5754B"/>
               <rect x="32" y="44" width="2.5" height="8" fill="#A5754B"/>
               <rect x="40" y="44" width="2.5" height="8" fill="#A5754B"/>
-              <path d="M 14 30 Q 6 20 8 12" stroke="#FF4F2C" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <circle cx="50" cy="52" r="1" fill="#7FD0A8" opacity="0.6"/>
-              <circle cx="55" cy="50" r="0.8" fill="#7FD0A8" opacity="0.6"/>
+              <path d="M 14 30 Q 6 20 8 12" stroke="#06B6D4" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="50" cy="52" r="1" fill="#34D399" opacity="0.6"/>
+              <circle cx="55" cy="50" r="0.8" fill="#34D399" opacity="0.6"/>
             </svg>
           </div>
           <h3 class="svc-name">Daily Care Visits</h3>
@@ -1814,7 +1819,7 @@
           <div class="stamp">careful</div>
           <div class="svc-icon" aria-hidden="true">
             <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 30 52 C 8 36 8 18 18 14 C 24 12 28 16 30 20 C 32 16 36 12 42 14 C 52 18 52 36 30 52 Z" fill="#FFB6A0" stroke="#C82F18" stroke-width="2"/>
+              <path d="M 30 52 C 8 36 8 18 18 14 C 24 12 28 16 30 20 C 32 16 36 12 42 14 C 52 18 52 36 30 52 Z" fill="#FB7185" stroke="#155E75" stroke-width="2"/>
               <ellipse cx="30" cy="34" rx="4" ry="3" fill="white"/>
               <circle cx="25" cy="28" r="2" fill="white"/>
               <circle cx="29" cy="26" r="2" fill="white"/>
@@ -1832,15 +1837,15 @@
           <div class="stamp">last-min</div>
           <div class="svc-icon" aria-hidden="true">
             <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="10" y="22" width="40" height="28" rx="3" fill="#FFC9A2" stroke="#C82F18" stroke-width="2"/>
-              <rect x="22" y="14" width="16" height="10" rx="2" fill="none" stroke="#C82F18" stroke-width="2"/>
-              <line x1="30" y1="22" x2="30" y2="50" stroke="#C82F18" stroke-width="1.5" opacity="0.5"/>
-              <ellipse cx="20" cy="38" rx="3" ry="2" fill="#FF4F2C"/>
-              <circle cx="17" cy="33" r="1.5" fill="#FF4F2C"/>
-              <circle cx="20" cy="32" r="1.5" fill="#FF4F2C"/>
-              <circle cx="23" cy="33" r="1.5" fill="#FF4F2C"/>
+              <rect x="10" y="22" width="40" height="28" rx="3" fill="#BAE6FD" stroke="#155E75" stroke-width="2"/>
+              <rect x="22" y="14" width="16" height="10" rx="2" fill="none" stroke="#155E75" stroke-width="2"/>
+              <line x1="30" y1="22" x2="30" y2="50" stroke="#155E75" stroke-width="1.5" opacity="0.5"/>
+              <ellipse cx="20" cy="38" rx="3" ry="2" fill="#06B6D4"/>
+              <circle cx="17" cy="33" r="1.5" fill="#06B6D4"/>
+              <circle cx="20" cy="32" r="1.5" fill="#06B6D4"/>
+              <circle cx="23" cy="33" r="1.5" fill="#06B6D4"/>
               <line x1="42" y1="22" x2="44" y2="18" stroke="#5C3D22" stroke-width="1.5"/>
-              <rect x="42" y="16" width="6" height="4" rx="0.5" fill="#FFD60A" stroke="#5C3D22" stroke-width="1"/>
+              <rect x="42" y="16" width="6" height="4" rx="0.5" fill="#FCD34D" stroke="#5C3D22" stroke-width="1"/>
             </svg>
           </div>
           <h3 class="svc-name">Travel-Day Concierge</h3>
@@ -1866,25 +1871,25 @@
           <svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#6BE0E6"/>
+                <stop offset="0%" stop-color="#38BDF8"/>
                 <stop offset="50%" stop-color="#C5F0E5"/>
                 <stop offset="100%" stop-color="#FFFAEC"/>
               </linearGradient>
             </defs>
             <rect x="0" y="0" width="800" height="280" fill="url(#skyGradient)" rx="14"/>
-            <circle cx="700" cy="56" r="22" fill="#FFD60A" opacity="0.95"/>
-            <circle cx="700" cy="56" r="34" fill="#FFD60A" opacity="0.22"/>
+            <circle cx="700" cy="56" r="22" fill="#FCD34D" opacity="0.95"/>
+            <circle cx="700" cy="56" r="34" fill="#FCD34D" opacity="0.22"/>
             <ellipse cx="120" cy="48" rx="32" ry="9" fill="white" opacity="0.85"/>
             <ellipse cx="140" cy="45" rx="22" ry="7" fill="white" opacity="0.85"/>
             <ellipse cx="380" cy="38" rx="28" ry="8" fill="white" opacity="0.75"/>
             <path d="M 0 240 Q 400 220 800 250 V 280 H 0 Z" fill="#E5C9A8"/>
 
             <g class="journey-marker" id="marker-pa" transform="translate(120, 130)" tabindex="0" role="button" aria-label="See Pennsylvania">
-              <circle r="46" fill="white" stroke="#3FA877" stroke-width="3.5"/>
-              <path d="M -22 14 L -8 -10 L 0 4 L 10 -16 L 22 14 Z" fill="#3FA877"/>
+              <circle r="46" fill="white" stroke="#059669" stroke-width="3.5"/>
+              <path d="M -22 14 L -8 -10 L 0 4 L 10 -16 L 22 14 Z" fill="#059669"/>
               <path d="M -8 -10 L -4 -2 L -14 -2 Z" fill="white"/>
               <path d="M 10 -16 L 14 -8 L 6 -8 Z" fill="white"/>
-              <path d="M 28 8 L 22 -6 L 26 -6 L 20 -16 L 30 -16 L 26 -6 L 30 -6 L 28 8 Z" fill="#3FA877"/>
+              <path d="M 28 8 L 22 -6 L 26 -6 L 20 -16 L 30 -16 L 26 -6 L 30 -6 L 28 8 Z" fill="#059669"/>
               <g transform="translate(-2, 18)">
                 <ellipse cx="0" cy="6" rx="14" ry="9" fill="#E8C7A0"/>
                 <ellipse cx="-10" cy="0" rx="4" ry="6" fill="#A5754B" transform="rotate(-15)"/>
@@ -1896,11 +1901,11 @@
                 <path d="M 0 11 Q 3 14 5 13" stroke="#2A2A2A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
               </g>
             </g>
-            <text x="120" y="200" text-anchor="middle" font-family="Fredoka, Inter, sans-serif" font-size="22" font-weight="600" fill="#1A1A2E">Central PA</text>
-            <text x="120" y="222" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1A1A2E" font-weight="700" letter-spacing="2">MAY — SEPT</text>
+            <text x="120" y="200" text-anchor="middle" font-family="Fredoka, Inter, sans-serif" font-size="22" font-weight="600" fill="#0F172A">Central PA</text>
+            <text x="120" y="222" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#0F172A" font-weight="700" letter-spacing="2">MAY — SEPT</text>
 
             <g class="journey-marker" id="marker-fl" transform="translate(680, 165)" tabindex="0" role="button" aria-label="See Florida">
-              <circle r="46" fill="white" stroke="#FF4F2C" stroke-width="3.5"/>
+              <circle r="46" fill="white" stroke="#06B6D4" stroke-width="3.5"/>
               <path d="M 0 14 Q 0 0 0 -10" stroke="#5C3D22" stroke-width="3" fill="none" stroke-linecap="round"/>
               <path d="M 0 -10 Q -10 -14 -16 -10" stroke="#7AA86A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
               <path d="M 0 -10 Q 10 -14 16 -10" stroke="#7AA86A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
@@ -1918,10 +1923,10 @@
                 <path d="M 12 4 Q 18 -2 14 -8" stroke="#C9B399" stroke-width="3.5" fill="none" stroke-linecap="round"/>
               </g>
             </g>
-            <text x="680" y="234" text-anchor="middle" font-family="Fredoka, Inter, sans-serif" font-size="22" font-weight="600" fill="#1A1A2E">Cocoa Beach, FL</text>
-            <text x="680" y="254" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1A1A2E" font-weight="700" letter-spacing="2">OCT — APR</text>
+            <text x="680" y="234" text-anchor="middle" font-family="Fredoka, Inter, sans-serif" font-size="22" font-weight="600" fill="#0F172A">Cocoa Beach, FL</text>
+            <text x="680" y="254" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#0F172A" font-weight="700" letter-spacing="2">OCT — APR</text>
 
-            <path d="M 165 130 Q 320 70 460 140 Q 590 200 645 165" stroke="#FF4F2C" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="6 8">
+            <path d="M 165 130 Q 320 70 460 140 Q 590 200 645 165" stroke="#06B6D4" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="6 8">
               <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="2s" repeatCount="indefinite"/>
             </path>
 
@@ -1929,12 +1934,12 @@
               <g transform="translate(180, 110)">
                 <animateTransform attributeName="transform" type="translate" values="180,110; 460,140; 645,165; 460,140; 180,110" keyTimes="0;0.25;0.5;0.75;1" dur="14s" repeatCount="indefinite"/>
                 <g transform="scale(0.7)">
-                  <ellipse cx="0" cy="6" rx="3" ry="1.5" fill="#0DB5C4" opacity="0.4"/>
-                  <path d="M -16 4 L 16 4 L 12 10 L -12 10 Z" fill="#0DB5C4"/>
+                  <ellipse cx="0" cy="6" rx="3" ry="1.5" fill="#0284C7" opacity="0.4"/>
+                  <path d="M -16 4 L 16 4 L 12 10 L -12 10 Z" fill="#0284C7"/>
                   <rect x="-12" y="-2" width="24" height="6" rx="1" fill="white"/>
                   <rect x="-2" y="-8" width="8" height="6" rx="1" fill="white"/>
-                  <line x1="2" y1="-8" x2="2" y2="-14" stroke="#0DB5C4" stroke-width="1"/>
-                  <path d="M 2 -14 L 10 -11 L 2 -8 Z" fill="#FF3D8B"/>
+                  <line x1="2" y1="-8" x2="2" y2="-14" stroke="#0284C7" stroke-width="1"/>
+                  <path d="M 2 -14 L 10 -11 L 2 -8 Z" fill="#FB7185"/>
                 </g>
               </g>
             </g>
@@ -2434,7 +2439,7 @@
     function burstConfetti(opts = {}) {
       const count = opts.count || 60;
       const chars = ['🐾', '♥', '✦', '🐾', '🦴', '★'];
-      const colors = ['#FF4F2C','#FF3D8B','#FFD60A','#7FD0A8','#0DB5C4','#B5EE3A'];
+      const colors = ['#06B6D4','#34D399','#38BDF8','#0284C7','#84CC16','#FB7185'];
       for (let i = 0; i < count; i++) {
         const c = document.createElement('span');
         c.className = 'confetti';
