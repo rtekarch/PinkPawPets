@@ -1,0 +1,261 @@
+<h2 class="sr-only">PinkPawPets cute and playful website with services, about section, and booking form for Charlie and Katie's pet care business.</h2>
+
+<style>
+@keyframes ppp-wiggle { 0%,100% { transform: rotate(0deg); } 25% { transform: rotate(-6deg); } 75% { transform: rotate(6deg); } }
+@keyframes ppp-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes ppp-pop { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+@keyframes ppp-heart { 0%,100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+@keyframes ppp-trot { 0% { transform: translateX(-30px) rotate(0deg); } 100% { transform: translateX(0) rotate(0deg); } }
+
+.ppp-wrap { font-family: var(--font-sans); color: #2C2C2A; padding: 0; position: relative; }
+
+/* Floating paw decorations */
+.ppp-deco { position: absolute; opacity: 0.35; pointer-events: none; }
+.ppp-deco.d1 { top: 20px; left: 20px; animation: ppp-float 4s ease-in-out infinite; }
+.ppp-deco.d2 { top: 80px; right: 30px; animation: ppp-float 5s ease-in-out infinite 0.5s; }
+.ppp-deco.d3 { top: 200px; left: 40px; animation: ppp-float 4.5s ease-in-out infinite 1s; }
+
+/* Hero */
+.ppp-hero { background: linear-gradient(135deg, #FBEAF0 0%, #F4C0D1 100%); border-radius: 24px; padding: 2.5rem 2rem; text-align: center; margin-bottom: 1.5rem; position: relative; overflow: hidden; border: 3px dashed #ED93B1; }
+.ppp-logo-circle { width: 88px; height: 88px; border-radius: 50%; background: white; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem; box-shadow: 0 4px 0 #ED93B1; animation: ppp-heart 2s ease-in-out infinite; }
+.ppp-logo-circle svg { width: 50px; height: 50px; }
+.ppp-title { font-size: 42px; font-weight: 500; margin: 0 0 0.5rem; color: #4B1528; letter-spacing: -0.5px; }
+.ppp-title .sparkle { display: inline-block; animation: ppp-wiggle 1.5s ease-in-out infinite; }
+.ppp-tag { font-size: 17px; color: #993556; margin: 0 0 1.5rem; font-style: italic; font-weight: 500; }
+.ppp-tag-emoji { display: inline-block; animation: ppp-heart 1.5s ease-in-out infinite; }
+
+.ppp-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.ppp-btn-primary { background: #D4537E; color: white; border: none; padding: 14px 28px; border-radius: 999px; font-size: 15px; font-weight: 500; cursor: pointer; font-family: var(--font-sans); transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 0 #993556; }
+.ppp-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 0 #993556; }
+.ppp-btn-primary:active { transform: translateY(2px); box-shadow: 0 2px 0 #993556; }
+.ppp-btn-secondary { background: white; color: #993556; border: 2px solid #ED93B1; padding: 12px 26px; border-radius: 999px; font-size: 15px; font-weight: 500; cursor: pointer; font-family: var(--font-sans); transition: all 0.15s; }
+.ppp-btn-secondary:hover { background: #FBEAF0; transform: translateY(-2px); }
+
+.ppp-section { margin-bottom: 2rem; }
+.ppp-section-title { font-size: 24px; font-weight: 500; margin: 0 0 0.25rem; color: #4B1528; display: flex; align-items: center; gap: 8px; }
+.ppp-section-emoji { display: inline-block; animation: ppp-wiggle 2s ease-in-out infinite; }
+.ppp-section-sub { font-size: 14px; color: #993556; margin: 0 0 1.25rem; font-style: italic; }
+
+/* Service cards */
+.ppp-services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+.ppp-service-card { background: white; border: 2px solid #FBEAF0; border-radius: 20px; padding: 1.25rem; cursor: pointer; transition: all 0.2s; position: relative; }
+.ppp-service-card:hover { border-color: #ED93B1; transform: translateY(-3px) rotate(-1deg); box-shadow: 0 6px 0 #FBEAF0; }
+.ppp-service-card.selected { border-color: #D4537E; background: #FBEAF0; box-shadow: 0 4px 0 #ED93B1; }
+.ppp-service-card.selected::after { content: '♥'; position: absolute; top: -8px; right: -8px; width: 28px; height: 28px; background: #D4537E; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; animation: ppp-pop 0.3s ease-out; box-shadow: 0 2px 0 #993556; }
+.ppp-service-icon { width: 52px; height: 52px; border-radius: 50%; background: #FBEAF0; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; font-size: 28px; transition: transform 0.2s; }
+.ppp-service-card:hover .ppp-service-icon { animation: ppp-wiggle 0.6s ease-in-out; }
+.ppp-service-name { font-size: 16px; font-weight: 500; margin: 0 0 4px; color: #4B1528; }
+.ppp-service-price { font-size: 13px; color: #D4537E; font-weight: 500; margin: 0 0 8px; background: #FBEAF0; display: inline-block; padding: 2px 10px; border-radius: 999px; }
+.ppp-service-card.selected .ppp-service-price { background: white; }
+.ppp-service-desc { font-size: 13px; color: #5F5E5A; margin: 0; line-height: 1.5; }
+
+/* About */
+.ppp-about { background: linear-gradient(135deg, #FBEAF0 0%, white 100%); border-radius: 20px; padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border: 2px dashed #F4C0D1; }
+.ppp-pal { text-align: center; padding: 1rem; background: white; border-radius: 16px; transition: transform 0.2s; }
+.ppp-pal:hover { transform: translateY(-3px); }
+.ppp-pal-avatar { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, #ED93B1 0%, #D4537E 100%); color: white; display: inline-flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 500; margin-bottom: 8px; box-shadow: 0 4px 0 #993556; }
+.ppp-pal-name { font-size: 16px; font-weight: 500; margin: 0 0 4px; color: #4B1528; }
+.ppp-pal-emoji { font-size: 14px; }
+.ppp-pal-bio { font-size: 13px; color: #5F5E5A; margin: 4px 0 0; line-height: 1.5; }
+
+/* Stats */
+.ppp-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 1rem; }
+.ppp-stat { background: white; border: 2px solid #FBEAF0; border-radius: 16px; padding: 1rem; text-align: center; transition: transform 0.2s; }
+.ppp-stat:hover { transform: translateY(-2px); border-color: #ED93B1; }
+.ppp-stat-num { font-size: 28px; font-weight: 500; color: #D4537E; margin: 0; }
+.ppp-stat-label { font-size: 12px; color: #993556; margin: 4px 0 0; font-weight: 500; }
+
+/* Form */
+.ppp-form { background: white; border: 2px solid #FBEAF0; border-radius: 20px; padding: 1.5rem; position: relative; }
+.ppp-form::before { content: '♥ ♥ ♥'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: white; padding: 0 12px; color: #ED93B1; font-size: 14px; letter-spacing: 4px; }
+.ppp-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.ppp-form-row.single { grid-template-columns: 1fr; }
+.ppp-label { display: block; font-size: 13px; font-weight: 500; margin-bottom: 6px; color: #4B1528; }
+.ppp-required { color: #D4537E; }
+.ppp-form input, .ppp-form select, .ppp-form textarea { width: 100%; padding: 10px 14px; border: 2px solid #FBEAF0; border-radius: 12px; font-size: 14px; font-family: var(--font-sans); transition: border-color 0.15s; box-sizing: border-box; background: white; color: #2C2C2A; }
+.ppp-form input:focus, .ppp-form select:focus, .ppp-form textarea:focus { outline: none; border-color: #D4537E; }
+.ppp-form input::placeholder, .ppp-form textarea::placeholder { color: #B4B2A9; }
+
+.ppp-summary { background: #FBEAF0; border-radius: 16px; padding: 1rem 1.25rem; margin-top: 1rem; font-size: 14px; color: #4B1528; border: 2px dashed #ED93B1; }
+.ppp-summary-empty { color: #993556; font-style: italic; }
+.ppp-summary strong { color: #4B1528; }
+
+.ppp-success { background: linear-gradient(135deg, #FBEAF0 0%, #F4C0D1 100%); border-radius: 16px; padding: 1.5rem; margin-top: 1rem; text-align: center; border: 3px dashed #D4537E; animation: ppp-pop 0.4s ease-out; }
+.ppp-success-emoji { font-size: 36px; display: block; margin-bottom: 8px; animation: ppp-heart 1s ease-in-out infinite; }
+.ppp-success-title { font-size: 18px; font-weight: 500; color: #4B1528; margin: 0 0 4px; }
+.ppp-success-msg { font-size: 14px; color: #993556; margin: 0; }
+
+@media (max-width: 480px) { .ppp-form-row, .ppp-about { grid-template-columns: 1fr; } }
+</style>
+
+<div class="ppp-wrap">
+
+  <div class="ppp-hero">
+    <span class="ppp-deco d1" style="font-size: 24px;">🐾</span>
+    <span class="ppp-deco d2" style="font-size: 20px;">♥</span>
+    <span class="ppp-deco d3" style="font-size: 22px;">🐾</span>
+    <div class="ppp-logo-circle">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#D4537E"><circle cx="6" cy="9" r="2"/><circle cx="18" cy="9" r="2"/><circle cx="9" cy="5" r="2"/><circle cx="15" cy="5" r="2"/><ellipse cx="12" cy="16" rx="5" ry="4"/></svg>
+    </div>
+    <h1 class="ppp-title"><span class="sparkle">✨</span> PinkPawPets <span class="sparkle">✨</span></h1>
+    <p class="ppp-tag">Loving care for the pets you love <span class="ppp-tag-emoji">♥</span></p>
+    <div class="ppp-cta-row">
+      <button class="ppp-btn-primary" onclick="document.getElementById('ppp-services').scrollIntoView({behavior:'smooth'})">See our services 🐾</button>
+      <button class="ppp-btn-secondary" onclick="document.getElementById('ppp-form').scrollIntoView({behavior:'smooth'})">Book us now</button>
+    </div>
+  </div>
+
+  <div class="ppp-section">
+    <h2 class="ppp-section-title"><span class="ppp-section-emoji">👋</span> Meet your pet pals</h2>
+    <p class="ppp-section-sub">Two trusted neighbors. Two years of happy tails.</p>
+    <div class="ppp-about">
+      <div class="ppp-pal">
+        <div class="ppp-pal-avatar">C</div>
+        <p class="ppp-pal-name">Charlie, 12 <span class="ppp-pal-emoji">🐕</span></p>
+        <p class="ppp-pal-bio">Loves big dogs, long walks, and meeting every cat in the neighborhood.</p>
+      </div>
+      <div class="ppp-pal">
+        <div class="ppp-pal-avatar">K</div>
+        <p class="ppp-pal-name">Katie, 12 <span class="ppp-pal-emoji">🐱</span></p>
+        <p class="ppp-pal-bio">Patient with shy pets, great at feeding routines, and never forgets a scheduled walk.</p>
+      </div>
+    </div>
+    <div class="ppp-stats">
+      <div class="ppp-stat"><p class="ppp-stat-num">40+</p><p class="ppp-stat-label">🐾 Pets cared for</p></div>
+      <div class="ppp-stat"><p class="ppp-stat-num">2</p><p class="ppp-stat-label">📅 Years running</p></div>
+      <div class="ppp-stat"><p class="ppp-stat-num">100%</p><p class="ppp-stat-label">♥ Tail wags</p></div>
+    </div>
+  </div>
+
+  <div class="ppp-section" id="ppp-services">
+    <h2 class="ppp-section-title"><span class="ppp-section-emoji">🐾</span> Our services</h2>
+    <p class="ppp-section-sub">Tap any service to add it to your booking ♥</p>
+    <div class="ppp-services-grid" id="ppp-grid"></div>
+  </div>
+
+  <div class="ppp-section" id="ppp-form">
+    <h2 class="ppp-section-title"><span class="ppp-section-emoji">💌</span> Request a booking</h2>
+    <p class="ppp-section-sub">Tell us about your pet. We'll text you back within 24 hours!</p>
+    <div class="ppp-form">
+      <div class="ppp-form-row">
+        <div>
+          <label class="ppp-label">Your name <span class="ppp-required">♥</span></label>
+          <input type="text" id="f-name" placeholder="Jane Smith" />
+        </div>
+        <div>
+          <label class="ppp-label">Phone <span class="ppp-required">♥</span></label>
+          <input type="tel" id="f-phone" placeholder="555-123-4567" />
+        </div>
+      </div>
+      <div class="ppp-form-row">
+        <div>
+          <label class="ppp-label">Pet's name 🐾</label>
+          <input type="text" id="f-pet" placeholder="Buddy" />
+        </div>
+        <div>
+          <label class="ppp-label">Pet type</label>
+          <select id="f-type">
+            <option value="Dog">🐕 Dog</option>
+            <option value="Cat">🐱 Cat</option>
+            <option value="Small pet">🐹 Small pet (hamster, fish, bunny)</option>
+            <option value="Multiple">♥ Multiple pets</option>
+          </select>
+        </div>
+      </div>
+      <div class="ppp-form-row">
+        <div>
+          <label class="ppp-label">Start date 📅</label>
+          <input type="date" id="f-start" />
+        </div>
+        <div>
+          <label class="ppp-label">End date 📅</label>
+          <input type="date" id="f-end" />
+        </div>
+      </div>
+      <div class="ppp-form-row single">
+        <div>
+          <label class="ppp-label">Notes for Charlie & Katie 💌</label>
+          <textarea id="f-notes" rows="3" placeholder="Feeding schedule, medication, favorite toys, anything we should know..." style="resize: vertical;"></textarea>
+        </div>
+      </div>
+
+      <div class="ppp-summary" id="ppp-summary">
+        <span class="ppp-summary-empty">🐾 Pick at least one service above to see your booking summary!</span>
+      </div>
+
+      <div style="margin-top: 1rem;">
+        <button class="ppp-btn-primary" onclick="submitBooking()" style="width: 100%;">Send booking request ♥</button>
+      </div>
+
+      <div id="ppp-success" style="display: none;"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const services = [
+  { id: 'walk',   name: 'Dog walking',         price: '$10 / 30 min',  desc: 'Leash time, sniff stops, and a happy return.',          emoji: '🐕' },
+  { id: 'dropin', name: 'Drop-in & feeding',   price: '$8 / visit',    desc: 'Food, fresh water, litter check, and cuddles.',         emoji: '🥣' },
+  { id: 'play',   name: 'Playtime & exercise', price: '$12 / 30 min',  desc: 'Fetch, tug, zoomies. Energy out, naps in.',             emoji: '🎾' },
+  { id: 'groom',  name: 'Brushing & baths',    price: '$15 / session', desc: 'Gentle brushing or a bubbly bath at your home.',        emoji: '🛁' },
+  { id: 'plant',  name: 'Plants & mail',       price: '$5 / visit',    desc: 'Watering plants and grabbing the mail while you travel.', emoji: '🌱' },
+  { id: 'small',  name: 'Small pet care',      price: '$8 / visit',    desc: 'Cats, hamsters, fish, bunnies, and more.',              emoji: '🐹' },
+];
+
+const selected = new Set();
+
+function renderServices() {
+  const grid = document.getElementById('ppp-grid');
+  grid.innerHTML = services.map(s => `
+    <div class="ppp-service-card ${selected.has(s.id) ? 'selected' : ''}" onclick="toggleService('${s.id}')">
+      <div class="ppp-service-icon">${s.emoji}</div>
+      <p class="ppp-service-name">${s.name}</p>
+      <p class="ppp-service-price">${s.price}</p>
+      <p class="ppp-service-desc">${s.desc}</p>
+    </div>
+  `).join('');
+}
+
+function toggleService(id) {
+  if (selected.has(id)) selected.delete(id);
+  else selected.add(id);
+  renderServices();
+  updateSummary();
+}
+
+function updateSummary() {
+  const box = document.getElementById('ppp-summary');
+  if (selected.size === 0) {
+    box.innerHTML = '<span class="ppp-summary-empty">🐾 Pick at least one service above to see your booking summary!</span>';
+    return;
+  }
+  const picked = services.filter(s => selected.has(s.id));
+  const list = picked.map(s => `${s.emoji} <strong>${s.name}</strong> (${s.price})`).join(' &nbsp;•&nbsp; ');
+  box.innerHTML = `<strong>♥ Your selection:</strong><br>${list}`;
+}
+
+function submitBooking() {
+  const name  = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  if (!name || !phone) {
+    alert('Please add your name and phone so Charlie & Katie can reach you! ♥');
+    return;
+  }
+  if (selected.size === 0) {
+    alert('Please pick at least one service! 🐾');
+    return;
+  }
+  const success = document.getElementById('ppp-success');
+  success.style.display = 'block';
+  success.className = 'ppp-success';
+  success.innerHTML = `
+    <span class="ppp-success-emoji">🐾</span>
+    <p class="ppp-success-title">Yay! Your request is on its way!</p>
+    <p class="ppp-success-msg">Thanks ${name.split(' ')[0]}! Charlie &amp; Katie will text you at ${phone} within 24 hours. ♥</p>
+  `;
+  success.scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+renderServices();
+</script>
