@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#06B6D4" />
+  <meta name="theme-color" content="#D4687A" />
   <title>Tori &amp; Max · Concierge Pet Care &amp; House Sitting | PinkPawPets</title>
   <meta name="description" content="Pet care from two free-spirited humans who happen to also work yachts. Overnight boarding, pet sitting, house sitting from Central PA to Cocoa Beach. 5+ years, 100s of pets and homes." />
   <meta property="og:title" content="Tori & Max · The Pro Crew at PinkPawPets" />
@@ -11,82 +11,54 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pinkpawpets.com/tori-and-max/" />
   <link rel="canonical" href="https://pinkpawpets.com/tori-and-max/" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF4F2C'%3E%3Ccircle cx='6' cy='9' r='2'/%3E%3Ccircle cx='18' cy='9' r='2'/%3E%3Ccircle cx='9' cy='5' r='2'/%3E%3Ccircle cx='15' cy='5' r='2'/%3E%3Cellipse cx='12' cy='16' rx='5' ry='4'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D4687A'%3E%3Ccircle cx='6' cy='9' r='2'/%3E%3Ccircle cx='18' cy='9' r='2'/%3E%3Ccircle cx='9' cy='5' r='2'/%3E%3Ccircle cx='15' cy='5' r='2'/%3E%3Cellipse cx='12' cy='16' rx='5' ry='4'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+
   <style>
+    /* ============================================================
+       DESIGN TOKENS
+
+       NOTE ON CONTRAST: --color-primary (#D4687A) on --color-bg
+       (#FDF7F2) achieves ~3.26:1 — passes WCAG AA for large text
+       (≥24px or ≥18.67px bold, requiring 3:1) but NOT for normal
+       body text (requiring 4.5:1). Primary color is applied only to
+       display headings and large decorative elements. All body copy
+       and labels use --color-text (#2D2D2D) on --color-bg, which
+       passes at 12.6:1.
+    ============================================================ */
     :root {
-      /* Clean cool white base — no warm undertone */
-      --cream: #FAFCFF;        /* near-white, cool blue tint */
-      --cream-2: #EAF6F8;      /* pale aqua */
-      --cream-soft: #FFFFFF;   /* pure white for cards */
-      --paper: #F0F8FB;        /* paper-white with aqua hint */
-      --peach: #B8ECEC;        /* repurposed: light aqua (was peach) */
-      --peach-soft: #DEF6F4;   /* repurposed: very pale aqua */
-
-      /* Pastel ocean/garden mesh — blue-green dominant, tiny warm note */
-      --mesh-aqua:     rgba(165, 230, 240, 0.55);
-      --mesh-mint:     rgba(180, 240, 210, 0.55);
-      --mesh-sky:      rgba(170, 220, 245, 0.55);
-      --mesh-teal:     rgba(150, 220, 230, 0.45);
-      --mesh-lavender: rgba(220, 200, 240, 0.50);
-      --mesh-blush:    rgba(255, 200, 220, 0.28);
-
-      /* Coral and terra repurposed -> teal/ocean (primary brand) */
-      --coral: #06B6D4;        /* vibrant teal — primary */
-      --coral-deep: #0E7490;   /* deep teal */
-      --terra: #155E75;        /* deep ocean */
-
-      /* Rose softened to coral-pink — small accent only */
-      --rose: #FB7185;         /* soft coral-pink */
-      --rose-deep: #E11D48;    /* deep rose */
-
-      /* Sage upgraded to vibrant emerald */
-      --sage: #34D399;         /* fresh mint green */
-      --sage-deep: #059669;    /* deep emerald */
-
-      --lime: #84CC16;         /* electric lime */
-      --lime-deep: #65A30D;
-
-      --sky: #38BDF8;          /* sky blue */
-      --sky-deep: #0284C7;     /* ocean blue */
-
-      --sun: #FCD34D;          /* softer yellow — TINY accent only */
-      --sun-deep: #EAB308;
-
-      --plum: #1E3A8A;         /* navy plum (was purple) */
-      --brown: #475569;        /* slate (was brown) */
-      --brown-soft: #64748B;
-      --charcoal: #0F172A;     /* deep blue-charcoal */
-      --slate: #475569;
-      --line: #DBEAEC;
-
-      /* Brand thread back to PinkPawPets */
-      --brand-pink: #ED93B1;
-      --brand-pink-deep: #D4537E;
-
-      /* Translucent tape colors — cool palette */
-      --tape-1: rgba(56, 189, 248, 0.55);    /* sky blue */
-      --tape-2: rgba(52, 211, 153, 0.55);    /* mint */
-      --tape-3: rgba(132, 204, 22, 0.45);    /* lime */
-      --tape-4: rgba(251, 113, 133, 0.40);   /* small pink pop */
-
-      --font-display: 'Fredoka', 'Inter', system-ui, sans-serif;
-      --font-hand: 'Caveat', 'Comic Sans MS', cursive;
-      --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-
-      --shadow-sm: 0 2px 4px rgba(14, 116, 144, 0.10);
-      --shadow-md: 0 12px 32px -8px rgba(14, 116, 144, 0.22);
-      --shadow-lg: 0 28px 56px -16px rgba(14, 116, 144, 0.32);
+      --color-bg:           #FDF7F2;
+      --color-surface:      #FFFFFF;
+      --color-primary:      #D4687A;
+      --color-primary-dark: #B04E62;
+      --color-accent:       #4A7C74;
+      --color-text:         #2D2D2D;
+      --color-text-muted:   #6B6B6B;
+      --color-border:       #E8DDD6;
+      --font-display:       'Playfair Display', Georgia, serif;
+      --font-body:          'DM Sans', system-ui, -apple-system, sans-serif;
+      --radius-sm:   8px;
+      --radius-md:   16px;
+      --radius-lg:   24px;
+      --radius-pill: 999px;
+      --shadow-sm:  0 2px 6px rgba(176, 78, 98, 0.08);
+      --shadow-md:  0 10px 28px -8px rgba(176, 78, 98, 0.16);
+      --shadow-lg:  0 24px 52px -16px rgba(176, 78, 98, 0.20);
     }
-    * { box-sizing: border-box; }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+
     body {
       font-family: var(--font-body);
-      background: var(--cream);
-      color: var(--charcoal);
+      background: var(--color-bg);
+      color: var(--color-text);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       line-height: 1.6;
@@ -94,1390 +66,746 @@
       cursor: none;
       position: relative;
     }
-    /* Ocean/garden mesh — blue-green dominant, tiny pink pop */
+
+    /* Warm mesh gradient */
     body::before {
       content: ''; position: fixed; inset: 0; z-index: -2; pointer-events: none;
-      background-color: var(--cream);
+      background-color: var(--color-bg);
       background-image:
-        radial-gradient(60% 50% at 6% 4%,    var(--mesh-sky),      transparent 65%),
-        radial-gradient(55% 45% at 95% 6%,   var(--mesh-mint),     transparent 65%),
-        radial-gradient(45% 35% at 50% 26%,  var(--mesh-aqua),     transparent 70%),
-        radial-gradient(55% 45% at 4% 52%,   var(--mesh-teal),     transparent 65%),
-        radial-gradient(60% 50% at 96% 58%,  var(--mesh-sky),      transparent 65%),
-        radial-gradient(50% 40% at 30% 92%,  var(--mesh-lavender), transparent 70%),
-        radial-gradient(40% 32% at 78% 94%,  var(--mesh-blush),    transparent 70%),
-        radial-gradient(45% 35% at 60% 78%,  var(--mesh-mint),     transparent 70%);
+        radial-gradient(60% 50% at 6% 4%,    rgba(212,104,122,0.07),  transparent 65%),
+        radial-gradient(55% 45% at 95% 6%,   rgba(74,124,116,0.07),   transparent 65%),
+        radial-gradient(45% 35% at 50% 26%,  rgba(212,104,122,0.04),  transparent 70%),
+        radial-gradient(55% 45% at 4% 52%,   rgba(232,221,214,0.45),  transparent 65%),
+        radial-gradient(60% 50% at 96% 58%,  rgba(74,124,116,0.05),   transparent 65%),
+        radial-gradient(50% 40% at 30% 92%,  rgba(212,104,122,0.05),  transparent 70%),
+        radial-gradient(40% 32% at 78% 94%,  rgba(74,124,116,0.04),   transparent 70%),
+        radial-gradient(45% 35% at 60% 78%,  rgba(232,221,214,0.38),  transparent 70%);
     }
-    /* Subtle dot grid — barely there, cool gray */
+
+    /* Subtle dot grid */
     body::after {
       content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
-      background-image:
-        radial-gradient(circle at 1px 1px, rgba(60,55,90,0.05) 1px, transparent 0);
-      background-size: 32px 32px;
-      opacity: 0.45;
+      background-image: radial-gradient(circle at 1px 1px, rgba(45,45,45,0.035) 1px, transparent 0);
+      background-size: 28px 28px;
     }
+
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
     .container { max-width: 1180px; margin: 0 auto; padding: 0 1.25rem; position: relative; }
-    a { color: inherit; }
+    a { color: var(--color-primary); }
     button { cursor: none; }
+    input, select, textarea { cursor: text; font-family: var(--font-body); }
+    input[type="date"], select { cursor: pointer; }
+    h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; }
+    p, label { font-family: var(--font-body); }
 
-    /* Restore native cursor on inputs */
-    input, select, textarea { cursor: text; }
-    input[type="date"] { cursor: pointer; }
-    select { cursor: pointer; }
-
-    /* === Cursor paw trail === */
-    .cursor-paw {
-      position: fixed;
-      width: 22px; height: 22px;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.4s ease, transform 0.05s linear;
+    /* ============================================================
+       ANIMATIONS
+    ============================================================ */
+    @keyframes float-y { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(4deg); } }
+    @keyframes wag     { 0%,100% { transform: rotate(-6deg); }  50% { transform: rotate(6deg); } }
+    @keyframes wag-fast { 0%,100% { transform: rotate(-12deg); } 50% { transform: rotate(12deg); } }
+    @keyframes bob     { 0%,100% { transform: translateY(0); }   50% { transform: translateY(-7px); } }
+    @keyframes blink   { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+    @keyframes hop     { 0%,100% { transform: translateY(0); }   25% { transform: translateY(-8px) scale(1.08); } 50% { transform: translateY(0); } }
+    @keyframes wiggle  { 0%,100% { transform: rotate(-2deg); }   50% { transform: rotate(2deg); } }
+    @keyframes spin-slow { from { transform: rotate(0deg); }     to   { transform: rotate(360deg); } }
+    @keyframes wave-shift { from { transform: translateX(0); }   to   { transform: translateX(-50%); } }
+    @keyframes rise    { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pop-in  { 0% { opacity: 0; transform: scale(0.4) rotate(-12deg); } 60% { transform: scale(1.1) rotate(3deg); } 100% { opacity: 1; transform: scale(1); } }
+    @keyframes gradient-shift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+    @keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 0 rgba(74,124,116,0.6); } 50% { box-shadow: 0 0 0 10px rgba(74,124,116,0); } }
+    @keyframes bounce-in { 0% { opacity: 0; transform: translateY(20px) scale(0.9); } 60% { transform: translateY(-4px) scale(1.02); } 100% { opacity: 1; transform: translateY(0); } }
+    @keyframes underline-draw { from { width: 0; } to { width: 100%; } }
+    @keyframes burst-up {
+      0%   { opacity: 1; transform: translate(-50%,-50%) scale(0.6); }
+      100% { opacity: 0; transform: translate(var(--tx, 0), var(--ty, -60px)) scale(1.2) rotate(var(--rr, 30deg)); }
     }
-    .cursor-paw svg { width: 100%; height: 100%; fill: var(--coral); filter: drop-shadow(0 1px 2px rgba(60,55,90,0.4)); }
+    @keyframes confetti-fall {
+      0%   { transform: translate(0, -20px) rotate(0deg); opacity: 0; }
+      10%  { opacity: 1; }
+      100% { transform: translate(var(--cx, 30px), 100vh) rotate(720deg); opacity: 0; }
+    }
+    @keyframes trail-fade {
+      0%   { opacity: 0.7; transform: translate(-50%,-50%) rotate(var(--rot, 0deg)) scale(1.1); }
+      100% { opacity: 0;   transform: translate(-50%,-50%) rotate(var(--rot, 0deg)) scale(0.4); }
+    }
+
+    /* Hand-drawn underline */
+    .hand-underline { position: relative; display: inline-block; white-space: nowrap; }
+    .hand-underline::after {
+      content: ''; position: absolute; left: -4%; right: -4%; bottom: -8px; height: 14px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'%3E%3Cpath d='M2 8 Q 50 2 100 7 T 198 9' stroke='%23D4687A' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-size: 100% 100%;
+      animation: underline-draw 1.2s 0.4s ease-out both;
+    }
+
+    /* ============================================================
+       CUSTOM PAW CURSOR
+    ============================================================ */
+    .cursor-paw {
+      position: fixed; width: 22px; height: 22px;
+      pointer-events: none; z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.4s ease;
+    }
+    .cursor-paw svg { width: 100%; height: 100%; fill: var(--color-primary); filter: drop-shadow(0 1px 3px rgba(176,78,98,0.35)); }
     .paw-trail {
-      position: fixed;
-      width: 14px; height: 14px;
-      pointer-events: none;
-      z-index: 9998;
+      position: fixed; width: 14px; height: 14px;
+      pointer-events: none; z-index: 9998;
       transform: translate(-50%, -50%) rotate(var(--rot, 0deg));
       animation: trail-fade 0.9s ease-out forwards;
     }
-    .paw-trail svg { width: 100%; height: 100%; fill: var(--rose); opacity: 0.7; }
-    @keyframes trail-fade {
-      0% { opacity: 0.85; transform: translate(-50%,-50%) rotate(var(--rot, 0deg)) scale(1.1); }
-      100% { opacity: 0; transform: translate(-50%,-50%) rotate(var(--rot, 0deg)) scale(0.4); }
-    }
+    .paw-trail svg { width: 100%; height: 100%; fill: var(--color-primary); opacity: 0.45; }
 
-    /* === Floating ambient decorations === */
-    .ambient-deco {
-      position: fixed; pointer-events: none; z-index: 1;
-      font-size: 18px; opacity: 0.35;
-      animation: drift 18s linear infinite;
-    }
-    @keyframes drift {
-      from { transform: translate(0,0) rotate(0deg); }
-      to   { transform: translate(40px, -40px) rotate(360deg); }
-    }
-
-    /* === Animations === */
-    @keyframes float-y { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(4deg); } }
-    @keyframes wag { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
-    @keyframes wag-fast { 0%,100% { transform: rotate(-12deg); } 50% { transform: rotate(12deg); } }
-    @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
-    @keyframes pulse-warm { 0%,100% { box-shadow: 0 0 0 0 rgba(6,182,212,0.55); } 50% { box-shadow: 0 0 0 14px rgba(6,182,212,0); } }
-    @keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
-    @keyframes wave-shift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    @keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes pop-in { 0% { opacity: 0; transform: scale(0.4) rotate(-12deg); } 60% { transform: scale(1.1) rotate(3deg); } 100% { opacity: 1; transform: scale(1) rotate(0deg); } }
-    @keyframes stamp-in { 0% { opacity: 0; transform: scale(2) rotate(-8deg); } 100% { opacity: 1; transform: scale(1) rotate(-3deg); } }
-    @keyframes gradient-shift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
-    @keyframes underline-draw { from { width: 0; } to { width: 100%; } }
-    @keyframes wiggle { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
-    @keyframes hop { 0%,100% { transform: translateY(0); } 25% { transform: translateY(-8px) scale(1.08); } 50% { transform: translateY(0); } }
-    @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-    @keyframes burst-up {
-      0% { opacity: 1; transform: translate(-50%,-50%) scale(0.6); }
-      100% { opacity: 0; transform: translate(var(--tx, 0), var(--ty, -60px)) scale(1.2) rotate(var(--rr, 30deg)); }
-    }
-    @keyframes z-rise {
-      0% { opacity: 0; transform: translate(0, 0) scale(0.6); }
-      30% { opacity: 1; }
-      100% { opacity: 0; transform: translate(20px, -50px) scale(1.4); }
-    }
-    @keyframes paw-trot-step {
-      0%,100% { transform: translateY(0) rotate(0deg); opacity: 0.5; }
-      50% { transform: translateY(-6px) rotate(var(--ang, 0deg)); opacity: 1; }
-    }
-    @keyframes confetti-fall {
-      0% { transform: translate(0, -20px) rotate(0deg); opacity: 0; }
-      10% { opacity: 1; }
-      100% { transform: translate(var(--cx, 30px), 100vh) rotate(720deg); opacity: 0; }
-    }
-    @keyframes bounce-in {
-      0% { opacity: 0; transform: translateY(20px) scale(0.9); }
-      60% { transform: translateY(-4px) scale(1.02); }
-      100% { opacity: 1; transform: translateY(0) scale(1); }
-    }
-
-    /* === Hand-drawn underlines === */
-    .hand-underline {
-      position: relative; display: inline-block;
-      white-space: nowrap;
-    }
-    .hand-underline::after {
-      content: ''; position: absolute;
-      left: -4%; right: -4%; bottom: -8px;
-      height: 14px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'%3E%3Cpath d='M2 8 Q 50 2 100 7 T 198 9' stroke='%23FF6B4A' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      animation: underline-draw 1.2s 0.4s ease-out both;
-    }
-    .hand-circle {
-      position: relative; display: inline-block;
-      padding: 0 6px;
-    }
-    .hand-circle::before {
-      content: ''; position: absolute; inset: -8px -10px -6px -10px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'%3E%3Cpath d='M 100 6 Q 188 12 192 30 Q 198 50 100 54 Q 8 52 6 30 Q 4 8 100 6 Z' stroke='%23E84777' stroke-width='3' fill='none' stroke-linecap='round' stroke-dasharray='5 4'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-size: 100% 100%;
-      pointer-events: none;
-    }
-
-    /* === Washi tape utility === */
-    .tape {
-      position: absolute;
-      width: 80px; height: 22px;
-      background: var(--tape-1);
-      transform: rotate(-15deg);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-      pointer-events: none;
-    }
-    .tape::before, .tape::after {
-      content: ''; position: absolute; top: 0; bottom: 0; width: 6px;
-      background: linear-gradient(90deg, rgba(0,0,0,0.08), transparent);
-    }
-    .tape::before { left: 0; }
-    .tape::after { right: 0; transform: scaleX(-1); }
-    .tape.t-yellow { background: var(--tape-2); }
-    .tape.t-pink { background: var(--tape-3); }
-
-    /* === Stamp utility === */
-    .stamp {
-      display: inline-block;
-      padding: 6px 14px;
-      border: 2.5px solid var(--terra);
-      color: var(--terra);
-      font-family: var(--font-body);
-      font-size: 11px; font-weight: 800;
-      letter-spacing: 2.5px; text-transform: uppercase;
-      transform: rotate(-3deg);
-      background: rgba(6,182,212,0.08);
-      border-radius: 4px;
-      position: relative;
-    }
-    .stamp::before {
-      content: ''; position: absolute; inset: 3px;
-      border: 1px dashed var(--terra);
-      border-radius: 2px;
-      pointer-events: none;
-      opacity: 0.5;
-    }
-
-    /* === Top nav === */
+    /* ============================================================
+       SECTION: NAV
+    ============================================================ */
     .topnav {
       position: sticky; top: 0; z-index: 40;
-      background: rgba(255,246,230,0.92);
-      backdrop-filter: saturate(160%) blur(12px);
-      -webkit-backdrop-filter: saturate(160%) blur(12px);
-      border-bottom: 2px dashed rgba(6,182,212,0.30);
+      background: rgba(253,247,242,0.94);
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      border-bottom: 1px solid var(--color-border);
     }
     .topnav-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; gap: 1rem; }
+
     .topnav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .topnav-mark {
       width: 38px; height: 38px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--coral), var(--terra));
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
       display: inline-flex; align-items: center; justify-content: center;
-      box-shadow: 0 3px 0 var(--coral-deep);
-      transform: rotate(-6deg);
-      transition: transform 0.2s;
+      box-shadow: 0 3px 0 var(--color-primary-dark); transform: rotate(-6deg); transition: transform 0.2s;
     }
     .topnav-brand:hover .topnav-mark { transform: rotate(6deg) scale(1.05); }
     .topnav-mark svg { width: 19px; height: 19px; fill: white; }
-    .topnav-name {
-      font-family: var(--font-display);
-      font-weight: 600; color: var(--charcoal); font-size: 18px;
-      letter-spacing: -0.3px;
-    }
+    .topnav-name { font-family: var(--font-display); font-weight: 700; color: var(--color-text); font-size: 18px; letter-spacing: -0.3px; }
     .topnav-name .thin {
-      color: var(--coral); font-weight: 500;
-      font-family: var(--font-body);
-      font-size: 13px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      vertical-align: 1px;
+      color: var(--color-primary); font-weight: 500;
+      font-family: var(--font-body); font-size: 13px;
+      letter-spacing: 1.5px; text-transform: uppercase; vertical-align: 1px;
     }
     .topnav-status {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 13px; color: var(--brown);
-      padding: 7px 14px;
-      border-radius: 999px;
-      background: white;
-      border: 1.5px solid var(--peach);
-      box-shadow: 0 2px 0 var(--peach);
-      max-width: 360px;
-      overflow: hidden;
-      flex: 1;
-      min-width: 0;
+      display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--color-text-muted);
+      padding: 7px 14px; border-radius: var(--radius-pill);
+      background: var(--color-surface); border: 1.5px solid var(--color-border);
+      box-shadow: 0 2px 0 var(--color-border); max-width: 360px; overflow: hidden; flex: 1; min-width: 0;
     }
-    .topnav-status .pulse {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--sage); animation: pulse-warm 2s infinite;
-      flex-shrink: 0;
-    }
-    .topnav-status-text {
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-      font-weight: 500;
-      transition: opacity 0.4s;
-    }
+    .topnav-status .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--color-accent); animation: pulse-dot 2s infinite; flex-shrink: 0; }
+    .topnav-status-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; transition: opacity 0.4s; }
     .topnav-back {
-      font-size: 13px; color: var(--brown);
-      text-decoration: none;
-      padding: 9px 16px;
-      border-radius: 999px;
-      background: white;
-      border: 1.5px solid var(--line);
-      transition: all 0.15s;
-      display: inline-flex; align-items: center; gap: 6px;
-      font-weight: 500;
-      flex-shrink: 0;
+      font-size: 13px; color: var(--color-text-muted); text-decoration: none;
+      padding: 9px 16px; border-radius: var(--radius-pill);
+      background: var(--color-surface); border: 1.5px solid var(--color-border);
+      transition: all 0.15s; display: inline-flex; align-items: center; gap: 6px; font-weight: 500; flex-shrink: 0;
     }
-    .topnav-back:hover { background: var(--peach-soft); border-color: var(--coral); color: var(--terra); transform: translateX(-2px); }
+    .topnav-back:hover { background: rgba(212,104,122,0.05); border-color: var(--color-primary); color: var(--color-primary); transform: translateX(-2px); text-decoration: none; }
 
-    /* === Hero === */
-    .hero {
-      position: relative;
-      padding: 3.5rem 0 0;
-      overflow: hidden;
+    /* ============================================================
+       SECTION: TRUST BAR
+    ============================================================ */
+    .trust-bar {
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0.6rem 0;
     }
+    .trust-bar-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      align-items: center;
+      justify-items: center;
+      text-align: center;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 0.4rem;
+      font-size: 13px; color: var(--color-text-muted);
+      font-family: var(--font-body); white-space: nowrap;
+    }
+
+    /* ============================================================
+       SECTION: HERO
+    ============================================================ */
+    .hero { position: relative; padding: 3.5rem 0 0; overflow: hidden; }
     .hero-paper {
-      position: absolute;
-      inset: 16px 12px 80px;
-      background: rgba(255, 255, 255, 0.55);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      border-radius: 28px;
-      transform: rotate(-0.4deg);
-      box-shadow: 0 16px 40px -16px rgba(60, 55, 90, 0.18);
-      z-index: 0;
+      position: absolute; inset: 16px 12px 80px;
+      background: rgba(255,255,255,0.52);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.72);
+      border-radius: 28px; transform: rotate(-0.4deg);
+      box-shadow: 0 16px 40px -16px rgba(212,104,122,0.10); z-index: 0;
     }
     .hero-paper::before, .hero-paper::after {
-      content: ''; position: absolute;
-      width: 110px; height: 26px;
-      background: var(--tape-2);
-      transform: rotate(-8deg);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      content: ''; position: absolute; width: 90px; height: 22px;
+      background: rgba(212,104,122,0.16); transform: rotate(-8deg);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
     }
     .hero-paper::before { top: -10px; left: 8%; }
-    .hero-paper::after { top: -10px; right: 10%; transform: rotate(8deg); background: var(--tape-1); }
+    .hero-paper::after  { top: -10px; right: 10%; transform: rotate(8deg); background: rgba(74,124,116,0.16); }
 
     .hero-grid {
       display: grid; grid-template-columns: 1.05fr 1fr; gap: 2rem;
-      align-items: center;
-      padding: 2rem 0 4rem;
-      position: relative; z-index: 2;
+      align-items: center; padding: 2rem 0 4rem; position: relative; z-index: 2;
     }
 
     .hello-tag {
-      display: inline-block;
-      font-family: var(--font-hand);
-      font-size: 28px; font-weight: 600;
-      color: var(--terra);
-      transform: rotate(-3deg);
-      margin-bottom: 0.5rem;
+      display: inline-block; font-family: var(--font-display); font-style: italic;
+      font-size: 22px; font-weight: 400; color: var(--color-primary);
+      transform: rotate(-2deg); margin-bottom: 0.75rem;
     }
-    .hello-tag::after { content: ' 👋'; font-family: var(--font-body); }
+    .hello-tag::after { content: ' 👋'; font-family: var(--font-body); font-style: normal; }
 
     .hero h1 {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: clamp(38px, 6vw, 70px);
-      line-height: 1.02;
-      letter-spacing: -0.025em;
-      color: var(--charcoal);
-      margin: 0 0 1.5rem;
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(38px, 6vw, 68px); line-height: 1.04;
+      letter-spacing: -0.025em; color: var(--color-text); margin: 0 0 1.5rem;
     }
-    .hero h1 .em-coral { color: var(--coral); font-weight: 700; }
-    .hero h1 .em-rose { color: var(--rose-deep); font-weight: 700; }
-    .hero h1 .em-sage { color: var(--sage-deep); font-weight: 700; }
+    .hero h1 .em-primary { color: var(--color-primary); font-style: italic; }
+    .hero h1 .em-accent  { color: var(--color-accent); }
 
     .hero-tag {
-      font-size: 17.5px; color: var(--slate); max-width: 500px;
+      font-size: 17.5px; color: var(--color-text-muted); max-width: 500px;
       margin: 0 0 1.5rem; line-height: 1.65;
     }
-    .hero-tag strong { color: var(--charcoal); font-weight: 600; }
+    .hero-tag strong { color: var(--color-text); font-weight: 600; }
 
-    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 1.5rem; }
+    .hero-cta-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-top: 1.5rem; }
+
     .btn-primary {
-      background: linear-gradient(135deg, var(--coral) 0%, var(--terra) 100%);
-      color: white; border: none;
-      padding: 16px 32px; border-radius: 999px;
-      font-family: var(--font-body); font-size: 15px; font-weight: 700;
-      cursor: none; text-decoration: none;
-      display: inline-flex; align-items: center; gap: 10px;
-      transition: transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 6px 0 var(--coral-deep), 0 14px 30px -12px rgba(229,78,44,0.55);
-      letter-spacing: 0.3px;
-      position: relative;
+      background: var(--color-primary); color: white; border: none;
+      padding: 15px 30px; border-radius: var(--radius-pill);
+      font-family: var(--font-body); font-size: 15px; font-weight: 600;
+      cursor: none; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+      transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 5px 0 var(--color-primary-dark), 0 14px 28px -12px rgba(212,104,122,0.45);
+      letter-spacing: 0.2px;
     }
-    .btn-primary:hover { transform: translateY(-3px) rotate(-1deg); box-shadow: 0 9px 0 var(--coral-deep), 0 16px 36px -12px rgba(229,78,44,0.65); }
-    .btn-primary:active { transform: translateY(2px); box-shadow: 0 3px 0 var(--coral-deep); }
+    .btn-primary:hover { background: var(--color-primary-dark); transform: translateY(-3px); box-shadow: 0 8px 0 var(--color-primary-dark), 0 16px 36px -12px rgba(212,104,122,0.55); text-decoration: none; color: white; }
+    .btn-primary:active { transform: translateY(2px); box-shadow: 0 3px 0 var(--color-primary-dark); }
     .btn-primary .arrow { transition: transform 0.2s; font-size: 18px; }
     .btn-primary:hover .arrow { transform: translateX(4px); }
-    .btn-ghost {
-      background: white; color: var(--brown);
-      border: 2px solid var(--peach);
-      padding: 14px 26px; border-radius: 999px;
-      font-family: var(--font-body); font-size: 14.5px; font-weight: 600;
-      cursor: none; text-decoration: none;
-      transition: all 0.15s;
-      box-shadow: 0 4px 0 var(--peach);
-      display: inline-flex; align-items: center; gap: 8px;
-    }
-    .btn-ghost:hover { background: var(--peach-soft); border-color: var(--coral); color: var(--terra); transform: translateY(-2px) rotate(1deg); box-shadow: 0 6px 0 var(--peach); }
 
-    .hero-meta {
-      display: flex; align-items: center; gap: 12px;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-      font-size: 13px;
-      color: var(--brown-soft);
-      font-weight: 500;
+    .link-secondary {
+      color: var(--color-text-muted); font-size: 15px; font-weight: 500;
+      text-decoration: none; border-bottom: 1.5px solid var(--color-border);
+      padding-bottom: 2px; transition: color 0.15s, border-color 0.15s;
     }
-    .hero-meta-item {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 5px 12px;
-      background: white;
-      border: 1.5px solid var(--peach);
-      border-radius: 999px;
-      font-size: 12.5px;
-      color: var(--brown);
-    }
-    .hero-meta-item.tilt-l { transform: rotate(-2deg); }
-    .hero-meta-item.tilt-r { transform: rotate(2deg); }
+    .link-secondary:hover { color: var(--color-primary); border-color: var(--color-primary); text-decoration: none; }
 
-    /* === Pet stage (interactive) === */
+    /* Pet stage */
     .pet-stage {
-      position: relative;
-      aspect-ratio: 1/1;
-      max-width: 520px;
-      width: 100%;
-      justify-self: end;
+      position: relative; aspect-ratio: 1 / 1; max-width: 520px; width: 100%; justify-self: end;
     }
     .pet-stage-bg {
-      position: absolute; inset: 0;
-      border-radius: 50%;
+      position: absolute; inset: 0; border-radius: 50%;
       background:
-        radial-gradient(circle at 30% 22%, rgba(255,255,255,0.88), transparent 55%),
-        radial-gradient(circle at 78% 28%, rgba(56,189,248,0.45) 0%, transparent 42%),
+        radial-gradient(circle at 30% 22%, rgba(255,255,255,0.90), transparent 55%),
+        radial-gradient(circle at 78% 28%, rgba(212,104,122,0.18) 0%, transparent 42%),
         conic-gradient(from 200deg at 50% 50%,
-          #C5F5E0 0deg,
-          #B8EDF0 80deg,
-          #BAE1FB 160deg,
-          #C8E2F8 220deg,
-          #DCD4F5 280deg,
-          #FFD8E5 320deg,
-          #C5F5E0 360deg);
-      box-shadow: inset 0 -20px 50px rgba(14,116,144,0.10), 0 24px 50px -15px rgba(14,116,144,0.25);
-      overflow: hidden;
-      cursor: none;
+          rgba(232,221,214,0.55) 0deg,
+          rgba(253,247,242,0.80) 80deg,
+          rgba(212,104,122,0.10) 160deg,
+          rgba(255,248,242,0.90) 220deg,
+          rgba(74,124,116,0.07) 280deg,
+          rgba(212,104,122,0.07) 320deg,
+          rgba(232,221,214,0.55) 360deg);
+      box-shadow: inset 0 -20px 50px rgba(212,104,122,0.05), 0 24px 50px -15px rgba(212,104,122,0.16);
+      overflow: hidden; cursor: none;
     }
-    /* Sun */
     .stage-sun {
-      position: absolute; top: 14%; right: 18%;
-      width: 56px; height: 56px; border-radius: 50%;
-      background: radial-gradient(circle, var(--sun) 30%, transparent 70%);
+      position: absolute; top: 14%; right: 18%; width: 56px; height: 56px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,104,122,0.35) 30%, transparent 70%);
       animation: bob 4s ease-in-out infinite;
     }
     .stage-sun::before {
       content: ''; position: absolute; inset: -10px; border-radius: 50%;
-      border: 2.5px dashed var(--sun);
-      animation: spin-slow 24s linear infinite;
-      opacity: 0.65;
+      border: 2px dashed rgba(212,104,122,0.25); animation: spin-slow 24s linear infinite; opacity: 0.65;
     }
-
     .stage-pets {
-      position: absolute; inset: 0;
-      display: flex; align-items: flex-end; justify-content: center;
-      padding-bottom: 8%;
-      pointer-events: none;
+      position: absolute; inset: 0; display: flex; align-items: flex-end;
+      justify-content: center; padding-bottom: 8%; pointer-events: none;
     }
-    .stage-dog, .stage-cat {
-      pointer-events: auto;
-      cursor: none;
-      transition: transform 0.18s ease;
-    }
+    .stage-dog, .stage-cat { pointer-events: auto; }
     .stage-dog {
-      width: 56%; max-width: 290px;
-      animation: bob 3.5s ease-in-out infinite;
-      filter: drop-shadow(0 10px 14px rgba(60,55,90,0.22));
-      transform-origin: bottom center;
+      width: clamp(140px, 50%, 220px); cursor: none;
+      filter: drop-shadow(0 8px 16px rgba(212,104,122,0.12));
+      transition: filter 0.2s; z-index: 2; position: relative;
     }
-    .stage-dog.petted { animation: hop 0.5s ease-out; }
-    .stage-dog:hover { transform: scale(1.04) rotate(-2deg); }
     .stage-cat {
-      width: 36%; max-width: 190px;
-      margin-left: -12%;
-      margin-bottom: 4%;
-      animation: bob 4.2s ease-in-out infinite 0.7s;
-      filter: drop-shadow(0 6px 10px rgba(60,55,90,0.22));
-      transform-origin: bottom center;
+      width: clamp(110px, 40%, 180px); cursor: none;
+      filter: drop-shadow(0 8px 12px rgba(74,124,116,0.10));
+      transition: filter 0.2s; z-index: 1; margin-right: -10px;
     }
-    .stage-cat.petted { animation: hop 0.5s ease-out; }
-    .stage-cat:hover { transform: scale(1.04) rotate(2deg); }
-    .dog-tail { transform-origin: 30% 70%; animation: wag 0.55s ease-in-out infinite; }
-    .stage-dog.petted .dog-tail { animation: wag-fast 0.18s ease-in-out infinite; }
-    .dog-eye, .cat-eye { transform-origin: center; animation: blink 5s infinite; }
+    .stage-dog.petted { animation: hop 0.5s ease-out;    filter: drop-shadow(0 8px 24px rgba(212,104,122,0.32)); }
+    .stage-cat.petted { animation: wiggle 0.5s ease-out; filter: drop-shadow(0 8px 20px rgba(74,124,116,0.30)); }
+    .dog-eye  { animation: blink 4s ease-in-out infinite;  transform-origin: center center; }
+    .cat-eye  { animation: blink 5s ease-in-out infinite;  transform-origin: center center; }
+    .dog-tail { animation: wag-fast 0.6s ease-in-out infinite; transform-origin: 172px 158px; }
 
-    /* "Click me!" hint */
-    .pet-hint {
-      position: absolute;
-      font-family: var(--font-hand);
-      font-size: 22px; font-weight: 700;
-      color: var(--terra);
-      pointer-events: none;
-      animation: bob 2.2s ease-in-out infinite;
-    }
-    .pet-hint.hint-dog {
-      top: 18%; left: 0;
-      transform: rotate(-8deg);
-    }
-    .pet-hint.hint-cat {
-      bottom: 28%; right: 0;
-      transform: rotate(8deg);
-      font-size: 20px;
-    }
-    .pet-hint::after {
-      content: '';
-      position: absolute;
-      width: 36px; height: 2px;
-      background: var(--terra);
-      transform: rotate(15deg);
-    }
-    .pet-hint.hint-dog::after { bottom: -6px; right: -30px; }
-    .pet-hint.hint-cat::after { top: -6px; left: -30px; transform: rotate(-25deg); }
-
-    /* Pets-pet counter */
-    .pets-counter {
-      position: absolute;
-      bottom: 6%; left: 6%;
-      background: white;
-      border: 3px solid var(--charcoal);
-      border-radius: 16px;
-      padding: 9px 14px;
-      transform: rotate(-3deg);
-      box-shadow: 4px 4px 0 var(--charcoal);
-      z-index: 3;
-    }
-    .pets-counter .pc-num {
-      font-family: var(--font-display); font-size: 24px; font-weight: 700;
-      color: var(--coral); line-height: 1;
-    }
-    .pets-counter .pc-label {
-      font-family: var(--font-body); font-size: 10.5px;
-      color: var(--charcoal); font-weight: 700;
-      letter-spacing: 1.5px; text-transform: uppercase;
-      line-height: 1; margin-top: 4px;
+    .stage-deco { position: absolute; pointer-events: none; font-size: 18px; opacity: 0.28; animation: float-y 5s ease-in-out infinite; }
+    .deco-paw1   { top: 12%; left: 12%;   animation-delay: 0s; }
+    .deco-paw2   { top: 20%; right: 14%;  animation-delay: 1.2s; }
+    .deco-paw3   { bottom: 28%; left: 8%; animation-delay: 2.4s; }
+    .deco-heart1 { top: 40%; left: 18%;   animation-delay: 0.6s;  color: var(--color-primary); }
+    .deco-heart2 { bottom: 35%; right: 12%; animation-delay: 1.8s; color: var(--color-primary); }
+    .deco-bone   { bottom: 18%; right: 22%; animation-delay: 3s; }
+    .deco-fish   { top: 55%; right: 8%;   animation-delay: 2s; }
+    .deco-ball   {
+      position: absolute; bottom: 22%; left: 28%;
+      width: 24px; height: 24px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+      opacity: 0.22; animation: float-y 3s ease-in-out infinite 0.5s;
     }
 
-    /* Reaction particles */
-    .reaction {
-      position: absolute;
-      pointer-events: none;
-      font-size: 22px;
-      animation: burst-up 1s ease-out forwards;
-      z-index: 5;
-    }
-    .reaction.r-z {
-      animation: z-rise 1.4s ease-out forwards;
-      font-family: var(--font-display);
-      font-weight: 700;
-      color: var(--sky-deep);
-      font-size: 28px;
-    }
-
-    /* Floating around stage */
-    .stage-deco { position: absolute; pointer-events: none; user-select: none; z-index: 2; }
-    .deco-ball {
-      bottom: 10%; right: 8%;
-      width: 36px; height: 36px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #BEF264, var(--lime));
-      box-shadow: inset 0 -4px 0 rgba(0,0,0,0.18), 0 6px 10px rgba(60,55,90,0.20);
-      animation: bob 1.8s ease-in-out infinite;
-      position: absolute;
-    }
-    .deco-ball::before, .deco-ball::after {
-      content: ''; position: absolute;
-      border: 2px solid rgba(255,255,255,0.5);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    .deco-ball::before { inset: 6px 4px; border-top: none; border-bottom: none; transform: rotate(20deg); }
-    .deco-ball::after { inset: 4px 6px; border-left: none; border-right: none; transform: rotate(-20deg); }
-
-    .deco-paw1 { top: 12%; left: -4%; font-size: 30px; animation: float-y 4.5s ease-in-out infinite; opacity: 0.9; }
-    .deco-paw2 { top: 32%; right: -3%; font-size: 24px; animation: float-y 5s ease-in-out infinite 0.8s; opacity: 0.8; }
-    .deco-paw3 { bottom: 4%; left: 0%; font-size: 26px; animation: float-y 4s ease-in-out infinite 1.5s; opacity: 0.85; }
-    .deco-heart1 { top: 42%; left: -6%; font-size: 24px; color: var(--coral); animation: bob 2.4s ease-in-out infinite; }
-    .deco-heart2 { top: 18%; right: -8%; font-size: 18px; color: var(--rose); animation: bob 2.8s ease-in-out infinite 0.6s; }
-    .deco-bone { bottom: 38%; right: -5%; font-size: 24px; animation: float-y 5.5s ease-in-out infinite; opacity: 0.9; }
-    .deco-fish { top: 60%; left: -2%; font-size: 22px; animation: float-y 6s ease-in-out infinite 1.2s; opacity: 0.7; }
-    .deco-yacht-easter {
-      position: absolute; bottom: 14%; right: 16%;
-      font-size: 14px;
-      opacity: 0.55;
-      animation: bob 6s ease-in-out infinite;
-    }
-    .deco-yacht-easter::after {
-      content: '↑ that\'s us 6mo/yr';
-      position: absolute;
-      bottom: -16px; right: -20px;
-      white-space: nowrap;
-      font-family: var(--font-hand);
-      font-size: 18px;
-      color: var(--charcoal);
-      font-weight: 700;
-      opacity: 0.85;
-      transform: rotate(-3deg);
-    }
-
-    /* Sticker labels in hero */
     .hero-sticker {
-      position: absolute;
-      background: var(--sage);
-      color: var(--charcoal);
-      padding: 10px 16px;
-      border-radius: 50%;
-      font-family: var(--font-hand);
-      font-size: 18px; font-weight: 700;
-      line-height: 1.1;
-      text-align: center;
-      box-shadow: 0 4px 0 #C99B26, 0 8px 16px rgba(60,55,90,0.15);
-      animation: wiggle 4s ease-in-out infinite;
-      z-index: 4;
-      width: 90px; height: 90px;
-      display: flex; align-items: center; justify-content: center;
-      transform: rotate(-12deg);
-    }
-    .hero-sticker.s-1 { top: -10px; right: -8px; }
-    .hero-sticker.s-1::before {
-      content: '★ ★ ★'; display: block;
-      font-size: 12px; color: var(--terra);
-      letter-spacing: 2px; margin-bottom: 2px;
+      position: absolute; top: 8%; left: 6%;
+      background: var(--color-primary); color: white;
+      font-family: var(--font-display); font-style: italic; font-size: 13px; font-weight: 700;
+      padding: 10px 14px; border-radius: 4px; transform: rotate(4deg);
+      line-height: 1.35; text-align: center;
+      box-shadow: 2px 2px 0 var(--color-primary-dark), 0 6px 14px rgba(212,104,122,0.28);
+      z-index: 3; pointer-events: none;
     }
 
-    /* Vibe marquee */
+    .reaction {
+      position: absolute; pointer-events: none; font-size: 22px; z-index: 10;
+      animation: burst-up 0.9s ease-out forwards;
+    }
+    .r-z { font-family: var(--font-display); font-style: italic; font-size: 20px; color: var(--color-accent); }
+
+    /* Vibe marquee strip (bottom of hero) */
     .vibe-strip {
-      background: linear-gradient(90deg, var(--coral), var(--rose-deep), var(--coral));
-      padding: 14px 0;
-      overflow: hidden;
-      transform: rotate(-1deg);
-      margin: -10px 0 -10px;
-      box-shadow: 0 8px 0 rgba(60,55,90,0.15);
-      position: relative;
-      z-index: 5;
-      border-top: 3px solid white;
-      border-bottom: 3px solid white;
+      overflow: hidden; width: 100%;
+      background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      padding: 11px 0; position: relative; z-index: 1;
     }
-    .vibe-strip-inner {
-      display: flex;
-      width: max-content;
-      animation: wave-shift 35s linear infinite;
-    }
+    .vibe-strip-inner { display: flex; width: max-content; animation: wave-shift 30s linear infinite; }
     .vibe-word {
-      color: white;
-      font-family: var(--font-display); font-size: 22px; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      padding: 0 28px;
-      display: inline-flex; align-items: center; gap: 18px;
-      flex-shrink: 0;
+      font-family: var(--font-body); font-weight: 600; font-size: 12px;
+      letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.88);
+      padding: 0 1.5rem; flex-shrink: 0; display: inline-flex; align-items: center; gap: 12px;
     }
-    .vibe-word::after { content: '🐾'; font-style: normal; font-size: 18px; }
+    .vibe-word::after { content: '✦'; opacity: 0.45; }
 
-    /* === Trust strip === */
-    .trust {
-      padding: 4rem 0 3.5rem;
-      position: relative;
+    /* ============================================================
+       SECTION: STATS STRIP
+    ============================================================ */
+    .stats-strip { background: var(--color-primary); color: white; }
+    .stats-strip-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
     }
-    .trust h2.section-eyebrow {
-      text-align: center; margin: 0 auto 2rem; display: block;
-    }
-    .trust-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1.25rem;
-      max-width: 1080px; margin: 0 auto;
-    }
-    .trust-stat {
-      text-align: center;
-      padding: 1.5rem 0.75rem 1.25rem;
-      background: white;
-      border-radius: 22px;
-      border: 2.5px solid var(--coral);
-      box-shadow: 0 6px 0 var(--coral-deep);
-      transition: transform 0.2s, box-shadow 0.2s;
-      position: relative;
-    }
-    .trust-stat:nth-child(1) { transform: rotate(-2deg); }
-    .trust-stat:nth-child(2) { transform: rotate(1.5deg); }
-    .trust-stat:nth-child(3) { transform: rotate(-1.2deg); }
-    .trust-stat:nth-child(4) { transform: rotate(2.2deg); }
-    .trust-stat:hover { transform: rotate(0) translateY(-4px); box-shadow: 0 10px 0 var(--coral-deep); }
-    .trust-stat .tape {
-      position: absolute; top: -10px; left: 50%; transform: translateX(-50%) rotate(-5deg);
-      width: 60px; height: 18px;
-    }
-    .trust-icon { font-size: 32px; margin-bottom: 6px; display: inline-block; animation: bob 3s ease-in-out infinite; }
-    .trust-stat:nth-child(2) .trust-icon { animation-delay: 0.3s; }
-    .trust-stat:nth-child(3) .trust-icon { animation-delay: 0.6s; }
-    .trust-stat:nth-child(4) .trust-icon { animation-delay: 0.9s; }
-    .trust-num {
-      font-family: var(--font-display);
-      font-size: 50px; font-weight: 700; color: var(--coral);
-      line-height: 1; letter-spacing: -0.02em;
-    }
-    .trust-num .plus { color: var(--rose-deep); }
-    .trust-label {
+    .stat-item {
+      padding: 1.75rem 1.5rem; text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.18);
       font-family: var(--font-body);
-      font-size: 12px;
-      color: var(--charcoal);
-      margin-top: 10px; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
     }
+    .stat-item:last-child { border-right: none; }
+    .stat-number {
+      font-family: var(--font-display); font-size: 2.25rem; font-weight: 700;
+      color: white; line-height: 1; margin-bottom: 0.25rem;
+    }
+    .stat-label { font-size: 13px; color: rgba(255,255,255,0.85); font-weight: 400; }
 
-    /* === Section base === */
-    section { padding: 5rem 0; position: relative; }
+    /* ============================================================
+       SHARED SECTION BASICS
+    ============================================================ */
+    section { padding: 5rem 0; }
     .section-eyebrow {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: 11.5px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase;
-      color: var(--coral-deep);
-      margin-bottom: 0.75rem;
-      padding: 6px 14px;
-      background: white;
-      border: 2px solid var(--coral);
-      border-radius: 4px;
-      transform: rotate(-1.5deg);
-    }
-    .section-eyebrow::before {
-      content: '✦'; font-size: 12px; color: var(--rose-deep);
+      display: inline-block; font-family: var(--font-body); font-size: 12px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.75rem;
     }
     .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(30px, 4.6vw, 50px);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      color: var(--charcoal);
-      margin: 0 0 0.75rem;
-      line-height: 1.08;
+      font-family: var(--font-display); font-size: clamp(1.75rem, 4vw, 2.75rem);
+      color: var(--color-text); margin: 0 0 0.75rem; font-weight: 700;
     }
-    .section-title em {
-      color: var(--coral);
-      font-weight: 700;
-      font-style: normal;
-      position: relative;
-    }
-    .section-title em.rose { color: var(--rose-deep); }
-    .section-title em.sage { color: var(--sage-deep); }
-    .section-lede {
-      font-size: 17.5px; color: var(--slate); max-width: 660px;
-      margin: 0 0 2.5rem; line-height: 1.65;
-    }
+    .section-title em   { color: var(--color-primary); font-style: italic; }
+    .section-title .sage { color: var(--color-accent); font-style: italic; }
+    .section-title .rose { color: var(--color-primary); font-style: italic; }
+    .section-lede { font-size: 1.05rem; color: var(--color-text-muted); max-width: 58ch; margin: 0 0 2.5rem; line-height: 1.7; }
 
-    /* === About === */
-    .about {
-      background: linear-gradient(180deg, transparent 0%, rgba(165, 230, 240, 0.30) 50%, transparent 100%);
-    }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    /* ============================================================
+       SECTION: ABOUT
+    ============================================================ */
+    .about { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+    .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3.5rem; align-items: center; }
+    .polaroids  { position: relative; height: 420px; }
 
-    .polaroids { position: relative; padding: 1rem; }
     .polaroid {
-      background: white;
-      padding: 14px 14px 50px;
-      box-shadow: 0 12px 30px -8px rgba(60,55,90,0.30);
-      width: 84%;
-      max-width: 280px;
-      position: relative;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: absolute; background: var(--color-surface);
+      border: 1.5px solid var(--color-border); border-radius: 4px;
+      padding: 12px 12px 40px; box-shadow: var(--shadow-md);
     }
-    .polaroid:hover { transform: translateY(-6px) rotate(0deg) scale(1.03) !important; box-shadow: 0 18px 40px -8px rgba(60,55,90,0.40); z-index: 5; }
-    .polaroid.p-tori { transform: rotate(-5deg); margin-bottom: -50px; }
-    .polaroid.p-max { transform: rotate(4deg); margin-left: 32%; }
+    .polaroid.p-tori { transform: rotate(-4deg); top: 0; left: 0; max-width: 220px; }
+    .polaroid.p-max  { transform: rotate(3deg); top: 60px; left: 40%; max-width: 220px; }
+
+    /* 1:1 photo placeholder — CSS gradient block per brief */
     .polaroid-photo {
-      aspect-ratio: 1/1;
-      background: linear-gradient(135deg, var(--coral), var(--terra));
-      border-radius: 4px;
+      width: 190px; height: 190px; border-radius: 2px;
+      background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-border) 100%);
+      border: 1px solid var(--color-border);
       display: flex; align-items: center; justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .polaroid.p-max .polaroid-photo {
-      background: linear-gradient(135deg, var(--sage), var(--sage-deep));
+      position: relative; overflow: hidden; flex-direction: column;
     }
     .polaroid-photo .initial {
-      font-family: var(--font-display);
-      font-size: 90px; font-weight: 700;
-      color: white;
-      text-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      font-family: var(--font-display); font-size: 4.5rem; font-weight: 700;
+      color: var(--color-border); line-height: 1; user-select: none;
     }
-    .polaroid-photo .pet-emoji {
-      position: absolute;
-      bottom: 12px; right: 12px;
-      font-size: 36px;
-      animation: bob 2.5s ease-in-out infinite;
-    }
-    .polaroid-caption {
-      font-family: var(--font-hand);
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--charcoal);
-      text-align: center;
-      margin-top: 10px;
-      line-height: 1.1;
-    }
-    .polaroid-caption small {
-      display: block;
-      font-family: var(--font-body);
-      font-size: 11px;
-      color: var(--slate);
-      font-weight: 600;
-      margin-top: 4px;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-    }
-    .polaroid .tape {
-      top: -10px; left: 50%; transform: translateX(-50%) rotate(-4deg);
-      width: 100px; height: 22px;
-    }
-    .polaroid.p-max .tape { transform: translateX(-50%) rotate(6deg); background: var(--tape-3); }
+    .polaroid-photo .pet-emoji { position: absolute; bottom: 8px; right: 8px; font-size: 1.5rem; }
+    .polaroid-caption { margin-top: 10px; font-family: var(--font-display); font-size: 15px; font-weight: 600; color: var(--color-text); text-align: center; }
+    .polaroid-caption small { display: block; font-size: 12px; color: var(--color-text-muted); font-weight: 400; margin-top: 2px; font-style: italic; font-family: var(--font-body); }
 
-    /* Speech bubbles */
     .bubble {
-      position: absolute;
-      background: white;
-      border: 2.5px solid var(--charcoal);
-      border-radius: 18px;
-      padding: 12px 16px;
-      font-family: var(--font-body);
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--charcoal);
-      max-width: 240px;
-      line-height: 1.4;
-      box-shadow: 4px 4px 0 var(--charcoal);
-      animation: bounce-in 0.5s ease-out;
-      font-style: italic;
+      position: absolute; background: var(--color-bg);
+      border: 1.5px solid var(--color-border); border-radius: var(--radius-sm);
+      padding: 10px 14px; font-size: 13px; color: var(--color-text);
+      max-width: 200px; line-height: 1.45; font-style: italic;
+      box-shadow: var(--shadow-sm); z-index: 5; transition: opacity 0.4s; font-family: var(--font-body);
     }
-    .bubble.b-tori {
-      top: 8%; right: -5%;
-      transform: rotate(3deg);
+    .bubble::before {
+      content: ''; position: absolute; bottom: -8px; left: 20px;
+      border: 8px solid transparent; border-top-color: var(--color-border); border-bottom: none; height: 0; width: 0;
     }
-    .bubble.b-tori::after {
-      content: ''; position: absolute;
-      bottom: -16px; left: 30px;
-      border: 8px solid transparent;
-      border-top-color: var(--charcoal);
-    }
-    .bubble.b-tori::before {
-      content: ''; position: absolute;
-      bottom: -12px; left: 32px;
-      border: 6px solid transparent;
-      border-top-color: white;
-      z-index: 1;
-    }
-    .bubble.b-max {
-      bottom: -8%; left: -8%;
-      transform: rotate(-4deg);
-    }
-    .bubble.b-max::after {
-      content: ''; position: absolute;
-      top: -16px; right: 30px;
-      border: 8px solid transparent;
-      border-bottom-color: var(--charcoal);
-    }
-    .bubble.b-max::before {
-      content: ''; position: absolute;
-      top: -12px; right: 32px;
-      border: 6px solid transparent;
-      border-bottom-color: white;
-      z-index: 1;
-    }
+    .bubble.b-tori { right: -10px; top: -15px; }
+    .bubble.b-max  { left: -10px; bottom: 0; }
 
-    .about-copy { position: relative; }
-    .about-copy h2 { margin-top: 0; }
-    .about-copy p { font-size: 16.5px; color: var(--slate); line-height: 1.75; margin: 0 0 1rem; }
-    .about-copy p strong { color: var(--charcoal); font-weight: 600; }
+    .about-copy p       { font-size: 16px; color: var(--color-text-muted); line-height: 1.7; margin: 0 0 1.25rem; }
+    .about-copy p strong { color: var(--color-text); font-weight: 600; }
     .about-quote {
-      background: var(--sage);
-      border: 3px solid var(--charcoal);
-      border-radius: 18px;
-      padding: 1.5rem 1.75rem;
-      margin: 1.5rem 0 0;
-      font-family: var(--font-hand);
-      font-size: 28px;
-      color: var(--charcoal);
-      line-height: 1.25;
-      position: relative;
-      transform: rotate(-1.5deg);
-      box-shadow: 6px 6px 0 var(--charcoal);
-      font-weight: 700;
+      font-family: var(--font-display); font-style: italic; font-size: 1.15rem;
+      color: var(--color-primary); border-left: 3px solid var(--color-primary);
+      padding: 0.75rem 1.25rem; background: rgba(212,104,122,0.05);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 1.5rem 0;
     }
-    .about-quote::before {
-      content: '"';
-      position: absolute; top: -32px; left: 14px;
-      font-family: var(--font-display);
-      font-size: 70px;
-      color: var(--coral);
-      line-height: 1; font-weight: 700;
-    }
-    .signature {
-      font-family: var(--font-hand);
-      font-size: 32px; font-weight: 700;
-      color: var(--coral);
-      display: inline-block;
-      margin-top: 1rem;
-      transform: rotate(-2deg);
-    }
-    .signature::before { content: '— '; }
+    .signature { font-family: var(--font-display); font-style: italic; font-size: 1.6rem; color: var(--color-primary); display: block; margin-top: 0.75rem; }
 
-    /* === Services === */
-    .services { background: linear-gradient(180deg, transparent 0%, rgba(180, 240, 210, 0.28) 50%, transparent 100%); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem; perspective: 1000px; }
+    /* ============================================================
+       SECTION: SERVICES
+    ============================================================ */
+    .services { background: var(--color-bg); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+
     .svc-card {
-      background: white;
-      border: 2.5px solid var(--charcoal);
-      border-radius: 24px;
-      padding: 1.75rem 1.5rem 1.5rem;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      position: relative;
-      box-shadow: 6px 6px 0 var(--charcoal);
-      transform-style: preserve-3d;
+      background: var(--color-surface); border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md); padding: 1.5rem;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; position: relative;
     }
-    .svc-card.tilt-l { transform: rotate(-1deg); }
-    .svc-card.tilt-r { transform: rotate(1deg); }
-    .svc-card.tilt-l2 { transform: rotate(-0.5deg); }
-    .svc-card.tilt-r2 { transform: rotate(0.8deg); }
-    .svc-card:hover {
-      transform: rotate(0deg) translateY(-6px);
-      box-shadow: 8px 12px 0 var(--charcoal);
-    }
-    .svc-card .tape {
-      position: absolute; top: -10px; left: 18px;
-      transform: rotate(-12deg);
-    }
-    .svc-card.tilt-r .tape, .svc-card.tilt-r2 .tape { left: auto; right: 18px; transform: rotate(12deg); background: var(--tape-3); }
-    .svc-card.tilt-l2 .tape { background: var(--tape-1); }
-    .svc-card .stamp {
-      position: absolute; top: 14px; right: 14px;
-      font-size: 9.5px;
-      padding: 4px 10px;
-    }
-    .svc-card:nth-child(2n) .stamp { color: var(--sage-deep); border-color: var(--sage-deep); background: rgba(146,189,142,0.10); }
-    .svc-card:nth-child(2n) .stamp::before { border-color: var(--sage-deep); }
-    .svc-card:nth-child(3n) .stamp { color: var(--rose-deep); border-color: var(--rose-deep); background: rgba(225,29,72,0.06); }
-    .svc-card:nth-child(3n) .stamp::before { border-color: var(--rose-deep); }
-    .svc-icon {
-      width: 76px; height: 76px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--peach-soft), white);
-      border: 2.5px solid var(--charcoal);
-      display: inline-flex; align-items: center; justify-content: center;
-      margin-bottom: 1.1rem;
-      margin-top: 0.5rem;
-      position: relative;
-      transition: transform 0.3s ease;
-      box-shadow: 4px 4px 0 var(--charcoal);
-    }
-    .svc-card:hover .svc-icon { animation: wiggle 0.5s ease-in-out; }
-    .svc-icon svg { width: 46px; height: 46px; }
-    .svc-name {
-      font-family: var(--font-display);
-      font-size: 24px; font-weight: 600;
-      color: var(--charcoal); margin: 0 0 0.5rem;
-      letter-spacing: -0.01em;
-    }
-    .svc-desc { font-size: 14.5px; color: var(--slate); margin: 0 0 1rem; line-height: 1.65; }
-    .svc-meta {
-      font-family: var(--font-body);
-      font-size: 11.5px; color: var(--coral-deep);
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      display: inline-flex; align-items: center; gap: 8px;
-    }
-    .svc-meta::before { content: '✦'; font-size: 12px; color: var(--rose-deep); }
+    .svc-card:hover { border-color: var(--color-primary); transform: translateY(-4px); box-shadow: var(--shadow-md); }
 
-    /* === Coast-to-coast journey === */
-    .journey { background: linear-gradient(180deg, transparent 0%, rgba(170, 220, 240, 0.26) 50%, transparent 100%); }
+    /* Price tag pill — --color-accent bg, white text, 11px */
+    .svc-price-tag {
+      display: inline-block; background: var(--color-accent); color: white;
+      font-size: 11px; font-weight: 600; padding: 3px 9px;
+      border-radius: var(--radius-pill); margin-bottom: 0.75rem;
+      font-family: var(--font-body); letter-spacing: 0.02em;
+    }
+
+    .svc-icon  { width: 52px; height: 52px; margin-bottom: 0.75rem; }
+    .svc-icon svg { width: 100%; height: 100%; }
+    .svc-name  { font-family: var(--font-display); font-size: 1.05rem; color: var(--color-text); margin: 0 0 0.5rem; font-weight: 700; }
+    .svc-desc  { font-size: 13px; color: var(--color-text-muted); margin: 0 0 0.5rem; line-height: 1.6; }
+    .svc-meta  { font-size: 12px; color: var(--color-accent); font-weight: 500; margin: 0; }
+
+    /* ============================================================
+       SECTION: JOURNEY
+    ============================================================ */
+    .journey { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
     .journey-card {
-      background: white;
-      border: 2.5px solid var(--charcoal);
-      border-radius: 28px;
-      padding: 2rem;
-      box-shadow: 8px 10px 0 var(--charcoal);
-      position: relative;
-      transform: rotate(-0.4deg);
+      background: var(--color-bg); border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-lg); padding: 2rem; position: relative; box-shadow: var(--shadow-sm);
     }
-    .journey-card .tape {
-      width: 110px; height: 24px;
-      top: -12px; left: 50%; transform: translateX(-50%) rotate(-3deg);
-      background: var(--tape-2);
-    }
-    .journey-graphic { position: relative; max-width: 940px; margin: 1.25rem auto 0; }
-    .journey-graphic svg { display: block; width: 100%; height: auto; }
-    .journey-marker {
-      cursor: none;
-      transition: transform 0.2s ease;
-    }
-    .journey-marker:hover { transform: scale(1.05); }
+    .journey-graphic { border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.5rem; position: relative; }
     .journey-popup {
-      position: absolute;
-      background: white;
-      border: 2.5px solid var(--charcoal);
-      border-radius: 14px;
-      padding: 8px 12px;
-      font-family: var(--font-hand);
-      font-size: 17px; font-weight: 700;
-      color: var(--charcoal);
-      max-width: 200px;
-      box-shadow: 4px 4px 0 var(--charcoal);
-      animation: bounce-in 0.4s ease-out;
-      pointer-events: none;
-      z-index: 10;
-      line-height: 1.2;
+      position: absolute; background: var(--color-surface); border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-sm); padding: 0.6rem 0.85rem;
+      font-size: 13px; color: var(--color-text); min-width: 180px;
+      box-shadow: var(--shadow-md); z-index: 10; animation: bounce-in 0.3s ease-out;
     }
-    .journey-legend {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      margin-top: 1.75rem;
-    }
+    .journey-popup div { padding: 3px 0; }
+    .journey-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
     .leg-card {
-      padding: 1.25rem 1.5rem;
-      background: white;
-      border: 2px dashed var(--coral);
-      border-radius: 18px;
       display: flex; align-items: center; gap: 1rem;
-      position: relative;
-      box-shadow: 4px 4px 0 rgba(6,182,212,0.30);
+      background: var(--color-surface); border: 1px solid var(--color-border);
+      border-radius: var(--radius-md); padding: 1rem; transition: box-shadow 0.2s;
     }
-    .leg-card:nth-child(1) { transform: rotate(-1deg); }
-    .leg-card:nth-child(2) { transform: rotate(1deg); }
-    .leg-icon { font-size: 38px; flex: 0 0 auto; animation: bob 3.5s ease-in-out infinite; }
-    .leg-card:nth-child(2) .leg-icon { animation-delay: -1.5s; }
-    .leg-content { flex: 1; }
-    .leg-card .lc-eyebrow {
-      font-family: var(--font-body);
-      font-size: 11px;
-      color: var(--coral-deep); font-weight: 800; margin-bottom: 2px;
-      letter-spacing: 1.5px; text-transform: uppercase;
-    }
-    .leg-card .lc-place {
-      font-family: var(--font-display); font-size: 22px; font-weight: 600;
-      color: var(--charcoal); margin: 0 0 2px; line-height: 1.2;
-    }
-    .leg-card .lc-when { font-size: 13px; color: var(--slate); font-weight: 500; }
-    .journey-note {
-      text-align: center;
-      margin-top: 1.75rem;
-      font-family: var(--font-body);
-      font-size: 14px;
-      color: var(--charcoal);
-      font-weight: 500;
-      font-style: italic;
-    }
-    .journey-note strong { color: var(--coral); font-weight: 700; font-style: normal; }
+    .leg-card:hover { box-shadow: var(--shadow-sm); }
+    .leg-icon { font-size: 1.75rem; flex-shrink: 0; }
+    .lc-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 2px; font-family: var(--font-body); }
+    .lc-place   { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--color-text); }
+    .lc-when    { font-size: 13px; color: var(--color-text-muted); font-style: italic; margin-top: 2px; font-family: var(--font-body); }
+    .journey-note { margin-top: 1rem; font-size: 14px; color: var(--color-text-muted); font-style: italic; }
+    .journey-note strong { color: var(--color-text); }
 
-    /* === How it works === */
-    .how { padding-top: 6rem; }
-    .how-steps {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      position: relative;
-      margin-top: 1rem;
-    }
-    .step {
-      background: white;
-      border: 2.5px solid var(--charcoal);
-      border-radius: 22px;
-      padding: 1.75rem 1.25rem 1.5rem;
-      position: relative;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 5px 5px 0 var(--charcoal);
-    }
-    .step:nth-child(1) { transform: rotate(-2deg); }
-    .step:nth-child(2) { transform: rotate(1.5deg); }
-    .step:nth-child(3) { transform: rotate(-1.2deg); }
-    .step:nth-child(4) { transform: rotate(2deg); }
-    .step:hover {
-      transform: rotate(0) translateY(-6px);
-      box-shadow: 8px 10px 0 var(--charcoal);
-    }
+    /* ============================================================
+       SECTION: HOW IT WORKS
+    ============================================================ */
+    .how { background: var(--color-bg); }
+    .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .step { text-align: center; padding: 1.25rem; }
     .step-num {
-      position: absolute;
-      top: -22px; left: -10px;
-      width: 60px; height: 60px;
-      border-radius: 50%;
-      background: var(--coral);
-      color: white;
-      font-family: var(--font-display);
-      font-size: 32px; font-weight: 700;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 4px 4px 0 var(--charcoal);
-      border: 3px solid var(--charcoal);
-      transform: rotate(-8deg);
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--color-primary); color: white;
+      font-family: var(--font-display); font-size: 1.25rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;
     }
-    .step:nth-child(2) .step-num { background: var(--rose); }
-    .step:nth-child(3) .step-num { background: var(--sky); color: var(--charcoal); }
-    .step:nth-child(4) .step-num { background: var(--lime); color: var(--charcoal); }
-    .step-icon {
-      font-size: 36px;
-      margin-bottom: 8px;
-      display: inline-block;
-      animation: bob 3s ease-in-out infinite;
-    }
-    .step:nth-child(2) .step-icon { animation-delay: 0.4s; }
-    .step:nth-child(3) .step-icon { animation-delay: 0.8s; }
-    .step:nth-child(4) .step-icon { animation-delay: 1.2s; }
-    .step-name {
-      font-family: var(--font-display);
-      font-size: 22px; font-weight: 600;
-      color: var(--charcoal); margin: 0 0 6px;
-      text-transform: lowercase;
-    }
-    .step-desc { font-size: 14px; color: var(--slate); margin: 0; line-height: 1.6; }
-    .step-paws {
-      position: absolute;
-      top: 50%; right: -36px;
-      width: 36px; height: 24px;
-      pointer-events: none;
-      z-index: 1;
-    }
-    .step-paws span {
-      position: absolute; font-size: 14px;
-      color: var(--coral);
-      animation: paw-trot-step 1.6s ease-in-out infinite;
-    }
-    .step-paws span:nth-child(1) { left: 0; top: 0; animation-delay: 0s; --ang: 10deg; }
-    .step-paws span:nth-child(2) { left: 12px; top: 8px; animation-delay: 0.4s; --ang: -10deg; }
-    .step-paws span:nth-child(3) { left: 24px; top: 0; animation-delay: 0.8s; --ang: 10deg; }
-    .step:last-child .step-paws { display: none; }
+    .step-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .step-name { font-family: var(--font-display); font-size: 1.05rem; color: var(--color-text); margin-bottom: 0.5rem; font-weight: 700; }
+    .step-desc { font-size: 13px; color: var(--color-text-muted); line-height: 1.6; }
+    .step-paws { color: var(--color-primary); font-size: 14px; letter-spacing: 4px; margin-top: 0.75rem; opacity: 0.45; }
 
-    /* === Promises === */
-    .promise {
-      background: linear-gradient(180deg, transparent 0%, rgba(180, 240, 210, 0.26) 50%, transparent 100%);
+    /* ============================================================
+       SECTION: TESTIMONIALS (SOCIAL PROOF)
+    ============================================================ */
+    .testimonials { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .testimonial-card {
+      background: var(--color-surface);
+      border-left: 3px solid var(--color-primary);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 1.5rem; box-shadow: var(--shadow-sm);
     }
-    .promise-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.25rem;
+    .testimonial-body {
+      font-family: var(--font-body); font-style: italic; font-size: 15px;
+      color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1rem;
     }
+    .testimonial-attr { font-size: 13px; font-weight: 600; color: var(--color-text); font-family: var(--font-body); }
+
+    /* ============================================================
+       SECTION: PROMISE ("Things You Can Count On")
+    ============================================================ */
+    .promise { background: var(--color-bg); }
+    .promise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
     .promise-item {
-      background: white;
-      border: 2.5px solid var(--charcoal);
-      border-radius: 18px;
-      padding: 1.25rem;
-      display: flex; gap: 12px; align-items: flex-start;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 4px 4px 0 var(--charcoal);
-      position: relative;
+      display: flex; align-items: flex-start; gap: 1rem;
+      background: var(--color-surface); border: 1px solid var(--color-border);
+      border-radius: var(--radius-md); padding: 1.25rem; transition: box-shadow 0.2s;
     }
-    .promise-item:nth-child(odd) { transform: rotate(-1deg); }
-    .promise-item:nth-child(even) { transform: rotate(1deg); }
-    .promise-item:hover {
-      transform: rotate(0) translateY(-3px);
-      box-shadow: 6px 8px 0 var(--charcoal);
-    }
-    .promise-paw {
-      flex: 0 0 36px; width: 36px; height: 36px; border-radius: 50%;
-      background: var(--coral);
-      color: white;
-      display: inline-flex; align-items: center; justify-content: center;
-      font-size: 18px;
-      box-shadow: 2px 2px 0 var(--charcoal);
-      border: 2px solid var(--charcoal);
-      flex-shrink: 0;
-      animation: bob 3s ease-in-out infinite;
-    }
-    .promise-item:nth-child(2n) .promise-paw { background: var(--rose); animation-delay: 0.4s; }
-    .promise-item:nth-child(3n) .promise-paw { background: var(--sky); color: white; animation-delay: 0.8s; }
-    .promise-item:nth-child(5n) .promise-paw { background: var(--sage); animation-delay: 1.2s; }
-    .promise-text { font-size: 14.5px; color: var(--charcoal); line-height: 1.5; font-weight: 700; }
-    .promise-text small {
-      display: block;
-      font-family: var(--font-body);
-      color: var(--slate);
-      font-weight: 500;
-      margin-top: 4px;
-      font-size: 13px;
-      line-height: 1.45;
-      font-style: italic;
-    }
+    .promise-item:hover { box-shadow: var(--shadow-sm); }
+    .promise-paw  { font-size: 1.25rem; flex-shrink: 0; line-height: 1.6; }
+    .promise-text { font-size: 15px; color: var(--color-text); font-weight: 500; font-family: var(--font-body); }
+    .promise-text small { display: block; font-size: 13px; color: var(--color-text-muted); font-weight: 400; margin-top: 3px; line-height: 1.45; }
 
-    /* === Booking form === */
-    .booking { padding: 5rem 0 6rem; }
+    /* ============================================================
+       SECTION: BOOKING
+    ============================================================ */
+    .booking { background: var(--color-surface); border-top: 1px solid var(--color-border); }
     .booking-card {
-      background: white;
-      border: 3px solid var(--charcoal);
-      border-radius: 28px;
-      padding: 2.5rem 2rem;
-      box-shadow: 10px 12px 0 var(--charcoal);
-      max-width: 780px; margin: 0 auto;
-      position: relative;
-      transform: rotate(-0.3deg);
+      background: var(--color-bg); border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-lg); padding: 2.5rem 2rem;
+      max-width: 700px; margin: 0 auto; position: relative; box-shadow: var(--shadow-sm);
     }
     .booking-card::before {
-      content: '🐾   ♥   🐾   ♥   🐾';
-      position: absolute; top: -20px; left: 50%;
-      transform: translateX(-50%) rotate(-2deg);
-      background: white; padding: 4px 18px;
-      font-size: 16px; letter-spacing: 4px;
-      border: 2px solid var(--charcoal);
-      border-radius: 999px;
-      box-shadow: 3px 3px 0 var(--charcoal);
+      content: '♥  ♥  ♥'; position: absolute; top: -14px; left: 50%;
+      transform: translateX(-50%); background: var(--color-bg); padding: 0 16px;
+      color: var(--color-primary); font-size: 14px; letter-spacing: 6px;
     }
-    .booking-card .tape {
-      width: 90px; height: 22px;
-      top: -10px; right: 8%;
-      background: var(--tape-3);
-      transform: rotate(8deg);
+
+    /* Quick form: 3 fields */
+    .form-quick { display: flex; flex-direction: column; gap: 1rem; }
+    .form-field  { display: flex; flex-direction: column; gap: 0.35rem; }
+    .form-label  {
+      display: block; font-family: var(--font-body); font-size: 12px; font-weight: 700;
+      color: var(--color-text); letter-spacing: 0.1em; text-transform: uppercase;
     }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .form-label .req { color: var(--color-primary); margin-left: 2px; }
+    .form-input, .form-select {
+      width: 100%; padding: 11px 14px; border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-sm); font-size: 15px; font-family: var(--font-body);
+      color: var(--color-text); background: var(--color-surface); transition: all 0.15s; box-sizing: border-box;
+    }
+    .form-input:focus, .form-select:focus {
+      outline: none; border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(212,104,122,0.12);
+    }
+    .form-input::placeholder { color: var(--color-text-muted); }
+    .form-note { font-size: 13px; color: var(--color-text-muted); font-style: italic; text-align: center; margin-top: 0.25rem; }
+
+    /* Collapsible details toggle */
+    .form-details-toggle {
+      background: none; border: none; padding: 0;
+      color: var(--color-primary); font-size: 14px; font-family: var(--font-body); font-weight: 500;
+      cursor: pointer; display: flex; align-items: center; gap: 0.4rem;
+      margin-top: 1.25rem; text-decoration: underline; text-underline-offset: 3px;
+    }
+    .form-details-toggle .toggle-arrow { transition: transform 0.2s; display: inline-block; }
+    .form-details-toggle[aria-expanded="true"] .toggle-arrow { transform: rotate(90deg); }
+    .form-details-panel {
+      display: none; padding-top: 1.25rem;
+      border-top: 1px dashed var(--color-border); margin-top: 1.25rem;
+    }
+    .form-details-panel.open { display: block; }
+
+    /* Full form rows inside collapsible */
+    .form-row       { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
     .form-row.single { grid-template-columns: 1fr; }
-    .form-label {
-      display: block;
-      font-family: var(--font-body);
-      font-size: 12px; font-weight: 700;
-      color: var(--charcoal); margin-bottom: 6px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-    .form-label .req { color: var(--coral); margin-left: 2px; }
     .form-row input, .form-row select, .form-row textarea {
-      width: 100%; padding: 12px 14px;
-      border: 2.5px solid var(--charcoal); border-radius: 12px;
-      font-size: 14px; font-family: var(--font-body); color: var(--charcoal);
-      background: var(--cream-soft);
-      transition: all 0.15s;
-      box-sizing: border-box;
-      box-shadow: 3px 3px 0 var(--charcoal);
+      width: 100%; padding: 11px 14px; border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-sm); font-size: 15px; font-family: var(--font-body);
+      color: var(--color-text); background: var(--color-surface); transition: all 0.15s; box-sizing: border-box;
     }
     .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
-      outline: none;
-      background: white;
-      transform: translate(-1px, -1px);
-      box-shadow: 4px 4px 0 var(--coral);
+      outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(212,104,122,0.12);
     }
     .form-row textarea { resize: vertical; min-height: 90px; }
 
+    /* Service pills inside collapsible */
     .svc-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 4px; }
-    .svc-pill {
-      cursor: none;
-      padding: 9px 16px;
-      border: 2.5px solid var(--charcoal);
-      border-radius: 999px;
-      font-size: 13px; font-weight: 700; color: var(--charcoal);
-      background: white;
-      transition: all 0.15s;
-      user-select: none;
-      display: inline-flex; align-items: center; gap: 6px;
-      box-shadow: 2px 2px 0 var(--charcoal);
+    .svc-pill  {
+      cursor: pointer; padding: 8px 16px; border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-pill); font-size: 13px; font-weight: 500;
+      color: var(--color-text); background: var(--color-surface); transition: all 0.15s;
+      user-select: none; display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-body);
     }
-    .svc-pill:hover { background: var(--peach-soft); transform: translate(-1px,-1px); box-shadow: 3px 3px 0 var(--coral); }
-    .svc-pill.active {
-      background: var(--coral);
-      color: white;
-      transform: translate(-1px,-1px);
-      box-shadow: 3px 3px 0 var(--charcoal);
-    }
+    .svc-pill:hover  { background: rgba(212,104,122,0.05); border-color: var(--color-primary); }
+    .svc-pill.active { background: var(--color-primary); color: white; border-color: var(--color-primary); }
     .svc-pill.active::before { content: '✓ '; }
 
     .booking-summary {
-      background: var(--peach-soft);
-      border: 2.5px dashed var(--coral);
-      border-radius: 14px;
-      padding: 1rem 1.25rem;
-      margin: 14px 0;
-      font-family: var(--font-body);
-      font-size: 14px; color: var(--charcoal);
-      font-weight: 500;
-      line-height: 1.55;
+      background: rgba(212,104,122,0.06); border: 1.5px dashed var(--color-primary);
+      border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin: 14px 0;
+      font-size: 14px; color: var(--color-text); line-height: 1.55; font-family: var(--font-body);
     }
-    .booking-summary.empty { color: var(--slate); font-style: italic; }
-    .booking-summary strong { color: var(--coral); font-weight: 700; }
+    .booking-summary.empty { color: var(--color-text-muted); font-style: italic; }
+    .booking-summary strong { color: var(--color-primary); font-weight: 700; }
 
     .booking-success {
-      background: var(--sage);
-      border: 3px solid var(--charcoal);
-      border-radius: 22px;
-      padding: 1.75rem;
-      margin-top: 1rem;
+      background: rgba(74,124,116,0.07); border: 1.5px solid var(--color-accent);
+      border-radius: var(--radius-md); padding: 1.75rem; margin-top: 1rem;
+      text-align: center; animation: pop-in 0.6s ease-out;
+    }
+    .booking-success h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--color-text); margin: 0 0 6px; }
+    .booking-success p  { font-size: 15px; color: var(--color-text-muted); margin: 0; line-height: 1.55; }
+    .booking-success p strong { color: var(--color-primary); }
+    .booking-success .check { font-size: 3rem; margin-bottom: 0.5rem; display: inline-block; animation: hop 1.2s ease-in-out infinite; }
+
+    /* ============================================================
+       EASTER EGG HINT CALLOUT
+    ============================================================ */
+    .easter-egg-hint {
+      background: rgba(212, 104, 122, 0.10);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1.25rem;
       text-align: center;
-      animation: pop-in 0.6s ease-out;
-      box-shadow: 5px 5px 0 var(--charcoal);
-      position: relative;
-      transform: rotate(-1deg);
-    }
-    .booking-success h3 {
-      font-family: var(--font-display); font-size: 30px;
-      color: var(--charcoal); margin: 0 0 6px; font-weight: 700;
-    }
-    .booking-success p { font-size: 15.5px; color: var(--charcoal); margin: 0; font-weight: 500; line-height: 1.55; }
-    .booking-success p strong { color: var(--coral); font-weight: 700; }
-    .booking-success .check {
-      font-size: 50px; margin-bottom: 4px; display: inline-block;
-      animation: hop 1s ease-in-out infinite;
+      font-size: 14px;
+      color: var(--color-primary);
+      font-family: var(--font-body);
+      max-width: 340px;
+      margin: 0 auto;
     }
 
-    /* === Confetti === */
-    .confetti {
-      position: fixed;
-      pointer-events: none;
-      z-index: 100;
-      font-size: 22px;
+    /* Confetti & bone rain */
+    .confetti, .bone-rain {
+      position: fixed; pointer-events: none; z-index: 100; font-size: 22px;
       animation: confetti-fall var(--cd, 2.5s) ease-in forwards;
     }
 
-    /* === Bone rain === */
-    .bone-rain {
-      position: fixed;
-      pointer-events: none;
-      z-index: 100;
-      font-size: 28px;
-      animation: confetti-fall var(--cd, 3s) linear forwards;
-    }
-
-    /* === Easter rainbow mode === */
+    /* Konami rainbow mode */
     body.rainbow-mode {
       animation: gradient-shift 3s linear infinite;
       background-size: 400% 400%;
       background-image: linear-gradient(90deg,
-        rgba(6, 182, 212, 0.32),
-        rgba(56, 189, 248, 0.32),
-        rgba(2, 132, 199, 0.32),
-        rgba(52, 211, 153, 0.32),
-        rgba(132, 204, 22, 0.32),
-        rgba(30, 58, 138, 0.32),
-        rgba(251, 113, 133, 0.32),
-        rgba(6, 182, 212, 0.32)
-      );
+        rgba(212,104,122,0.25), rgba(74,124,116,0.25), rgba(212,104,122,0.20),
+        rgba(74,124,116,0.20), rgba(212,104,122,0.25));
     }
 
-    /* === Footer === */
+    /* ============================================================
+       FOOTER
+    ============================================================ */
     footer {
-      background: linear-gradient(135deg, var(--terra) 0%, var(--coral-deep) 100%);
-      color: var(--cream-soft);
-      padding: 4rem 0 2rem;
-      position: relative;
-      overflow: hidden;
-      margin-top: 2rem;
+      background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+      color: white; padding: 4rem 0 2rem; position: relative; overflow: hidden;
     }
     .footer-marquee {
       position: absolute; top: 0; left: 0; right: 0;
-      background: var(--charcoal);
-      padding: 10px 0;
-      overflow: hidden;
-      transform: rotate(-1deg) translateX(-2%);
-      width: 104%;
-      margin-top: 14px;
+      background: rgba(0,0,0,0.12); padding: 10px 0; overflow: hidden;
+      transform: rotate(-1deg) translateX(-2%); width: 104%; margin-top: 14px;
     }
-    .footer-marquee-inner {
-      display: flex;
-      width: max-content;
-      animation: wave-shift 32s linear infinite;
-    }
-    .footer-marquee-word {
-      color: var(--sage);
-      font-family: var(--font-hand);
-      font-size: 26px; font-weight: 700;
-      padding: 0 24px;
-      flex-shrink: 0;
+    .footer-marquee-inner { display: flex; width: max-content; animation: wave-shift 32s linear infinite; }
+    .footer-marquee-word  {
+      color: rgba(255,255,255,0.88); font-family: var(--font-display); font-style: italic;
+      font-size: 20px; font-weight: 400; padding: 0 24px; flex-shrink: 0;
       display: inline-flex; align-items: center; gap: 14px;
     }
-    .footer-marquee-word::after { content: '✦'; color: white; font-family: var(--font-body); }
+    .footer-marquee-word::after { content: '✦'; opacity: 0.45; font-style: normal; font-size: 12px; }
     .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2rem; position: relative; z-index: 1; padding-top: 3rem; }
-    .footer-brand {
-      font-family: var(--font-display);
-      font-size: 28px; font-weight: 600; margin-bottom: 0.5rem;
-      letter-spacing: -0.3px;
-    }
-    .footer-brand .pp { color: var(--sage); }
-    .footer-brand .crew { font-family: var(--font-hand); font-weight: 700; font-size: 30px; }
-    .footer-tag {
-      font-size: 14px; color: rgba(255,252,246,0.88);
-      max-width: 320px; line-height: 1.65;
-    }
-    .footer-h {
-      font-family: var(--font-body);
-      font-size: 12px;
-      color: var(--sage); margin: 0 0 12px; font-weight: 800;
-      letter-spacing: 2px; text-transform: uppercase;
-    }
-    .footer-link {
-      display: block; font-size: 14px;
-      color: rgba(255,252,246,0.9);
-      text-decoration: none; padding: 5px 0;
-      transition: color 0.15s, transform 0.15s;
-    }
-    .footer-link:hover { color: var(--sage); transform: translateX(4px); }
+    .footer-brand { font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .footer-tag   { font-size: 14px; color: rgba(255,255,255,0.85); max-width: 320px; line-height: 1.65; font-family: var(--font-body); }
+    .footer-h     { font-family: var(--font-body); font-size: 12px; color: rgba(255,255,255,0.65); margin: 0 0 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+    .footer-link  { display: block; font-size: 14px; color: rgba(255,255,255,0.85); text-decoration: none; padding: 5px 0; transition: color 0.15s, transform 0.15s; font-family: var(--font-body); }
+    .footer-link:hover { color: white; transform: translateX(4px); }
     .footer-bottom {
-      margin-top: 2rem; padding-top: 1.5rem;
-      border-top: 1px dashed rgba(255,252,246,0.30);
-      font-size: 12.5px; color: rgba(255,252,246,0.70);
-      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
-      position: relative; z-index: 1;
-    }
-    .footer-bottom .easter-hint {
-      font-family: var(--font-body);
-      font-size: 12px;
-      color: var(--sage);
-      opacity: 0.85;
-      font-style: italic;
+      margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.18);
+      font-size: 12.5px; color: rgba(255,255,255,0.65);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; position: relative; z-index: 1;
     }
 
-    /* === Reveal === */
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-    /* Loading paws */
-    .loading {
-      display: inline-flex; gap: 4px; align-items: center;
-    }
-    .loading span {
-      display: inline-block;
-      animation: bob 0.7s ease-in-out infinite;
-    }
+    .loading { display: inline-flex; gap: 4px; align-items: center; }
+    .loading span { display: inline-block; animation: bob 0.7s ease-in-out infinite; }
     .loading span:nth-child(2) { animation-delay: 0.15s; }
-    .loading span:nth-child(3) { animation-delay: 0.3s; }
+    .loading span:nth-child(3) { animation-delay: 0.30s; }
 
+    /* ============================================================
+       RESPONSIVE — MOBILE
+    ============================================================ */
     @media (max-width: 880px) {
-      body { cursor: auto; }
+      body   { cursor: auto; }
       button { cursor: pointer; }
       .cursor-paw, .paw-trail { display: none; }
-      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .pet-stage { max-width: 380px; margin: 0 auto; }
-      .about-grid { grid-template-columns: 1fr; }
-      .trust-grid { grid-template-columns: repeat(2, 1fr); }
-      .how-steps { grid-template-columns: repeat(2, 1fr); }
-      .step-paws { display: none; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      section { padding: 3.75rem 0; }
-      .hero { padding-top: 2.5rem; }
-      .booking-card, .journey-card { padding: 1.75rem 1.25rem; }
+      .hero-grid     { grid-template-columns: 1fr; gap: 2rem; }
+      .pet-stage     { max-width: 380px; margin: 0 auto; }
+      .about-grid    { grid-template-columns: 1fr; }
+      .how-steps     { grid-template-columns: repeat(2, 1fr); }
+      .step-paws     { display: none; }
+      .footer-grid   { grid-template-columns: 1fr 1fr; }
+      section        { padding: 3.5rem 0; }
+      .hero          { padding-top: 2.5rem; }
+      .booking-card  { padding: 1.75rem 1.25rem; }
       .journey-legend { grid-template-columns: 1fr; }
       .topnav-status { display: none; }
-      .pet-hint { display: none; }
-      .polaroid.p-tori { transform: rotate(-3deg); margin-bottom: 0; max-width: 200px; }
-      .polaroid.p-max { transform: rotate(3deg); margin-left: 38%; max-width: 200px; margin-top: -30px; }
-      .bubble.b-tori { right: 0; top: 0; }
-      .bubble.b-max { left: 0; bottom: -15px; }
+      .polaroid.p-tori { max-width: 180px; }
+      .polaroid.p-max  { left: 42%; max-width: 180px; top: 50px; }
+      .bubble.b-tori   { right: 0; top: 0; }
+      .bubble.b-max    { left: 0; bottom: -15px; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .services-grid     { grid-template-columns: 1fr 1fr; }
     }
+
+    /* Service cards: single column below 768px */
+    @media (max-width: 768px) {
+      .services-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Stats strip + trust bar: 2-column at 600px */
+    @media (max-width: 600px) {
+      .trust-bar-inner,
+      .stats-strip-inner { grid-template-columns: repeat(2, 1fr); }
+      .stats-strip-inner .stat-item:nth-child(2) { border-right: none; }
+      .stats-strip-inner .stat-item:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.18); }
+      .promise-grid { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 520px) {
-      .form-row { grid-template-columns: 1fr; }
-      .how-steps { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 42px; }
-      .vibe-word { font-size: 17px; padding: 0 16px; }
+      .form-row        { grid-template-columns: 1fr; }
+      .how-steps       { grid-template-columns: 1fr; }
+      .footer-grid     { grid-template-columns: 1fr; }
+      .hero h1         { font-size: 38px; }
+    }
+
+    /* Stats strip + trust bar: 1-column at 380px */
+    @media (max-width: 380px) {
+      .trust-bar-inner,
+      .stats-strip-inner { grid-template-columns: 1fr; }
+      .stats-strip-inner .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.18); }
+      .stats-strip-inner .stat-item:last-child { border-bottom: none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.001s !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.001s !important;
-      }
+      *, *::before, *::after { animation-duration: 0.001s !important; animation-iteration-count: 1 !important; transition-duration: 0.001s !important; }
       body { cursor: auto; }
       .cursor-paw, .paw-trail { display: none; }
     }
@@ -1494,63 +822,79 @@
     </svg>
   </div>
 
-  <nav class="topnav">
+  <!-- SECTION: NAV -->
+  <nav class="topnav" aria-label="Site navigation">
     <div class="container topnav-inner">
       <a class="topnav-brand" href="/">
-        <span class="topnav-mark">
+        <span class="topnav-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="9" r="2"/><circle cx="18" cy="9" r="2"/><circle cx="9" cy="5" r="2"/><circle cx="15" cy="5" r="2"/><ellipse cx="12" cy="16" rx="5" ry="4"/></svg>
         </span>
         <span class="topnav-name">PinkPawPets <span class="thin">· pro crew</span></span>
       </a>
-      <span class="topnav-status" id="topnav-status">
-        <span class="pulse"></span>
-        <span class="topnav-status-text" id="status-text">📸 emailing photos to Bella's mom</span>
+      <span class="topnav-status" id="topnav-status" aria-live="polite" aria-label="Current status">
+        <span class="pulse" aria-hidden="true"></span>
+        <span class="topnav-status-text" id="status-text">
+          <span role="img" aria-label="Camera">📸</span> emailing photos to Bella's mom
+        </span>
       </span>
       <a class="topnav-back" href="/">← Charlie &amp; Katie</a>
     </div>
   </nav>
 
+  <!-- SECTION: TRUST BAR -->
+  <div class="trust-bar" role="region" aria-label="Trust credentials">
+    <div class="container">
+      <div class="trust-bar-inner">
+        <div class="trust-item">
+          <span role="img" aria-label="Shield">🛡️</span> Fully Insured
+        </div>
+        <div class="trust-item">
+          <span role="img" aria-label="Hospital">🏥</span> Vet Emergency Plan on File
+        </div>
+        <div class="trust-item">
+          <span role="img" aria-label="Camera">📸</span> Daily Photo Updates
+        </div>
+        <div class="trust-item">
+          <span role="img" aria-label="Lock">🔐</span> Yacht-Crew Key Protocols
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION: HERO -->
   <header class="hero">
     <div class="hero-paper" aria-hidden="true"></div>
     <div class="container hero-grid">
+
       <div>
         <span class="hello-tag">hi, hi, hi</span>
-        <h1>The pet care your dog would <span class="em-coral">book themselves</span> — <span class="em-rose">if they had thumbs</span>.</h1>
+        <h1>The pet care your dog would <span class="em-primary">book themselves</span> — <span class="em-accent">if they had thumbs</span>.</h1>
         <p class="hero-tag">
           We're <strong>Tori &amp; Max</strong> — two ridiculous animal people. We've spent the last <strong>5+ years</strong>
           caring for hundreds of pets and homes from <strong>Central PA to Cocoa Beach</strong>. The other half
           of our year? Yeah, we work yachts. We don't take ourselves seriously. We do take your pets very seriously.
         </p>
         <div class="hero-cta-row">
-          <a class="btn-primary" href="#booking">tell us about your pup <span class="arrow">→</span></a>
-          <a class="btn-ghost" href="#services">peek at what we do 👀</a>
-        </div>
-        <div class="hero-meta">
-          <span class="hero-meta-item tilt-l">🌅 2 coasts</span>
-          <span class="hero-meta-item tilt-r">🐾 100+ pets</span>
-          <span class="hero-meta-item tilt-l">🏡 100+ homes</span>
-          <span class="hero-meta-item tilt-r">⛵ also yachts</span>
+          <a class="btn-primary" href="#booking">tell us about your pup <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="link-secondary" href="#services">see what we do</a>
         </div>
       </div>
 
       <div class="pet-stage" id="pet-stage" aria-label="Click on the dog or cat to pet them!">
         <div class="pet-stage-bg">
-          <div class="stage-sun"></div>
+          <div class="stage-sun" aria-hidden="true"></div>
         </div>
 
-        <span class="hero-sticker s-1">happy<br>tails<br>only!</span>
+        <span class="hero-sticker" aria-hidden="true">happy<br>tails<br>only!</span>
 
-        <span class="stage-deco deco-paw1">🐾</span>
-        <span class="stage-deco deco-paw2">🐾</span>
-        <span class="stage-deco deco-paw3">🐾</span>
-        <span class="stage-deco deco-heart1">♥</span>
-        <span class="stage-deco deco-heart2">♥</span>
-        <span class="stage-deco deco-bone">🦴</span>
-        <span class="stage-deco deco-fish">🐟</span>
-        <span class="stage-deco deco-ball" aria-hidden="true"></span>
-
-        <span class="pet-hint hint-dog">click me!</span>
-        <span class="pet-hint hint-cat">me too!</span>
+        <span class="stage-deco deco-paw1"  aria-hidden="true">🐾</span>
+        <span class="stage-deco deco-paw2"  aria-hidden="true">🐾</span>
+        <span class="stage-deco deco-paw3"  aria-hidden="true">🐾</span>
+        <span class="stage-deco deco-heart1" aria-hidden="true">♥</span>
+        <span class="stage-deco deco-heart2" aria-hidden="true">♥</span>
+        <span class="stage-deco deco-bone"  aria-hidden="true">🦴</span>
+        <span class="stage-deco deco-fish"  aria-hidden="true">🐟</span>
+        <span class="deco-ball" aria-hidden="true"></span>
 
         <div class="stage-pets">
           <!-- Custom dog SVG -->
@@ -1560,31 +904,31 @@
               <ellipse cx="172" cy="158" rx="22" ry="9" fill="#E8C7A0" transform="rotate(-30 172 158)"/>
               <circle cx="186" cy="146" r="9" fill="#E8C7A0"/>
             </g>
-            <ellipse cx="80" cy="200" rx="11" ry="14" fill="#D4B287"/>
+            <ellipse cx="80"  cy="200" rx="11" ry="14" fill="#D4B287"/>
             <ellipse cx="140" cy="200" rx="11" ry="14" fill="#D4B287"/>
-            <ellipse cx="56" cy="78" rx="20" ry="36" fill="#A5754B" transform="rotate(-18 56 78)"/>
-            <ellipse cx="164" cy="78" rx="20" ry="36" fill="#A5754B" transform="rotate(18 164 78)"/>
+            <ellipse cx="56"  cy="78"  rx="20" ry="36" fill="#A5754B" transform="rotate(-18 56 78)"/>
+            <ellipse cx="164" cy="78"  rx="20" ry="36" fill="#A5754B" transform="rotate(18 164 78)"/>
             <ellipse cx="110" cy="108" rx="64" ry="60" fill="#E8C7A0"/>
-            <ellipse cx="68" cy="92" rx="22" ry="18" fill="#A5754B" opacity="0.65" transform="rotate(-15 68 92)"/>
+            <ellipse cx="68"  cy="92"  rx="22" ry="18" fill="#A5754B" opacity="0.65" transform="rotate(-15 68 92)"/>
             <ellipse cx="110" cy="138" rx="34" ry="24" fill="#F5DEC0"/>
             <g class="dog-eye">
-              <ellipse cx="86" cy="102" rx="6.5" ry="9" fill="#2A2A2A"/>
-              <circle cx="84" cy="100" r="2.2" fill="white"/>
+              <ellipse cx="86"  cy="102" rx="6.5" ry="9" fill="#2A2A2A"/>
+              <circle  cx="84"  cy="100" r="2.2"        fill="white"/>
             </g>
-            <g class="dog-eye" style="animation-delay: 0.1s">
+            <g class="dog-eye" style="animation-delay:0.1s">
               <ellipse cx="134" cy="102" rx="6.5" ry="9" fill="#2A2A2A"/>
-              <circle cx="132" cy="100" r="2.2" fill="white"/>
+              <circle  cx="132" cy="100" r="2.2"         fill="white"/>
             </g>
-            <path d="M 78 88 Q 86 84 94 88" stroke="#8B5A2B" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+            <path d="M 78 88 Q 86 84 94 88"   stroke="#8B5A2B" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
             <path d="M 126 88 Q 134 84 142 88" stroke="#8B5A2B" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
-            <ellipse cx="110" cy="128" rx="10" ry="7" fill="#2A2A2A"/>
-            <ellipse cx="107" cy="125" rx="3" ry="2" fill="#5A5A5A"/>
-            <path d="M 110 137 Q 100 152 88 144" stroke="#2A2A2A" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+            <ellipse cx="110" cy="128" rx="10" ry="7"  fill="#2A2A2A"/>
+            <ellipse cx="107" cy="125" rx="3"  ry="2"  fill="#5A5A5A"/>
+            <path d="M 110 137 Q 100 152 88 144"  stroke="#2A2A2A" stroke-width="2.8" fill="none" stroke-linecap="round"/>
             <path d="M 110 137 Q 120 152 132 144" stroke="#2A2A2A" stroke-width="2.8" fill="none" stroke-linecap="round"/>
             <path d="M 102 146 Q 110 158 118 146 Q 113 154 110 154 Q 107 154 102 146 Z" fill="#FF7878"/>
-            <path d="M 60 168 Q 110 178 160 168" stroke="#06B6D4" stroke-width="6" fill="none" stroke-linecap="round"/>
-            <circle cx="110" cy="174" r="6" fill="#FCD34D"/>
-            <circle cx="110" cy="174" r="2.5" fill="#155E75"/>
+            <path d="M 60 168 Q 110 178 160 168" stroke="#D4687A" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <circle cx="110" cy="174" r="6" fill="#F5DEC0"/>
+            <circle cx="110" cy="174" r="2.5" fill="#4A7C74"/>
           </svg>
 
           <!-- Custom cat SVG -->
@@ -1593,101 +937,90 @@
             <ellipse cx="92" cy="172" rx="48" ry="22" fill="#C9B399"/>
             <ellipse cx="74" cy="186" rx="8" ry="10" fill="#A8946F"/>
             <ellipse cx="108" cy="186" rx="8" ry="10" fill="#A8946F"/>
-            <path d="M 56 70 L 44 28 L 84 60 Z" fill="#9E8B70"/>
+            <path d="M 56 70 L 44 28 L 84 60 Z"  fill="#9E8B70"/>
             <path d="M 130 70 L 142 28 L 102 60 Z" fill="#9E8B70"/>
-            <path d="M 58 64 L 52 38 L 76 56 Z" fill="#FFB89B"/>
+            <path d="M 58 64 L 52 38 L 76 56 Z"   fill="#FFB89B"/>
             <path d="M 128 64 L 134 38 L 110 56 Z" fill="#FFB89B"/>
             <ellipse cx="93" cy="102" rx="50" ry="48" fill="#C9B399"/>
-            <path d="M 60 80 Q 70 84 80 80" stroke="#9E8B70" stroke-width="2.8" fill="none" stroke-linecap="round" opacity="0.7"/>
+            <path d="M 60 80 Q 70 84 80 80"   stroke="#9E8B70" stroke-width="2.8" fill="none" stroke-linecap="round" opacity="0.7"/>
             <path d="M 106 80 Q 116 84 126 80" stroke="#9E8B70" stroke-width="2.8" fill="none" stroke-linecap="round" opacity="0.7"/>
-            <path d="M 50 96 Q 60 99 70 96" stroke="#9E8B70" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+            <path d="M 50 96 Q 60 99 70 96"   stroke="#9E8B70" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5"/>
             <path d="M 116 96 Q 126 99 136 96" stroke="#9E8B70" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5"/>
             <g class="cat-eye">
-              <ellipse cx="74" cy="100" rx="7" ry="10" fill="#7AA86A"/>
-              <ellipse cx="74" cy="100" rx="2" ry="8.5" fill="#2A2A2A"/>
-              <circle cx="72" cy="96" r="1.8" fill="white"/>
+              <ellipse cx="74" cy="100" rx="7"   ry="10"  fill="#7AA86A"/>
+              <ellipse cx="74" cy="100" rx="2"   ry="8.5" fill="#2A2A2A"/>
+              <circle  cx="72" cy="96"  r="1.8"           fill="white"/>
             </g>
-            <g class="cat-eye" style="animation-delay: 0.15s">
-              <ellipse cx="112" cy="100" rx="7" ry="10" fill="#7AA86A"/>
-              <ellipse cx="112" cy="100" rx="2" ry="8.5" fill="#2A2A2A"/>
-              <circle cx="110" cy="96" r="1.8" fill="white"/>
+            <g class="cat-eye" style="animation-delay:0.15s">
+              <ellipse cx="112" cy="100" rx="7"   ry="10"  fill="#7AA86A"/>
+              <ellipse cx="112" cy="100" rx="2"   ry="8.5" fill="#2A2A2A"/>
+              <circle  cx="110" cy="96"  r="1.8"           fill="white"/>
             </g>
             <path d="M 93 120 L 86 128 L 100 128 Z" fill="#FF8C9C"/>
-            <path d="M 93 128 Q 93 134 86 136" stroke="#2A2A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <path d="M 93 128 Q 93 134 86 136"  stroke="#2A2A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
             <path d="M 93 128 Q 93 134 100 136" stroke="#2A2A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-            <line x1="56" y1="124" x2="38" y2="119" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
-            <line x1="56" y1="129" x2="36" y2="129" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+            <line x1="56"  y1="124" x2="38"  y2="119" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+            <line x1="56"  y1="129" x2="36"  y2="129" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
             <line x1="130" y1="124" x2="148" y2="119" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
             <line x1="130" y1="129" x2="150" y2="129" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
-            <path d="M 58 152 Q 93 162 128 152" stroke="#34D399" stroke-width="5" fill="none" stroke-linecap="round"/>
-            <circle cx="93" cy="158" r="4" fill="#FCD34D"/>
+            <path d="M 58 152 Q 93 162 128 152" stroke="#D4687A" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <circle cx="93" cy="158" r="4" fill="#F5DEC0"/>
           </svg>
         </div>
-
-        <span class="deco-yacht-easter" title="Crew lead the other half of the year">⛵</span>
-
-        <div class="pets-counter" id="pets-counter">
-          <div class="pc-num"><span id="pc-num">0</span></div>
-          <div class="pc-label">pets given today</div>
-        </div>
       </div>
+
     </div>
 
-    <!-- Vibe marquee -->
+    <!-- Vibe marquee strip -->
     <div class="vibe-strip" aria-hidden="true">
       <div class="vibe-strip-inner" id="vibe-strip-inner"></div>
     </div>
   </header>
 
-  <section class="trust">
-    <div class="container">
-      <span class="section-eyebrow" style="margin-left: 50%; transform: translateX(-50%) rotate(-1.5deg);">By the numbers</span>
-      <div class="trust-grid">
-        <div class="trust-stat">
-          <div class="tape"></div>
-          <div class="trust-icon">⏳</div>
-          <div class="trust-num"><span data-count="5">0</span><span class="plus">+</span></div>
-          <div class="trust-label">years caring</div>
+  <!-- SECTION: STATS STRIP -->
+  <div class="stats-strip" role="region" aria-label="By the numbers">
+    <div class="stats-strip-inner">
+      <div class="stat-item">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Coasts covered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">
+          <span role="img" aria-label="Paw print">🐾</span> Pets cared for
         </div>
-        <div class="trust-stat">
-          <div class="tape" style="background: var(--tape-3);"></div>
-          <div class="trust-icon">🐾</div>
-          <div class="trust-num"><span data-count="100">0</span><span class="plus">+</span></div>
-          <div class="trust-label">pets cared for</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">
+          <span role="img" aria-label="House">🏡</span> Homes watched
         </div>
-        <div class="trust-stat">
-          <div class="tape" style="background: var(--tape-1);"></div>
-          <div class="trust-icon">🏡</div>
-          <div class="trust-num"><span data-count="100">0</span><span class="plus">+</span></div>
-          <div class="trust-label">homes watched</div>
-        </div>
-        <div class="trust-stat">
-          <div class="tape" style="background: var(--tape-2);"></div>
-          <div class="trust-icon">🌅</div>
-          <div class="trust-num"><span data-count="2">0</span></div>
-          <div class="trust-label">coasts served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">Also</div>
+        <div class="stat-label">
+          <span role="img" aria-label="Sailboat">⛵</span> Yachts. Yes, really.
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
+  <!-- SECTION: ABOUT -->
   <section class="about reveal">
     <div class="container about-grid">
       <div class="polaroids">
         <div class="polaroid p-tori">
-          <div class="tape"></div>
           <div class="polaroid-photo">
-            <span class="initial">T</span>
-            <span class="pet-emoji">🐕</span>
+            <span class="initial" aria-hidden="true">T</span>
+            <span class="pet-emoji" aria-hidden="true">🐕</span>
           </div>
           <div class="polaroid-caption">tori<small>belly-rub specialist</small></div>
           <div class="bubble b-tori" id="bubble-tori">If your dog has trust issues, give me 10 minutes.</div>
         </div>
         <div class="polaroid p-max">
-          <div class="tape"></div>
           <div class="polaroid-photo">
-            <span class="initial">M</span>
-            <span class="pet-emoji">🐈</span>
+            <span class="initial" aria-hidden="true">M</span>
+            <span class="pet-emoji" aria-hidden="true">🐈</span>
           </div>
           <div class="polaroid-caption">max<small>door-locker, plant-watcher</small></div>
           <div class="bubble b-max" id="bubble-max">Yes I locked the back door. Twice. With photo.</div>
@@ -1695,7 +1028,7 @@
       </div>
       <div class="about-copy">
         <span class="section-eyebrow">about us</span>
-        <h2 class="section-title">Two pet people who happen to <em class="rose">also</em> work yachts.</h2>
+        <h2 class="section-title">Two pet people who happen to <em>also</em> work yachts.</h2>
         <p>
           When we're stateside, this is what we do — and we love it. <strong>5+ years and hundreds
           of pets and homes</strong>. Overnight boarding, in-home pet sitting, house watch, daily
@@ -1713,6 +1046,7 @@
     </div>
   </section>
 
+  <!-- SECTION: SERVICES -->
   <section class="services reveal" id="services">
     <div class="container">
       <span class="section-eyebrow">what we do</span>
@@ -1723,20 +1057,19 @@
       </p>
 
       <div class="services-grid">
-        <div class="svc-card tilt-l">
-          <div class="tape"></div>
-          <div class="stamp">premium</div>
+
+        <div class="svc-card">
+          <span class="svc-price-tag">from $85/night</span>
           <div class="svc-icon" aria-hidden="true">
             <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="30" cy="46" rx="24" ry="6" fill="#A7F3D0"/>
-              <path d="M 8 46 Q 8 34 16 32 L 44 32 Q 52 34 52 46" stroke="#155E75" stroke-width="2.5" fill="#FFE0C8" stroke-linejoin="round"/>
-              <ellipse cx="30" cy="40" rx="14" ry="6" fill="#A5754B"/>
-              <circle cx="22" cy="38" r="4" fill="#A5754B"/>
-              <path d="M 19 37 Q 21 36 23 37" stroke="#2A2A2A" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+              <ellipse cx="30" cy="46" rx="24" ry="6" fill="rgba(212,104,122,0.15)"/>
+              <path d="M 8 46 Q 8 34 16 32 L 44 32 Q 52 34 52 46" stroke="#B04E62" stroke-width="2.5" fill="#FDF7F2" stroke-linejoin="round"/>
+              <ellipse cx="30" cy="40" rx="14" ry="6" fill="#D4B287"/>
+              <circle cx="22" cy="38" r="4" fill="#D4B287"/>
               <ellipse cx="20" cy="36" rx="0.8" ry="0.6" fill="#2A2A2A"/>
-              <path d="M 14 28 Q 14 24 16 24 Q 18 26 20 30" fill="#A5754B"/>
-              <text x="42" y="28" font-family="Inter" font-size="6" fill="#34D399" font-weight="700">Z</text>
-              <text x="46" y="22" font-family="Inter" font-size="8" fill="#34D399" font-weight="700">Z</text>
+              <path d="M 14 28 Q 14 24 16 24 Q 18 26 20 30" fill="#D4B287"/>
+              <text x="42" y="28" font-family="DM Sans" font-size="7" fill="#4A7C74" font-weight="700">Z</text>
+              <text x="46" y="22" font-family="DM Sans" font-size="9" fill="#4A7C74" font-weight="700">Z</text>
             </svg>
           </div>
           <h3 class="svc-name">Overnight Boarding</h3>
@@ -1744,20 +1077,18 @@
           <p class="svc-meta">dusk to dawn · 24/7 attention</p>
         </div>
 
-        <div class="svc-card tilt-r">
-          <div class="tape"></div>
-          <div class="stamp">cozy</div>
+        <div class="svc-card">
+          <span class="svc-price-tag">from $95/night</span>
           <div class="svc-icon" aria-hidden="true">
             <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 12 28 L 30 14 L 48 28 L 48 48 L 12 48 Z" fill="#FFE0C8" stroke="#155E75" stroke-width="2" stroke-linejoin="round"/>
-              <path d="M 8 30 L 30 12 L 52 30" stroke="#155E75" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="26" y="36" width="8" height="12" fill="#155E75"/>
-              <circle cx="32" cy="42" r="0.8" fill="#FCD34D"/>
-              <ellipse cx="20" cy="38" rx="2.5" ry="1.8" fill="#06B6D4"/>
-              <circle cx="17" cy="34" r="1.2" fill="#06B6D4"/>
-              <circle cx="20" cy="33" r="1.2" fill="#06B6D4"/>
-              <circle cx="23" cy="34" r="1.2" fill="#06B6D4"/>
-              <circle cx="26" cy="35.5" r="1" fill="#06B6D4"/>
+              <path d="M 12 28 L 30 14 L 48 28 L 48 48 L 12 48 Z" fill="#FDF7F2" stroke="#B04E62" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M 8 30 L 30 12 L 52 30" stroke="#B04E62" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="26" y="36" width="8" height="12" fill="#4A7C74"/>
+              <circle cx="32" cy="42" r="0.8" fill="#FDF7F2"/>
+              <ellipse cx="20" cy="38" rx="2.5" ry="1.8" fill="#D4687A"/>
+              <circle cx="17" cy="34" r="1.2" fill="#D4687A"/>
+              <circle cx="20" cy="33" r="1.2" fill="#D4687A"/>
+              <circle cx="23" cy="34" r="1.2" fill="#D4687A"/>
             </svg>
           </div>
           <h3 class="svc-name">In-Home Pet Sitting</h3>
@@ -1765,24 +1096,21 @@
           <p class="svc-meta">per night · we do the dishes too</p>
         </div>
 
-        <div class="svc-card tilt-l2">
-          <div class="tape"></div>
-          <div class="stamp">trusted</div>
+        <div class="svc-card">
+          <span class="svc-price-tag">from $65/night</span>
           <div class="svc-icon" aria-hidden="true">
             <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="14" y="22" width="28" height="22" rx="3" fill="#34D399" stroke="#059669" stroke-width="2"/>
-              <rect x="14" y="22" width="28" height="6" fill="#059669"/>
-              <rect x="42" y="28" width="3" height="10" fill="#FCD34D"/>
+              <rect x="14" y="22" width="28" height="22" rx="3" fill="#4A7C74" stroke="#2D6158" stroke-width="2"/>
+              <rect x="14" y="22" width="28" height="6" fill="#2D6158"/>
+              <rect x="42" y="28" width="3" height="10" fill="#F5DEC0"/>
               <rect x="26" y="44" width="4" height="10" fill="#5C3D22"/>
-              <rect x="20" y="14" width="18" height="12" rx="1" fill="white" stroke="#155E75" stroke-width="1.6"/>
-              <path d="M 20 14 L 29 22 L 38 14" stroke="#155E75" stroke-width="1.4" fill="none"/>
-              <path d="M 8 38 L 14 38 L 13 50 L 9 50 Z" fill="#155E75"/>
-              <path d="M 11 38 Q 8 30 6 28" stroke="#34D399" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <path d="M 11 38 Q 14 30 16 28" stroke="#34D399" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <path d="M 11 38 Q 11 30 11 26" stroke="#34D399" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <circle cx="6" cy="28" r="1.5" fill="#7AA86A"/>
-              <circle cx="16" cy="28" r="1.5" fill="#7AA86A"/>
-              <circle cx="11" cy="26" r="1.5" fill="#7AA86A"/>
+              <rect x="20" y="14" width="18" height="12" rx="1" fill="white" stroke="#4A7C74" stroke-width="1.6"/>
+              <path d="M 20 14 L 29 22 L 38 14" stroke="#4A7C74" stroke-width="1.4" fill="none"/>
+              <path d="M 8 38 L 14 38 L 13 50 L 9 50 Z" fill="#4A7C74"/>
+              <path d="M 11 38 Q 8 30 6 28"  stroke="#D4687A" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M 11 38 Q 14 30 16 28" stroke="#D4687A" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="6"  cy="28" r="1.5" fill="#D4687A"/>
+              <circle cx="16" cy="28" r="1.5" fill="#D4687A"/>
             </svg>
           </div>
           <h3 class="svc-name">House Sitting</h3>
@@ -1790,23 +1118,20 @@
           <p class="svc-meta">daily checks · plants kept alive</p>
         </div>
 
-        <div class="svc-card tilt-r2">
-          <div class="tape"></div>
-          <div class="stamp">daily</div>
+        <div class="svc-card">
+          <span class="svc-price-tag">from $25/visit</span>
           <div class="svc-icon" aria-hidden="true">
             <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="34" cy="40" rx="14" ry="8" fill="#E8C7A0"/>
-              <ellipse cx="22" cy="36" rx="8" ry="9" fill="#E8C7A0"/>
+              <ellipse cx="34" cy="40" rx="14" ry="8"  fill="#E8C7A0"/>
+              <ellipse cx="22" cy="36" rx="8"  ry="9"  fill="#E8C7A0"/>
               <ellipse cx="20" cy="32" rx="3.5" ry="6" fill="#A5754B" transform="rotate(-15 20 32)"/>
-              <circle cx="18" cy="34" r="1.2" fill="#2A2A2A"/>
+              <circle  cx="18" cy="34" r="1.2" fill="#2A2A2A"/>
               <ellipse cx="14" cy="36" rx="1.5" ry="1" fill="#2A2A2A"/>
               <path d="M 46 40 Q 52 36 50 30" stroke="#E8C7A0" stroke-width="3.5" fill="none" stroke-linecap="round"/>
               <rect x="24" y="44" width="2.5" height="8" fill="#A5754B"/>
               <rect x="32" y="44" width="2.5" height="8" fill="#A5754B"/>
               <rect x="40" y="44" width="2.5" height="8" fill="#A5754B"/>
-              <path d="M 14 30 Q 6 20 8 12" stroke="#06B6D4" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <circle cx="50" cy="52" r="1" fill="#34D399" opacity="0.6"/>
-              <circle cx="55" cy="50" r="0.8" fill="#34D399" opacity="0.6"/>
+              <path d="M 14 30 Q 6 20 8 12" stroke="#4A7C74" stroke-width="2" fill="none" stroke-linecap="round"/>
             </svg>
           </div>
           <h3 class="svc-name">Daily Care Visits</h3>
@@ -1814,12 +1139,11 @@
           <p class="svc-meta">1–4 visits per day</p>
         </div>
 
-        <div class="svc-card tilt-l">
-          <div class="tape"></div>
-          <div class="stamp">careful</div>
+        <div class="svc-card">
+          <span class="svc-price-tag">custom quote</span>
           <div class="svc-icon" aria-hidden="true">
             <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 30 52 C 8 36 8 18 18 14 C 24 12 28 16 30 20 C 32 16 36 12 42 14 C 52 18 52 36 30 52 Z" fill="#FB7185" stroke="#155E75" stroke-width="2"/>
+              <path d="M 30 52 C 8 36 8 18 18 14 C 24 12 28 16 30 20 C 32 16 36 12 42 14 C 52 18 52 36 30 52 Z" fill="#D4687A" stroke="#B04E62" stroke-width="2"/>
               <ellipse cx="30" cy="34" rx="4" ry="3" fill="white"/>
               <circle cx="25" cy="28" r="2" fill="white"/>
               <circle cx="29" cy="26" r="2" fill="white"/>
@@ -1832,101 +1156,99 @@
           <p class="svc-meta">detailed daily logs</p>
         </div>
 
-        <div class="svc-card tilt-r">
-          <div class="tape"></div>
-          <div class="stamp">last-min</div>
+        <div class="svc-card">
+          <span class="svc-price-tag">custom quote</span>
           <div class="svc-icon" aria-hidden="true">
             <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="10" y="22" width="40" height="28" rx="3" fill="#BAE6FD" stroke="#155E75" stroke-width="2"/>
-              <rect x="22" y="14" width="16" height="10" rx="2" fill="none" stroke="#155E75" stroke-width="2"/>
-              <line x1="30" y1="22" x2="30" y2="50" stroke="#155E75" stroke-width="1.5" opacity="0.5"/>
-              <ellipse cx="20" cy="38" rx="3" ry="2" fill="#06B6D4"/>
-              <circle cx="17" cy="33" r="1.5" fill="#06B6D4"/>
-              <circle cx="20" cy="32" r="1.5" fill="#06B6D4"/>
-              <circle cx="23" cy="33" r="1.5" fill="#06B6D4"/>
+              <rect x="10" y="22" width="40" height="28" rx="3" fill="#E8DDD6" stroke="#4A7C74" stroke-width="2"/>
+              <rect x="22" y="14" width="16" height="10" rx="2" fill="none" stroke="#4A7C74" stroke-width="2"/>
+              <line x1="30" y1="22" x2="30" y2="50" stroke="#4A7C74" stroke-width="1.5" opacity="0.4"/>
+              <ellipse cx="20" cy="38" rx="3" ry="2" fill="#D4687A"/>
+              <circle cx="17" cy="33" r="1.5" fill="#D4687A"/>
+              <circle cx="20" cy="32" r="1.5" fill="#D4687A"/>
+              <circle cx="23" cy="33" r="1.5" fill="#D4687A"/>
               <line x1="42" y1="22" x2="44" y2="18" stroke="#5C3D22" stroke-width="1.5"/>
-              <rect x="42" y="16" width="6" height="4" rx="0.5" fill="#FCD34D" stroke="#5C3D22" stroke-width="1"/>
+              <rect x="42" y="16" width="6" height="4" rx="0.5" fill="#F5DEC0" stroke="#5C3D22" stroke-width="1"/>
             </svg>
           </div>
           <h3 class="svc-name">Travel-Day Concierge</h3>
           <p class="svc-desc">Airport-day handoffs, last-minute starts, late-night arrivals. We've done crew turnaround in 90 minutes — your trip can be that smooth.</p>
           <p class="svc-meta">flexible windows · same-week starts</p>
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- SECTION: JOURNEY -->
   <section class="journey reveal">
     <div class="container">
       <span class="section-eyebrow">where we are</span>
-      <h2 class="section-title">Two coasts. <em class="sage">One standard.</em></h2>
+      <h2 class="section-title">Two coasts. <span class="sage">One standard.</span></h2>
       <p class="section-lede">
         We follow the season — Central Pennsylvania in summer, Cocoa Beach in winter. If you're
         somewhere along that line, there's a good chance we're close. Click the markers below ↓
       </p>
 
       <div class="journey-card">
-        <div class="tape"></div>
         <div class="journey-graphic" aria-label="Travel route from Central Pennsylvania to Cocoa Beach, Florida" id="journey-graphic">
           <svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#38BDF8"/>
-                <stop offset="50%" stop-color="#C5F0E5"/>
-                <stop offset="100%" stop-color="#FFFAEC"/>
+              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%"   stop-color="#FDF7F2"/>
+                <stop offset="50%"  stop-color="#F5E8E0"/>
+                <stop offset="100%" stop-color="#FDF7F2"/>
               </linearGradient>
             </defs>
-            <rect x="0" y="0" width="800" height="280" fill="url(#skyGradient)" rx="14"/>
-            <circle cx="700" cy="56" r="22" fill="#FCD34D" opacity="0.95"/>
-            <circle cx="700" cy="56" r="34" fill="#FCD34D" opacity="0.22"/>
-            <ellipse cx="120" cy="48" rx="32" ry="9" fill="white" opacity="0.85"/>
-            <ellipse cx="140" cy="45" rx="22" ry="7" fill="white" opacity="0.85"/>
-            <ellipse cx="380" cy="38" rx="28" ry="8" fill="white" opacity="0.75"/>
-            <path d="M 0 240 Q 400 220 800 250 V 280 H 0 Z" fill="#E5C9A8"/>
+            <rect x="0" y="0" width="800" height="280" fill="url(#skyGrad)" rx="14"/>
+            <circle cx="700" cy="56" r="22" fill="#D4687A" opacity="0.6"/>
+            <circle cx="700" cy="56" r="34" fill="#D4687A" opacity="0.12"/>
+            <ellipse cx="120" cy="48" rx="32" ry="9"  fill="white" opacity="0.7"/>
+            <ellipse cx="140" cy="45" rx="22" ry="7"  fill="white" opacity="0.7"/>
+            <ellipse cx="380" cy="38" rx="28" ry="8"  fill="white" opacity="0.6"/>
+            <path d="M 0 240 Q 400 220 800 250 V 280 H 0 Z" fill="#E8DDD6"/>
 
             <g class="journey-marker" id="marker-pa" transform="translate(120, 130)" tabindex="0" role="button" aria-label="See Pennsylvania">
-              <circle r="46" fill="white" stroke="#059669" stroke-width="3.5"/>
-              <path d="M -22 14 L -8 -10 L 0 4 L 10 -16 L 22 14 Z" fill="#059669"/>
+              <circle r="46" fill="white" stroke="#4A7C74" stroke-width="3.5"/>
+              <path d="M -22 14 L -8 -10 L 0 4 L 10 -16 L 22 14 Z" fill="#4A7C74"/>
               <path d="M -8 -10 L -4 -2 L -14 -2 Z" fill="white"/>
-              <path d="M 10 -16 L 14 -8 L 6 -8 Z" fill="white"/>
-              <path d="M 28 8 L 22 -6 L 26 -6 L 20 -16 L 30 -16 L 26 -6 L 30 -6 L 28 8 Z" fill="#059669"/>
+              <path d="M 10 -16 L 14 -8 L 6 -8 Z"  fill="white"/>
+              <path d="M 28 8 L 22 -6 L 26 -6 L 20 -16 L 30 -16 L 26 -6 L 30 -6 L 28 8 Z" fill="#4A7C74"/>
               <g transform="translate(-2, 18)">
-                <ellipse cx="0" cy="6" rx="14" ry="9" fill="#E8C7A0"/>
-                <ellipse cx="-10" cy="0" rx="4" ry="6" fill="#A5754B" transform="rotate(-15)"/>
-                <ellipse cx="10" cy="0" rx="4" ry="6" fill="#A5754B" transform="rotate(15)"/>
+                <ellipse cx="0" cy="6"  rx="14" ry="9"  fill="#E8C7A0"/>
+                <ellipse cx="-10" cy="0" rx="4" ry="6"  fill="#A5754B" transform="rotate(-15)"/>
+                <ellipse cx="10"  cy="0" rx="4" ry="6"  fill="#A5754B" transform="rotate(15)"/>
                 <ellipse cx="-4" cy="4" rx="1.2" ry="1.5" fill="#2A2A2A"/>
-                <ellipse cx="4" cy="4" rx="1.2" ry="1.5" fill="#2A2A2A"/>
-                <ellipse cx="0" cy="9" rx="2" ry="1.4" fill="#2A2A2A"/>
+                <ellipse cx="4"  cy="4" rx="1.2" ry="1.5" fill="#2A2A2A"/>
+                <ellipse cx="0"  cy="9" rx="2"   ry="1.4" fill="#2A2A2A"/>
                 <path d="M 0 11 Q -3 14 -5 13" stroke="#2A2A2A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-                <path d="M 0 11 Q 3 14 5 13" stroke="#2A2A2A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                <path d="M 0 11 Q 3 14 5 13"   stroke="#2A2A2A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
               </g>
             </g>
-            <text x="120" y="200" text-anchor="middle" font-family="Fredoka, Inter, sans-serif" font-size="22" font-weight="600" fill="#0F172A">Central PA</text>
-            <text x="120" y="222" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#0F172A" font-weight="700" letter-spacing="2">MAY — SEPT</text>
+            <text x="120" y="200" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="20" font-weight="700" fill="#2D2D2D">Central PA</text>
+            <text x="120" y="220" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="#4A7C74" font-weight="700" letter-spacing="2">MAY — SEPT</text>
 
             <g class="journey-marker" id="marker-fl" transform="translate(680, 165)" tabindex="0" role="button" aria-label="See Florida">
-              <circle r="46" fill="white" stroke="#06B6D4" stroke-width="3.5"/>
-              <path d="M 0 14 Q 0 0 0 -10" stroke="#5C3D22" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <path d="M 0 -10 Q -10 -14 -16 -10" stroke="#7AA86A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-              <path d="M 0 -10 Q 10 -14 16 -10" stroke="#7AA86A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-              <path d="M 0 -10 Q -8 -18 -2 -22" stroke="#7AA86A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-              <path d="M 0 -10 Q 8 -18 2 -22" stroke="#7AA86A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-              <circle cx="-3" cy="-9" r="2" fill="#5C3D22"/>
-              <circle cx="3" cy="-9" r="2" fill="#5C3D22"/>
+              <circle r="46" fill="white" stroke="#D4687A" stroke-width="3.5"/>
+              <path d="M 0 14 Q 0 0 0 -10"   stroke="#5C3D22" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M 0 -10 Q -10 -14 -16 -10" stroke="#4A7C74" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <path d="M 0 -10 Q 10 -14 16 -10"   stroke="#4A7C74" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <path d="M 0 -10 Q -8 -18 -2 -22"   stroke="#4A7C74" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <path d="M 0 -10 Q 8 -18 2 -22"     stroke="#4A7C74" stroke-width="3.5" fill="none" stroke-linecap="round"/>
               <g transform="translate(-4, 18)">
-                <ellipse cx="0" cy="5" rx="14" ry="6" fill="#C9B399"/>
-                <ellipse cx="-9" cy="2" rx="6" ry="6" fill="#C9B399"/>
+                <ellipse cx="0" cy="5"  rx="14" ry="6"  fill="#C9B399"/>
+                <ellipse cx="-9" cy="2" rx="6"  ry="6"  fill="#C9B399"/>
                 <path d="M -13 -2 L -15 -7 L -10 -3 Z" fill="#9E8B70"/>
-                <path d="M -5 -2 L -3 -7 L -8 -3 Z" fill="#9E8B70"/>
+                <path d="M -5 -2 L -3 -7 L -8 -3 Z"   fill="#9E8B70"/>
                 <ellipse cx="-11" cy="2" rx="1" ry="1.4" fill="#7AA86A"/>
-                <ellipse cx="-7" cy="2" rx="1" ry="1.4" fill="#7AA86A"/>
+                <ellipse cx="-7"  cy="2" rx="1" ry="1.4" fill="#7AA86A"/>
                 <path d="M 12 4 Q 18 -2 14 -8" stroke="#C9B399" stroke-width="3.5" fill="none" stroke-linecap="round"/>
               </g>
             </g>
-            <text x="680" y="234" text-anchor="middle" font-family="Fredoka, Inter, sans-serif" font-size="22" font-weight="600" fill="#0F172A">Cocoa Beach, FL</text>
-            <text x="680" y="254" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#0F172A" font-weight="700" letter-spacing="2">OCT — APR</text>
+            <text x="680" y="234" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="20" font-weight="700" fill="#2D2D2D">Cocoa Beach, FL</text>
+            <text x="680" y="254" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" fill="#D4687A" font-weight="700" letter-spacing="2">OCT — APR</text>
 
-            <path d="M 165 130 Q 320 70 460 140 Q 590 200 645 165" stroke="#06B6D4" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="6 8">
+            <path d="M 165 130 Q 320 70 460 140 Q 590 200 645 165" stroke="#D4687A" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="6 8" opacity="0.6">
               <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="2s" repeatCount="indefinite"/>
             </path>
 
@@ -1934,12 +1256,12 @@
               <g transform="translate(180, 110)">
                 <animateTransform attributeName="transform" type="translate" values="180,110; 460,140; 645,165; 460,140; 180,110" keyTimes="0;0.25;0.5;0.75;1" dur="14s" repeatCount="indefinite"/>
                 <g transform="scale(0.7)">
-                  <ellipse cx="0" cy="6" rx="3" ry="1.5" fill="#0284C7" opacity="0.4"/>
-                  <path d="M -16 4 L 16 4 L 12 10 L -12 10 Z" fill="#0284C7"/>
+                  <ellipse cx="0" cy="6" rx="3" ry="1.5" fill="#B04E62" opacity="0.4"/>
+                  <path d="M -16 4 L 16 4 L 12 10 L -12 10 Z" fill="#D4687A"/>
                   <rect x="-12" y="-2" width="24" height="6" rx="1" fill="white"/>
-                  <rect x="-2" y="-8" width="8" height="6" rx="1" fill="white"/>
-                  <line x1="2" y1="-8" x2="2" y2="-14" stroke="#0284C7" stroke-width="1"/>
-                  <path d="M 2 -14 L 10 -11 L 2 -8 Z" fill="#FB7185"/>
+                  <rect x="-2"  y="-8" width="8"  height="6" rx="1" fill="white"/>
+                  <line x1="2" y1="-8" x2="2" y2="-14" stroke="#D4687A" stroke-width="1"/>
+                  <path d="M 2 -14 L 10 -11 L 2 -8 Z" fill="#4A7C74"/>
                 </g>
               </g>
             </g>
@@ -1948,7 +1270,7 @@
 
         <div class="journey-legend">
           <div class="leg-card">
-            <span class="leg-icon">🌲</span>
+            <span class="leg-icon" role="img" aria-label="Pine tree">🌲</span>
             <div class="leg-content">
               <div class="lc-eyebrow">summer base</div>
               <div class="lc-place">Central Pennsylvania</div>
@@ -1956,7 +1278,7 @@
             </div>
           </div>
           <div class="leg-card">
-            <span class="leg-icon">🌴</span>
+            <span class="leg-icon" role="img" aria-label="Palm tree">🌴</span>
             <div class="leg-content">
               <div class="lc-eyebrow">winter base</div>
               <div class="lc-place">Cocoa Beach, Florida</div>
@@ -1964,11 +1286,12 @@
             </div>
           </div>
         </div>
-        <p class="journey-note"><strong>heads up:</strong> charter season pulls us to sea sometimes — book early for peak weeks ⛵</p>
+        <p class="journey-note"><strong>heads up:</strong> charter season pulls us to sea sometimes — book early for peak weeks <span role="img" aria-label="Sailboat">⛵</span></p>
       </div>
     </div>
   </section>
 
+  <!-- SECTION: HOW IT WORKS -->
   <section class="how reveal">
     <div class="container">
       <span class="section-eyebrow">how it works</span>
@@ -1976,29 +1299,29 @@
       <p class="section-lede">A quote-first process. We get to know your pet and home before you commit. No autopay traps, no upsells.</p>
       <div class="how-steps">
         <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-icon">📩</div>
+          <div class="step-num" aria-hidden="true">1</div>
+          <div class="step-icon" aria-hidden="true">📩</div>
           <h3 class="step-name">tell us</h3>
           <p class="step-desc">Fill out the form below. Dates, pets, vibe. We respond within 24 hours, usually faster.</p>
-          <div class="step-paws"><span>🐾</span><span>🐾</span><span>🐾</span></div>
+          <div class="step-paws" aria-hidden="true">🐾 🐾 🐾</div>
         </div>
         <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-icon">🤝</div>
+          <div class="step-num" aria-hidden="true">2</div>
+          <div class="step-icon" aria-hidden="true">🤝</div>
           <h3 class="step-name">meet &amp; greet</h3>
           <p class="step-desc">Free 15-minute walkthrough at your home. Your pet sniffs us, you grill us, routines lock in.</p>
-          <div class="step-paws"><span>🐾</span><span>🐾</span><span>🐾</span></div>
+          <div class="step-paws" aria-hidden="true">🐾 🐾 🐾</div>
         </div>
         <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-icon">📸</div>
+          <div class="step-num" aria-hidden="true">3</div>
+          <div class="step-icon" aria-hidden="true">📸</div>
           <h3 class="step-name">daily updates</h3>
           <p class="step-desc">Photos, walk maps, feeding logs — every day. You'll know your dog ate breakfast.</p>
-          <div class="step-paws"><span>🐾</span><span>🐾</span><span>🐾</span></div>
+          <div class="step-paws" aria-hidden="true">🐾 🐾 🐾</div>
         </div>
         <div class="step">
-          <div class="step-num">4</div>
-          <div class="step-icon">🏡</div>
+          <div class="step-num" aria-hidden="true">4</div>
+          <div class="step-icon" aria-hidden="true">🏡</div>
           <h3 class="step-name">welcome home</h3>
           <p class="step-desc">Pet content, mail stacked, plants alive, alarm set. Trip recap waiting on the counter.</p>
         </div>
@@ -2006,95 +1329,197 @@
     </div>
   </section>
 
+  <!-- SECTION: TESTIMONIALS -->
+  <section class="testimonials reveal">
+    <div class="container">
+      <span class="section-eyebrow">from real clients</span>
+      <h2 class="section-title">What pet parents say.</h2>
+      <div class="testimonials-grid">
+        <!-- TODO: Replace with real testimonials -->
+        <div class="testimonial-card">
+          <p class="testimonial-body">"We've tried three sitters over the past few years. Tori is the first one our dog was actually excited to see when we got home — which told us everything we needed to know."</p>
+          <p class="testimonial-attr">— [Client name, Location]</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-body">"Max sent daily photos and once texted us to ask if it was okay to give our cat an extra treat because she seemed a little anxious. That's the level of care we'd hoped for but honestly didn't expect."</p>
+          <p class="testimonial-attr">— [Client name, Location]</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-body">"They left our house cleaner than when they arrived. Our dog's routine stayed completely intact. We've already rebooked for three trips next year."</p>
+          <p class="testimonial-attr">— [Client name, Location]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: PROMISE ("Things You Can Count On") -->
   <section class="promise reveal">
     <div class="container">
       <span class="section-eyebrow">promises we keep</span>
-      <h2 class="section-title">Things you can count on. <em class="rose">Always.</em></h2>
+      <h2 class="section-title">Things you can count on. <span class="rose">Always.</span></h2>
       <div class="promise-grid">
-        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Daily photo &amp; text updates<small>never wonder how their day went</small></span></div>
-        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Mail, packages &amp; trash pickup<small>your home looks lived-in the whole time</small></span></div>
-        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Plant &amp; garden watering<small>indoor + outdoor, logged to your spec</small></span></div>
-        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Discreet key &amp; alarm handling<small>yacht-crew protocols. codes never written down</small></span></div>
-        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Vet-coordinated medication<small>pre-trip schedule confirmed in writing</small></span></div>
-        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Emergency vet plan on file<small>we know where to go and what you'd want done</small></span></div>
-        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Two-person backup<small>if one of us can't, the other can</small></span></div>
-        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Post-trip home report<small>photos, notes, anything that came up — written up for you</small></span></div>
+        <div class="promise-item">
+          <span class="promise-paw" role="img" aria-label="Paw print">🐾</span>
+          <span class="promise-text">Daily photo &amp; text updates<small>never wonder how their day went</small></span>
+        </div>
+        <div class="promise-item">
+          <span class="promise-paw" role="img" aria-label="Paw print">🐾</span>
+          <span class="promise-text">Mail, packages &amp; trash pickup<small>your home looks lived-in the whole time</small></span>
+        </div>
+        <div class="promise-item">
+          <span class="promise-paw" role="img" aria-label="Paw print">🐾</span>
+          <span class="promise-text">Plant &amp; garden watering<small>indoor + outdoor, logged to your spec</small></span>
+        </div>
+        <div class="promise-item">
+          <span class="promise-paw" role="img" aria-label="Paw print">🐾</span>
+          <span class="promise-text">Discreet key &amp; alarm handling<small>yacht-crew protocols. codes never written down</small></span>
+        </div>
+        <div class="promise-item">
+          <span class="promise-paw" role="img" aria-label="Paw print">🐾</span>
+          <span class="promise-text">Vet-coordinated medication<small>pre-trip schedule confirmed in writing</small></span>
+        </div>
+        <div class="promise-item">
+          <span class="promise-paw" role="img" aria-label="Paw print">🐾</span>
+          <span class="promise-text">Emergency vet plan on file<small>we know where to go and what you'd want done</small></span>
+        </div>
+        <div class="promise-item">
+          <span class="promise-paw" role="img" aria-label="Paw print">🐾</span>
+          <span class="promise-text">Two-person backup<small>if one of us can't, the other can</small></span>
+        </div>
+        <div class="promise-item">
+          <span class="promise-paw" role="img" aria-label="Paw print">🐾</span>
+          <span class="promise-text">Post-trip home report<small>photos, notes, anything that came up — written up for you</small></span>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- SECTION: BOOKING -->
   <section class="booking reveal" id="booking">
     <div class="container">
       <span class="section-eyebrow">book a quote</span>
-      <h2 class="section-title">Tell us about your <em>fur weirdo</em>.</h2>
-      <p class="section-lede">No commitment — we'll text you within 24 hours with meet-and-greet times and a clear quote.</p>
+      <h2 class="section-title" style="text-align:center;">Tell us about your <em>fur weirdo</em>.</h2>
+      <p class="section-lede" style="text-align:center; margin-left:auto; margin-right:auto;">No commitment — we'll text you within 24 hours with meet-and-greet times and a clear quote.</p>
 
       <div class="booking-card">
-        <div class="tape"></div>
-        <div class="form-row">
-          <div>
-            <label class="form-label">your name <span class="req">♥</span></label>
-            <input type="text" id="f-name" placeholder="full name plz" autocomplete="name" />
-          </div>
-          <div>
-            <label class="form-label">phone <span class="req">♥</span></label>
-            <input type="tel" id="f-phone" placeholder="(555) 123-4567" autocomplete="tel" />
-          </div>
-        </div>
 
-        <div class="form-row">
-          <div>
-            <label class="form-label">pet's name 🐾</label>
-            <input type="text" id="f-pet" placeholder="Buddy, Luna, Mr. Whiskerton…" />
+        <!-- Quick contact form: 3 fields -->
+        <form class="form-quick" id="ppp-quick-form" novalidate>
+          <div class="form-field">
+            <label class="form-label" for="f-name">
+              Your name <span class="req" aria-hidden="true">♥</span>
+            </label>
+            <input class="form-input" type="text" id="f-name" name="name"
+              autocomplete="name" required placeholder="full name plz" />
           </div>
-          <div>
-            <label class="form-label">pet type</label>
-            <select id="f-type">
-              <option value="Dog">🐕 dog</option>
-              <option value="Cat">🐱 cat</option>
-              <option value="Multiple">♥ multiple pets</option>
-              <option value="Small pet">🐹 small pet</option>
-              <option value="No pet (house sitting only)">🏡 no pet — house sitting only</option>
+
+          <div class="form-field">
+            <label class="form-label" for="f-phone">
+              Phone <span class="req" aria-hidden="true">♥</span>
+            </label>
+            <input class="form-input" type="tel" id="f-phone" name="phone"
+              autocomplete="tel" required placeholder="(555) 123-4567" />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="f-service-quick">
+              What do you need? <span class="req" aria-hidden="true">♥</span>
+            </label>
+            <select class="form-select" id="f-service-quick" name="service" required>
+              <option value="" disabled selected>choose a service…</option>
+              <option value="Overnight boarding">🛏️ Overnight boarding</option>
+              <option value="In-home pet sitting">🏠 In-home pet sitting</option>
+              <option value="House sitting">🔑 House sitting</option>
+              <option value="Daily visits">🐕 Daily visits</option>
+              <option value="Senior / special needs">♥ Senior / special needs</option>
+              <option value="Travel-day concierge">🧳 Travel-day concierge</option>
             </select>
           </div>
-        </div>
 
-        <div class="form-row">
-          <div>
-            <label class="form-label">trip start 📅</label>
-            <input type="date" id="f-start" />
-          </div>
-          <div>
-            <label class="form-label">trip end 📅</label>
-            <input type="date" id="f-end" />
-          </div>
-        </div>
+          <div class="booking-summary empty" id="summary">pick at least one service so we know what to quote!</div>
 
-        <div class="form-row single">
-          <div>
-            <label class="form-label">what do you need? <span class="req">♥</span></label>
-            <div class="svc-pills" id="svc-pills"></div>
-          </div>
-        </div>
+          <p class="form-note">We'll text you within 24 hours to collect the rest.</p>
 
-        <div class="form-row single">
-          <div>
-            <label class="form-label">tell us about your pet, home &amp; trip 💌</label>
-            <textarea id="f-notes" rows="4" placeholder="routines, meds, alarm reminders, key handoff plans, weird habits, favorite toys, snack hierarchy…"></textarea>
-          </div>
-        </div>
+          <button class="btn-primary" id="submit-btn" type="button" onclick="submitBooking()" style="width:100%; justify-content:center; padding:17px;">
+            send the quote request <span class="arrow" aria-hidden="true">→</span>
+          </button>
 
-        <div class="booking-summary empty" id="summary">pick at least one service so we know what to quote!</div>
+          <div id="success" style="display:none;"></div>
+        </form>
 
-        <button class="btn-primary" id="submit-btn" onclick="submitBooking()" style="width: 100%; justify-content: center; padding: 18px;">
-          send the quote request <span class="arrow">→</span>
+        <!-- Collapsible: full details -->
+        <button class="form-details-toggle" id="details-toggle"
+          aria-expanded="false" aria-controls="details-panel" type="button">
+          <span class="toggle-arrow" aria-hidden="true">›</span>
+          already know what you need? expand for details.
         </button>
 
-        <div id="success" style="display: none;"></div>
+        <div class="form-details-panel" id="details-panel" role="region" aria-labelledby="details-toggle">
+          <div class="form-row">
+            <div>
+              <label class="form-label" for="f-pet">
+                Pet's name <span role="img" aria-label="Paw print">🐾</span>
+              </label>
+              <input type="text" id="f-pet" placeholder="Buddy, Luna, Mr. Whiskerton…" />
+            </div>
+            <div>
+              <label class="form-label" for="f-type">Pet type</label>
+              <select id="f-type">
+                <option value="Dog">🐕 dog</option>
+                <option value="Cat">🐱 cat</option>
+                <option value="Multiple">♥ multiple pets</option>
+                <option value="Small pet">🐹 small pet</option>
+                <option value="No pet (house sitting only)">🏡 no pet — house sitting only</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label class="form-label" for="f-start">
+                Trip start <span role="img" aria-label="Calendar">📅</span>
+              </label>
+              <input type="date" id="f-start" />
+            </div>
+            <div>
+              <label class="form-label" for="f-end">
+                Trip end <span role="img" aria-label="Calendar">📅</span>
+              </label>
+              <input type="date" id="f-end" />
+            </div>
+          </div>
+
+          <div class="form-row single">
+            <div>
+              <label class="form-label" for="svc-pills-label">What do you need? (select all that apply)</label>
+              <div class="svc-pills" id="svc-pills" role="group" aria-labelledby="svc-pills-label"></div>
+            </div>
+          </div>
+
+          <div class="form-row single">
+            <div>
+              <label class="form-label" for="f-notes">
+                Tell us about your pet, home &amp; trip <span role="img" aria-label="Love letter">💌</span>
+              </label>
+              <textarea id="f-notes" rows="4" placeholder="routines, meds, alarm reminders, key handoff plans, weird habits, favorite toys, snack hierarchy…"></textarea>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
+  <!-- SECTION: EASTER EGG HINT -->
+  <div style="padding: 1.5rem 0 2.5rem;" aria-hidden="true">
+    <div class="container">
+      <div class="easter-egg-hint">
+        psst — try typing 'treat' <span role="img" aria-label="Bone">🦴</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION: FOOTER -->
   <footer>
     <div class="footer-marquee" aria-hidden="true">
       <div class="footer-marquee-inner" id="footer-marquee-inner"></div>
@@ -2102,7 +1527,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand"><span class="pp">PinkPawPets</span> · <span class="crew">pro crew</span></div>
+          <div class="footer-brand">PinkPawPets</div>
           <p class="footer-tag">Concierge pet care, overnight boarding &amp; house sitting from <strong>Tori &amp; Max</strong>. Two coasts, hundreds of pets, zero spreadsheets.</p>
         </div>
         <div>
@@ -2121,465 +1546,448 @@
       </div>
       <div class="footer-bottom">
         <span>© <span id="yr"></span> PinkPawPets · Tori &amp; Max</span>
-        <span class="easter-hint">try typing "treat" 🦴</span>
-        <span>Central PA · Cocoa Beach, FL · 🐾</span>
+        <span>Central PA · Cocoa Beach, FL · <span role="img" aria-label="Paw print">🐾</span></span>
       </div>
     </div>
   </footer>
 
-  <script>
-    const BOOKING_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxw2a6-Kdjl0ukocVZ1XAlUqpeiqGAcCwa1F4ofZK0uW8_YNkhK6yrtRcWsZMaTxGAEyQ/exec';
-    const TEAM_TAG = 'Tori & Max';
+<script>
+  /* ============================================================
+     CONSTANTS
+  ============================================================ */
+  const BOOKING_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxw2a6-Kdjl0ukocVZ1XAlUqpeiqGAcCwa1F4ofZK0uW8_YNkhK6yrtRcWsZMaTxGAEyQ/exec';
+  const TEAM_TAG = 'Tori & Max';
 
-    document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
-    /* ============ Custom paw cursor ============ */
-    (function pawCursor() {
-      if (window.matchMedia('(max-width: 880px)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      const cur = document.getElementById('cursor-paw');
-      let lastTrail = 0;
-      const TRAIL_INTERVAL = 90;
-      const pawSvg = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="9" r="2"/><circle cx="18" cy="9" r="2"/><circle cx="9" cy="5" r="2"/><circle cx="15" cy="5" r="2"/><ellipse cx="12" cy="16" rx="5.5" ry="4.5"/></svg>`;
+  /* ============================================================
+     CUSTOM PAW CURSOR
+  ============================================================ */
+  (function pawCursor() {
+    if (window.matchMedia('(max-width: 880px)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const cur = document.getElementById('cursor-paw');
+    let lastTrail = 0;
+    const TRAIL_INTERVAL = 90;
+    const pawSvg = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="9" r="2"/><circle cx="18" cy="9" r="2"/><circle cx="9" cy="5" r="2"/><circle cx="15" cy="5" r="2"/><ellipse cx="12" cy="16" rx="5.5" ry="4.5"/></svg>`;
 
-      document.addEventListener('mousemove', (e) => {
-        cur.style.left = e.clientX + 'px';
-        cur.style.top = e.clientY + 'px';
-        const now = performance.now();
-        if (now - lastTrail > TRAIL_INTERVAL) {
-          lastTrail = now;
-          const t = document.createElement('div');
-          t.className = 'paw-trail';
-          t.style.left = e.clientX + 'px';
-          t.style.top = e.clientY + 'px';
-          t.style.setProperty('--rot', (Math.random() * 60 - 30) + 'deg');
-          t.innerHTML = pawSvg;
-          document.body.appendChild(t);
-          setTimeout(() => t.remove(), 950);
-        }
-      });
-      document.addEventListener('mouseleave', () => { cur.style.opacity = 0; });
-      document.addEventListener('mouseenter', () => { cur.style.opacity = 1; });
-    })();
-
-    /* ============ Topnav rotating status ============ */
-    (function rotatingStatus() {
-      const month = new Date().getMonth();
-      const isPA = month >= 4 && month <= 8;
-      const seasonalLine = isPA ? '🌲 currently in Central PA' : '🌴 currently in Cocoa Beach, FL';
-      const lines = [
-        seasonalLine,
-        '📸 emailing photos to Bella\'s mom',
-        '🐕 walking Atlas at 3pm',
-        '🌿 watering the Hendersons\' fern',
-        '🏡 alarm set, mail brought in',
-        '♥ giving belly rubs (always)',
-        '🦴 making homemade dog treats',
-        '⛵ ...except when we\'re at sea'
-      ];
-      let i = 0;
-      const el = document.getElementById('status-text');
-      el.textContent = lines[0];
-      setInterval(() => {
-        el.style.opacity = '0';
-        setTimeout(() => {
-          i = (i + 1) % lines.length;
-          el.textContent = lines[i];
-          el.style.opacity = '1';
-        }, 400);
-      }, 5500);
-    })();
-
-    /* ============ Stat counters ============ */
-    (function counters() {
-      const els = document.querySelectorAll('[data-count]');
-      if (!('IntersectionObserver' in window)) {
-        els.forEach(el => el.textContent = el.dataset.count);
-        return;
+    document.addEventListener('mousemove', (e) => {
+      cur.style.left = e.clientX + 'px';
+      cur.style.top  = e.clientY + 'px';
+      const now = performance.now();
+      if (now - lastTrail > TRAIL_INTERVAL) {
+        lastTrail = now;
+        const t = document.createElement('div');
+        t.className = 'paw-trail';
+        t.style.left = e.clientX + 'px';
+        t.style.top  = e.clientY + 'px';
+        t.style.setProperty('--rot', (Math.random() * 60 - 30) + 'deg');
+        t.innerHTML = pawSvg;
+        document.body.appendChild(t);
+        setTimeout(() => t.remove(), 950);
       }
-      const animate = (el) => {
-        const target = parseInt(el.dataset.count, 10) || 0;
-        const start = performance.now();
-        const dur = 1400;
-        const tick = (t) => {
-          const p = Math.min((t - start) / dur, 1);
-          const eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = Math.round(target * eased);
-          if (p < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
-      };
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); } });
-      }, { threshold: 0.4 });
-      els.forEach(el => io.observe(el));
-    })();
+    });
+    document.addEventListener('mouseleave', () => { cur.style.opacity = '0'; });
+    document.addEventListener('mouseenter', () => { cur.style.opacity = '1'; });
+  })();
 
-    /* ============ Reveal on scroll ============ */
-    (function reveal() {
-      if (!('IntersectionObserver' in window)) {
-        document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
-        return;
-      }
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
-      }, { threshold: 0.12 });
-      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-    })();
-
-    /* ============ Vibe marquee ============ */
-    (function vibeMarquee() {
-      const words = ['BELLY RUBS', 'TAIL WAGS', 'FRESH WATER', 'MIDNIGHT SNUGGLES', 'MAIL PICKUP', 'KEY HANDOFFS', 'PHOTO UPDATES', 'PLANT WATERING', 'TREAT TIME', 'COZY NAPS', 'ALARM CHECKS', 'PORCH PATROL'];
-      const inner = document.getElementById('vibe-strip-inner');
-      const set = () => words.map(w => `<span class="vibe-word">${w}</span>`).join('');
-      inner.innerHTML = set() + set() + set();
-    })();
-    (function footerMarquee() {
-      const words = ['hundreds of tail wags', 'two coasts, one standard', 'mail in · plants alive · alarm set', 'we love your dog', 'pet care done right', 'home like our own', 'photo updates daily', 'no kennels ever'];
-      const inner = document.getElementById('footer-marquee-inner');
-      const set = () => words.map(w => `<span class="footer-marquee-word">${w}</span>`).join('');
-      inner.innerHTML = set() + set() + set();
-    })();
-
-    /* ============ Speech bubble rotation ============ */
-    (function bubbles() {
-      const toriLines = [
-        "If your dog has trust issues, give me 10 minutes.",
-        "Brought my own treats. We're best friends now.",
-        "Atlas had bath time + 12 belly rubs today.",
-        "I am physically incapable of not saying hi to strangers' dogs.",
-        "Senior dogs are my whole personality.",
-        "Yes I sang to your cat. She liked it."
-      ];
-      const maxLines = [
-        "Yes I locked the back door. Twice. With photo.",
-        "Plants are alive AND thriving — taking credit.",
-        "Mail in, alarm set, dog walked. ✓✓✓",
-        "Yacht-crew habits don't turn off when I'm home.",
-        "Made the bed. You're welcome.",
-        "Coffee mug rinsed. We're not animals (the human kind)."
-      ];
-      const tEl = document.getElementById('bubble-tori');
-      const mEl = document.getElementById('bubble-max');
-      let ti = 0, mi = 0;
-      const rotate = () => {
-        ti = (ti + 1) % toriLines.length;
-        mi = (mi + 1) % maxLines.length;
-        tEl.style.opacity = '0';
-        mEl.style.opacity = '0';
-        setTimeout(() => {
-          tEl.textContent = toriLines[ti];
-          mEl.textContent = maxLines[mi];
-          tEl.style.animation = 'none';
-          mEl.style.animation = 'none';
-          void tEl.offsetWidth; void mEl.offsetWidth;
-          tEl.style.animation = '';
-          mEl.style.animation = '';
-          tEl.style.opacity = '1';
-          mEl.style.opacity = '1';
-        }, 400);
-      };
-      setInterval(rotate, 6000);
-    })();
-
-    /* ============ Click-to-pet pets ============ */
-    (function clickPets() {
-      const dog = document.getElementById('stage-dog');
-      const cat = document.getElementById('stage-cat');
-      const stage = document.getElementById('pet-stage');
-      const numEl = document.getElementById('pc-num');
-
-      const today = new Date().toDateString();
-      let saved;
-      try { saved = JSON.parse(localStorage.getItem('ppp-pets') || 'null'); } catch(_){ saved = null; }
-      let count = (saved && saved.day === today) ? saved.count : 0;
-      // Add a community-feel base so it doesn't always start at 0 on first visit
-      if (!saved || saved.day !== today) count = Math.floor(Math.random() * 40) + 12;
-      numEl.textContent = count;
-
-      const persist = () => { try { localStorage.setItem('ppp-pets', JSON.stringify({day: today, count})); } catch(_){} };
-
-      const burst = (host, x, y, char) => {
-        for (let i = 0; i < 6; i++) {
-          const r = document.createElement('span');
-          r.className = 'reaction' + (char === 'Z' ? ' r-z' : '');
-          r.textContent = char;
-          r.style.left = x + 'px';
-          r.style.top = y + 'px';
-          r.style.setProperty('--tx', (Math.random()*120-60) + 'px');
-          r.style.setProperty('--ty', -(40 + Math.random()*60) + 'px');
-          r.style.setProperty('--rr', (Math.random()*60-30) + 'deg');
-          r.style.animationDelay = (i * 50) + 'ms';
-          host.appendChild(r);
-          setTimeout(() => r.remove(), 1500);
-        }
-      };
-
-      const handle = (el, char) => {
-        el.addEventListener('click', (e) => {
-          el.classList.remove('petted');
-          void el.offsetWidth;
-          el.classList.add('petted');
-          const rect = stage.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          burst(stage, x, y, char);
-          count++;
-          numEl.textContent = count;
-          persist();
-          if (count === 25 || count === 50 || count === 100) {
-            burstConfetti({count: 30});
-          }
-          // Hide click-me hints after first pet
-          document.querySelectorAll('.pet-hint').forEach(h => h.style.opacity = '0');
-        });
-        el.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
-        });
-      };
-      handle(dog, '♥');
-      handle(cat, 'Z');
-    })();
-
-    /* ============ Service card 3D tilt ============ */
-    (function tiltCards() {
-      if (window.matchMedia('(max-width: 880px)').matches) return;
-      document.querySelectorAll('.svc-card').forEach(card => {
-        let baseRot = 0;
-        const cs = window.getComputedStyle(card).transform;
-        const m = cs.match(/matrix\(([^)]+)\)/);
-        if (m) {
-          const v = m[1].split(',').map(parseFloat);
-          baseRot = Math.atan2(v[1], v[0]) * 180 / Math.PI;
-        }
-        card.addEventListener('mousemove', (e) => {
-          const r = card.getBoundingClientRect();
-          const px = (e.clientX - r.left) / r.width - 0.5;
-          const py = (e.clientY - r.top) / r.height - 0.5;
-          card.style.transform = `rotate(${baseRot}deg) translateY(-6px) perspective(900px) rotateY(${px * 8}deg) rotateX(${-py * 8}deg)`;
-        });
-        card.addEventListener('mouseleave', () => {
-          card.style.transform = '';
-        });
-      });
-    })();
-
-    /* ============ Journey marker popups ============ */
-    (function markerPopups() {
-      const graphic = document.getElementById('journey-graphic');
-      const paLines = ['🥾 hiking trail visits', '🦌 yes, deer-proof yards too', '🐕 pawprint-stamped paths'];
-      const flLines = ['🌴 sand-paw cleanups', '🦩 we know the dog beaches', '🐚 vacation-rental sitting'];
-      let popup = null;
-
-      const showPopup = (markerId, lines) => {
-        if (popup) popup.remove();
-        const marker = document.getElementById(markerId);
-        const r = marker.getBoundingClientRect();
-        const gr = graphic.getBoundingClientRect();
-        popup = document.createElement('div');
-        popup.className = 'journey-popup';
-        popup.innerHTML = lines.map(l => `<div>${l}</div>`).join('');
-        popup.style.left = (r.left - gr.left + r.width/2 - 90) + 'px';
-        popup.style.top = (r.top - gr.top - 80) + 'px';
-        graphic.appendChild(popup);
-        setTimeout(() => { if (popup) { popup.remove(); popup = null; } }, 3500);
-      };
-
-      ['marker-pa', 'marker-fl'].forEach(id => {
-        const el = document.getElementById(id);
-        const lines = id === 'marker-pa' ? paLines : flLines;
-        el.addEventListener('click', () => showPopup(id, lines));
-        el.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showPopup(id, lines); }
-        });
-      });
-    })();
-
-    /* ============ Service pill chooser ============ */
-    const services = [
-      { id: 'boarding',   name: 'Overnight boarding', emoji: '🛏️' },
-      { id: 'in-home',    name: 'In-home pet sitting', emoji: '🏠' },
-      { id: 'house-sit',  name: 'House sitting', emoji: '🔑' },
-      { id: 'visits',     name: 'Daily visits', emoji: '🐕' },
-      { id: 'special',    name: 'Senior / special needs', emoji: '♥' },
-      { id: 'concierge',  name: 'Travel-day concierge', emoji: '🧳' },
+  /* ============================================================
+     TOPNAV ROTATING STATUS
+  ============================================================ */
+  (function rotatingStatus() {
+    const month = new Date().getMonth();
+    const isPA = month >= 4 && month <= 8;
+    const seasonalLine = isPA ? '🌲 currently in Central PA' : '🌴 currently in Cocoa Beach, FL';
+    const lines = [
+      seasonalLine,
+      '📸 emailing photos to Bella\'s mom',
+      '🐕 walking Atlas at 3pm',
+      '🌿 watering the Hendersons\' fern',
+      '🏡 alarm set, mail brought in',
+      '♥ giving belly rubs (always)',
+      '🦴 making homemade dog treats',
+      '⛵ ...except when we\'re at sea'
     ];
-    const selected = new Set();
+    let i = 0;
+    const el = document.getElementById('status-text');
+    el.textContent = lines[0];
+    setInterval(() => {
+      el.style.opacity = '0';
+      setTimeout(() => {
+        i = (i + 1) % lines.length;
+        el.textContent = lines[i];
+        el.style.opacity = '1';
+      }, 400);
+    }, 5500);
+  })();
 
-    function renderPills() {
-      const wrap = document.getElementById('svc-pills');
-      wrap.innerHTML = services.map(s => `
-        <span class="svc-pill ${selected.has(s.id) ? 'active' : ''}" data-id="${s.id}">${s.emoji} ${s.name}</span>
-      `).join('');
-      wrap.querySelectorAll('.svc-pill').forEach(p => {
-        p.addEventListener('click', () => {
-          const id = p.dataset.id;
-          if (selected.has(id)) selected.delete(id);
-          else selected.add(id);
-          renderPills();
-          updateSummary();
-        });
-      });
+  /* ============================================================
+     SCROLL REVEAL
+  ============================================================ */
+  (function reveal() {
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+      return;
     }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  })();
 
-    function updateSummary() {
-      const box = document.getElementById('summary');
-      if (selected.size === 0) {
-        box.className = 'booking-summary empty';
-        box.textContent = 'pick at least one service so we know what to quote!';
-        return;
+  /* ============================================================
+     VIBE MARQUEE
+  ============================================================ */
+  (function vibeMarquee() {
+    const words = ['BELLY RUBS', 'TAIL WAGS', 'FRESH WATER', 'MIDNIGHT SNUGGLES', 'MAIL PICKUP', 'KEY HANDOFFS', 'PHOTO UPDATES', 'PLANT WATERING', 'TREAT TIME', 'COZY NAPS', 'ALARM CHECKS', 'PORCH PATROL'];
+    const inner = document.getElementById('vibe-strip-inner');
+    const set = () => words.map(w => `<span class="vibe-word">${w}</span>`).join('');
+    inner.innerHTML = set() + set() + set();
+  })();
+
+  (function footerMarquee() {
+    const words = ['hundreds of tail wags', 'two coasts, one standard', 'mail in · plants alive · alarm set', 'we love your dog', 'pet care done right', 'home like our own', 'photo updates daily', 'no kennels ever'];
+    const inner = document.getElementById('footer-marquee-inner');
+    const set = () => words.map(w => `<span class="footer-marquee-word">${w}</span>`).join('');
+    inner.innerHTML = set() + set() + set();
+  })();
+
+  /* ============================================================
+     SPEECH BUBBLE ROTATION (Tori & Max quotes)
+  ============================================================ */
+  (function bubbles() {
+    const toriLines = [
+      "If your dog has trust issues, give me 10 minutes.",
+      "Brought my own treats. We're best friends now.",
+      "Atlas had bath time + 12 belly rubs today.",
+      "I am physically incapable of not saying hi to strangers' dogs.",
+      "Senior dogs are my whole personality.",
+      "Yes I sang to your cat. She liked it."
+    ];
+    const maxLines = [
+      "Yes I locked the back door. Twice. With photo.",
+      "Plants are alive AND thriving — taking credit.",
+      "Mail in, alarm set, dog walked. ✓✓✓",
+      "Yacht-crew habits don't turn off when I'm home.",
+      "Made the bed. You're welcome.",
+      "Coffee mug rinsed. We're not animals (the human kind)."
+    ];
+    const tEl = document.getElementById('bubble-tori');
+    const mEl = document.getElementById('bubble-max');
+    if (!tEl || !mEl) return;
+    let ti = 0, mi = 0;
+    setInterval(() => {
+      ti = (ti + 1) % toriLines.length;
+      mi = (mi + 1) % maxLines.length;
+      tEl.style.opacity = '0';
+      mEl.style.opacity = '0';
+      setTimeout(() => {
+        tEl.textContent = toriLines[ti];
+        mEl.textContent = maxLines[mi];
+        tEl.style.opacity = '1';
+        mEl.style.opacity = '1';
+      }, 400);
+    }, 6000);
+  })();
+
+  /* ============================================================
+     CLICK-TO-PET INTERACTIONS
+  ============================================================ */
+  (function clickPets() {
+    const dog   = document.getElementById('stage-dog');
+    const cat   = document.getElementById('stage-cat');
+    const stage = document.getElementById('pet-stage');
+
+    const burst = (x, y, char) => {
+      for (let i = 0; i < 6; i++) {
+        const r = document.createElement('span');
+        r.className = 'reaction' + (char === 'Z' ? ' r-z' : '');
+        r.textContent = char;
+        r.style.left = x + 'px'; r.style.top = y + 'px';
+        r.style.setProperty('--tx', (Math.random() * 120 - 60) + 'px');
+        r.style.setProperty('--ty', -(40 + Math.random() * 60) + 'px');
+        r.style.setProperty('--rr', (Math.random() * 60 - 30) + 'deg');
+        r.style.animationDelay = (i * 50) + 'ms';
+        stage.appendChild(r);
+        setTimeout(() => r.remove(), 1500);
       }
-      const picked = services.filter(s => selected.has(s.id));
-      box.className = 'booking-summary';
-      box.innerHTML = '<strong>🐾 you picked:</strong> ' + picked.map(s => s.emoji + ' ' + s.name).join(' · ');
-    }
+    };
 
+    const handle = (el, char) => {
+      el.addEventListener('click', (e) => {
+        el.classList.remove('petted'); void el.offsetWidth; el.classList.add('petted');
+        const rect = stage.getBoundingClientRect();
+        burst(e.clientX - rect.left, e.clientY - rect.top, char);
+      });
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+      });
+    };
+    handle(dog, '♥');
+    handle(cat, 'Z');
+  })();
+
+  /* ============================================================
+     JOURNEY MARKER POPUPS
+  ============================================================ */
+  (function markerPopups() {
+    const graphic = document.getElementById('journey-graphic');
+    const paLines = ['🥾 hiking trail visits', '🦌 yes, deer-proof yards too', '🐕 pawprint-stamped paths'];
+    const flLines = ['🌴 sand-paw cleanups', '🦩 we know the dog beaches', '🐚 vacation-rental sitting'];
+    let popup = null;
+
+    const showPopup = (markerId, lines) => {
+      if (popup) popup.remove();
+      const marker = document.getElementById(markerId);
+      const r  = marker.getBoundingClientRect();
+      const gr = graphic.getBoundingClientRect();
+      popup = document.createElement('div');
+      popup.className = 'journey-popup';
+      popup.innerHTML = lines.map(l => `<div>${l}</div>`).join('');
+      popup.style.left = (r.left - gr.left + r.width / 2 - 90) + 'px';
+      popup.style.top  = (r.top  - gr.top  - 80) + 'px';
+      graphic.appendChild(popup);
+      setTimeout(() => { if (popup) { popup.remove(); popup = null; } }, 3500);
+    };
+
+    ['marker-pa', 'marker-fl'].forEach(id => {
+      const el    = document.getElementById(id);
+      const lines = id === 'marker-pa' ? paLines : flLines;
+      el.addEventListener('click',   ()  => showPopup(id, lines));
+      el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showPopup(id, lines); } });
+    });
+  })();
+
+  /* ============================================================
+     SERVICE PILLS (inside collapsible details)
+  ============================================================ */
+  const services = [
+    { id: 'boarding',  name: 'Overnight boarding',   emoji: '🛏️' },
+    { id: 'in-home',   name: 'In-home pet sitting',  emoji: '🏠' },
+    { id: 'house-sit', name: 'House sitting',         emoji: '🔑' },
+    { id: 'visits',    name: 'Daily visits',          emoji: '🐕' },
+    { id: 'special',   name: 'Senior / special needs', emoji: '♥' },
+    { id: 'concierge', name: 'Travel-day concierge',  emoji: '🧳' },
+  ];
+  const selected = new Set();
+
+  function renderPills() {
+    const wrap = document.getElementById('svc-pills');
+    wrap.innerHTML = services.map(s => `
+      <span class="svc-pill ${selected.has(s.id) ? 'active' : ''}" data-id="${s.id}"
+        role="checkbox" aria-checked="${selected.has(s.id)}" tabindex="0">
+        ${s.emoji} ${s.name}
+      </span>
+    `).join('');
+    wrap.querySelectorAll('.svc-pill').forEach(p => {
+      p.addEventListener('click', () => togglePill(p.dataset.id));
+      p.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); togglePill(p.dataset.id); } });
+    });
+  }
+
+  function togglePill(id) {
+    if (selected.has(id)) selected.delete(id); else selected.add(id);
     renderPills();
+    updateSummary();
+  }
 
-    /* ============ Confetti ============ */
-    function burstConfetti(opts = {}) {
-      const count = opts.count || 60;
-      const chars = ['🐾', '♥', '✦', '🐾', '🦴', '★'];
-      const colors = ['#06B6D4','#34D399','#38BDF8','#0284C7','#84CC16','#FB7185'];
-      for (let i = 0; i < count; i++) {
-        const c = document.createElement('span');
-        c.className = 'confetti';
-        c.textContent = chars[Math.floor(Math.random()*chars.length)];
-        c.style.color = colors[Math.floor(Math.random()*colors.length)];
-        c.style.left = Math.random()*100 + 'vw';
-        c.style.top = '-20px';
-        c.style.setProperty('--cx', (Math.random()*200-100) + 'px');
-        c.style.setProperty('--cd', (1.8 + Math.random()*1.6) + 's');
-        c.style.fontSize = (16 + Math.random()*16) + 'px';
-        c.style.animationDelay = (Math.random()*0.6) + 's';
-        document.body.appendChild(c);
-        setTimeout(() => c.remove(), 4500);
-      }
+  function updateSummary() {
+    const box = document.getElementById('summary');
+    const quickService = document.getElementById('f-service-quick').value;
+    /* Merge quick-form service + pills for summary display */
+    const allSelected = new Set(selected);
+    if (quickService) {
+      /* Find matching pill id for display */
+      const match = services.find(s => s.name.toLowerCase() === quickService.toLowerCase());
+      if (match) allSelected.add(match.id);
+    }
+    if (allSelected.size === 0 && !quickService) {
+      box.className = 'booking-summary empty';
+      box.textContent = 'pick at least one service so we know what to quote!';
+      return;
+    }
+    const picked = services.filter(s => allSelected.has(s.id));
+    const extras = quickService && !picked.find(s => s.name.toLowerCase() === quickService.toLowerCase())
+      ? [{ emoji: '📋', name: quickService }] : [];
+    const all = [...picked, ...extras];
+    box.className = 'booking-summary';
+    box.innerHTML = '<strong>🐾 you picked:</strong> ' + all.map(s => s.emoji + ' ' + s.name).join(' · ');
+  }
+
+  /* Sync quick-form dropdown → update summary */
+  document.getElementById('f-service-quick').addEventListener('change', updateSummary);
+
+  renderPills();
+
+  /* ============================================================
+     COLLAPSIBLE DETAILS PANEL
+  ============================================================ */
+  const detailsToggle = document.getElementById('details-toggle');
+  const detailsPanel  = document.getElementById('details-panel');
+  detailsToggle.addEventListener('click', function () {
+    const isOpen = detailsPanel.classList.contains('open');
+    detailsPanel.classList.toggle('open', !isOpen);
+    detailsToggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  /* ============================================================
+     CONFETTI
+  ============================================================ */
+  function burstConfetti(opts = {}) {
+    const count  = opts.count || 60;
+    const chars  = ['🐾', '♥', '✦', '🐾', '🦴', '★'];
+    const colors = ['#D4687A','#4A7C74','#B04E62','#6B9E96','#D4687A','#4A7C74'];
+    for (let i = 0; i < count; i++) {
+      const c = document.createElement('span');
+      c.className     = 'confetti';
+      c.textContent   = chars[Math.floor(Math.random() * chars.length)];
+      c.style.color   = colors[Math.floor(Math.random() * colors.length)];
+      c.style.left    = Math.random() * 100 + 'vw';
+      c.style.top     = '-20px';
+      c.style.setProperty('--cx', (Math.random() * 200 - 100) + 'px');
+      c.style.setProperty('--cd', (1.8 + Math.random() * 1.6) + 's');
+      c.style.fontSize       = (16 + Math.random() * 16) + 'px';
+      c.style.animationDelay = (Math.random() * 0.6) + 's';
+      document.body.appendChild(c);
+      setTimeout(() => c.remove(), 4500);
+    }
+  }
+
+  /* ============================================================
+     BOOKING SUBMIT
+  ============================================================ */
+  async function submitBooking() {
+    const name     = document.getElementById('f-name').value.trim();
+    const phone    = document.getElementById('f-phone').value.trim();
+    const service  = document.getElementById('f-service-quick').value;
+
+    if (!name || !phone) {
+      alert('please add your name and phone so Tori & Max can reach you 🐾');
+      return;
+    }
+    if (!service && selected.size === 0) {
+      alert('pick at least one service so we know what to quote ♥');
+      return;
     }
 
-    /* ============ Booking submit ============ */
-    async function submitBooking() {
-      const name      = document.getElementById('f-name').value.trim();
-      const phone     = document.getElementById('f-phone').value.trim();
-      const petName   = document.getElementById('f-pet').value.trim();
-      const petType   = document.getElementById('f-type').value;
-      const startDate = document.getElementById('f-start').value;
-      const endDate   = document.getElementById('f-end').value;
-      const notesIn   = document.getElementById('f-notes').value.trim();
+    /* Collect optional expanded-form details */
+    const petName   = document.getElementById('f-pet').value.trim();
+    const petType   = document.getElementById('f-type').value;
+    const startDate = document.getElementById('f-start').value;
+    const endDate   = document.getElementById('f-end').value;
+    const notesIn   = document.getElementById('f-notes').value.trim();
 
-      if (!name || !phone) {
-        alert('please add your name and phone so Tori & Max can reach you 🐾');
-        return;
-      }
-      if (selected.size === 0) {
-        alert('pick at least one service so we know what to quote ♥');
-        return;
-      }
+    /* Merge service from dropdown + pills */
+    const pickedPills = services.filter(s => selected.has(s.id)).map(s => s.name);
+    const allServices = service
+      ? [service, ...pickedPills.filter(n => n.toLowerCase() !== service.toLowerCase())]
+      : pickedPills;
 
-      const pickedServices = services.filter(s => selected.has(s.id)).map(s => s.name);
-      const taggedNotes = `[TEAM: ${TEAM_TAG}]\n${notesIn || '(no additional notes)'}`;
+    const taggedNotes = `[TEAM: ${TEAM_TAG}]\n${notesIn || '(no additional notes)'}`;
 
-      const btn = document.getElementById('submit-btn');
-      const originalLabel = btn.innerHTML;
-      btn.disabled = true;
-      btn.innerHTML = 'sending <span class="loading"><span>🐾</span><span>🐾</span><span>🐾</span></span>';
+    const btn = document.getElementById('submit-btn');
+    const originalLabel = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = 'sending <span class="loading"><span>🐾</span><span>🐾</span><span>🐾</span></span>';
 
-      const payload = {
-        name, phone, petName, petType, startDate, endDate,
-        notes: taggedNotes,
-        services: pickedServices,
-        team: TEAM_TAG,
-        userAgent: navigator.userAgent
-      };
+    const payload = {
+      name, phone, petName, petType, startDate, endDate,
+      notes: taggedNotes,
+      services: allServices,
+      team: TEAM_TAG,
+      userAgent: navigator.userAgent
+    };
 
-      try {
-        await fetch(BOOKING_ENDPOINT, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify(payload)
-        });
+    try {
+      await fetch(BOOKING_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
 
-        burstConfetti({count: 90});
+      burstConfetti({ count: 90 });
 
-        const success = document.getElementById('success');
-        success.style.display = 'block';
-        success.className = 'booking-success';
-        const firstName = name.split(' ')[0];
-        success.innerHTML = `
-          <span class="check">🐾</span>
-          <h3>got it, ${firstName}!</h3>
-          <p>Tori &amp; Max will text you at <strong>${phone}</strong> within <strong>24 hours</strong> with meet-and-greet times and a clear quote. ♥</p>
-        `;
-        success.scrollIntoView({behavior:'smooth', block:'center'});
-        btn.innerHTML = 'sent ♥';
-      } catch (err) {
-        console.error(err);
-        alert("we couldn't send that just now. Try again, or reach out directly. 🐾");
-        btn.disabled = false;
-        btn.innerHTML = originalLabel;
-      }
+      const success = document.getElementById('success');
+      success.style.display = 'block';
+      success.className = 'booking-success';
+      const firstName = name.split(' ')[0];
+      success.innerHTML = `
+        <span class="check" role="img" aria-label="Paw print">🐾</span>
+        <h3>got it, ${firstName}!</h3>
+        <p>Tori &amp; Max will text you at <strong>${phone}</strong> within <strong>24 hours</strong> with meet-and-greet times and a clear quote. ♥</p>
+      `;
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      btn.innerHTML = 'sent ♥';
+    } catch (err) {
+      console.error(err);
+      alert("we couldn't send that just now. Try again, or reach out directly. 🐾");
+      btn.disabled = false;
+      btn.innerHTML = originalLabel;
     }
-    window.submitBooking = submitBooking;
+  }
+  window.submitBooking = submitBooking;
 
-    /* ============ Easter eggs ============ */
-    (function easterEggs() {
-      // Konami code → rainbow mode + confetti
-      const seq = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
-      let pos = 0;
-      document.addEventListener('keydown', (e) => {
-        if (e.key === seq[pos]) {
-          pos++;
-          if (pos === seq.length) {
-            document.body.classList.add('rainbow-mode');
-            burstConfetti({count: 120});
-            pos = 0;
-            setTimeout(() => document.body.classList.remove('rainbow-mode'), 6000);
-          }
-        } else {
-          pos = (e.key === seq[0]) ? 1 : 0;
+  /* ============================================================
+     MAGNETIC CTA BUTTONS
+  ============================================================ */
+  (function magneticBtn() {
+    if (window.matchMedia('(max-width: 880px)').matches) return;
+    document.querySelectorAll('.btn-primary').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top  - r.height / 2;
+        btn.style.transform = `translate(${x * 0.18}px, ${y * 0.22}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    });
+  })();
+
+  /* ============================================================
+     EASTER EGGS
+  ============================================================ */
+  (function easterEggs() {
+    /* Konami code → rainbow mode + confetti */
+    const seq = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+    let pos = 0;
+    document.addEventListener('keydown', (e) => {
+      if (e.key === seq[pos]) {
+        pos++;
+        if (pos === seq.length) {
+          document.body.classList.add('rainbow-mode');
+          burstConfetti({ count: 120 });
+          pos = 0;
+          setTimeout(() => document.body.classList.remove('rainbow-mode'), 6000);
         }
-      });
+      } else {
+        pos = (e.key === seq[0]) ? 1 : 0;
+      }
+    });
 
-      // Type "treat" → bone rain
-      let buf = '';
-      document.addEventListener('keydown', (e) => {
-        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-        if (e.key.length !== 1) return;
-        buf = (buf + e.key.toLowerCase()).slice(-5);
-        if (buf === 'treat') {
-          for (let i = 0; i < 30; i++) {
-            const b = document.createElement('span');
-            b.className = 'bone-rain';
-            b.textContent = ['🦴','🐾','♥'][Math.floor(Math.random()*3)];
-            b.style.left = Math.random()*100 + 'vw';
-            b.style.top = '-30px';
-            b.style.setProperty('--cx', (Math.random()*120-60) + 'px');
-            b.style.setProperty('--cd', (2 + Math.random()*2) + 's');
-            b.style.fontSize = (22 + Math.random()*16) + 'px';
-            b.style.animationDelay = (Math.random()*1) + 's';
-            document.body.appendChild(b);
-            setTimeout(() => b.remove(), 4500);
-          }
-          buf = '';
+    /* Type "treat" → bone rain */
+    let buf = '';
+    document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+      if (e.key.length !== 1) return;
+      buf = (buf + e.key.toLowerCase()).slice(-5);
+      if (buf === 'treat') {
+        for (let i = 0; i < 30; i++) {
+          const b = document.createElement('span');
+          b.className   = 'bone-rain';
+          b.textContent = ['🦴','🐾','♥'][Math.floor(Math.random() * 3)];
+          b.style.left  = Math.random() * 100 + 'vw';
+          b.style.top   = '-30px';
+          b.style.setProperty('--cx', (Math.random() * 120 - 60) + 'px');
+          b.style.setProperty('--cd', (2 + Math.random() * 2) + 's');
+          b.style.fontSize       = (22 + Math.random() * 16) + 'px';
+          b.style.animationDelay = (Math.random() * 1) + 's';
+          document.body.appendChild(b);
+          setTimeout(() => b.remove(), 4500);
         }
-      });
-    })();
-
-    /* ============ Magnetic CTA ============ */
-    (function magneticBtn() {
-      if (window.matchMedia('(max-width: 880px)').matches) return;
-      document.querySelectorAll('.btn-primary, .btn-ghost').forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-          const r = btn.getBoundingClientRect();
-          const x = e.clientX - r.left - r.width/2;
-          const y = e.clientY - r.top - r.height/2;
-          btn.style.transform = `translate(${x*0.18}px, ${y*0.22}px)`;
-        });
-        btn.addEventListener('mouseleave', () => {
-          btn.style.transform = '';
-        });
-      });
-    })();
-  </script>
+        buf = '';
+      }
+    });
+  })();
+</script>
 </body>
 </html>
