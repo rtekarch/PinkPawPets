@@ -3,39 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0E2A47" />
+  <meta name="theme-color" content="#FF8C70" />
   <title>Tori &amp; Max · Concierge Pet Care &amp; House Sitting | PinkPawPets</title>
   <meta name="description" content="Concierge pet care, overnight boarding, and house sitting by Tori & Max. 5+ years, 100s of pets and homes cared for. Yacht-crew precision, pet-loving heart. Service from Central Pennsylvania to Cocoa Beach, Florida." />
   <meta property="og:title" content="Tori & Max · Concierge Pet Care & House Sitting" />
-  <meta property="og:description" content="Concierge pet care for pets and homes — by land or by sea. Trusted by hundreds across two coasts." />
+  <meta property="og:description" content="Pets first. Homes treated like our own. Trusted by hundreds across two coasts." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pinkpawpets.com/tori-and-max/" />
   <link rel="canonical" href="https://pinkpawpets.com/tori-and-max/" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230E2A47'%3E%3Ccircle cx='6' cy='9' r='2'/%3E%3Ccircle cx='18' cy='9' r='2'/%3E%3Ccircle cx='9' cy='5' r='2'/%3E%3Ccircle cx='15' cy='5' r='2'/%3E%3Cellipse cx='12' cy='16' rx='5' ry='4'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF8C70'%3E%3Ccircle cx='6' cy='9' r='2'/%3E%3Ccircle cx='18' cy='9' r='2'/%3E%3Ccircle cx='9' cy='5' r='2'/%3E%3Ccircle cx='15' cy='5' r='2'/%3E%3Cellipse cx='12' cy='16' rx='5' ry='4'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --hull: #0E2A47;
-      --deep: #1B4965;
-      --steel: #2C7DA0;
-      --foam: #A9D6E5;
-      --mist: #E8F4F8;
-      --sand: #F5E8D3;
-      --sand-light: #FBF4E6;
-      --gold: #C8932B;
-      --gold-light: #E5C16C;
-      --pink: #D4537E;
-      --ink: #14213D;
-      --slate: #475569;
-      --cream: #FFFCF7;
-      --line: #E5E7EB;
+      /* Warm pet-friendly palette */
+      --cream: #FFF6E9;
+      --cream-soft: #FFFCF6;
+      --peach: #FFD6B8;
+      --peach-soft: #FFE9D8;
+      --coral: #FF8C70;
+      --coral-deep: #E76A4D;
+      --terra: #D4604B;
+      --sage: #9CB89B;
+      --sage-deep: #6F8C71;
+      --sky: #C5E0E8;
+      --sky-deep: #7AB0BC;
+      --sunny: #FFD074;
+      --brown: #6B4423;
+      --brown-soft: #8B6F47;
+      --charcoal: #2A2A2A;
+      --slate: #5C5552;
+      --line: #F0E4D2;
+
+      /* Brand thread back to PinkPawPets */
+      --brand-pink: #ED93B1;
+      --brand-pink-deep: #D4537E;
+
       --font-display: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
       --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-      --shadow-sm: 0 1px 2px rgba(14,42,71,0.06);
-      --shadow-md: 0 8px 24px -8px rgba(14,42,71,0.18);
-      --shadow-lg: 0 22px 48px -16px rgba(14,42,71,0.30);
+      --shadow-sm: 0 2px 4px rgba(212,96,75,0.08);
+      --shadow-md: 0 10px 30px -8px rgba(212,96,75,0.20);
+      --shadow-lg: 0 24px 50px -16px rgba(212,96,75,0.30);
+      --shadow-bottom: 0 4px 0 rgba(212,96,75,0.18);
     }
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; }
@@ -43,287 +53,481 @@
     body {
       font-family: var(--font-body);
       background: var(--cream);
-      color: var(--ink);
+      color: var(--charcoal);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      line-height: 1.55;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-    .container { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
     a { color: inherit; }
 
     /* === Top nav === */
     .topnav {
       position: sticky; top: 0; z-index: 40;
-      background: rgba(255,252,247,0.85);
+      background: rgba(255,246,233,0.92);
       backdrop-filter: saturate(140%) blur(10px);
       -webkit-backdrop-filter: saturate(140%) blur(10px);
-      border-bottom: 1px solid rgba(14,42,71,0.08);
+      border-bottom: 1px solid rgba(212,96,75,0.12);
     }
     .topnav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
     .topnav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .topnav-mark {
-      width: 32px; height: 32px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--hull), var(--deep));
+      width: 36px; height: 36px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--coral), var(--terra));
       display: inline-flex; align-items: center; justify-content: center;
+      box-shadow: 0 3px 0 var(--coral-deep);
     }
-    .topnav-mark svg { width: 18px; height: 18px; fill: var(--gold-light); }
-    .topnav-name { font-family: var(--font-display); font-weight: 600; color: var(--hull); letter-spacing: 0.2px; font-size: 16px; }
-    .topnav-name .thin { color: var(--slate); font-weight: 400; }
-    .topnav-back { font-size: 13px; color: var(--slate); text-decoration: none; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); transition: all 0.15s; }
-    .topnav-back:hover { background: var(--mist); border-color: var(--foam); color: var(--hull); }
+    .topnav-mark svg { width: 18px; height: 18px; fill: white; }
+    .topnav-name {
+      font-family: var(--font-display);
+      font-weight: 600; color: var(--charcoal); font-size: 17px;
+      letter-spacing: -0.2px;
+    }
+    .topnav-name .thin { color: var(--coral); font-weight: 500; font-style: italic; }
+    .topnav-back {
+      font-size: 13px; color: var(--brown);
+      text-decoration: none;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--line);
+      transition: all 0.15s;
+      display: inline-flex; align-items: center; gap: 6px;
+      font-weight: 500;
+    }
+    .topnav-back:hover { background: var(--peach-soft); border-color: var(--coral); color: var(--terra); }
+
+    /* === Animations === */
+    @keyframes float-y { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-10px) rotate(3deg); } }
+    @keyframes wag { 0%,100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
+    @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @keyframes pulse-warm { 0%,100% { box-shadow: 0 0 0 0 rgba(255,140,112,0.55); } 50% { box-shadow: 0 0 0 12px rgba(255,140,112,0); } }
+    @keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+    @keyframes wave-shift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes paw-trot {
+      0% { transform: translateX(0) rotate(-8deg); opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { transform: translateX(60px) rotate(8deg); opacity: 0; }
+    }
 
     /* === Hero === */
-    .hero { position: relative; overflow: hidden; padding: 5.5rem 0 0; background: linear-gradient(180deg, #F1F8FB 0%, var(--cream) 100%); }
-    .hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 3rem; align-items: center; padding-bottom: 3.5rem; position: relative; z-index: 2; }
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 11.5px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
-      color: var(--steel);
-      margin-bottom: 1.25rem;
+    .hero {
+      position: relative;
+      padding: 4rem 0 0;
+      background: linear-gradient(180deg, var(--peach-soft) 0%, var(--cream) 65%, var(--cream) 100%);
+      overflow: hidden;
     }
-    .eyebrow .pp-thread { color: var(--pink); font-weight: 700; }
-    .eyebrow .divider { width: 24px; height: 1px; background: currentColor; opacity: 0.4; }
-    .hero h1 {
-      font-family: var(--font-display);
-      font-weight: 500;
-      font-size: clamp(36px, 5.4vw, 60px);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      color: var(--hull);
-      margin: 0 0 1.25rem;
-      font-variation-settings: "opsz" 96;
+    .hero::before {
+      content: ''; position: absolute; top: -100px; right: -120px;
+      width: 380px; height: 380px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,208,116,0.55) 0%, rgba(255,208,116,0) 65%);
+      pointer-events: none;
     }
-    .hero h1 em { font-style: italic; color: var(--deep); font-weight: 400; }
-    .hero-tag {
-      font-size: 18px; color: var(--slate); max-width: 540px;
-      margin: 0 0 1.75rem; line-height: 1.6;
+    .hero::after {
+      content: ''; position: absolute; bottom: 80px; left: -150px;
+      width: 320px; height: 320px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(156,184,155,0.35) 0%, rgba(156,184,155,0) 60%);
+      pointer-events: none;
     }
-    .hero-tag strong { color: var(--ink); font-weight: 600; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem;
+      align-items: center;
+      padding-bottom: 4rem;
+      position: relative; z-index: 2;
+    }
 
-    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-    .btn-primary {
-      background: var(--hull); color: var(--cream);
-      border: 1px solid var(--hull);
-      padding: 14px 28px; border-radius: 999px;
-      font-family: var(--font-body); font-size: 14.5px; font-weight: 600;
-      cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
-      transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
-      box-shadow: var(--shadow-md);
-      letter-spacing: 0.2px;
-    }
-    .btn-primary:hover { background: var(--deep); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-    .btn-primary .arrow { transition: transform 0.2s; }
-    .btn-primary:hover .arrow { transform: translateX(3px); }
-    .btn-ghost {
-      background: transparent; color: var(--hull);
-      border: 1px solid rgba(14,42,71,0.18);
-      padding: 13px 24px; border-radius: 999px;
-      font-family: var(--font-body); font-size: 14.5px; font-weight: 600;
-      cursor: pointer; text-decoration: none;
-      transition: all 0.15s;
-    }
-    .btn-ghost:hover { background: var(--mist); border-color: var(--steel); }
-
-    /* "Currently in" live badge */
     .where-now {
       display: inline-flex; align-items: center; gap: 10px;
-      background: white; border: 1px solid var(--line);
-      padding: 8px 14px 8px 12px; border-radius: 999px;
-      font-size: 12.5px; font-weight: 500; color: var(--slate);
-      margin-bottom: 1.5rem;
+      background: white; border: 1.5px solid var(--peach);
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 13px; font-weight: 600; color: var(--brown);
+      margin-bottom: 1.25rem;
       box-shadow: var(--shadow-sm);
     }
     .where-now .pulse {
-      width: 8px; height: 8px; border-radius: 50%; background: var(--gold);
-      box-shadow: 0 0 0 0 rgba(200,147,43,0.55);
-      animation: where-pulse 2s infinite;
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--sage); animation: pulse-warm 2s infinite;
     }
-    .where-now strong { color: var(--hull); font-weight: 700; }
-    @keyframes where-pulse { 0% { box-shadow: 0 0 0 0 rgba(200,147,43,0.55); } 70% { box-shadow: 0 0 0 8px rgba(200,147,43,0); } 100% { box-shadow: 0 0 0 0 rgba(200,147,43,0); } }
+    .where-now strong { color: var(--terra); font-weight: 700; }
 
-    /* Hero visual: layered SVG composition */
-    .hero-visual {
-      position: relative; aspect-ratio: 1/1;
-      max-width: 460px; justify-self: end;
-      width: 100%;
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--coral-deep);
+      margin-bottom: 1rem;
     }
-    .hero-circle {
+    .eyebrow .pp-thread {
+      color: var(--brand-pink-deep);
+      font-weight: 700;
+    }
+    .eyebrow .divider { width: 24px; height: 2px; background: var(--coral); border-radius: 2px; }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(38px, 5.6vw, 62px);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      margin: 0 0 1.25rem;
+      font-variation-settings: "opsz" 96;
+    }
+    .hero h1 em {
+      font-style: italic; color: var(--terra); font-weight: 500;
+      position: relative;
+    }
+    .hero h1 em::after {
+      content: ''; position: absolute; left: 0; right: 0; bottom: 4px;
+      height: 8px; background: var(--sunny); opacity: 0.4;
+      border-radius: 4px; z-index: -1;
+    }
+    .hero-tag {
+      font-size: 18px; color: var(--slate); max-width: 540px;
+      margin: 0 0 1.75rem; line-height: 1.65;
+    }
+    .hero-tag strong { color: var(--charcoal); font-weight: 600; }
+
+    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 1.5rem; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--coral), var(--coral-deep));
+      color: white; border: none;
+      padding: 15px 30px; border-radius: 999px;
+      font-family: var(--font-body); font-size: 15px; font-weight: 700;
+      cursor: pointer; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 10px;
+      transition: transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 5px 0 var(--coral-deep), 0 10px 24px -10px rgba(231,106,77,0.5);
+      letter-spacing: 0.3px;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 7px 0 var(--coral-deep), 0 14px 30px -10px rgba(231,106,77,0.6); }
+    .btn-primary:active { transform: translateY(2px); box-shadow: 0 3px 0 var(--coral-deep); }
+    .btn-primary .arrow { transition: transform 0.2s; font-size: 18px; }
+    .btn-primary:hover .arrow { transform: translateX(4px); }
+    .btn-ghost {
+      background: white; color: var(--brown);
+      border: 2px solid var(--peach);
+      padding: 13px 26px; border-radius: 999px;
+      font-family: var(--font-body); font-size: 14.5px; font-weight: 600;
+      cursor: pointer; text-decoration: none;
+      transition: all 0.15s;
+      box-shadow: 0 3px 0 var(--peach);
+    }
+    .btn-ghost:hover { background: var(--peach-soft); border-color: var(--coral); color: var(--terra); transform: translateY(-2px); box-shadow: 0 5px 0 var(--peach); }
+
+    /* === Hero pet illustration stage === */
+    .pet-stage {
+      position: relative;
+      aspect-ratio: 1/1;
+      max-width: 480px;
+      width: 100%;
+      justify-self: end;
+    }
+    .pet-stage-bg {
       position: absolute; inset: 0;
       border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, var(--mist), var(--foam) 55%, var(--steel) 100%);
-      box-shadow: 0 30px 60px -20px rgba(27,73,101,0.45), inset 0 -24px 60px rgba(14,42,71,0.18);
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,255,255,0.7), transparent 50%),
+        linear-gradient(135deg, var(--peach) 0%, var(--cream-soft) 50%, var(--sky) 100%);
+      box-shadow: inset 0 -20px 50px rgba(212,96,75,0.10), 0 20px 50px -15px rgba(212,96,75,0.30);
       overflow: hidden;
     }
-    .hero-sun {
-      position: absolute; top: 14%; right: 18%;
-      width: 80px; height: 80px; border-radius: 50%;
-      background: radial-gradient(circle, var(--gold-light) 0%, rgba(229,193,108,0) 70%);
-      animation: sun-glow 5s ease-in-out infinite;
+    .pet-stage-bg::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 75% 30%, rgba(255,208,116,0.55) 0%, transparent 35%);
     }
-    @keyframes sun-glow { 0%,100% { transform: scale(1); opacity: 0.95; } 50% { transform: scale(1.08); opacity: 1; } }
-    .hero-yacht-wrap {
-      position: absolute; bottom: 32%; left: 0; right: 0;
-      animation: yacht-glide 9s ease-in-out infinite;
+    .stage-sun {
+      position: absolute; top: 12%; right: 18%;
+      width: 48px; height: 48px; border-radius: 50%;
+      background: radial-gradient(circle, var(--sunny) 25%, transparent 65%);
+      animation: bob 4s ease-in-out infinite;
     }
-    @keyframes yacht-glide { 0%,100% { transform: translateX(-8%); } 50% { transform: translateX(8%); } }
-    .hero-yacht {
-      display: block; margin: 0 auto;
-      width: 50%;
-      animation: yacht-bob 4s ease-in-out infinite;
-      filter: drop-shadow(0 4px 8px rgba(14,42,71,0.35));
+    .stage-pets {
+      position: absolute; inset: 0;
+      display: flex; align-items: flex-end; justify-content: center;
+      padding-bottom: 8%;
     }
-    @keyframes yacht-bob { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-4px) rotate(1deg); } }
-    .hero-waves { position: absolute; left: 0; right: 0; bottom: 0; height: 35%; overflow: hidden; }
-    .hero-paw {
-      position: absolute;
-      font-size: 22px;
-      animation: paw-float 6s ease-in-out infinite;
-      filter: drop-shadow(0 2px 4px rgba(14,42,71,0.18));
+    .stage-dog {
+      width: 56%; max-width: 280px;
+      animation: bob 3.5s ease-in-out infinite;
+      filter: drop-shadow(0 8px 12px rgba(212,96,75,0.20));
+      transform-origin: bottom center;
     }
-    .hero-paw.p1 { top: 8%;  left: -4%;  animation-delay: 0s; }
-    .hero-paw.p2 { top: 30%; right: -2%; animation-delay: 1.5s; }
-    .hero-paw.p3 { bottom: 6%; left: -2%; animation-delay: 3s; }
-    @keyframes paw-float { 0%,100% { transform: translateY(0) rotate(-8deg); opacity: 0.85; } 50% { transform: translateY(-12px) rotate(8deg); opacity: 1; } }
+    .stage-cat {
+      width: 36%; max-width: 180px;
+      margin-left: -12%;
+      margin-bottom: 4%;
+      animation: bob 4.2s ease-in-out infinite 0.7s;
+      filter: drop-shadow(0 6px 10px rgba(212,96,75,0.20));
+      transform-origin: bottom center;
+    }
+    .dog-tail { transform-origin: 30% 70%; animation: wag 0.5s ease-in-out infinite; }
+    .dog-eye, .cat-eye { transform-origin: center; animation: blink 5s infinite; }
 
-    /* Bottom hero waves */
-    .ocean-divider { position: relative; height: 90px; overflow: hidden; line-height: 0; margin-top: -1px; }
-    .ocean-divider svg { display: block; width: 100%; height: 100%; }
+    /* Floating around stage */
+    .stage-deco { position: absolute; pointer-events: none; user-select: none; }
+    .deco-paw1 { top: 12%; left: -6%; font-size: 28px; animation: float-y 4.5s ease-in-out infinite; opacity: 0.85; }
+    .deco-paw2 { top: 28%; right: -4%; font-size: 22px; animation: float-y 5s ease-in-out infinite 0.8s; opacity: 0.75; }
+    .deco-paw3 { bottom: 6%; left: -2%; font-size: 24px; animation: float-y 4s ease-in-out infinite 1.5s; opacity: 0.85; }
+    .deco-heart1 { top: 42%; left: -8%; font-size: 22px; color: var(--coral); animation: bob 2.4s ease-in-out infinite; }
+    .deco-heart2 { top: 18%; right: -10%; font-size: 18px; color: var(--brand-pink); animation: bob 2.8s ease-in-out infinite 0.6s; }
+    .deco-bone { bottom: 30%; right: -8%; font-size: 22px; animation: float-y 5.5s ease-in-out infinite; opacity: 0.85; }
+    .deco-yacht-easter {
+      position: absolute; bottom: 12%; right: 14%;
+      font-size: 14px;
+      opacity: 0.55;
+      animation: bob 6s ease-in-out infinite;
+    }
+    .deco-yacht-easter::after {
+      content: 'and yes — even on yachts';
+      position: absolute;
+      bottom: -22px; right: 0;
+      white-space: nowrap;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--brown-soft);
+      font-weight: 600;
+      opacity: 0.6;
+    }
+
+    /* Bottom hero scallop */
+    .hero-scallop { position: relative; height: 72px; line-height: 0; margin-top: -1px; }
+    .hero-scallop svg { display: block; width: 100%; height: 100%; }
 
     /* === Trust strip === */
     .trust {
-      background: linear-gradient(180deg, var(--cream) 0%, #F8F1E1 100%);
-      padding: 2.5rem 0;
-      border-top: 1px solid rgba(200,147,43,0.18);
-      border-bottom: 1px solid rgba(200,147,43,0.18);
+      background: var(--cream-soft);
+      padding: 3rem 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
-    .trust-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .trust-stat {
+      text-align: center;
+      padding: 1.25rem 0.75rem;
+      background: white;
+      border-radius: 20px;
+      border: 1.5px solid var(--peach);
+      box-shadow: var(--shadow-bottom);
+      transition: transform 0.2s;
     }
-    .trust-stat { text-align: center; }
-    .trust-num { font-family: var(--font-display); font-size: 38px; font-weight: 600; color: var(--hull); line-height: 1; letter-spacing: -0.02em; font-variation-settings: "opsz" 96; }
-    .trust-num .plus { color: var(--gold); }
-    .trust-label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--slate); margin-top: 8px; font-weight: 500; }
+    .trust-stat:hover { transform: translateY(-3px); }
+    .trust-icon { font-size: 28px; margin-bottom: 8px; display: inline-block; }
+    .trust-num {
+      font-family: var(--font-display);
+      font-size: 38px; font-weight: 600; color: var(--terra);
+      line-height: 1; letter-spacing: -0.02em;
+      font-variation-settings: "opsz" 96;
+    }
+    .trust-num .plus { color: var(--coral); }
+    .trust-label {
+      font-size: 11.5px; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--brown-soft);
+      margin-top: 8px; font-weight: 600;
+    }
 
     /* === Section base === */
-    section { padding: 5rem 0; }
+    section { padding: 5rem 0; position: relative; }
     .section-eyebrow {
-      display: inline-block;
+      display: inline-flex; align-items: center; gap: 10px;
       font-size: 11.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-      color: var(--gold);
+      color: var(--coral-deep);
       margin-bottom: 0.75rem;
+    }
+    .section-eyebrow::before {
+      content: ''; width: 24px; height: 2px;
+      background: var(--coral); border-radius: 2px;
     }
     .section-title {
       font-family: var(--font-display);
-      font-size: clamp(28px, 3.6vw, 40px);
+      font-size: clamp(28px, 3.8vw, 42px);
       font-weight: 500;
       letter-spacing: -0.015em;
-      color: var(--hull);
+      color: var(--charcoal);
       margin: 0 0 0.75rem;
       line-height: 1.15;
       font-variation-settings: "opsz" 96;
     }
-    .section-title em { font-style: italic; color: var(--deep); font-weight: 400; }
-    .section-lede { font-size: 17px; color: var(--slate); max-width: 640px; margin: 0 0 2.5rem; line-height: 1.6; }
+    .section-title em {
+      font-style: italic;
+      color: var(--terra);
+      font-weight: 500;
+      position: relative;
+    }
+    .section-lede {
+      font-size: 17px; color: var(--slate); max-width: 660px;
+      margin: 0 0 2.5rem; line-height: 1.65;
+    }
 
     /* === About === */
-    .about { background: var(--cream); }
+    .about { background: var(--peach-soft); }
     .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: center; }
     .about-pals { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .pal {
-      background: white; border: 1px solid var(--line);
-      border-radius: 18px; padding: 1.5rem 1.25rem;
-      text-align: center; transition: transform 0.25s, box-shadow 0.25s;
-      box-shadow: var(--shadow-sm);
-    }
-    .pal:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-    .pal-avatar {
-      width: 86px; height: 86px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--hull), var(--steel));
-      color: var(--gold-light);
-      display: inline-flex; align-items: center; justify-content: center;
-      font-family: var(--font-display); font-size: 36px; font-weight: 600;
-      margin-bottom: 0.75rem;
-      box-shadow: 0 8px 20px -8px rgba(14,42,71,0.45);
+      background: white; border: 1.5px solid white;
+      border-radius: 24px; padding: 1.75rem 1.25rem 1.5rem;
+      text-align: center;
+      transition: transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 6px 0 var(--peach), 0 12px 30px -10px rgba(212,96,75,0.20);
       position: relative;
     }
-    .pal:nth-child(2) .pal-avatar { background: linear-gradient(135deg, var(--deep), var(--gold)); }
-    .pal-avatar::after {
-      content: ''; position: absolute; inset: -3px; border-radius: 50%;
-      border: 1px solid var(--gold-light); opacity: 0.4;
+    .pal::before {
+      content: '🐾'; position: absolute; top: -10px; right: 14px;
+      font-size: 22px; opacity: 0.35;
+      transform: rotate(15deg);
     }
-    .pal-name { font-family: var(--font-display); font-size: 19px; font-weight: 600; color: var(--hull); margin: 0 0 4px; }
-    .pal-role { font-size: 12px; color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; margin: 0 0 12px; }
+    .pal:hover { transform: translateY(-5px) rotate(-1deg); }
+    .pal:nth-child(2):hover { transform: translateY(-5px) rotate(1deg); }
+    .pal-avatar {
+      width: 88px; height: 88px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--coral), var(--terra));
+      color: white;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 38px; font-weight: 600;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 6px 0 var(--coral-deep);
+      position: relative;
+    }
+    .pal:nth-child(2) .pal-avatar {
+      background: linear-gradient(135deg, var(--sage), var(--sage-deep));
+      box-shadow: 0 6px 0 var(--sage-deep);
+    }
+    .pal-avatar::after {
+      content: ''; position: absolute; bottom: -2px; right: -4px;
+      font-size: 18px;
+    }
+    .pal:nth-child(1) .pal-avatar::after { content: '🐕'; right: -8px; bottom: -4px; }
+    .pal:nth-child(2) .pal-avatar::after { content: '🐈'; right: -8px; bottom: -4px; }
+    .pal-name {
+      font-family: var(--font-display);
+      font-size: 21px; font-weight: 600;
+      color: var(--charcoal); margin: 0 0 4px;
+    }
+    .pal-role {
+      font-size: 11px; color: var(--coral-deep);
+      letter-spacing: 1.5px; text-transform: uppercase;
+      font-weight: 700; margin: 0 0 12px;
+    }
     .pal-bio { font-size: 14px; color: var(--slate); margin: 0; line-height: 1.6; }
 
     .about-copy h2 { margin-top: 0; }
-    .about-copy p { font-size: 16px; color: var(--slate); line-height: 1.7; margin: 0 0 1rem; }
-    .about-copy p strong { color: var(--ink); font-weight: 600; }
+    .about-copy p { font-size: 16.5px; color: var(--slate); line-height: 1.75; margin: 0 0 1rem; }
+    .about-copy p strong { color: var(--charcoal); font-weight: 600; }
     .about-quote {
-      border-left: 3px solid var(--gold);
-      padding-left: 1.25rem;
+      background: white;
+      border: 2px dashed var(--peach);
+      border-radius: 18px;
+      padding: 1.25rem 1.5rem;
       margin: 1.5rem 0 0;
       font-family: var(--font-display);
       font-style: italic;
       font-size: 18px;
-      color: var(--hull);
-      line-height: 1.5;
+      color: var(--terra);
+      line-height: 1.55;
+      position: relative;
+    }
+    .about-quote::before {
+      content: '"'; position: absolute; top: -8px; left: 14px;
+      background: var(--peach-soft); padding: 0 8px;
+      font-size: 32px; font-family: var(--font-display);
+      color: var(--coral); font-style: normal;
+      line-height: 1; font-weight: 600;
     }
 
     /* === Services === */
-    .services { background: linear-gradient(180deg, var(--cream) 0%, #F4F8FA 100%); }
+    .services { background: var(--cream); }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
     .svc-card {
-      background: white; border: 1px solid var(--line);
-      border-radius: 20px; padding: 1.75rem 1.5rem;
+      background: white;
+      border: 1.5px solid var(--line);
+      border-radius: 24px;
+      padding: 1.75rem 1.5rem 1.5rem;
       transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-      position: relative; overflow: hidden;
+      position: relative;
+      overflow: hidden;
     }
     .svc-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--steel), var(--gold));
-      transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
+      content: ''; position: absolute;
+      top: -50px; right: -50px;
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--peach-soft) 0%, transparent 65%);
+      transition: transform 0.4s ease;
     }
-    .svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--foam); }
-    .svc-card:hover::before { transform: scaleX(1); }
+    .svc-card:hover {
+      transform: translateY(-5px) rotate(-0.5deg);
+      box-shadow: var(--shadow-md);
+      border-color: var(--peach);
+    }
+    .svc-card:hover::before { transform: scale(1.4); }
+    .svc-card:nth-child(2n):hover { transform: translateY(-5px) rotate(0.5deg); }
     .svc-icon {
-      width: 52px; height: 52px; border-radius: 14px;
-      background: linear-gradient(135deg, var(--mist), var(--foam));
+      width: 72px; height: 72px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--peach-soft), white);
       display: inline-flex; align-items: center; justify-content: center;
-      margin-bottom: 1rem;
-      color: var(--hull);
+      margin-bottom: 1.1rem;
+      box-shadow: inset 0 -3px 0 var(--peach);
+      position: relative; z-index: 1;
     }
-    .svc-icon svg { width: 26px; height: 26px; }
-    .svc-name { font-family: var(--font-display); font-size: 21px; font-weight: 600; color: var(--hull); margin: 0 0 0.5rem; }
-    .svc-desc { font-size: 14.5px; color: var(--slate); margin: 0 0 1rem; line-height: 1.6; }
-    .svc-meta { font-size: 12.5px; color: var(--gold); letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600; }
+    .svc-icon svg { width: 44px; height: 44px; }
+    .svc-name {
+      font-family: var(--font-display);
+      font-size: 22px; font-weight: 600;
+      color: var(--charcoal); margin: 0 0 0.5rem;
+      position: relative; z-index: 1;
+    }
+    .svc-desc { font-size: 14.5px; color: var(--slate); margin: 0 0 1rem; line-height: 1.65; position: relative; z-index: 1; }
+    .svc-meta {
+      font-size: 11.5px; color: var(--coral-deep);
+      letter-spacing: 1.2px; text-transform: uppercase; font-weight: 700;
+      display: inline-flex; align-items: center; gap: 6px;
+      position: relative; z-index: 1;
+    }
+    .svc-meta::before { content: '🐾'; font-size: 12px; opacity: 0.85; }
 
     /* === Coast-to-coast journey === */
-    .journey { background: var(--cream); }
+    .journey { background: var(--peach-soft); }
     .journey-card {
-      background: white; border: 1px solid var(--line);
-      border-radius: 24px; padding: 2.5rem 2rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .journey-graphic {
+      background: white;
+      border: 1.5px solid var(--line);
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: 0 8px 0 var(--peach), var(--shadow-md);
       position: relative;
-      max-width: 880px; margin: 1.5rem auto 0;
+      overflow: hidden;
     }
+    .journey-graphic { position: relative; max-width: 920px; margin: 1rem auto 0; }
     .journey-graphic svg { display: block; width: 100%; height: auto; }
     .journey-legend {
-      display: flex; justify-content: space-between; gap: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
       margin-top: 1.5rem;
-      flex-wrap: wrap;
     }
     .leg-card {
-      flex: 1; min-width: 240px;
-      padding: 1rem 1.25rem;
-      background: var(--sand-light);
-      border: 1px solid rgba(200,147,43,0.25);
-      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      background: linear-gradient(135deg, var(--peach-soft), white);
+      border: 2px dashed var(--peach);
+      border-radius: 18px;
+      display: flex; align-items: center; gap: 1rem;
     }
-    .leg-card .lc-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
-    .leg-card .lc-place { font-family: var(--font-display); font-size: 19px; font-weight: 600; color: var(--hull); margin: 4px 0 4px; }
+    .leg-icon { font-size: 36px; flex: 0 0 auto; animation: bob 3.5s ease-in-out infinite; }
+    .leg-card:nth-child(2) .leg-icon { animation-delay: -1.5s; }
+    .leg-content { flex: 1; }
+    .leg-card .lc-eyebrow {
+      font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--coral-deep); font-weight: 700; margin-bottom: 2px;
+    }
+    .leg-card .lc-place {
+      font-family: var(--font-display); font-size: 19px; font-weight: 600;
+      color: var(--charcoal); margin: 0 0 2px; line-height: 1.2;
+    }
     .leg-card .lc-when { font-size: 13px; color: var(--slate); }
     .journey-note {
       text-align: center;
@@ -331,75 +535,108 @@
       font-size: 13.5px; color: var(--slate);
       font-style: italic;
     }
+    .journey-note strong { color: var(--terra); font-weight: 600; }
 
     /* === How it works === */
-    .how { background: linear-gradient(180deg, #F4F8FA 0%, var(--cream) 100%); }
-    .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+    .how { background: var(--cream); }
+    .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; position: relative; }
+    .how-steps::after {
+      content: ''; position: absolute;
+      top: 78px; left: 12.5%; right: 12.5%; height: 2px;
+      background: repeating-linear-gradient(90deg, var(--coral) 0 8px, transparent 8px 16px);
+      opacity: 0.4; z-index: 0;
+    }
     .step {
-      background: white; border: 1px solid var(--line);
-      border-radius: 18px; padding: 1.5rem 1.25rem;
-      position: relative;
-      transition: transform 0.2s;
-    }
-    .step:hover { transform: translateY(-3px); border-color: var(--foam); }
-    .step-num {
-      font-family: var(--font-display);
-      font-size: 32px; font-weight: 600;
-      background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      -webkit-background-clip: text; background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 1;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
-    }
-    .step-name { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--hull); margin: 0 0 6px; }
-    .step-desc { font-size: 13.5px; color: var(--slate); margin: 0; line-height: 1.55; }
-
-    /* === What we promise === */
-    .promise { background: var(--cream); }
-    .promise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
-    .promise-item {
-      background: white; border: 1px solid var(--line);
-      border-radius: 16px; padding: 1.25rem 1.25rem;
-      display: flex; gap: 12px; align-items: flex-start;
+      background: white; border: 1.5px solid var(--line);
+      border-radius: 22px; padding: 1.5rem 1.25rem;
+      position: relative; z-index: 1;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-    .promise-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
-    .promise-check {
-      flex: 0 0 28px; width: 28px; height: 28px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    .step:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); border-color: var(--peach); }
+    .step-icon {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--coral), var(--terra));
       color: white;
       display: inline-flex; align-items: center; justify-content: center;
-      font-size: 14px; font-weight: 700;
-      margin-top: 2px;
-      box-shadow: 0 4px 10px -4px rgba(200,147,43,0.5);
+      font-family: var(--font-display); font-size: 22px; font-weight: 700;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 4px 0 var(--coral-deep);
     }
-    .promise-text { font-size: 14px; color: var(--ink); line-height: 1.55; font-weight: 500; }
-    .promise-text small { display: block; color: var(--slate); font-weight: 400; margin-top: 2px; }
+    .step:nth-child(2) .step-icon { background: linear-gradient(135deg, var(--sage), var(--sage-deep)); box-shadow: 0 4px 0 var(--sage-deep); }
+    .step:nth-child(3) .step-icon { background: linear-gradient(135deg, var(--sky-deep), #5A95A2); box-shadow: 0 4px 0 #5A95A2; }
+    .step:nth-child(4) .step-icon { background: linear-gradient(135deg, var(--sunny), #E5A943); box-shadow: 0 4px 0 #E5A943; }
+    .step-name {
+      font-family: var(--font-display);
+      font-size: 18px; font-weight: 600;
+      color: var(--charcoal); margin: 0 0 6px;
+    }
+    .step-desc { font-size: 13.5px; color: var(--slate); margin: 0; line-height: 1.6; }
+
+    /* === Promises === */
+    .promise { background: var(--peach-soft); }
+    .promise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .promise-item {
+      background: white; border: 1.5px solid white;
+      border-radius: 18px; padding: 1.25rem;
+      display: flex; gap: 14px; align-items: flex-start;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 0 var(--peach);
+    }
+    .promise-item:hover { transform: translateY(-3px); box-shadow: 0 6px 0 var(--peach), var(--shadow-sm); }
+    .promise-paw {
+      flex: 0 0 32px; width: 32px; height: 32px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--coral), var(--terra));
+      color: white;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      box-shadow: 0 3px 0 var(--coral-deep);
+      flex-shrink: 0;
+    }
+    .promise-text { font-size: 14.5px; color: var(--charcoal); line-height: 1.55; font-weight: 600; }
+    .promise-text small { display: block; color: var(--slate); font-weight: 400; margin-top: 3px; font-size: 13px; }
 
     /* === Booking form === */
-    .booking { background: linear-gradient(180deg, var(--cream) 0%, #F0F5F8 100%); }
+    .booking { background: var(--cream); }
     .booking-card {
-      background: white; border: 1px solid var(--line);
-      border-radius: 24px; padding: 2.5rem 2rem;
-      box-shadow: var(--shadow-md);
+      background: white;
+      border: 2px dashed var(--peach);
+      border-radius: 28px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 8px 0 var(--peach);
       max-width: 760px; margin: 0 auto;
+      position: relative;
+    }
+    .booking-card::before {
+      content: '🐾 ♥ 🐾';
+      position: absolute; top: -14px; left: 50%;
+      transform: translateX(-50%);
+      background: white; padding: 0 12px;
+      font-size: 14px; letter-spacing: 6px;
+      color: var(--coral);
     }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
     .form-row.single { grid-template-columns: 1fr; }
-    .form-label { display: block; font-size: 12.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; letter-spacing: 0.3px; }
-    .form-label .req { color: var(--gold); margin-left: 2px; }
+    .form-label {
+      display: block; font-size: 12.5px; font-weight: 700;
+      color: var(--charcoal); margin-bottom: 6px; letter-spacing: 0.3px;
+    }
+    .form-label .req { color: var(--coral); margin-left: 2px; }
     .form-row input, .form-row select, .form-row textarea {
       width: 100%; padding: 12px 14px;
-      border: 1px solid var(--line); border-radius: 10px;
-      font-size: 14px; font-family: var(--font-body); color: var(--ink);
-      background: var(--cream);
+      border: 2px solid var(--line); border-radius: 12px;
+      font-size: 14px; font-family: var(--font-body); color: var(--charcoal);
+      background: var(--cream-soft);
       transition: border-color 0.15s, box-shadow 0.15s;
       box-sizing: border-box;
     }
     .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
-      outline: none; border-color: var(--steel);
-      box-shadow: 0 0 0 3px rgba(44,125,160,0.15);
+      outline: none; border-color: var(--coral);
+      box-shadow: 0 0 0 4px rgba(255,140,112,0.15);
       background: white;
     }
     .form-row textarea { resize: vertical; min-height: 90px; }
@@ -407,108 +644,141 @@
     .svc-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 4px; }
     .svc-pill {
       cursor: pointer;
-      padding: 8px 14px;
-      border: 1px solid var(--line);
+      padding: 9px 16px;
+      border: 2px solid var(--line);
       border-radius: 999px;
-      font-size: 13px; font-weight: 500; color: var(--ink);
-      background: var(--cream);
+      font-size: 13px; font-weight: 600; color: var(--charcoal);
+      background: white;
       transition: all 0.15s;
       user-select: none;
+      display: inline-flex; align-items: center; gap: 6px;
     }
-    .svc-pill:hover { border-color: var(--steel); }
-    .svc-pill.active { background: var(--hull); color: white; border-color: var(--hull); }
+    .svc-pill:hover { border-color: var(--coral); background: var(--peach-soft); }
+    .svc-pill.active {
+      background: linear-gradient(135deg, var(--coral), var(--terra));
+      color: white; border-color: var(--terra);
+      box-shadow: 0 3px 0 var(--coral-deep);
+    }
+    .svc-pill.active::before { content: '✓ '; }
 
     .booking-summary {
-      background: var(--mist); border: 1px solid var(--foam);
-      border-radius: 12px; padding: 0.85rem 1.1rem;
+      background: var(--peach-soft);
+      border: 2px dashed var(--peach);
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
       margin: 14px 0;
-      font-size: 13.5px; color: var(--hull);
+      font-size: 13.5px; color: var(--charcoal);
     }
-    .booking-summary.empty { color: var(--slate); font-style: italic; }
+    .booking-summary.empty { color: var(--brown-soft); font-style: italic; }
+    .booking-summary strong { color: var(--terra); }
+
     .booking-success {
-      background: linear-gradient(135deg, var(--mist), white);
-      border: 1px solid var(--foam);
-      border-radius: 16px; padding: 1.5rem;
+      background: linear-gradient(135deg, var(--peach-soft), white);
+      border: 3px dashed var(--coral);
+      border-radius: 20px;
+      padding: 1.75rem;
       margin-top: 1rem;
       text-align: center;
       animation: rise 0.4s ease-out;
     }
-    .booking-success h3 { font-family: var(--font-display); font-size: 22px; color: var(--hull); margin: 0 0 6px; font-weight: 600; }
-    .booking-success p { font-size: 14px; color: var(--slate); margin: 0; }
-    .booking-success .check { font-size: 32px; color: var(--gold); margin-bottom: 6px; }
+    .booking-success h3 {
+      font-family: var(--font-display); font-size: 22px;
+      color: var(--terra); margin: 0 0 6px; font-weight: 600;
+    }
+    .booking-success p { font-size: 14.5px; color: var(--slate); margin: 0; }
+    .booking-success .check {
+      font-size: 42px; margin-bottom: 4px; display: inline-block;
+      animation: bob 1.6s ease-in-out infinite;
+    }
 
     /* === Footer === */
     footer {
-      background: var(--hull); color: var(--cream);
-      padding: 3rem 0 2rem;
+      background: linear-gradient(135deg, var(--terra) 0%, var(--coral-deep) 100%);
+      color: var(--cream-soft);
+      padding: 3.5rem 0 2rem;
+      position: relative;
+      overflow: hidden;
     }
-    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2rem; }
-    .footer-brand { font-family: var(--font-display); font-size: 22px; font-weight: 600; margin-bottom: 0.5rem; }
-    .footer-tag { font-size: 13.5px; color: rgba(255,252,247,0.7); max-width: 320px; line-height: 1.6; }
-    .footer-h { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-light); margin: 0 0 12px; font-weight: 700; }
-    .footer-link { display: block; font-size: 14px; color: rgba(255,252,247,0.85); text-decoration: none; padding: 4px 0; transition: color 0.15s; }
-    .footer-link:hover { color: var(--gold-light); }
-    .footer-bottom { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,252,247,0.12); font-size: 12.5px; color: rgba(255,252,247,0.55); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-    .footer-bottom a { color: rgba(255,252,247,0.7); text-decoration: none; }
-    .footer-bottom a:hover { color: var(--gold-light); }
+    footer::before {
+      content: '🐾 ♥ 🐾 ♥ 🐾 ♥ 🐾 ♥ 🐾 ♥ 🐾 ♥ 🐾 ♥ 🐾 ♥';
+      position: absolute; top: 18px; left: -10%; right: -10%;
+      font-size: 12px; opacity: 0.20;
+      letter-spacing: 18px; white-space: nowrap;
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2rem; position: relative; z-index: 1; }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 24px; font-weight: 600; margin-bottom: 0.5rem;
+    }
+    .footer-brand .pp { color: var(--sunny); }
+    .footer-tag {
+      font-size: 14px; color: rgba(255,252,246,0.85);
+      max-width: 320px; line-height: 1.65;
+    }
+    .footer-h {
+      font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--sunny); margin: 0 0 12px; font-weight: 700;
+    }
+    .footer-link {
+      display: block; font-size: 14px;
+      color: rgba(255,252,246,0.9);
+      text-decoration: none; padding: 5px 0;
+      transition: color 0.15s;
+    }
+    .footer-link:hover { color: var(--sunny); }
+    .footer-bottom {
+      margin-top: 2rem; padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,252,246,0.20);
+      font-size: 12.5px; color: rgba(255,252,246,0.65);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+      position: relative; z-index: 1;
+    }
 
-    /* === Animations & utility === */
-    @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    /* === Reveal === */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-    /* Wave animations */
-    .wave-path { animation: wave-shift 12s linear infinite; }
-    .wave-path.slow { animation-duration: 18s; opacity: 0.5; }
-    @keyframes wave-shift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-    /* Journey route dash animation */
-    .route-dash {
-      stroke-dasharray: 6 8;
-      animation: dash-march 2s linear infinite;
+    /* Loading paws */
+    .loading {
+      display: inline-flex; gap: 4px; align-items: center;
     }
-    @keyframes dash-march { to { stroke-dashoffset: -28; } }
-
-    /* Yacht moving along the route */
-    .route-yacht {
-      animation: route-travel 14s ease-in-out infinite;
+    .loading span {
+      display: inline-block;
+      animation: bob 0.7s ease-in-out infinite;
     }
-    @keyframes route-travel {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(280px); }
-    }
-
-    /* Subtle gold particles for premium feel */
-    .gold-particle {
-      position: fixed; pointer-events: none;
-      width: 4px; height: 4px; border-radius: 50%;
-      background: var(--gold-light);
-      opacity: 0;
-      z-index: 5;
-    }
-
-    /* Loading dots */
-    .loading { display: inline-flex; gap: 4px; }
-    .loading span { width: 6px; height: 6px; border-radius: 50%; background: currentColor; animation: load-bounce 0.9s ease-in-out infinite; }
     .loading span:nth-child(2) { animation-delay: 0.15s; }
     .loading span:nth-child(3) { animation-delay: 0.3s; }
-    @keyframes load-bounce { 0%, 100% { transform: translateY(0); opacity: 0.4; } 50% { transform: translateY(-4px); opacity: 1; } }
+
+    /* Walking paws across screen on scroll-into-view */
+    .paw-stamp {
+      position: absolute; pointer-events: none; user-select: none;
+      animation: paw-trot 2.4s ease-in-out infinite;
+      font-size: 16px;
+      opacity: 0;
+    }
+
+    /* Section dividers (scallops) */
+    .scallop { position: relative; height: 60px; line-height: 0; margin-top: -1px; margin-bottom: -1px; }
+    .scallop svg { display: block; width: 100%; height: 100%; }
 
     @media (max-width: 880px) {
       .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .hero-visual { max-width: 360px; margin: 0 auto; }
+      .pet-stage { max-width: 380px; margin: 0 auto; }
       .about-grid { grid-template-columns: 1fr; }
-      .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem 1rem; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
       .how-steps { grid-template-columns: repeat(2, 1fr); }
+      .how-steps::after { display: none; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
-      section { padding: 3.5rem 0; }
-      .hero { padding-top: 3.5rem; }
+      section { padding: 3.75rem 0; }
+      .hero { padding-top: 3rem; }
       .booking-card, .journey-card { padding: 1.75rem 1.25rem; }
+      .journey-legend { grid-template-columns: 1fr; }
     }
     @media (max-width: 520px) {
       .form-row { grid-template-columns: 1fr; }
       .how-steps { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
+      .about-pals { grid-template-columns: 1fr; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -544,76 +814,138 @@
         <div class="eyebrow">
           <span class="pp-thread">PinkPawPets</span>
           <span class="divider"></span>
-          Pro Crew
+          <span>Pro Crew</span>
         </div>
-        <h1>Concierge care for your pets <em>and</em> home — by land or by sea.</h1>
+        <h1>The pet care your dog would <em>book themselves</em>.</h1>
         <p class="hero-tag">
-          <strong>Tori &amp; Max</strong> have spent 5+ years caring for pets and homes across two coasts —
-          and the rest of the year working as crew leads aboard private yachts. The same standards your
-          home would meet in the Mediterranean apply on your kitchen counter.
+          Hi — we're <strong>Tori &amp; Max</strong>. We've cared for hundreds of pets and homes across two
+          coasts over the past 5+ years. Belly rubs are mandatory. Plant watering, mail pickup, and
+          alarm codes are also handled.
         </p>
         <div class="hero-cta-row">
-          <a class="btn-primary" href="#booking">Request a quote <span class="arrow">→</span></a>
-          <a class="btn-ghost" href="#services">Our services</a>
+          <a class="btn-primary" href="#booking">Tell us about your pup <span class="arrow">→</span></a>
+          <a class="btn-ghost" href="#services">See what we do</a>
         </div>
       </div>
 
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-circle">
-          <div class="hero-sun"></div>
-          <div class="hero-yacht-wrap">
-            <svg class="hero-yacht" viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg" fill="none">
-              <!-- Yacht hull -->
-              <path d="M20 60 L180 60 L160 78 L40 78 Z" fill="#0E2A47"/>
-              <!-- Lower deck -->
-              <rect x="40" y="46" width="120" height="16" rx="2" fill="#FFFCF7"/>
-              <rect x="50" y="50" width="8" height="6" fill="#A9D6E5"/>
-              <rect x="65" y="50" width="8" height="6" fill="#A9D6E5"/>
-              <rect x="80" y="50" width="8" height="6" fill="#A9D6E5"/>
-              <rect x="95" y="50" width="8" height="6" fill="#A9D6E5"/>
-              <rect x="110" y="50" width="8" height="6" fill="#A9D6E5"/>
-              <rect x="125" y="50" width="8" height="6" fill="#A9D6E5"/>
-              <rect x="140" y="50" width="8" height="6" fill="#A9D6E5"/>
-              <!-- Upper deck -->
-              <rect x="60" y="32" width="80" height="14" rx="2" fill="#FFFCF7"/>
-              <rect x="70" y="36" width="6" height="6" fill="#A9D6E5"/>
-              <rect x="82" y="36" width="6" height="6" fill="#A9D6E5"/>
-              <rect x="94" y="36" width="6" height="6" fill="#A9D6E5"/>
-              <rect x="106" y="36" width="6" height="6" fill="#A9D6E5"/>
-              <rect x="118" y="36" width="6" height="6" fill="#A9D6E5"/>
-              <!-- Bridge -->
-              <rect x="86" y="20" width="28" height="12" rx="2" fill="#FFFCF7"/>
-              <rect x="92" y="23" width="16" height="6" fill="#1B4965"/>
-              <!-- Antenna -->
-              <line x1="100" y1="20" x2="100" y2="8" stroke="#0E2A47" stroke-width="1.5"/>
-              <circle cx="100" cy="8" r="2" fill="#C8932B"/>
-              <!-- Flag -->
-              <line x1="180" y1="60" x2="180" y2="32" stroke="#0E2A47" stroke-width="1.5"/>
-              <path d="M180 32 L196 36 L180 40 Z" fill="#D4537E"/>
-            </svg>
-          </div>
-          <div class="hero-waves">
-            <svg viewBox="0 0 1200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-              <g class="wave-path slow">
-                <path d="M0 110 Q 150 90 300 110 T 600 110 T 900 110 T 1200 110 V200 H0 Z" fill="#2C7DA0" opacity="0.55"/>
-                <path d="M1200 110 Q 1350 90 1500 110 T 1800 110 T 2100 110 T 2400 110 V200 H1200 Z" fill="#2C7DA0" opacity="0.55"/>
-              </g>
-              <g class="wave-path">
-                <path d="M0 140 Q 150 120 300 140 T 600 140 T 900 140 T 1200 140 V200 H0 Z" fill="#1B4965"/>
-                <path d="M1200 140 Q 1350 120 1500 140 T 1800 140 T 2100 140 T 2400 140 V200 H1200 Z" fill="#1B4965"/>
-              </g>
-            </svg>
-          </div>
+      <div class="pet-stage" aria-hidden="true">
+        <div class="pet-stage-bg">
+          <div class="stage-sun"></div>
         </div>
-        <span class="hero-paw p1">🐾</span>
-        <span class="hero-paw p2">🐾</span>
-        <span class="hero-paw p3">🐾</span>
+
+        <span class="stage-deco deco-paw1">🐾</span>
+        <span class="stage-deco deco-paw2">🐾</span>
+        <span class="stage-deco deco-paw3">🐾</span>
+        <span class="stage-deco deco-heart1">♥</span>
+        <span class="stage-deco deco-heart2">♥</span>
+        <span class="stage-deco deco-bone">🦴</span>
+
+        <div class="stage-pets">
+          <!-- Custom dog SVG -->
+          <svg class="stage-dog" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+            <!-- Body / chest -->
+            <ellipse cx="110" cy="180" rx="68" ry="34" fill="#E8C7A0"/>
+            <!-- Tail (animated) -->
+            <g class="dog-tail">
+              <ellipse cx="172" cy="158" rx="22" ry="9" fill="#E8C7A0" transform="rotate(-30 172 158)"/>
+              <circle cx="186" cy="146" r="9" fill="#E8C7A0"/>
+            </g>
+            <!-- Front legs -->
+            <ellipse cx="80" cy="200" rx="11" ry="14" fill="#D4B287"/>
+            <ellipse cx="140" cy="200" rx="11" ry="14" fill="#D4B287"/>
+            <!-- Ears (back) -->
+            <ellipse cx="56" cy="78" rx="20" ry="36" fill="#A5754B" transform="rotate(-18 56 78)"/>
+            <ellipse cx="164" cy="78" rx="20" ry="36" fill="#A5754B" transform="rotate(18 164 78)"/>
+            <!-- Head -->
+            <ellipse cx="110" cy="108" rx="64" ry="60" fill="#E8C7A0"/>
+            <!-- Spot on head -->
+            <ellipse cx="68" cy="92" rx="22" ry="18" fill="#A5754B" opacity="0.65" transform="rotate(-15 68 92)"/>
+            <!-- Snout -->
+            <ellipse cx="110" cy="138" rx="34" ry="24" fill="#F5DEC0"/>
+            <!-- Eyes (with blink) -->
+            <g class="dog-eye">
+              <ellipse cx="86" cy="102" rx="6.5" ry="9" fill="#2A2A2A"/>
+              <circle cx="84" cy="100" r="2.2" fill="white"/>
+            </g>
+            <g class="dog-eye" style="animation-delay: 0.1s">
+              <ellipse cx="134" cy="102" rx="6.5" ry="9" fill="#2A2A2A"/>
+              <circle cx="132" cy="100" r="2.2" fill="white"/>
+            </g>
+            <!-- Eyebrows -->
+            <path d="M 78 88 Q 86 84 94 88" stroke="#8B5A2B" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+            <path d="M 126 88 Q 134 84 142 88" stroke="#8B5A2B" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+            <!-- Nose -->
+            <ellipse cx="110" cy="128" rx="10" ry="7" fill="#2A2A2A"/>
+            <ellipse cx="107" cy="125" rx="3" ry="2" fill="#5A5A5A"/>
+            <!-- Mouth (smile) -->
+            <path d="M 110 137 Q 100 152 88 144" stroke="#2A2A2A" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+            <path d="M 110 137 Q 120 152 132 144" stroke="#2A2A2A" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+            <!-- Tongue -->
+            <path d="M 102 146 Q 110 158 118 146 Q 113 154 110 154 Q 107 154 102 146 Z" fill="#FF7878"/>
+            <!-- Collar -->
+            <path d="M 60 168 Q 110 178 160 168" stroke="#FF8C70" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <circle cx="110" cy="174" r="6" fill="#FFD074"/>
+            <circle cx="110" cy="174" r="2.5" fill="#D4604B"/>
+          </svg>
+
+          <!-- Custom cat SVG -->
+          <svg class="stage-cat" viewBox="0 0 180 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Tail curled -->
+            <path d="M 30 168 Q 6 150 14 122 Q 22 100 40 110" stroke="#C9B399" stroke-width="14" fill="none" stroke-linecap="round"/>
+            <!-- Body -->
+            <ellipse cx="92" cy="172" rx="48" ry="22" fill="#C9B399"/>
+            <!-- Front legs -->
+            <ellipse cx="74" cy="186" rx="8" ry="10" fill="#A8946F"/>
+            <ellipse cx="108" cy="186" rx="8" ry="10" fill="#A8946F"/>
+            <!-- Ears -->
+            <path d="M 56 70 L 44 28 L 84 60 Z" fill="#9E8B70"/>
+            <path d="M 130 70 L 142 28 L 102 60 Z" fill="#9E8B70"/>
+            <!-- Inner ears -->
+            <path d="M 58 64 L 52 38 L 76 56 Z" fill="#FFB89B"/>
+            <path d="M 128 64 L 134 38 L 110 56 Z" fill="#FFB89B"/>
+            <!-- Head -->
+            <ellipse cx="93" cy="102" rx="50" ry="48" fill="#C9B399"/>
+            <!-- Stripes -->
+            <path d="M 60 80 Q 70 84 80 80" stroke="#9E8B70" stroke-width="2.8" fill="none" stroke-linecap="round" opacity="0.7"/>
+            <path d="M 106 80 Q 116 84 126 80" stroke="#9E8B70" stroke-width="2.8" fill="none" stroke-linecap="round" opacity="0.7"/>
+            <path d="M 50 96 Q 60 99 70 96" stroke="#9E8B70" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+            <path d="M 116 96 Q 126 99 136 96" stroke="#9E8B70" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+            <!-- Eyes -->
+            <g class="cat-eye">
+              <ellipse cx="74" cy="100" rx="7" ry="10" fill="#7AA86A"/>
+              <ellipse cx="74" cy="100" rx="2" ry="8.5" fill="#2A2A2A"/>
+              <circle cx="72" cy="96" r="1.8" fill="white"/>
+            </g>
+            <g class="cat-eye" style="animation-delay: 0.15s">
+              <ellipse cx="112" cy="100" rx="7" ry="10" fill="#7AA86A"/>
+              <ellipse cx="112" cy="100" rx="2" ry="8.5" fill="#2A2A2A"/>
+              <circle cx="110" cy="96" r="1.8" fill="white"/>
+            </g>
+            <!-- Nose -->
+            <path d="M 93 120 L 86 128 L 100 128 Z" fill="#FF8C9C"/>
+            <!-- Mouth -->
+            <path d="M 93 128 Q 93 134 86 136" stroke="#2A2A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <path d="M 93 128 Q 93 134 100 136" stroke="#2A2A2A" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <!-- Whiskers -->
+            <line x1="56" y1="124" x2="38" y2="119" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+            <line x1="56" y1="129" x2="36" y2="129" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+            <line x1="130" y1="124" x2="148" y2="119" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+            <line x1="130" y1="129" x2="150" y2="129" stroke="#5C5552" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+            <!-- Collar -->
+            <path d="M 58 152 Q 93 162 128 152" stroke="#9CB89B" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <circle cx="93" cy="158" r="4" fill="#FFD074"/>
+          </svg>
+        </div>
+
+        <!-- Tiny yacht easter egg -->
+        <span class="deco-yacht-easter" title="Crew lead by the other half of the year">⛵</span>
       </div>
     </div>
 
-    <div class="ocean-divider" aria-hidden="true">
-      <svg viewBox="0 0 1200 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 20 Q 300 80 600 30 T 1200 40 V90 H0 Z" fill="#FFFCF7"/>
+    <!-- Soft scallop divider into trust strip -->
+    <div class="scallop" aria-hidden="true">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 30 Q 150 60 300 30 T 600 30 T 900 30 T 1200 30 V60 H0 Z" fill="#FFFCF6"/>
       </svg>
     </div>
   </header>
@@ -622,18 +954,22 @@
     <div class="container">
       <div class="trust-grid">
         <div class="trust-stat">
+          <div class="trust-icon">⏳</div>
           <div class="trust-num"><span data-count="5">0</span><span class="plus">+</span></div>
           <div class="trust-label">Years caring</div>
         </div>
         <div class="trust-stat">
+          <div class="trust-icon">🐾</div>
           <div class="trust-num"><span data-count="100">0</span><span class="plus">+</span></div>
           <div class="trust-label">Pets cared for</div>
         </div>
         <div class="trust-stat">
+          <div class="trust-icon">🏡</div>
           <div class="trust-num"><span data-count="100">0</span><span class="plus">+</span></div>
           <div class="trust-label">Homes watched</div>
         </div>
         <div class="trust-stat">
+          <div class="trust-icon">🌅</div>
           <div class="trust-num"><span data-count="2">0</span></div>
           <div class="trust-label">Coasts served</div>
         </div>
@@ -647,32 +983,32 @@
         <div class="pal">
           <div class="pal-avatar">T</div>
           <p class="pal-name">Tori</p>
-          <p class="pal-role">Crew Lead · Pet Care</p>
-          <p class="pal-bio">Calm under any condition. The kind of person you trust with your house keys and a senior pet's medication schedule on the same day.</p>
+          <p class="pal-role">Lead · Pet Care</p>
+          <p class="pal-bio">Calm, patient, and never met a senior dog she didn't fall in love with. Will hand-feed your bunny if that's what it takes.</p>
         </div>
         <div class="pal">
           <div class="pal-avatar">M</div>
           <p class="pal-name">Max</p>
-          <p class="pal-role">Crew Lead · Home Care</p>
-          <p class="pal-bio">Detail-obsessed and dependable. Will text you a photo of your dog mid-walk and confirm the alarm is set before locking up.</p>
+          <p class="pal-role">Lead · Home Care</p>
+          <p class="pal-bio">The "did you remember to —" person. Walks confirmed, trash out, mail in, photo of your pup mid-treat in your inbox by 8am.</p>
         </div>
       </div>
       <div class="about-copy">
         <span class="section-eyebrow">About Tori &amp; Max</span>
-        <h2 class="section-title">The standards of a private yacht <em>brought home</em>.</h2>
+        <h2 class="section-title">Two pet people who happen to <em>also</em> work yachts.</h2>
         <p>
-          For half the year, Tori &amp; Max work as <strong>crew leads aboard private yachts</strong> — the
-          ones you see anchored off St. Barts and the Amalfi Coast. The expectations there are
-          uncompromising. Schedules are kept. Spaces are pristine. Guests are at ease.
+          When we're stateside, this is what we do. <strong>5+ years and hundreds of pets and homes</strong>
+          — overnight boarding, in-home pet sitting, house watch, daily visits, the works. We chose this
+          because we love animals first, paychecks second.
         </p>
         <p>
-          When they're stateside, they bring the same discipline to your driveway. Whether it's a
-          three-night sit with a senior dog or a two-week house watch with mail, plants, and a finicky
-          cat, every visit is logged, photographed, and delivered with the kind of quiet professionalism
-          you usually have to charter a 140-foot yacht to get.
+          The other half of our year, we work as <strong>crew leads on private yachts</strong> — the ones
+          you've seen in port photos. That world is unforgiving about the small stuff: schedules kept,
+          spaces tidy, guests at ease. We bring those habits home with us. Your dog gets the snuggles.
+          Your home gets the attention to detail.
         </p>
         <p class="about-quote">
-          &ldquo;Your pet doesn't know you're 4,000 miles away. We make sure your home doesn't either.&rdquo;
+          Your pet doesn't know you're 4,000 miles away. We make sure your home doesn't either.
         </p>
       </div>
     </div>
@@ -681,64 +1017,146 @@
   <section class="services reveal" id="services">
     <div class="container">
       <span class="section-eyebrow">Services</span>
-      <h2 class="section-title">Premium care, <em>tailored</em> to your trip.</h2>
+      <h2 class="section-title">Whatever your trip needs — <em>we've got it</em>.</h2>
       <p class="section-lede">
-        Most clients combine two or three of these. Pricing is custom and quoted after a free
-        meet-and-greet — never a surprise.
+        Most clients combine two or three. Pricing is custom and quoted after a free meet-and-greet —
+        you'll never see a surprise charge.
       </p>
 
       <div class="services-grid">
         <div class="svc-card">
-          <div class="svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 4 21 12"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+          <div class="svc-icon" aria-hidden="true">
+            <!-- Dog bed with sleeping pup -->
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="30" cy="46" rx="24" ry="6" fill="#FFD6B8"/>
+              <path d="M 8 46 Q 8 34 16 32 L 44 32 Q 52 34 52 46" stroke="#D4604B" stroke-width="2.5" fill="#FFE9D8" stroke-linejoin="round"/>
+              <ellipse cx="30" cy="40" rx="14" ry="6" fill="#A5754B"/>
+              <circle cx="22" cy="38" r="4" fill="#A5754B"/>
+              <path d="M 19 37 Q 21 36 23 37" stroke="#2A2A2A" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+              <ellipse cx="20" cy="36" rx="0.8" ry="0.6" fill="#2A2A2A"/>
+              <path d="M 14 28 Q 14 24 16 24 Q 18 26 20 30" fill="#A5754B"/>
+              <text x="42" y="28" font-family="Inter" font-size="6" fill="#9CB89B" font-weight="700">Z</text>
+              <text x="46" y="22" font-family="Inter" font-size="8" fill="#9CB89B" font-weight="700">Z</text>
+            </svg>
           </div>
           <h3 class="svc-name">Overnight Boarding</h3>
-          <p class="svc-desc">Your pet stays with us in a quiet, fully pet-proofed home. Crate-trained or free-roam. One booking per family at a time — never a kennel.</p>
-          <p class="svc-meta">From dusk to dawn · 24/7 attention</p>
+          <p class="svc-desc">Your pet stays with us in a quiet, fully pet-proofed home. Crate-trained or free-roam — your call. One family at a time, never a kennel.</p>
+          <p class="svc-meta">Dusk to dawn · 24/7 attention</p>
         </div>
 
         <div class="svc-card">
-          <div class="svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          <div class="svc-icon" aria-hidden="true">
+            <!-- House with paw print -->
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 12 28 L 30 14 L 48 28 L 48 48 L 12 48 Z" fill="#FFE9D8" stroke="#D4604B" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M 8 30 L 30 12 L 52 30" stroke="#D4604B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="26" y="36" width="8" height="12" fill="#D4604B"/>
+              <circle cx="32" cy="42" r="0.8" fill="#FFD074"/>
+              <!-- paw inside on left wall -->
+              <ellipse cx="20" cy="38" rx="2.5" ry="1.8" fill="#FF8C70"/>
+              <circle cx="17" cy="34" r="1.2" fill="#FF8C70"/>
+              <circle cx="20" cy="33" r="1.2" fill="#FF8C70"/>
+              <circle cx="23" cy="34" r="1.2" fill="#FF8C70"/>
+              <circle cx="26" cy="35.5" r="1" fill="#FF8C70"/>
+            </svg>
           </div>
           <h3 class="svc-name">In-Home Pet Sitting</h3>
-          <p class="svc-desc">We stay overnight at your place. Your pet's routine, bed, food, and view all stay the same. We handle feedings, meds, walks, and playtime.</p>
+          <p class="svc-desc">We stay at your place. Same bed, same routine, same spot on the couch. Feedings, meds, walks, and play — all on your schedule.</p>
           <p class="svc-meta">Per night · Multi-pet welcome</p>
         </div>
 
         <div class="svc-card">
-          <div class="svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><circle cx="7" cy="6" r="0.6" fill="currentColor"/><circle cx="9.5" cy="6" r="0.6" fill="currentColor"/></svg>
+          <div class="svc-icon" aria-hidden="true">
+            <!-- Mailbox with envelope and plant -->
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="22" width="28" height="22" rx="3" fill="#9CB89B" stroke="#6F8C71" stroke-width="2"/>
+              <rect x="14" y="22" width="28" height="6" fill="#6F8C71"/>
+              <rect x="42" y="28" width="3" height="10" fill="#FFD074"/>
+              <rect x="26" y="44" width="4" height="10" fill="#6B4423"/>
+              <!-- envelope sticking out -->
+              <rect x="20" y="14" width="18" height="12" rx="1" fill="white" stroke="#D4604B" stroke-width="1.6"/>
+              <path d="M 20 14 L 29 22 L 38 14" stroke="#D4604B" stroke-width="1.4" fill="none"/>
+              <!-- plant pot -->
+              <path d="M 8 38 L 14 38 L 13 50 L 9 50 Z" fill="#D4604B"/>
+              <path d="M 11 38 Q 8 30 6 28" stroke="#9CB89B" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M 11 38 Q 14 30 16 28" stroke="#9CB89B" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M 11 38 Q 11 30 11 26" stroke="#9CB89B" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="6" cy="28" r="1.5" fill="#7AA86A"/>
+              <circle cx="16" cy="28" r="1.5" fill="#7AA86A"/>
+              <circle cx="11" cy="26" r="1.5" fill="#7AA86A"/>
+            </svg>
           </div>
           <h3 class="svc-name">House Sitting</h3>
-          <p class="svc-desc">For homes without pets. Mail, packages, plants, lights, alarm checks, trash pickup — and a real human inside the house each day. Insurance-friendly.</p>
+          <p class="svc-desc">For homes without pets. Mail, packages, plants, lights, alarm checks, trash pickup — and a real human inside the house every day.</p>
           <p class="svc-meta">Daily checks · Custom routine</p>
         </div>
 
         <div class="svc-card">
-          <div class="svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div class="svc-icon" aria-hidden="true">
+            <!-- Walking dog illustration -->
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Dog -->
+              <ellipse cx="34" cy="40" rx="14" ry="8" fill="#E8C7A0"/>
+              <ellipse cx="22" cy="36" rx="8" ry="9" fill="#E8C7A0"/>
+              <ellipse cx="20" cy="32" rx="3.5" ry="6" fill="#A5754B" transform="rotate(-15 20 32)"/>
+              <!-- Eye/nose -->
+              <circle cx="18" cy="34" r="1.2" fill="#2A2A2A"/>
+              <ellipse cx="14" cy="36" rx="1.5" ry="1" fill="#2A2A2A"/>
+              <!-- Tail -->
+              <path d="M 46 40 Q 52 36 50 30" stroke="#E8C7A0" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <!-- Legs -->
+              <rect x="24" y="44" width="2.5" height="8" fill="#A5754B"/>
+              <rect x="32" y="44" width="2.5" height="8" fill="#A5754B"/>
+              <rect x="40" y="44" width="2.5" height="8" fill="#A5754B"/>
+              <!-- Leash -->
+              <path d="M 14 30 Q 6 20 8 12" stroke="#FF8C70" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <!-- Paw prints -->
+              <circle cx="50" cy="52" r="1" fill="#9CB89B" opacity="0.6"/>
+              <circle cx="55" cy="50" r="0.8" fill="#9CB89B" opacity="0.6"/>
+            </svg>
           </div>
           <h3 class="svc-name">Daily Care Visits</h3>
-          <p class="svc-desc">Drop-in visits — feeding, fresh water, litter, a real walk (not just a yard break), and yes, photos every time. 30 or 60-minute options.</p>
+          <p class="svc-desc">Drop-in visits — feeding, fresh water, litter, a real walk (not just a yard break), and yes, photos every visit. 30 or 60-minute options.</p>
           <p class="svc-meta">1–4 visits per day</p>
         </div>
 
         <div class="svc-card">
-          <div class="svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <div class="svc-icon" aria-hidden="true">
+            <!-- Heart with paw -->
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 30 52 C 8 36 8 18 18 14 C 24 12 28 16 30 20 C 32 16 36 12 42 14 C 52 18 52 36 30 52 Z" fill="#FFB6A0" stroke="#D4604B" stroke-width="2"/>
+              <!-- paw inside -->
+              <ellipse cx="30" cy="34" rx="4" ry="3" fill="white"/>
+              <circle cx="25" cy="28" r="2" fill="white"/>
+              <circle cx="29" cy="26" r="2" fill="white"/>
+              <circle cx="33" cy="26" r="2" fill="white"/>
+              <circle cx="37" cy="28" r="2" fill="white"/>
+            </svg>
           </div>
           <h3 class="svc-name">Senior &amp; Special Needs</h3>
-          <p class="svc-desc">Med schedules, mobility help, sub-Q fluids, anxious pets, post-surgery recovery. We've done it all and we'll show you our notes from past clients.</p>
-          <p class="svc-meta">Vet-coordinated · Detailed logs</p>
+          <p class="svc-desc">Med schedules, mobility help, sub-Q fluids, anxious pets, post-surgery recovery. Vet-coordinated, fully logged, no rushing.</p>
+          <p class="svc-meta">Detailed daily logs</p>
         </div>
 
         <div class="svc-card">
-          <div class="svc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="svc-icon" aria-hidden="true">
+            <!-- Suitcase with paw -->
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="22" width="40" height="28" rx="3" fill="#FFD6B8" stroke="#D4604B" stroke-width="2"/>
+              <rect x="22" y="14" width="16" height="10" rx="2" fill="none" stroke="#D4604B" stroke-width="2"/>
+              <line x1="30" y1="22" x2="30" y2="50" stroke="#D4604B" stroke-width="1.5" opacity="0.5"/>
+              <!-- paw on case -->
+              <ellipse cx="20" cy="38" rx="3" ry="2" fill="#FF8C70"/>
+              <circle cx="17" cy="33" r="1.5" fill="#FF8C70"/>
+              <circle cx="20" cy="32" r="1.5" fill="#FF8C70"/>
+              <circle cx="23" cy="33" r="1.5" fill="#FF8C70"/>
+              <!-- Tag -->
+              <line x1="42" y1="22" x2="44" y2="18" stroke="#6B4423" stroke-width="1.5"/>
+              <rect x="42" y="16" width="6" height="4" rx="0.5" fill="#FFD074" stroke="#6B4423" stroke-width="1"/>
+            </svg>
           </div>
           <h3 class="svc-name">Travel-Day Concierge</h3>
-          <p class="svc-desc">Airport-day handoffs, last-minute starts, late-night arrivals. We've done crew turnaround in 90 minutes — your trip can be that smooth too.</p>
+          <p class="svc-desc">Airport-day handoffs, last-minute starts, late-night arrivals. We've done crew turnaround in 90 minutes — your trip can be that smooth.</p>
           <p class="svc-meta">Flexible windows · Same-week starts</p>
         </div>
       </div>
@@ -750,54 +1168,102 @@
       <span class="section-eyebrow">Service Area</span>
       <h2 class="section-title">Two coasts. <em>One standard.</em></h2>
       <p class="section-lede">
-        Tori &amp; Max follow the season — Central Pennsylvania in summer, Cocoa Beach, Florida in winter.
-        If you're somewhere along that line, there's a good chance we're close.
+        We follow the season — Central Pennsylvania in summer, Cocoa Beach in winter. If you're
+        somewhere along that line, there's a good chance we're close.
       </p>
 
       <div class="journey-card">
         <div class="journey-graphic" aria-label="Travel route from Central Pennsylvania to Cocoa Beach, Florida">
           <svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
-            <!-- Background sky band -->
-            <rect x="0" y="0" width="800" height="280" fill="#F4F8FA"/>
-            <!-- Soft cloud trail behind route -->
-            <path d="M50 100 Q 200 60 400 110 T 750 130" stroke="#E8F4F8" stroke-width="40" fill="none" stroke-linecap="round" opacity="0.8"/>
+            <!-- Sky -->
+            <defs>
+              <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#C5E0E8"/>
+                <stop offset="100%" stop-color="#FFF6E9"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="800" height="280" fill="url(#skyGradient)" rx="14"/>
+
+            <!-- Sun -->
+            <circle cx="700" cy="56" r="22" fill="#FFD074" opacity="0.85"/>
+            <circle cx="700" cy="56" r="34" fill="#FFD074" opacity="0.18"/>
+
+            <!-- Clouds -->
+            <ellipse cx="120" cy="48" rx="32" ry="9" fill="white" opacity="0.85"/>
+            <ellipse cx="140" cy="45" rx="22" ry="7" fill="white" opacity="0.85"/>
+            <ellipse cx="380" cy="38" rx="28" ry="8" fill="white" opacity="0.75"/>
+
+            <!-- Ground curve -->
+            <path d="M 0 240 Q 400 220 800 250 V 280 H 0 Z" fill="#E5C9A8"/>
 
             <!-- Pennsylvania marker -->
-            <g transform="translate(80, 80)">
-              <circle r="36" fill="#1B4965" opacity="0.08"/>
-              <circle r="22" fill="white" stroke="#1B4965" stroke-width="2"/>
-              <!-- pine tree -->
-              <path d="M 0 -10 L -7 0 L -4 0 L -8 6 L -3 6 L -7 12 L 7 12 L 3 6 L 8 6 L 4 0 L 7 0 Z" fill="#1B4965"/>
-              <rect x="-1.5" y="12" width="3" height="3" fill="#5C3A1E"/>
+            <g transform="translate(120, 130)">
+              <circle r="44" fill="white" stroke="#9CB89B" stroke-width="3"/>
+              <!-- Mountain -->
+              <path d="M -22 14 L -8 -10 L 0 4 L 10 -16 L 22 14 Z" fill="#6F8C71"/>
+              <!-- Snow caps -->
+              <path d="M -8 -10 L -4 -2 L -14 -2 Z" fill="white"/>
+              <path d="M 10 -16 L 14 -8 L 6 -8 Z" fill="white"/>
+              <!-- Pine tree -->
+              <path d="M 28 8 L 22 -6 L 26 -6 L 20 -16 L 30 -16 L 26 -6 L 30 -6 L 28 8 Z" fill="#6F8C71"/>
+              <!-- Cute dog peeking -->
+              <g transform="translate(-2, 18)">
+                <ellipse cx="0" cy="6" rx="14" ry="9" fill="#E8C7A0"/>
+                <ellipse cx="-10" cy="0" rx="4" ry="6" fill="#A5754B" transform="rotate(-15)"/>
+                <ellipse cx="10" cy="0" rx="4" ry="6" fill="#A5754B" transform="rotate(15)"/>
+                <ellipse cx="-4" cy="4" rx="1.2" ry="1.5" fill="#2A2A2A"/>
+                <ellipse cx="4" cy="4" rx="1.2" ry="1.5" fill="#2A2A2A"/>
+                <ellipse cx="0" cy="9" rx="2" ry="1.4" fill="#2A2A2A"/>
+                <path d="M 0 11 Q -3 14 -5 13" stroke="#2A2A2A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                <path d="M 0 11 Q 3 14 5 13" stroke="#2A2A2A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              </g>
             </g>
-            <text x="80" y="140" text-anchor="middle" font-family="Fraunces, serif" font-size="18" font-weight="600" fill="#0E2A47">Central PA</text>
-            <text x="80" y="158" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#475569" letter-spacing="1">MAY — SEPT</text>
+            <text x="120" y="200" text-anchor="middle" font-family="Fraunces, serif" font-size="20" font-weight="600" fill="#2A2A2A">Central PA</text>
+            <text x="120" y="220" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#5C5552" letter-spacing="1.5" font-weight="600">MAY — SEPT</text>
 
             <!-- Florida marker -->
-            <g transform="translate(720, 200)">
-              <circle r="36" fill="#C8932B" opacity="0.12"/>
-              <circle r="22" fill="white" stroke="#C8932B" stroke-width="2"/>
-              <!-- palm tree -->
-              <path d="M -6 12 Q -2 0 0 -10" stroke="#5C3A1E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <path d="M 0 -10 Q -10 -14 -14 -10" stroke="#1B7A4D" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <path d="M 0 -10 Q 10 -14 14 -10" stroke="#1B7A4D" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <path d="M 0 -10 Q -8 -18 -2 -20" stroke="#1B7A4D" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <path d="M 0 -10 Q 8 -18 2 -20" stroke="#1B7A4D" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <g transform="translate(680, 165)">
+              <circle r="44" fill="white" stroke="#FF8C70" stroke-width="3"/>
+              <!-- Palm tree -->
+              <path d="M 0 14 Q 0 0 0 -10" stroke="#6B4423" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M 0 -10 Q -10 -14 -16 -10" stroke="#7AA86A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <path d="M 0 -10 Q 10 -14 16 -10" stroke="#7AA86A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <path d="M 0 -10 Q -8 -18 -2 -22" stroke="#7AA86A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <path d="M 0 -10 Q 8 -18 2 -22" stroke="#7AA86A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <!-- Coconuts -->
+              <circle cx="-3" cy="-9" r="2" fill="#6B4423"/>
+              <circle cx="3" cy="-9" r="2" fill="#6B4423"/>
+              <!-- Cute cat lounging -->
+              <g transform="translate(-4, 18)">
+                <ellipse cx="0" cy="5" rx="14" ry="6" fill="#C9B399"/>
+                <ellipse cx="-9" cy="2" rx="6" ry="6" fill="#C9B399"/>
+                <path d="M -13 -2 L -15 -7 L -10 -3 Z" fill="#9E8B70"/>
+                <path d="M -5 -2 L -3 -7 L -8 -3 Z" fill="#9E8B70"/>
+                <ellipse cx="-11" cy="2" rx="1" ry="1.4" fill="#7AA86A"/>
+                <ellipse cx="-7" cy="2" rx="1" ry="1.4" fill="#7AA86A"/>
+                <path d="M 12 4 Q 18 -2 14 -8" stroke="#C9B399" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              </g>
             </g>
-            <text x="720" y="258" text-anchor="middle" font-family="Fraunces, serif" font-size="18" font-weight="600" fill="#0E2A47">Cocoa Beach, FL</text>
-            <text x="720" y="276" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#475569" letter-spacing="1">OCT — APR</text>
+            <text x="680" y="234" text-anchor="middle" font-family="Fraunces, serif" font-size="20" font-weight="600" fill="#2A2A2A">Cocoa Beach, FL</text>
+            <text x="680" y="252" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#5C5552" letter-spacing="1.5" font-weight="600">OCT — APR</text>
 
-            <!-- Animated dashed route -->
-            <path d="M 110 90 Q 280 30 460 130 T 690 200" stroke="#C8932B" stroke-width="2.5" fill="none" stroke-linecap="round" class="route-dash"/>
+            <!-- Animated route -->
+            <path d="M 165 130 Q 320 70 460 140 Q 590 200 645 165" stroke="#FF8C70" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="6 8">
+              <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="2s" repeatCount="indefinite"/>
+            </path>
 
-            <!-- Yacht traveling along route -->
-            <g class="route-yacht" transform="translate(180, 60)">
-              <g transform="translate(0, 0) scale(0.55)">
-                <path d="M 0 14 L 50 14 L 44 22 L 6 22 Z" fill="#0E2A47"/>
-                <rect x="6" y="6" width="38" height="9" rx="1" fill="#FFFCF7"/>
-                <rect x="22" y="-2" width="16" height="8" rx="1" fill="#FFFCF7"/>
-                <line x1="30" y1="-2" x2="30" y2="-12" stroke="#0E2A47" stroke-width="1"/>
-                <path d="M30 -12 L42 -8 L30 -4 Z" fill="#D4537E"/>
+            <!-- Yacht traveling -->
+            <g>
+              <g transform="translate(180, 110)">
+                <animateTransform attributeName="transform" type="translate" values="180,110; 460,140; 645,165; 460,140; 180,110" keyTimes="0;0.25;0.5;0.75;1" dur="14s" repeatCount="indefinite"/>
+                <g transform="scale(0.7)">
+                  <ellipse cx="0" cy="6" rx="3" ry="1.5" fill="#2C7DA0" opacity="0.4"/>
+                  <path d="M -16 4 L 16 4 L 12 10 L -12 10 Z" fill="#2C7DA0"/>
+                  <rect x="-12" y="-2" width="24" height="6" rx="1" fill="white"/>
+                  <rect x="-2" y="-8" width="8" height="6" rx="1" fill="white"/>
+                  <line x1="2" y1="-8" x2="2" y2="-14" stroke="#2C7DA0" stroke-width="1"/>
+                  <path d="M 2 -14 L 10 -11 L 2 -8 Z" fill="#ED93B1"/>
+                </g>
               </g>
             </g>
           </svg>
@@ -805,17 +1271,23 @@
 
         <div class="journey-legend">
           <div class="leg-card">
-            <div class="lc-eyebrow">Summer Base</div>
-            <div class="lc-place">🌲 Central Pennsylvania</div>
-            <div class="lc-when">May through September</div>
+            <span class="leg-icon">🌲</span>
+            <div class="leg-content">
+              <div class="lc-eyebrow">Summer Base</div>
+              <div class="lc-place">Central Pennsylvania</div>
+              <div class="lc-when">May through September</div>
+            </div>
           </div>
           <div class="leg-card">
-            <div class="lc-eyebrow">Winter Base</div>
-            <div class="lc-place">🌴 Cocoa Beach, Florida</div>
-            <div class="lc-when">October through April</div>
+            <span class="leg-icon">🌴</span>
+            <div class="leg-content">
+              <div class="lc-eyebrow">Winter Base</div>
+              <div class="lc-place">Cocoa Beach, Florida</div>
+              <div class="lc-when">October through April</div>
+            </div>
           </div>
         </div>
-        <p class="journey-note">Charter season can pull us to sea — book early for peak weeks.</p>
+        <p class="journey-note"><strong>Heads up:</strong> charter season can pull us to sea — book early for peak weeks. ⛵</p>
       </div>
     </div>
   </section>
@@ -824,27 +1296,27 @@
     <div class="container">
       <span class="section-eyebrow">How it works</span>
       <h2 class="section-title">Four steps. <em>Zero stress.</em></h2>
-      <p class="section-lede">A quote-first process. We get to know your pet and home before you commit to anything.</p>
+      <p class="section-lede">A quote-first process. We get to know your pet and home before you commit.</p>
       <div class="how-steps">
         <div class="step">
-          <div class="step-num">01</div>
-          <h3 class="step-name">Request a quote</h3>
+          <div class="step-icon">📩</div>
+          <h3 class="step-name">Tell us</h3>
           <p class="step-desc">Fill out the form below — dates, pets, and what you need. We respond within 24 hours.</p>
         </div>
         <div class="step">
-          <div class="step-num">02</div>
-          <h3 class="step-name">Free meet &amp; greet</h3>
-          <p class="step-desc">15-minute walkthrough at your home. We meet your pet, you meet us, and we lock in routines.</p>
+          <div class="step-icon">🤝</div>
+          <h3 class="step-name">Meet &amp; greet</h3>
+          <p class="step-desc">Free 15-minute walkthrough at your home. We meet your pet, you meet us, routines locked in.</p>
         </div>
         <div class="step">
-          <div class="step-num">03</div>
+          <div class="step-icon">📸</div>
           <h3 class="step-name">Daily updates</h3>
           <p class="step-desc">Photos, walk maps, feeding logs — sent every day. You'll know your dog ate breakfast.</p>
         </div>
         <div class="step">
-          <div class="step-num">04</div>
+          <div class="step-icon">🏡</div>
           <h3 class="step-name">Welcome home</h3>
-          <p class="step-desc">Pet content, mail stacked, plants alive, alarm set. Trip recap waiting for you on the counter.</p>
+          <p class="step-desc">Pet content, mail stacked, plants alive, alarm set. Trip recap waiting on the counter.</p>
         </div>
       </div>
     </div>
@@ -855,14 +1327,14 @@
       <span class="section-eyebrow">What you can count on</span>
       <h2 class="section-title">Promises we <em>actually keep</em>.</h2>
       <div class="promise-grid">
-        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Daily photo &amp; text updates<small>Never wonder how your pet's day went.</small></span></div>
-        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Mail, packages &amp; trash pickup<small>Your home looks lived-in the whole time.</small></span></div>
-        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Plant &amp; garden watering<small>Indoor and outdoor — we'll log what you tell us.</small></span></div>
-        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Discreet key &amp; alarm handling<small>Yacht-crew protocols. Codes never written down.</small></span></div>
-        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Vet-coordinated medication<small>Pre-trip schedule confirmed in writing.</small></span></div>
-        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Emergency vet plan on file<small>We know where to go and what you'd want done.</small></span></div>
-        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Two-person backup<small>If one of us can't make it, the other can.</small></span></div>
-        <div class="promise-item"><span class="promise-check">✓</span><span class="promise-text">Post-trip home report<small>Photos, notes, anything that came up — written up for you.</small></span></div>
+        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Daily photo &amp; text updates<small>Never wonder how your pet's day went.</small></span></div>
+        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Mail, packages &amp; trash pickup<small>Your home looks lived-in the whole time.</small></span></div>
+        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Plant &amp; garden watering<small>Indoor and outdoor — we'll log what you tell us.</small></span></div>
+        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Discreet key &amp; alarm handling<small>Yacht-crew protocols. Codes never written down.</small></span></div>
+        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Vet-coordinated medication<small>Pre-trip schedule confirmed in writing.</small></span></div>
+        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Emergency vet plan on file<small>We know where to go and what you'd want done.</small></span></div>
+        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Two-person backup<small>If one of us can't make it, the other can.</small></span></div>
+        <div class="promise-item"><span class="promise-paw">🐾</span><span class="promise-text">Post-trip home report<small>Photos, notes, anything that came up — written up for you.</small></span></div>
       </div>
     </div>
   </section>
@@ -870,66 +1342,66 @@
   <section class="booking reveal" id="booking">
     <div class="container">
       <span class="section-eyebrow">Book a quote</span>
-      <h2 class="section-title">Tell us about your trip.</h2>
-      <p class="section-lede">No commitment. We'll respond within 24 hours with a meet-and-greet time and a clear quote.</p>
+      <h2 class="section-title">Tell us about your <em>fur family</em>.</h2>
+      <p class="section-lede">No commitment — we'll respond within 24 hours with a meet-and-greet time and a clear quote.</p>
 
       <div class="booking-card">
         <div class="form-row">
           <div>
-            <label class="form-label">Your name <span class="req">*</span></label>
+            <label class="form-label">Your name <span class="req">♥</span></label>
             <input type="text" id="f-name" placeholder="Full name" autocomplete="name" />
           </div>
           <div>
-            <label class="form-label">Phone <span class="req">*</span></label>
+            <label class="form-label">Phone <span class="req">♥</span></label>
             <input type="tel" id="f-phone" placeholder="(555) 123-4567" autocomplete="tel" />
           </div>
         </div>
 
         <div class="form-row">
           <div>
-            <label class="form-label">Pet's name</label>
+            <label class="form-label">Pet's name 🐾</label>
             <input type="text" id="f-pet" placeholder="Buddy, Luna…" />
           </div>
           <div>
             <label class="form-label">Pet type</label>
             <select id="f-type">
-              <option value="Dog">Dog</option>
-              <option value="Cat">Cat</option>
-              <option value="Multiple">Multiple pets</option>
-              <option value="Small pet">Small pet</option>
-              <option value="No pet (house sitting only)">No pet — house sitting only</option>
+              <option value="Dog">🐕 Dog</option>
+              <option value="Cat">🐱 Cat</option>
+              <option value="Multiple">♥ Multiple pets</option>
+              <option value="Small pet">🐹 Small pet</option>
+              <option value="No pet (house sitting only)">🏡 No pet — house sitting only</option>
             </select>
           </div>
         </div>
 
         <div class="form-row">
           <div>
-            <label class="form-label">Trip start</label>
+            <label class="form-label">Trip start 📅</label>
             <input type="date" id="f-start" />
           </div>
           <div>
-            <label class="form-label">Trip end</label>
+            <label class="form-label">Trip end 📅</label>
             <input type="date" id="f-end" />
           </div>
         </div>
 
         <div class="form-row single">
           <div>
-            <label class="form-label">Services interested in <span class="req">*</span></label>
+            <label class="form-label">What do you need? <span class="req">♥</span></label>
             <div class="svc-pills" id="svc-pills"></div>
           </div>
         </div>
 
         <div class="form-row single">
           <div>
-            <label class="form-label">Tell us about your pet, home, and trip</label>
+            <label class="form-label">Tell us about your pet, home, and trip 💌</label>
             <textarea id="f-notes" rows="4" placeholder="Routines, medications, alarm code reminders, key handoff plan, special requests…"></textarea>
           </div>
         </div>
 
         <div class="booking-summary empty" id="summary">Pick at least one service to see your selection here.</div>
 
-        <button class="btn-primary" id="submit-btn" onclick="submitBooking()" style="width: 100%; justify-content: center;">
+        <button class="btn-primary" id="submit-btn" onclick="submitBooking()" style="width: 100%; justify-content: center; padding: 16px;">
           Send quote request <span class="arrow">→</span>
         </button>
 
@@ -942,8 +1414,8 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand">PinkPawPets · <span style="color: var(--gold-light)">Pro Crew</span></div>
-          <p class="footer-tag">Concierge pet care, overnight boarding, and house sitting from Tori &amp; Max — across two coasts and aboard a few yachts in between.</p>
+          <div class="footer-brand"><span class="pp">PinkPawPets</span> · Pro Crew</div>
+          <p class="footer-tag">Concierge pet care, overnight boarding, and house sitting from Tori &amp; Max — across two coasts and a few yachts in between.</p>
         </div>
         <div>
           <h4 class="footer-h">Services</h4>
@@ -961,7 +1433,7 @@
       </div>
       <div class="footer-bottom">
         <span>© <span id="yr"></span> PinkPawPets · Tori &amp; Max</span>
-        <span>Central PA · Cocoa Beach, FL</span>
+        <span>Central PA · Cocoa Beach, FL · 🐾</span>
       </div>
     </div>
   </footer>
@@ -973,16 +1445,14 @@
 
     document.getElementById('yr').textContent = new Date().getFullYear();
 
-    /* ========= "Currently in" badge ========= */
+    /* "Currently in" badge */
     (function whereNow() {
-      const month = new Date().getMonth(); // 0=Jan
-      // May–Sept (4–8) = PA, otherwise FL
+      const month = new Date().getMonth();
       const isPA = month >= 4 && month <= 8;
-      const place = isPA ? 'Central Pennsylvania' : 'Cocoa Beach, FL';
-      document.getElementById('where-place').textContent = place;
+      document.getElementById('where-place').textContent = isPA ? 'Central Pennsylvania' : 'Cocoa Beach, FL';
     })();
 
-    /* ========= Animated stat counters ========= */
+    /* Stat counters */
     (function counters() {
       const els = document.querySelectorAll('[data-count]');
       if (!('IntersectionObserver' in window)) {
@@ -1007,7 +1477,7 @@
       els.forEach(el => io.observe(el));
     })();
 
-    /* ========= Reveal on scroll ========= */
+    /* Reveal on scroll */
     (function reveal() {
       if (!('IntersectionObserver' in window)) {
         document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
@@ -1019,53 +1489,21 @@
       document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     })();
 
-    /* ========= Subtle gold particle drift on scroll ========= */
-    (function goldDust() {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      if (!window.matchMedia('(hover: hover)').matches) return;
-      let last = 0;
-      window.addEventListener('scroll', () => {
-        const now = performance.now();
-        if (now - last < 220) return;
-        last = now;
-        if (Math.random() > 0.45) return;
-        const p = document.createElement('span');
-        p.className = 'gold-particle';
-        const x = Math.random() * window.innerWidth;
-        const y = window.innerHeight - 40 + (Math.random() * 20);
-        p.style.left = x + 'px';
-        p.style.top  = y + 'px';
-        const drift = (Math.random() * 60 - 30).toFixed(0);
-        const rise  = (60 + Math.random() * 60).toFixed(0);
-        const dur   = (1.6 + Math.random() * 1.6).toFixed(2);
-        p.style.transition = `transform ${dur}s ease-out, opacity ${dur}s ease-out`;
-        document.body.appendChild(p);
-        requestAnimationFrame(() => {
-          p.style.opacity = '0.8';
-          p.style.transform = `translate(${drift}px, -${rise}px)`;
-        });
-        setTimeout(() => {
-          p.style.opacity = '0';
-        }, parseFloat(dur) * 800);
-        setTimeout(() => p.remove(), parseFloat(dur) * 1200);
-      }, { passive: true });
-    })();
-
-    /* ========= Service pill chooser ========= */
+    /* Service pill chooser */
     const services = [
-      { id: 'boarding',   name: 'Overnight boarding' },
-      { id: 'in-home',    name: 'In-home pet sitting' },
-      { id: 'house-sit',  name: 'House sitting' },
-      { id: 'visits',     name: 'Daily visits' },
-      { id: 'special',    name: 'Senior / special needs' },
-      { id: 'concierge',  name: 'Travel-day concierge' },
+      { id: 'boarding',   name: 'Overnight boarding', emoji: '🛏️' },
+      { id: 'in-home',    name: 'In-home pet sitting', emoji: '🏠' },
+      { id: 'house-sit',  name: 'House sitting', emoji: '🔑' },
+      { id: 'visits',     name: 'Daily visits', emoji: '🐕' },
+      { id: 'special',    name: 'Senior / special needs', emoji: '♥' },
+      { id: 'concierge',  name: 'Travel-day concierge', emoji: '🧳' },
     ];
     const selected = new Set();
 
     function renderPills() {
       const wrap = document.getElementById('svc-pills');
       wrap.innerHTML = services.map(s => `
-        <span class="svc-pill ${selected.has(s.id) ? 'active' : ''}" data-id="${s.id}">${s.name}</span>
+        <span class="svc-pill ${selected.has(s.id) ? 'active' : ''}" data-id="${s.id}">${s.emoji} ${s.name}</span>
       `).join('');
       wrap.querySelectorAll('.svc-pill').forEach(p => {
         p.addEventListener('click', () => {
@@ -1085,14 +1523,14 @@
         box.textContent = 'Pick at least one service to see your selection here.';
         return;
       }
-      const picked = services.filter(s => selected.has(s.id)).map(s => s.name);
+      const picked = services.filter(s => selected.has(s.id));
       box.className = 'booking-summary';
-      box.innerHTML = '<strong>Requested:</strong> ' + picked.join(' · ');
+      box.innerHTML = '<strong>🐾 Requested:</strong> ' + picked.map(s => s.emoji + ' ' + s.name).join(' · ');
     }
 
     renderPills();
 
-    /* ========= Booking submit (Apps Script same endpoint, tagged) ========= */
+    /* Booking submit */
     async function submitBooking() {
       const name      = document.getElementById('f-name').value.trim();
       const phone     = document.getElementById('f-phone').value.trim();
@@ -1112,14 +1550,12 @@
       }
 
       const pickedServices = services.filter(s => selected.has(s.id)).map(s => s.name);
-
-      // Auto-tag the notes so the bookings sheet/email clearly shows this is a Tori & Max request
       const taggedNotes = `[TEAM: ${TEAM_TAG}]\n${notesIn || '(no additional notes)'}`;
 
       const btn = document.getElementById('submit-btn');
       const originalLabel = btn.innerHTML;
       btn.disabled = true;
-      btn.innerHTML = 'Sending <span class="loading"><span></span><span></span><span></span></span>';
+      btn.innerHTML = 'Sending <span class="loading"><span>🐾</span><span>🐾</span><span>🐾</span></span>';
 
       const payload = {
         name, phone, petName, petType, startDate, endDate,
@@ -1141,12 +1577,12 @@
         success.style.display = 'block';
         success.className = 'booking-success';
         success.innerHTML = `
-          <div class="check">✓</div>
-          <h3>Request received.</h3>
-          <p>Thanks ${name.split(' ')[0]}. Tori &amp; Max will text you at ${phone} within 24 hours with meet-and-greet times and a clear quote.</p>
+          <span class="check">🐾</span>
+          <h3>Request received!</h3>
+          <p>Thanks ${name.split(' ')[0]}. Tori &amp; Max will text you at ${phone} within 24 hours with meet-and-greet times and a clear quote. ♥</p>
         `;
         success.scrollIntoView({behavior:'smooth', block:'center'});
-        btn.innerHTML = 'Sent ✓';
+        btn.innerHTML = 'Sent ♥';
       } catch (err) {
         console.error(err);
         alert("We couldn't send that request just now. Please try again, or reach out directly.");
